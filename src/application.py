@@ -10,6 +10,8 @@ L4 应用层：类比迁移 / 镜像点推断（今晚唯一完全空白、也�
   ① 与真实数据库(Materials Project/OQMD/NOMAD)交叉验证
   ② 标注为可证伪的假设，不包装成结论
 """
+import sys
+
 from graph import build_graph, vectorize, parse_composition, structure_family, all_elements
 from rules import edge_vector, cosine, is_degenerate
 
@@ -108,4 +110,6 @@ def demo_run():
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     demo_run()

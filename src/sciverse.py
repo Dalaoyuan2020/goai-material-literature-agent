@@ -9,13 +9,16 @@ Key 存放：~/Documents/Claude_Mini_agent/_digital_assets/api_keys.env (SCIVERS
 """
 import os
 import json
+import sys
 import time
 import hashlib
 import urllib.request
 import urllib.error
+from pathlib import Path
 
 BASE = "https://api.sciverse.space"
-CALL_LOG_DIR = __file__.rsplit("/", 2)[0] + "/outputs/sciverse_calls"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+CALL_LOG_DIR = REPO_ROOT / "outputs" / "sciverse_calls"
 
 
 def _load_key():
@@ -63,7 +66,7 @@ def meta_search(query: str, year_gte: int = None, page_size: int = 10, fields=No
     )
 
     call_id = hashlib.sha256(f"{query}{time.time()}".encode()).hexdigest()[:12]
-    os.makedirs(CALL_LOG_DIR, exist_ok=True)
+    CALL_LOG_DIR.mkdir(parents=True, exist_ok=True)
 
     try:
         with urllib.request.urlopen(req, timeout=20) as resp:
@@ -73,7 +76,7 @@ def meta_search(query: str, year_gte: int = None, page_size: int = 10, fields=No
         data = {"error": e.code, "message": e.read().decode("utf-8", errors="ignore")}
         status = e.code
 
-    with open(f"{CALL_LOG_DIR}/{call_id}.json", "w", encoding="utf-8") as f:
+    with (CALL_LOG_DIR / f"{call_id}.json").open("w", encoding="utf-8") as f:
         json.dump({
             "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
             "request": body,
@@ -85,6 +88,10 @@ def meta_search(query: str, year_gte: int = None, page_size: int = 10, fields=No
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8")
     data, call_id = meta_search("superconductor cobalt doping iron pnictide", year_gte=2010, page_size=5)
     print(f"证据链记录: outputs/sciverse_calls/{call_id}.json")
     print(f"命中总数: {data.get('total_count', 'N/A')}")
