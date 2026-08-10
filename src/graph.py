@@ -10,7 +10,7 @@ import csv
 import re
 from collections import defaultdict
 
-DATA_DIR = __file__.rsplit("/", 2)[0] + "/data"
+DATA_DIR = __file__.rsplit("/", 2)[0] + "/knowledge"
 
 # 结构家族识别规则：按化学计量比模式分类（超导材料学界公认的家族命名）
 STRUCTURE_FAMILIES = [
@@ -54,7 +54,7 @@ def parse_composition(formula: str) -> dict:
 
 def load_edges():
     edges = []
-    with open(f"{DATA_DIR}/relations_table.csv", encoding="utf-8") as f:
+    with open(f"{DATA_DIR}/edges.csv", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             edges.append(row)
     return edges
