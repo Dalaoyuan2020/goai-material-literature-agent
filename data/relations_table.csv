@@ -1,0 +1,58 @@
+材料A,材料B,关系类型,关系类型定义,文献DOI,年份,证据强度,文献标题,证据说明
+LaFeAsO,LaFeAsO1-xFx,R4,"氧位F掺杂 oxygen-site F doping (O→F, 1111系)",10.1103/PhysRevB.78.020512,2008,direct,"Ferromagnetic spin fluctuation in<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""inline""><mm","PRB78 abs: 'The F doped LaFeAsO, a recently discovered superconductor with the high Tc of 26 K'"
+LaFeAsO,LaFeAsO1-xFx,R4,"氧位F掺杂 oxygen-site F doping (O→F, 1111系)",10.1021/ja800073m,2008,direct,Iron-Based Layered Superconductor La[O<sub>1-</sub><i><sub>x</sub></i>F<i><sub>x</sub></i>]FeAs (<i>x</i> = 0.,kamihara JACS 发现文(标题)
+SmFeAsO,SmFeAsO1-xFx,R4,"氧位F掺杂 oxygen-site F doping (O→F, 1111系)",10.1038/nature07045,2008,direct,Superconductivity at 43 K in SmFeAsO1-xF x,Chen abs: 'bulk superconductivity in samarium-arsenide oxides SmFeAsO1-xFx... Tc as high as 43 K'
+SmFeAsO,SmFeAsO1-xFx,R4,"氧位F掺杂 oxygen-site F doping (O→F, 1111系)",10.1088/0256-307X/25/6/080,2008,direct,"Superconductivity at 55 K in Iron-Based F-Doped Layered Quaternary Compound Sm[O
+                    <sub>
+   ",Ren CPL: 'Superconductivity at 55 K in Iron-Based F-Doped Layered Quaternary Compound Sm[O1-xFx]FeAs' (标题)
+GdFeAsO,GdFeAsO1-xFx,R4,"氧位F掺杂 oxygen-site F doping (O→F, 1111系)",10.1209/0295-5075/83/67006,2008,negative,"Thorium-doping–induced superconductivity up to 56 K in Gd
+                    <sub>1−x</sub>
+                 ",wang EPL abs: 'F-doping in GdFeAsO is particularly difficult due to the lattice mismatch' (负样本:F掺杂困难)
+GdFeAsO,Gd1-xThxFeAsO,R1,"阳离子位掺杂 cation-site doping (Ba→K, Gd→Th, Nd→Sr, Mg→Al)",10.1209/0295-5075/83/67006,2008,direct,"Thorium-doping–induced superconductivity up to 56 K in Gd
+                    <sub>1−x</sub>
+                 ",wang EPL abs: 'superconductivity with Tc as high as 56 K by the Th4+ substitution for Gd3+ in GdFeAsO'
+LaFeAsO,SmFeAsO,R5,稀土位替换 rare-earth substitution (La→Sm/Ce/Nd/Pr/Gd),10.1209/0295-5075/83/67006,2008,secondary,"Thorium-doping–induced superconductivity up to 56 K in Gd
+                    <sub>1−x</sub>
+                 ","wang EPL abs: 'Tc pushed up... above 40 K by either applying pressure or replacing La with Sm[3], Ce[4], Nd[5] and Pr[6]'"
+LaFeAsO,CeFeAsO,R5,稀土位替换 rare-earth substitution (La→Sm/Ce/Nd/Pr/Gd),10.1209/0295-5075/83/67006,2008,secondary,"Thorium-doping–induced superconductivity up to 56 K in Gd
+                    <sub>1−x</sub>
+                 ",同上 (Ce[4]引用)
+LaFeAsO,NdFeAsO,R5,稀土位替换 rare-earth substitution (La→Sm/Ce/Nd/Pr/Gd),10.1209/0295-5075/83/67006,2008,secondary,"Thorium-doping–induced superconductivity up to 56 K in Gd
+                    <sub>1−x</sub>
+                 ",同上 (Nd[5]引用)
+LaFeAsO,PrFeAsO,R5,稀土位替换 rare-earth substitution (La→Sm/Ce/Nd/Pr/Gd),10.1209/0295-5075/83/67006,2008,secondary,"Thorium-doping–induced superconductivity up to 56 K in Gd
+                    <sub>1−x</sub>
+                 ",同上 (Pr[6]引用)
+BaFe2As2,Ba0.6K0.4Fe2As2,R1,"阳离子位掺杂 cation-site doping (Ba→K, Gd→Th, Nd→Sr, Mg→Al)",10.1103/PhysRevLett.101.107006,2008,direct,"Superconductivity at 38 K in the Iron Arsenide<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display",rotter abs: 'bulk superconductivity up to Tc=38K in (Ba1-xKx)Fe2As2... partial substitution of the barium site with potassium'
+BaFe2As2,BaFe1.8Co0.2As2,R2,过渡金属Fe位取代掺杂 transition-metal-site doping (Fe→Co/Mn/Ni/Ru/Pt),10.1103/PhysRevLett.101.117004,2008,direct,"Superconductivity at 22 K in Co-Doped<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""inline""",sefat abs: 'bulk superconductivity in BaFe1.8Co0.2As2... Tc=22K... first example of SC induced by electron doping'
+BaFe2As2,BaFe2(As0.7P0.3)2,R3,"阴离子位等电子取代 anion isoelectronic substitution (Se↔Te, Se↔S, As↔P)",10.1103/PhysRevB.94.094504,2016,direct,"Spin excitations in optimally P-doped<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:mrow><mml:m",ba122_p abs: 'optimally P-doped BaFe2(As0.7P0.3)2 superconductor (Tc=30K)... Replacing 30% As by smaller P to induce superconductivity'
+SrFe2As2,SrFe1.8Co0.2As2,R2,过渡金属Fe位取代掺杂 transition-metal-site doping (Fe→Co/Mn/Ni/Ru/Pt),10.1103/PhysRevB.82.024510,2010,direct,"Electron-hole asymmetry in Co- and Mn-doped<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""i",sr122_co abs: 'SC phase appears only for Co (electron)-doping'
+SrFe2As2,SrFe1.8Mn0.2As2,R2,过渡金属Fe位取代掺杂 transition-metal-site doping (Fe→Co/Mn/Ni/Ru/Pt),10.1103/PhysRevB.82.024510,2010,negative,"Electron-hole asymmetry in Co- and Mn-doped<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""i",sr122_co abs: 'Absence of the superconductivity by Mn-doping' (负样本)
+SrFe2As2,SrFe2-xRuxAs2,R2,过渡金属Fe位取代掺杂 transition-metal-site doping (Fe→Co/Mn/Ni/Ru/Pt),10.1016/j.physc.2009.06.009,2009,direct,Superconductivity induced by doping Ru in SrFe2−xRuxAs2,Physica C 2009 标题: 'Superconductivity induced by doping Ru in SrFe2-xRuxAs2'
+SrFe2As2,SrFe2-xPtxAs2,R2,过渡金属Fe位取代掺杂 transition-metal-site doping (Fe→Co/Mn/Ni/Ru/Pt),10.1016/j.physc.2011.05.005,2011,direct,Superconductivity of the platinum doped 122 iron arsenide SrFe2−xPtxAs2,Physica C 2011 标题: 'Superconductivity of the platinum doped 122 iron arsenide SrFe2-xPtxAs2'
+BaFe2As2,SrFe2As2,R9,同结构家族 same structural family (无向等价值),10.1103/PhysRevB.82.024510,2010,direct,"Electron-hole asymmetry in Co- and Mn-doped<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""i",sr122_co abs: 同 ThCr2Si2 122 系; rotter abs: 'BaFe2As2 as well as KFe2As2 both crystallize in the tetragonal ThCr2Si2-type structure'
+BaFe2As2,KFe2As2,R9,同结构家族 same structural family (无向等价值),10.1103/PhysRevLett.101.107006,2008,direct,"Superconductivity at 38 K in the Iron Arsenide<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display",rotter abs: 'BaFe2As2 as well as KFe2As2 both crystallize in the tetragonal ThCr2Si2-type structure'
+FeSe,FeSe0.5Te0.5,R3,"阴离子位等电子取代 anion isoelectronic substitution (Se↔Te, Se↔S, As↔P)",10.1209/0295-5075/84/37002,2008,direct,Tellurium substitution effect on superconductivity of the α-phase iron selenide,yeh abs: 'FeSe1-xTex (x=0~1)... Tc reaches a maximum of 15.2K at about 50% Te substitution'
+FeTe,FeSe0.5Te0.5,R3,"阴离子位等电子取代 anion isoelectronic substitution (Se↔Te, Se↔S, As↔P)",10.1209/0295-5075/84/37002,2008,direct,Tellurium substitution effect on superconductivity of the α-phase iron selenide,yeh abs: 'FeTe is no longer superconducting... Te substitution effect' (反向:FeTe加Se恢复超导)
+FeSe,FeSe1-xSx,R3,"阴离子位等电子取代 anion isoelectronic substitution (Se↔Te, Se↔S, As↔P)",10.3389/fphy.2020.594500,2021,direct,Electronic Nematic States Tuned by Isoelectronic Substitution in Bulk FeSe1−xSx,fese_sx review abs: 'isoelectronic substitution... FeSe1-xSx' (nematic)
+FeSe,FeSe-STO_mono,R6,界面/衬底增强 interface/substrate enhancement (块材→单层膜异质结),10.1038/nmat4153,2014,direct,Superconductivity above 100 K in single-layer FeSe films on doped SrTiO3,ge abs: 'single-layer FeSe films grown on SrTiO3... possible Tc of ~80K... nearly ten times of the Tc of bulk FeSe... above the Tc record of 56K'
+FeSe,FeSe-BTO_mono,R6,界面/衬底增强 interface/substrate enhancement (块材→单层膜异质结),10.1038/ncomms6044,2014,direct,Tuning the band structure and superconductivity in single-layer FeSe by interface engineering,peng ncomms6044 标题: 'Tuning the band structure and superconductivity in single-layer FeSe by interface engineering'
+FeSe0.5Te0.5,FeSe0.5Te0.5_P,R7,压力诱导超导 pressure-induced superconductivity,10.1209/0295-5075/84/37002,2008,direct,Tellurium substitution effect on superconductivity of the α-phase iron selenide,yeh abs: 'The pressure-enhanced Tc of FeSe0.5Te0.5 is more than 10 times larger than that of FeSe'
+NdNiO2,Nd0.8Sr0.2NiO2,R1,"阳离子位掺杂 cation-site doping (Ba→K, Gd→Th, Nd→Sr, Mg→Al)",10.1038/s41586-019-1496-5,2019,direct,Superconductivity in an infinite-layer nickelate,"li_nickelate Nature 2019 (标题+正文摘要无法拉取, 标题确认无限层镍酸盐超导); 1909.00509 abs: 'Nd0.8Sr0.2NiO2 with Tc 9-15 K'"
+La3Ni2O7,La3Ni2O7_P,R7,压力诱导超导 pressure-induced superconductivity,10.1103/PhysRevX.14.011040,2023,direct,"Pressure-Induced Superconductivity In Polycrystalline 
+<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML","2309.17378 abs: 'zero resistivity at 9 GPa below 6.6K, increases quickly to 35.6K at 14.5GPa'"
+La3Ni2O7,La3Ni2O7_P,R7,压力诱导超导 pressure-induced superconductivity,10.1038/s41586-023-06408-7,2023,direct,Signatures of superconductivity near 80 K in a nickelate under high pressure,Nature 标题: 'Signatures of superconductivity near 80 K in a nickelate under high pressure'
+MgB2,Mg1-xAlxB2,R1,"阳离子位掺杂 cation-site doping (Ba→K, Gd→Th, Nd→Sr, Mg→Al)",10.1038/35066528,2001,direct,Loss of superconductivity with the addition of Al to MgB2 and a structural transition in Mg1-x AlxB2,slusky Nature 标题: 'Loss of superconductivity with the addition of Al to MgB2 and a structural transition' (负效应)
+BaLaCuO,YBa2Cu3O7,R8,Tc记录超越 Tc-record surpass (文献明确表述打破记录),10.1103/PhysRevLett.58.908,1987,secondary,Superconductivity at 93 K in a new mixed-phase Y-Ba-Cu-O compound system at ambient pressure,wu PRL 标题: '93K in a new mixed-phase Y-Ba-Cu-O' — 铜氧化物体系Tc记录提升(背景关联)
+MgB2,SmFeAsO1-xFx,R8,Tc记录超越 Tc-record surpass (文献明确表述打破记录),10.1038/nature07045,2008,direct,Superconductivity at 43 K in SmFeAsO1-xF x,Chen abs: 'The highest reported value of Tc for non-copper-oxide bulk superconductivity is 39K in MgB2... SmFeAsO1-xFx is the first non-copper oxide superconductor with Tc higher than 40K'
+SmFeAsO1-xFx,FeSe-STO_mono,R8,Tc记录超越 Tc-record surpass (文献明确表述打破记录),10.1038/nmat4153,2014,direct,Superconductivity above 100 K in single-layer FeSe films on doped SrTiO3,ge abs: 'possible Tc of ~80K... above the Tc record of 56K for the bulk Fe-based superconductors'
+LaFeAsO,SmFeAsO,R9,同结构家族 same structural family (无向等价值),10.1209/0295-5075/83/67006,2008,secondary,"Thorium-doping–induced superconductivity up to 56 K in Gd
+                    <sub>1−x</sub>
+                 ",wang EPL abs: 'LnFeAsO1-xFx (Ln = lanthanide elements)' — 1111 家族
+LaFeAsO,GdFeAsO,R9,同结构家族 same structural family (无向等价值),10.1209/0295-5075/83/67006,2008,secondary,"Thorium-doping–induced superconductivity up to 56 K in Gd
+                    <sub>1−x</sub>
+                 ",同上 1111 家族
+FeSe,FeTe,R9,同结构家族 same structural family (无向等价值),10.1209/0295-5075/84/37002,2008,direct,Tellurium substitution effect on superconductivity of the α-phase iron selenide,yeh abs: 'PbO-type compound FeSe1-xTex (x=0~1)' — 11 家族
+SmFeAsO,GdFeAsO,R9,同结构家族 same structural family (无向等价值),10.1209/0295-5075/83/67006,2008,secondary,"Thorium-doping–induced superconductivity up to 56 K in Gd
+                    <sub>1−x</sub>
+                 ",同上 1111 家族
