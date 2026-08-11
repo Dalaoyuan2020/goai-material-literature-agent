@@ -69,3 +69,10 @@
 - 新增 `agent/workflow.json`，以 `frontend_dev_spec.section_04.material_literature_agent` 为契约标识，将文献检索、构图、向量化、类比源、单家族/全家族搜索、主管线和可视化 8 个意图映射到实际 Python 公共函数，并声明入参、产物与副作用。
 - 本地没有 `frontend_dev_spec.md`，且 GitHub 443 不可达；因此按用户提供的完整接口要求，以现有真实函数签名构建同构契约，没有虚构不存在的可调用入口。
 - 验证：`agent/workflow.json` 通过标准 JSON 解析；契约测试逐个 import 并确认 8 个函数均可调用，同时检查 agent 铁律包含证据边界、假设状态和 LLM 诚信字段，2/2 通过。
+
+## 2026-08-12 · 夜间 P0-4：四家族搜索自查
+
+- 新增 `src/verify_search.py`，一条命令核对四份报告及其审计链：家族映射、诚实方法名、候选池严格增长、已观察 ID 唯一、每个后续轮含首轮完整池外 ID、候选假设状态、核心/MatKG 证据隔离、每轮两次 LLM 逻辑调用、审计文件存在、真实调用标志一致、凭证不入审计。
+- 旗舰 1111 另设硬检查：首轮基线池必须为 49、最终池必须大于 49、后续轮新增 ID 必须大于 0。当前结果为 49→85、后续轮观察到 16 个首轮外 ID，全部通过。
+- 四家族自查结果：122 12→24（后续新 ID 12）、1111 49→85（16）、11 38→55（15）、MgB2 5→9（4）；每家族 10 份审计，真实 LLM 均为 false 且与审计一致。
+- `agent/workflow.json` 同步新增 `search.verify -> verify_search.verify_all` 意图。验证报告写入 `outputs/search_verification.json`；自查、契约和编译测试合计 3 项全部通过。

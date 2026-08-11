@@ -72,6 +72,13 @@
       "artifacts": ["outputs/search_runs/122.json", "outputs/search_runs/1111.json", "outputs/search_runs/11.json", "outputs/search_runs/MgB2.json", "outputs/llm_calls/<call_id>.json"],
       "side_effect": "audited_search_write"
     },
+    "search.verify": {
+      "aliases": ["verify_search", "自查搜索结果"],
+      "function": "verify_search.verify_all",
+      "arguments": {},
+      "artifacts": ["outputs/search_verification.json"],
+      "side_effect": "none_when_called_as_function; report_write_when_called_as_cli"
+    },
     "pipeline.compile": {
       "aliases": ["run_pipeline", "编译主管线"],
       "function": "pipeline.run",

@@ -1,0 +1,505 @@
+{
+  "passed": true,
+  "expected_families": [
+    "122",
+    "1111",
+    "11",
+    "MgB2"
+  ],
+  "missing_reports": [],
+  "family_results": [
+    {
+      "run_name": "122",
+      "passed": true,
+      "summary": {
+        "initial_candidate_pool_count": 12,
+        "final_candidate_pool_count": 24,
+        "rounds_run": 5,
+        "observed_candidate_count": 20,
+        "later_round_novel_count": 12,
+        "llm_call_count": 10,
+        "real_llm_api_called": false
+      },
+      "checks": [
+        {
+          "name": "known_family",
+          "passed": true,
+          "details": "122"
+        },
+        {
+          "name": "family_mapping",
+          "passed": true,
+          "details": "expected=122, actual=122"
+        },
+        {
+          "name": "honest_method_name",
+          "passed": true,
+          "details": "可解释余弦评分 + LLM引导扩张与剪枝"
+        },
+        {
+          "name": "initial_pool_count_matches_ids",
+          "passed": true,
+          "details": "count=12, ids=12"
+        },
+        {
+          "name": "candidate_pool_grew",
+          "passed": true,
+          "details": "12->24"
+        },
+        {
+          "name": "pool_growth_is_strict_by_round",
+          "passed": true,
+          "details": [
+            12,
+            15,
+            18,
+            21,
+            24
+          ]
+        },
+        {
+          "name": "observed_ids_are_unique",
+          "passed": true,
+          "details": "observed=20, unique=20"
+        },
+        {
+          "name": "every_later_round_contains_id_impossible_in_round_1",
+          "passed": true,
+          "details": [
+            {
+              "round": 2,
+              "novel_count": 3
+            },
+            {
+              "round": 3,
+              "novel_count": 3
+            },
+            {
+              "round": 4,
+              "novel_count": 3
+            },
+            {
+              "round": 5,
+              "novel_count": 3
+            }
+          ]
+        },
+        {
+          "name": "all_outputs_are_unverified_hypotheses",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "evidence_tiers_remain_separate",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "two_audited_llm_decisions_per_round",
+          "passed": true,
+          "details": "rounds=5, call_ids=10"
+        },
+        {
+          "name": "all_llm_audits_exist",
+          "passed": true,
+          "details": {
+            "missing": [],
+            "loaded": 10
+          }
+        },
+        {
+          "name": "audit_tasks_cover_ranking_and_expansion",
+          "passed": true,
+          "details": {
+            "candidate_ranking": 5,
+            "round_expansion_decision": 5
+          }
+        },
+        {
+          "name": "real_llm_flag_matches_audits",
+          "passed": true,
+          "details": "report=False, audits=False"
+        },
+        {
+          "name": "audits_declare_no_credentials",
+          "passed": true,
+          "details": "audit_count=10"
+        }
+      ]
+    },
+    {
+      "run_name": "1111",
+      "passed": true,
+      "summary": {
+        "initial_candidate_pool_count": 49,
+        "final_candidate_pool_count": 85,
+        "rounds_run": 5,
+        "observed_candidate_count": 20,
+        "later_round_novel_count": 16,
+        "llm_call_count": 10,
+        "real_llm_api_called": false
+      },
+      "checks": [
+        {
+          "name": "known_family",
+          "passed": true,
+          "details": "1111"
+        },
+        {
+          "name": "family_mapping",
+          "passed": true,
+          "details": "expected=1111, actual=1111"
+        },
+        {
+          "name": "honest_method_name",
+          "passed": true,
+          "details": "可解释余弦评分 + LLM引导扩张与剪枝"
+        },
+        {
+          "name": "initial_pool_count_matches_ids",
+          "passed": true,
+          "details": "count=49, ids=49"
+        },
+        {
+          "name": "candidate_pool_grew",
+          "passed": true,
+          "details": "49->85"
+        },
+        {
+          "name": "pool_growth_is_strict_by_round",
+          "passed": true,
+          "details": [
+            49,
+            58,
+            67,
+            76,
+            85
+          ]
+        },
+        {
+          "name": "observed_ids_are_unique",
+          "passed": true,
+          "details": "observed=20, unique=20"
+        },
+        {
+          "name": "every_later_round_contains_id_impossible_in_round_1",
+          "passed": true,
+          "details": [
+            {
+              "round": 2,
+              "novel_count": 4
+            },
+            {
+              "round": 3,
+              "novel_count": 4
+            },
+            {
+              "round": 4,
+              "novel_count": 4
+            },
+            {
+              "round": 5,
+              "novel_count": 4
+            }
+          ]
+        },
+        {
+          "name": "all_outputs_are_unverified_hypotheses",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "evidence_tiers_remain_separate",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "two_audited_llm_decisions_per_round",
+          "passed": true,
+          "details": "rounds=5, call_ids=10"
+        },
+        {
+          "name": "all_llm_audits_exist",
+          "passed": true,
+          "details": {
+            "missing": [],
+            "loaded": 10
+          }
+        },
+        {
+          "name": "audit_tasks_cover_ranking_and_expansion",
+          "passed": true,
+          "details": {
+            "candidate_ranking": 5,
+            "round_expansion_decision": 5
+          }
+        },
+        {
+          "name": "real_llm_flag_matches_audits",
+          "passed": true,
+          "details": "report=False, audits=False"
+        },
+        {
+          "name": "audits_declare_no_credentials",
+          "passed": true,
+          "details": "audit_count=10"
+        }
+      ]
+    },
+    {
+      "run_name": "11",
+      "passed": true,
+      "summary": {
+        "initial_candidate_pool_count": 38,
+        "final_candidate_pool_count": 55,
+        "rounds_run": 5,
+        "observed_candidate_count": 20,
+        "later_round_novel_count": 15,
+        "llm_call_count": 10,
+        "real_llm_api_called": false
+      },
+      "checks": [
+        {
+          "name": "known_family",
+          "passed": true,
+          "details": "11"
+        },
+        {
+          "name": "family_mapping",
+          "passed": true,
+          "details": "expected=11, actual=11"
+        },
+        {
+          "name": "honest_method_name",
+          "passed": true,
+          "details": "可解释余弦评分 + LLM引导扩张与剪枝"
+        },
+        {
+          "name": "initial_pool_count_matches_ids",
+          "passed": true,
+          "details": "count=38, ids=38"
+        },
+        {
+          "name": "candidate_pool_grew",
+          "passed": true,
+          "details": "38->55"
+        },
+        {
+          "name": "pool_growth_is_strict_by_round",
+          "passed": true,
+          "details": [
+            38,
+            42,
+            45,
+            50,
+            55
+          ]
+        },
+        {
+          "name": "observed_ids_are_unique",
+          "passed": true,
+          "details": "observed=20, unique=20"
+        },
+        {
+          "name": "every_later_round_contains_id_impossible_in_round_1",
+          "passed": true,
+          "details": [
+            {
+              "round": 2,
+              "novel_count": 4
+            },
+            {
+              "round": 3,
+              "novel_count": 3
+            },
+            {
+              "round": 4,
+              "novel_count": 4
+            },
+            {
+              "round": 5,
+              "novel_count": 4
+            }
+          ]
+        },
+        {
+          "name": "all_outputs_are_unverified_hypotheses",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "evidence_tiers_remain_separate",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "two_audited_llm_decisions_per_round",
+          "passed": true,
+          "details": "rounds=5, call_ids=10"
+        },
+        {
+          "name": "all_llm_audits_exist",
+          "passed": true,
+          "details": {
+            "missing": [],
+            "loaded": 10
+          }
+        },
+        {
+          "name": "audit_tasks_cover_ranking_and_expansion",
+          "passed": true,
+          "details": {
+            "candidate_ranking": 5,
+            "round_expansion_decision": 5
+          }
+        },
+        {
+          "name": "real_llm_flag_matches_audits",
+          "passed": true,
+          "details": "report=False, audits=False"
+        },
+        {
+          "name": "audits_declare_no_credentials",
+          "passed": true,
+          "details": "audit_count=10"
+        }
+      ]
+    },
+    {
+      "run_name": "MgB2",
+      "passed": true,
+      "summary": {
+        "initial_candidate_pool_count": 5,
+        "final_candidate_pool_count": 9,
+        "rounds_run": 5,
+        "observed_candidate_count": 9,
+        "later_round_novel_count": 4,
+        "llm_call_count": 10,
+        "real_llm_api_called": false
+      },
+      "checks": [
+        {
+          "name": "known_family",
+          "passed": true,
+          "details": "MgB2"
+        },
+        {
+          "name": "family_mapping",
+          "passed": true,
+          "details": "expected=diboride, actual=diboride"
+        },
+        {
+          "name": "honest_method_name",
+          "passed": true,
+          "details": "可解释余弦评分 + LLM引导扩张与剪枝"
+        },
+        {
+          "name": "initial_pool_count_matches_ids",
+          "passed": true,
+          "details": "count=5, ids=5"
+        },
+        {
+          "name": "candidate_pool_grew",
+          "passed": true,
+          "details": "5->9"
+        },
+        {
+          "name": "pool_growth_is_strict_by_round",
+          "passed": true,
+          "details": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "name": "observed_ids_are_unique",
+          "passed": true,
+          "details": "observed=9, unique=9"
+        },
+        {
+          "name": "every_later_round_contains_id_impossible_in_round_1",
+          "passed": true,
+          "details": [
+            {
+              "round": 2,
+              "novel_count": 1
+            },
+            {
+              "round": 3,
+              "novel_count": 1
+            },
+            {
+              "round": 4,
+              "novel_count": 1
+            },
+            {
+              "round": 5,
+              "novel_count": 1
+            }
+          ]
+        },
+        {
+          "name": "all_outputs_are_unverified_hypotheses",
+          "passed": true,
+          "details": "candidate_count=9"
+        },
+        {
+          "name": "evidence_tiers_remain_separate",
+          "passed": true,
+          "details": "candidate_count=9"
+        },
+        {
+          "name": "two_audited_llm_decisions_per_round",
+          "passed": true,
+          "details": "rounds=5, call_ids=10"
+        },
+        {
+          "name": "all_llm_audits_exist",
+          "passed": true,
+          "details": {
+            "missing": [],
+            "loaded": 10
+          }
+        },
+        {
+          "name": "audit_tasks_cover_ranking_and_expansion",
+          "passed": true,
+          "details": {
+            "candidate_ranking": 5,
+            "round_expansion_decision": 5
+          }
+        },
+        {
+          "name": "real_llm_flag_matches_audits",
+          "passed": true,
+          "details": "report=False, audits=False"
+        },
+        {
+          "name": "audits_declare_no_credentials",
+          "passed": true,
+          "details": "audit_count=10"
+        }
+      ]
+    }
+  ],
+  "flagship_1111_checks": [
+    {
+      "name": "flagship_1111_baseline_pool_is_49",
+      "passed": true,
+      "details": 49
+    },
+    {
+      "name": "flagship_1111_expands_beyond_baseline",
+      "passed": true,
+      "details": 85
+    },
+    {
+      "name": "flagship_1111_has_later_round_novel_ids",
+      "passed": true,
+      "details": 16
+    }
+  ]
+}

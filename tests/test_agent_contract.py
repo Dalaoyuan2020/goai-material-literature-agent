@@ -14,7 +14,7 @@ class AgentContractTests(unittest.TestCase):
         workflow_path = REPO_ROOT / "agent" / "workflow.json"
         workflow = json.loads(workflow_path.read_text(encoding="utf-8"))
         self.assertEqual(workflow["schema_version"], "1.0")
-        self.assertGreaterEqual(len(workflow["intents"]), 8)
+        self.assertGreaterEqual(len(workflow["intents"]), 9)
         for name, spec in workflow["intents"].items():
             with self.subTest(intent=name):
                 module_name, function_name = spec["function"].rsplit(".", 1)
