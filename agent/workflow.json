@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "frontend_dev_spec.section_04.material_literature_agent",
+  "python_path": "src",
+  "evidence_policy": {
+    "strong_source": "knowledge/edges.csv DOI-backed core only",
+    "weak_context": "knowledge/edges_matkg.csv vector-space context only",
+    "hypothesis_status": "候选假设(未验证)"
+  },
+  "intents": {
+    "literature.search": {
+      "aliases": ["search_literature", "检索文献"],
+      "function": "sciverse.meta_search",
+      "arguments": {
+        "query": {"type": "string", "required": true},
+        "year_gte": {"type": "integer|null", "required": false},
+        "page_size": {"type": "integer", "required": false, "default": 10},
+        "fields": {"type": "array<string>|null", "required": false}
+      },
+      "artifacts": ["outputs/sciverse_calls/<call_id>.json"],
+      "side_effect": "external_api_and_audit_write"
+    },
+    "graph.build": {
+      "aliases": ["build_graph", "构建知识图"],
+      "function": "graph.build_graph",
+      "arguments": {
+        "include_extended": {"type": "boolean", "required": false, "default": false}
+      },
+      "returns": "[materials, edges]",
+      "side_effect": "none"
+    },
+    "graph.vectorize": {
+      "aliases": ["vectorize", "向量化"],
+      "function": "graph.vectorize",
+      "arguments": {
+        "materials": {"type": "object", "required": true}
+      },
+      "returns": "[vectors, elements, structure_families]",
+      "side_effect": "none"
+    },
+    "analogy.sources": {
+      "aliases": ["find_analogy_sources", "查找类比源"],
+      "function": "application.find_analogy_source",
+      "arguments": {
+        "edges": {"type": "array<object>", "required": true},
+        "materials": {"type": "object", "required": true},
+        "vecs": {"type": "object", "required": true},
+        "comp_dims": {"type": "integer", "required": true},
+        "relation_type": {"type": "string", "required": true},
+        "ranked_pairs": {"type": "boolean", "required": false, "default": false}
+      },
+      "returns": "best source object, ranked source array, or null",
+      "side_effect": "none"
+    },
+    "search.family": {
+      "aliases": ["run_family_search", "搜索单一家族"],
+      "function": "search.run_family_search",
+      "arguments": {
+        "run_name": {"type": "string", "required": true, "enum": ["122", "1111", "11", "MgB2"]},
+        "family": {"type": "string", "required": true, "enum": ["122", "1111", "11", "diboride"]},
+        "max_rounds": {"type": "integer", "required": false, "default": 5},
+        "patience": {"type": "integer", "required": false, "default": 2},
+        "batch_size": {"type": "integer", "required": false, "default": 4}
+      },
+      "artifacts": ["outputs/search_runs/<run_name>.json", "outputs/llm_calls/<call_id>.json"],
+      "side_effect": "audited_search_write"
+    },
+    "search.all_families": {
+      "aliases": ["run_all_search", "搜索全部家族"],
+      "function": "search.run_all",
+      "arguments": {},
+      "artifacts": ["outputs/search_runs/122.json", "outputs/search_runs/1111.json", "outputs/search_runs/11.json", "outputs/search_runs/MgB2.json", "outputs/llm_calls/<call_id>.json"],
+      "side_effect": "audited_search_write"
+    },
+    "pipeline.compile": {
+      "aliases": ["run_pipeline", "编译主管线"],
+      "function": "pipeline.run",
+      "arguments": {},
+      "artifacts": ["outputs/pipeline_report.json"],
+      "side_effect": "report_write"
+    },
+    "visualization.generate": {
+      "aliases": ["generate_visualizations", "生成可视化"],
+      "function": "visualize.generate_all",
+      "arguments": {},
+      "artifacts": ["outputs/visualizations/*"],
+      "side_effect": "figure_write"
+    }
+  }
+}
