@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>科研 Agent 工作台 · 前端开发说明书</title>
+<style>
+  :root {
+    --bg: #F5F3EC;
+    --surface: #FFFFFF;
+    --ink: #221F19;
+    --ink-soft: #5B5646;
+    --ink-faint: #8F8973;
+    --line: #E1DCC9;
+    --line-soft: #ECE8D9;
+    --panel-a: #2E4A3E;
+    --panel-a-soft: #E4EBE5;
+    --panel-b: #4A5A73;
+    --panel-b-soft: #E7EBF1;
+    --panel-c: #7A5230;
+    --panel-c-soft: #F0E6DA;
+    --accent: #B0542A;
+    --accent-soft: #F3E1D2;
+    --code-bg: #1E1C15;
+    --code-ink: #E6E1D1;
+    --shadow: 0 1px 2px rgba(34,31,25,0.05), 0 12px 32px rgba(34,31,25,0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17150F;
+      --surface: #1E1C16;
+      --ink: #EBE6D8;
+      --ink-soft: #B0AA95;
+      --ink-faint: #7B7663;
+      --line: #322E22;
+      --line-soft: #24221A;
+      --panel-a: #7FAB93;
+      --panel-a-soft: #1B2620;
+      --panel-b: #90A6C4;
+      --panel-b-soft: #1C222E;
+      --panel-c: #C99361;
+      --panel-c-soft: #2B2015;
+      --accent: #DE8952;
+      --accent-soft: #2D2013;
+      --code-bg: #100F0B;
+      --code-ink: #D9D4C2;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 32px rgba(0,0,0,0.4);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #17150F;
+    --surface: #1E1C16;
+    --ink: #EBE6D8;
+    --ink-soft: #B0AA95;
+    --ink-faint: #7B7663;
+    --line: #322E22;
+    --line-soft: #24221A;
+    --panel-a: #7FAB93;
+    --panel-a-soft: #1B2620;
+    --panel-b: #90A6C4;
+    --panel-b-soft: #1C222E;
+    --panel-c: #C99361;
+    --panel-c-soft: #2B2015;
+    --accent: #DE8952;
+    --accent-soft: #2D2013;
+    --code-bg: #100F0B;
+    --code-ink: #D9D4C2;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 32px rgba(0,0,0,0.4);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", Helvetica Neue, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.62;
+    margin: 0;
+    padding: 0 0 120px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .page { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Cover ---------- */
+
+  .cover {
+    padding: 80px 28px 56px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 52px;
+  }
+
+  .cover-inner { max-width: 900px; margin: 0 auto; }
+
+  .doc-meta {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+
+  .doc-meta .item strong {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(30px, 4.6vw, 44px);
+    line-height: 1.22;
+    text-wrap: balance;
+    margin: 0 0 18px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .cover-sub {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0;
+  }
+
+  /* ---------- TOC ---------- */
+
+  .toc {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 32px auto 0;
+    max-width: 900px;
+  }
+
+  .toc a {
+    background: var(--surface);
+    padding: 14px 12px;
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 12.5px;
+    font-weight: 600;
+    display: block;
+  }
+
+  .toc a span { display: block; color: var(--ink-faint); font-weight: 400; font-size: 11px; margin-top: 2px; }
+
+  @media (max-width: 640px) { .toc { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ---------- Sections ---------- */
+
+  section { margin-bottom: 56px; scroll-margin-top: 24px; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .section-num {
+    font-family: ui-monospace, monospace;
+    font-size: 14px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+
+  h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 28px 0 12px;
+  }
+
+  h3:first-child { margin-top: 0; }
+
+  p { color: var(--ink-soft); margin: 0 0 14px; max-width: 68ch; }
+  p:last-child { margin-bottom: 0; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Role callout ---------- */
+
+  .roles {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 24px 28px;
+    box-shadow: var(--shadow);
+  }
+
+  .role { text-align: center; }
+  .role .who { font-size: 12px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .role .name { font-size: 19px; font-weight: 700; color: var(--ink); }
+  .role .job { font-size: 13.5px; color: var(--ink-soft); margin-top: 4px; }
+  .roles .arrow { color: var(--accent); font-size: 20px; }
+
+  @media (max-width: 560px) {
+    .roles { grid-template-columns: 1fr; }
+    .roles .arrow { transform: rotate(90deg); }
+  }
+
+  /* ---------- Three-panel mockup ---------- */
+
+  .mockup {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .mockup-frame {
+    display: grid;
+    grid-template-columns: 84px 1fr 260px;
+    height: 460px;
+  }
+
+  .mockup-col {
+    padding: 18px 14px;
+    border-right: 1px solid var(--line);
+    overflow-y: auto;
+  }
+  .mockup-col:last-child { border-right: none; }
+
+  .mockup-nav { background: var(--line-soft); display: flex; flex-direction: column; align-items: center; gap: 18px; padding-top: 22px; }
+  .mockup-nav .nav-item {
+    width: 48px; height: 48px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; text-align: center; line-height: 1.2;
+    color: var(--ink-faint); cursor: pointer;
+  }
+  .mockup-nav .nav-item.active { background: var(--panel-a-soft); color: var(--panel-a); }
+
+  .mockup-main { background: var(--bg); }
+  .mockup-main .panel-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--panel-a); margin-bottom: 14px;
+  }
+  .chat-bubble {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    padding: 12px 14px; margin-bottom: 10px; font-size: 13.5px; color: var(--ink-soft);
+  }
+  .chat-bubble.user { background: var(--panel-a-soft); color: var(--ink); margin-left: 32px; }
+
+  .mockup-side { background: var(--surface); }
+  .mockup-side .panel-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--panel-c); margin-bottom: 14px;
+  }
+  .kb-row {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12.5px; padding: 8px 0; border-top: 1px solid var(--line-soft);
+  }
+  .kb-row:first-of-type { border-top: none; }
+  .kb-row .name { color: var(--ink-soft); }
+  .kb-row .count { color: var(--ink-faint); font-family: ui-monospace, monospace; }
+
+  .kb-tag {
+    display: inline-block; font-size: 10.5px; font-weight: 600;
+    padding: 2px 6px; border-radius: 4px; margin-left: 6px;
+  }
+  .kb-tag.core { background: var(--panel-a-soft); color: var(--panel-a); }
+  .kb-tag.weak { background: var(--line-soft); color: var(--ink-faint); }
+
+  .mockup-caption {
+    padding: 14px 20px;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--line);
+    background: var(--line-soft);
+  }
+
+  /* ---------- Card detail explainer ---------- */
+
+  .kb-detail-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-top: 16px;
+  }
+
+  .kb-detail-card .field-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 12px;
+    padding: 9px 0;
+    border-top: 1px solid var(--line-soft);
+    font-size: 13.5px;
+  }
+  .kb-detail-card .field-row:first-child { border-top: none; }
+  .kb-detail-card .field-name { color: var(--ink-faint); font-family: ui-monospace, monospace; font-size: 12.5px; }
+  .kb-detail-card .field-value { color: var(--ink); }
+  .kb-detail-card .field-value.mono { font-family: ui-monospace, monospace; font-size: 12.5px; color: var(--ink-soft); }
+
+  /* ---------- Code block ---------- */
+
+  .code-block {
+    background: var(--code-bg);
+    color: var(--code-ink);
+    border-radius: 8px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    font-size: 12.5px;
+    line-height: 1.7;
+    margin: 12px 0 8px;
+  }
+  .code-block .k { color: #8FB89C; }
+  .code-block .s { color: #D9A868; }
+  .code-block .c { color: #7A7666; }
+
+  .code-caption { font-size: 12.5px; color: var(--ink-faint); margin-bottom: 20px; }
+
+  /* ---------- Scope table ---------- */
+
+  .scope-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  .scope-table th, .scope-table td { padding: 12px 16px; text-align: left; border-top: 1px solid var(--line-soft); }
+  .scope-table th { background: var(--line-soft); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--ink-faint); border-top: none; }
+  .scope-table td.v1 { color: var(--panel-a); font-weight: 600; }
+  .scope-table td.later { color: var(--ink-faint); }
+  .scope-table .wrap { overflow-x: auto; }
+
+  /* ---------- Accept checklist ---------- */
+
+  .checklist { list-style: none; margin: 0; padding: 0; }
+  .checklist li {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 12px 0; border-top: 1px solid var(--line-soft); font-size: 14.5px; color: var(--ink-soft);
+  }
+  .checklist li:first-child { border-top: none; }
+  .checklist .box {
+    flex-shrink: 0; width: 18px; height: 18px; border: 1.5px solid var(--panel-a); border-radius: 4px; margin-top: 2px;
+  }
+
+  /* ---------- Footer legend ---------- */
+
+  .legend {
+    display: flex; gap: 20px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-faint);
+    padding-top: 22px; border-top: 1px solid var(--line);
+  }
+  .legend .swatch { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+  .dot.core { background: var(--panel-a); }
+  .dot.weak { background: var(--ink-faint); }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="doc-meta">
+      <div class="item"><strong>文档类型</strong>产品说明书 · 开发规格</div>
+      <div class="item"><strong>产品经理</strong>致远</div>
+      <div class="item"><strong>开发</strong>谭力奎</div>
+      <div class="item"><strong>版本</strong>v1 · 2026-08-11</div>
+    </div>
+    <h1>科研 Agent 工作台<br>前端开发说明书</h1>
+    <p class="cover-sub">照 Codex 的路子做一个能下载到本地跑的桌面 UI，三栏布局，先把壳做出来能用，功能后续陆续接。</p>
+  </div>
+
+  <nav class="toc">
+    <a href="#roles"><span class="mono">01</span>分工与边界<span>谁做什么，v1不做什么</span></a>
+    <a href="#layout"><span class="mono">02</span>页面长什么样<span>三栏结构 + 交互示意</span></a>
+    <a href="#kb"><span class="mono">03</span>字库面板详解<span>Karpathy Wiki 案例说清楚</span></a>
+    <a href="#contract"><span class="mono">04</span>接口契约<span>四个端口文件格式</span></a>
+  </nav>
+</div>
+
+<div class="page">
+
+  <section id="roles">
+    <div class="section-head">
+      <span class="section-num mono">01</span>
+      <h2>分工与边界</h2>
+    </div>
+
+    <div class="roles">
+      <div class="role">
+        <div class="who">产品经理</div>
+        <div class="name">致远</div>
+        <div class="job">功能 / 算法 / 知识库<br>不碰界面</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="role">
+        <div class="who">开发</div>
+        <div class="name">谭力奎</div>
+        <div class="job">UI / 交互 / 前端工程<br>这是他自己的项目产出</div>
+      </div>
+    </div>
+
+    <h3>V1 只做什么，不做什么</h3>
+    <div class="wrap">
+    <table class="scope-table">
+      <tr><th>模块</th><th>V1 范围</th><th>暂不做</th></tr>
+      <tr><td>整体框架</td><td class="v1">三栏布局能跑起来，能下载到本地打开</td><td class="later">打包分发、自动更新</td></tr>
+      <tr><td>文献阅读器</td><td class="v1">能预览 PDF/PPT 的空壳</td><td class="later">真实解析、划词翻译、批注</td></tr>
+      <tr><td>字库面板</td><td class="v1">只读展示，读真实数据渲染</td><td class="later">编辑/新增/删除条目</td></tr>
+      <tr><td>编排 / 技能</td><td class="v1">两个按钮能点开，界面占位</td><td class="later">真正调用后端执行</td></tr>
+      <tr><td>对话区</td><td class="v1">输入框 + 消息气泡样式</td><td class="later">真实模型接入</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section id="layout">
+    <div class="section-head">
+      <span class="section-num mono">02</span>
+      <h2>页面长什么样</h2>
+    </div>
+    <p>三栏，从左到右：<strong>导航栏</strong>（窄，图标式）→ <strong>工作区</strong>（宽，主对话/内容区）→ <strong>字库面板</strong>（固定宽度，右侧常驻）。参考 Codex 开源界面的整体气质，不追求视觉花哨。</p>
+
+    <div class="mockup">
+      <div class="mockup-frame">
+        <div class="mockup-col mockup-nav">
+          <div class="nav-item active">编<br>排</div>
+          <div class="nav-item">技<br>能</div>
+          <div class="nav-item">字<br>库</div>
+        </div>
+        <div class="mockup-col mockup-main">
+          <div class="panel-label">工作区 · 编排</div>
+          <div class="chat-bubble">帮我找一下超导材料里，122体系掺钴之后还有哪些没做过的组合</div>
+          <div class="chat-bubble user">正在检索知识库中的 122 体系边... 已找到 3 组已验证变换，正在生成候选</div>
+          <div class="chat-bubble">候选：SrFe2As2 → SrFe1.8Co0.2As2（来源余弦 0.9958，未验证，需交叉核实）</div>
+        </div>
+        <div class="mockup-col mockup-side">
+          <div class="panel-label">字库</div>
+          <div class="kb-row"><span class="name">材料点<span class="kb-tag core">核心</span></span><span class="count">91</span></div>
+          <div class="kb-row"><span class="name">材料点<span class="kb-tag weak">扩展</span></span><span class="count">46</span></div>
+          <div class="kb-row"><span class="name">关系边<span class="kb-tag core">核心</span></span><span class="count">79</span></div>
+          <div class="kb-row"><span class="name">关系边<span class="kb-tag weak">扩展</span></span><span class="count">210</span></div>
+          <div class="kb-row"><span class="name">候选假设</span><span class="count">6</span></div>
+        </div>
+      </div>
+      <div class="mockup-caption">这是示意图，不是最终视觉稿——重点是结构比例和信息层级，配色/字体谭自己定。</div>
+    </div>
+  </section>
+
+  <section id="kb">
+    <div class="section-head">
+      <span class="section-num mono">03</span>
+      <h2>字库面板详解 —— 这个案例说清楚"卡帕西知识库"是什么</h2>
+    </div>
+
+    <p><strong>字库面板不是一个通用的"文件管理器"</strong>，它展示的是一套特定结构的数据：材料科学文献被拆解成"点"（材料）和"边"（材料之间的关系），每条边都能追溯到具体论文。这套结构现在已经在跑，V1 只需要<strong>把这份真实数据读出来、按下面这个样子摆出来</strong>，不用设计新的信息架构。</p>
+
+    <h3>点开一条边，应该看到什么</h3>
+    <div class="kb-detail-card">
+      <div class="field-row"><span class="field-name">材料 A</span><span class="field-value">LaFeAsO</span></div>
+      <div class="field-row"><span class="field-name">材料 B</span><span class="field-value">LaFeAsO1-xFx</span></div>
+      <div class="field-row"><span class="field-name">关系类型</span><span class="field-value">R4 · 氧位F掺杂</span></div>
+      <div class="field-row"><span class="field-name">文献 DOI</span><span class="field-value mono">10.1103/PhysRevB.78.020512</span></div>
+      <div class="field-row"><span class="field-name">年份</span><span class="field-value">2008</span></div>
+      <div class="field-row"><span class="field-name">证据强度</span><span class="field-value">direct</span></div>
+      <div class="field-row"><span class="field-name">证据摘录</span><span class="field-value">"The F doped LaFeAsO, a recently discovered superconductor with the high Tc of 26 K"</span></div>
+    </div>
+    <p style="margin-top:14px; font-size:13.5px; color:var(--ink-faint);">这条数据是真实存在的，来自项目仓库的 <span class="mono">knowledge/edges.csv</span> 第一行。字库面板点开任意一条边，都应该长这样——不是占位假数据，是把这个文件真实读出来渲染。</p>
+
+    <h3>核心 vs 扩展——两种数据不能视觉混淆</h3>
+    <p>系统里有两批数据，可信度不一样，<strong>UI 上必须能一眼分清</strong>：</p>
+    <div class="kb-detail-card" style="padding: 16px 20px;">
+      <div class="field-row"><span class="field-name">核心数据</span><span class="field-value">每条边都有真实 DOI，人工核验过，91个点 / 79条边</span></div>
+      <div class="field-row"><span class="field-name">扩展数据</span><span class="field-value">来自公开知识图谱批量导入，没有逐条核验，46个点 / 210条边，仅用于辅助参考</span></div>
+    </div>
+    <p style="margin-top:14px; font-size:13.5px; color:var(--ink-faint);">V1 做法很简单：两种数据加一个小标签区分（比如上面示意图里的"核心/扩展"标签），不用做复杂的可视化，能让人一眼看出"这条数据能不能直接信"就够了。</p>
+  </section>
+
+  <section id="contract">
+    <div class="section-head">
+      <span class="section-num mono">04</span>
+      <h2>接口契约 —— 四个端口</h2>
+    </div>
+    <p>后端按这四个文件跟前端对接，字段名和层级现在已经定了，谭直接按这个格式读文件渲染，不需要理解后端具体怎么算出来的。</p>
+
+    <h3>1 · 记忆 —— 字库数据从哪读</h3>
+    <div class="code-block mono"><span class="c">// knowledge/edges.csv 每行一条边</span>
+{
+  <span class="s">"材料A"</span>: <span class="s">"LaFeAsO"</span>,
+  <span class="s">"材料B"</span>: <span class="s">"LaFeAsO1-xFx"</span>,
+  <span class="s">"关系类型"</span>: <span class="s">"R4"</span>,
+  <span class="s">"文献DOI"</span>: <span class="s">"10.1103/PhysRevB.78.020512"</span>,
+  <span class="s">"年份"</span>: <span class="s">2008</span>,
+  <span class="s">"证据强度"</span>: <span class="s">"direct"</span>,
+  <span class="s">"证据说明"</span>: <span class="s">"..."</span>
+}</div>
+    <div class="code-caption">对应上面第03节展示的那条边。扩展数据在 <span class="mono">knowledge/edges_matkg.csv</span>，字段名不同，前端按同一个视觉规则打标签即可，不用理解字段差异的原因。</div>
+
+    <h3>2 · 技能 —— 概览数字从哪读</h3>
+    <div class="code-block mono"><span class="c">// outputs/pipeline_report.json</span>
+{
+  <span class="s">"L2_structure"</span>: {
+    <span class="s">"core_materials_count"</span>: <span class="s">91</span>,
+    <span class="s">"core_edges_count"</span>: <span class="s">79</span>,
+    <span class="s">"extended_nodes_count"</span>: <span class="s">46</span>,
+    <span class="s">"extended_edges_count"</span>: <span class="s">210</span>
+  },
+  <span class="s">"L4_application"</span>: {
+    <span class="s">"candidates_generated"</span>: <span class="s">6</span>
+  }
+}</div>
+    <div class="code-caption">字库面板右侧那几个统计数字（示意图里的91/46/79/210/6），直接读这个文件的对应字段，不用自己算。</div>
+
+    <h3>3 · 灵魂 —— 身份定义</h3>
+    <p style="font-size:13.5px;">静态文件，定义这个 Agent 是谁、语气风格、边界。V1 阶段前端不需要解析内容，只要有这个文件存在、能被工作流读取即可，具体内容后续再补。</p>
+
+    <h3>4 · 工作流 —— 对话怎么触发后端</h3>
+    <p style="font-size:13.5px;">V1 阶段对话区可以先做成界面样式（输入框+气泡），不用真的接通后端执行——等后端这边把执行逻辑理清楚了再对接，这次先把壳做扎实。</p>
+  </section>
+
+  <section>
+    <h3 style="margin-top:0;">验收标准</h3>
+    <ul class="checklist">
+      <li><span class="box"></span>三栏布局能在本地打开，导航栏三个按钮能切换（不要求功能，要求能点、有视觉反馈）</li>
+      <li><span class="box"></span>字库面板读取 <span class="mono">edges.csv</span> 真实数据，展示出至少几条真实边（不是硬编码假数据）</li>
+      <li><span class="box"></span>核心数据和扩展数据视觉上能区分（一个小标签即可，不需要复杂设计）</li>
+      <li><span class="box"></span>点开任意一条边，能看到第03节展示的那七个字段</li>
+      <li><span class="box"></span>整体安装包/运行方式简单，能打开就算过关，不追求长期无 bug</li>
+    </ul>
+  </section>
+
+  <div class="legend">
+    <span class="swatch"><span class="dot core"></span>核心数据（DOI可溯源）</span>
+    <span class="swatch"><span class="dot weak"></span>扩展数据（辅助参考）</span>
+  </div>
+
+</div>
+</body>
+</html>
