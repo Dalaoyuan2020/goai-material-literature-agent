@@ -39,6 +39,12 @@
 
 核心集与扩展集的读取必须由参数显式区分：`build_graph(include_extended=True)` 可构建核心+扩展向量空间；L3/L4 的证据来源必须显式使用 `load_core_edges()`。不得仅因 MatKG 的 `Count` 较高就把聚合共现当作可溯源的因果/变换证据。
 
+## 搜索与可视化
+
+- `python src/search.py` 在 122/1111/11/MgB2 四个家族运行贝叶斯优化风格的搜索控制器。当前热启动、判断和采样是**启发式近似，非真实 LLM 调用**；代理信号直接复用 `rules.cosine` 的核心边变换平行性，结果写入 `outputs/search_runs/`。
+- `E:\Anaconda3\python.exe src/visualize.py` 从 `outputs/pipeline_report.json` 和 `outputs/search_runs/` 生成流程、分布与方法图。可视化是仓库中唯一允许使用第三方库的部分，依赖 `matplotlib` 与 `numpy`；计算主管线和搜索层仍使用 Python 标准库。
+- 全项目统一视觉语义：核心 DOI 证据使用深色/实线，MatKG 聚合弱证据使用浅色/虚线或阴影；候选假设使用橙色虚线并明确标注“未验证”。
+
 **关系类型体系（R1-R9）**：
 - R1 阳离子位掺杂 R2 Fe位取代掺杂 R3 阴离子位等电子取代 R4 氧位F掺杂
 - R5 稀土位替换 R6 界面/衬底增强 R7 压力诱导超导 R8 Tc记录超越 R9 同结构家族(无方向)
