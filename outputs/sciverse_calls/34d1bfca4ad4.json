@@ -1,0 +1,198 @@
+{
+  "timestamp": "2026-08-11 11:44:22",
+  "request": {
+    "query": "FeSe tellurium doping superconductor",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2024.0,
+        "abstract": "Recently, we have grown low-tellurium-doped FeSe single crystals successfully by the chemical vapor transport method. Our previous inelastic neutron scattering measurements have revealed strong spin fluctuations at the stripe and Néel wave vectors in FeSe, both of which are strongly coupled with nematicity. The nematic transition temperature in FeSe decreases with increasing tellurium concentration, and a nematic critical point is further proposed by transport measurements. Tc exhibits a highly unusual non-monotonic behaviour, reaching a local minimum of about 6 K at the critical tellurium concentration ~ 0.3. To understand these exotic phenomena, studying Fe(Te,Se) from FeSe side, i.e., with low tellurium dopant level is important. In this experiment, we propose to map out the spin fluctuation spectrum and its interplay with nematicity and superconductivity in FeTe0.3Se0.7. MSLICE will be used to analyse the data. The success of the proposed experiment, combined with the previous results, will lead to a comprehensive understanding of the magnetic ground state and its relationship with nematicity and superconductivity in Fe(Te, Se) system and offer important indications on the roles of the stripe and the Néel spin fluctuations in iron chalcogenides.",
+        "title": "High energy spin fluctuations in low-tellurium-doped FeSe single crystals",
+        "doi": "10.5286/isis.e.rb2310169",
+        "relevance_score": 48.51752,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Science and Technology Facilities Council"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2024.0,
+        "abstract": "Recently, we have grown low-tellurium-doped FeSe single crystals successfully by the chemical vapor transport method. Our previous inelastic neutron scattering measurements have revealed strong spin fluctuations at the stripe and Néel wave vectors in FeSe, both of which are strongly coupled with nematicity. The nematic transition temperature in FeSe decreases with increasing tellurium concentration, and a nematic critical point is further proposed by transport measurements. Tc exhibits a highly unusual non-monotonic behaviour, reaching a local minimum of about 6 K at the critical tellurium concentration ~ 0.3. To understand these exotic phenomena, studying Fe(Te,Se) from FeSe side, i.e., with low tellurium dopant level is important. In this experiment, we propose to map out the spin fluctuation spectrum and its interplay with nematicity and superconductivity in FeTe0.3Se0.7. MSLICE will be used to analyse the data. The success of the proposed experiment, combined with the previous results, will lead to a comprehensive understanding of the magnetic ground state and its relationship with nematicity and superconductivity in Fe(Te, Se) system and offer important indications on the roles of the stripe and the Néel spin fluctuations in iron chalcogenides.",
+        "title": "High energy spin fluctuations in low-tellurium-doped FeSe single crystals",
+        "doi": "10.5286/isis.e.rb2310169-1",
+        "relevance_score": 47.74946,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Science and Technology Facilities Council"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2013.0,
+        "abstract": "We have synthesized a Ba-doped FeSe superconductor using liquid ammonia, and investigated in detail the structure and composition of the Ba-FeSe phase. In the superconducting phase, both the Tc and the shielding fraction are almost unchanged even if the nominal composition of Ba is varied in the region from 0.3 to 0.7. The optimized Tc is 38.8 K. We have determined the structure of the superconducting phase with X-ray powder diffraction (using synchrotron radiation) and here describe the co-intercalation of Ba and NH3 molecules between the FeSe layers.",
+        "title": "Co-intercalation of Ammonia molecules between FeSe layers in Ba-doped FeSe superconductor",
+        "doi": "10.48550/arxiv.1306.0979",
+        "relevance_score": 46.200405,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)",
+        "doc_id": "9418a4b486575ee74d44bac9df7e30c03bb1426262bb24e5c063da810080e055"
+      },
+      {
+        "citation_count": 5.0,
+        "publication_published_year": 2012.0,
+        "abstract": "It is reported the influence of the interstitial atoms doping on the FeSe superconductor. Polycrystalline samples with FeSeFx and FeSeBx nominal compositions were prepared by solid state reaction. An enhancement of the superconducting transition temperature was observed in the temperature dependence of the electrical resistivity curve to the FeSeF0.015 sample. R(T) data display superconducting behavior close to 12 K. The Tc increased with F doping by up to 50%. In contrast, boron doping no change the superconducting properties of the FeSe compound. As the FeSeFx and FeSeBx system the fluoride doping introduce a negative chemical pressure in the FeSe superconductor. This fact suggests that fluoride doping have changed the electronic properties of the FeSe phase.",
+        "title": "Influence of the Fluoride Atoms Doping on the FeSe Superconductor",
+        "doi": "10.4236/msa.2012.39090",
+        "relevance_score": 45.789024,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Materials Sciences and Applications"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2026.0,
+        "abstract": "Superconducting domes are conspicuous features of the phase diagrams of most unconventional and high-temperature superconductors. The superconducting transition temperature ($T_{c}$) of FeSe can be dramatically enhanced with electron doping, but unlike all other high-temperature and unconventional superconductors, its full phase diagram and superconducting dome have yet to be fully explored. Here, we employ a combination of molecular beam epitaxy synthesis, alkali surface doping, in-vacuum electrical transport, and angle-resolved photoemission spectroscopy to investigate the entire superconducting dome of electron-doped FeSe, achieving a fully metallic state where superconductivity is suppressed in the heavily overdoped regime. We discover a robust scaling between $T_{c}$ and the residual resistivity ($\\rho_{0}$) which holds across the entire superconducting dome, suggesting that the evolution of $T_{c}$ is heavily influenced by the evolution of the elastic scattering rate in the high-$T_{c}$ electron-doped phase. This in turn suggests that the superconducting dome in electron-doped FeSe appears to be fundamentally different than that of other unconventional superconductors where doping plays the primary role, and may be driven primarily by the sensitivity of the superconductivity to disorder.",
+        "title": "What controls the superconducting dome of electron-doped FeSe?",
+        "doi": "10.48550/arxiv.2605.31459",
+        "relevance_score": 45.732944,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 54.0,
+        "publication_published_year": 2008.0,
+        "abstract": "Here we present a systematic study of correlation between superconductivity with Se-content and Te-doping to the -FeSe system. Detailed structural and specific heat measurements at low temperature suggest that the occurrence of superconductivity is closely related to the presence of P-1 (triclinic) symmetry at low temperature. Magnetic field dependence of the resistive transition in polycrystalline -FeSe 1-x and FeSe 1-x Te x suggest that Te-doping tends to induce the system to become more 2D-like and enhances substantially the upper critical field value, whereas the FeSe system behaves more like 3D superconductor.",
+        "title": "Se and Te Doping Study of the FeSe Superconductors",
+        "doi": "10.1143/jpsjs.77sc.19",
+        "relevance_score": 45.625187,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of the Physical Society of Japan",
+        "doc_id": "1bd4136e698c3f879efa3164ce73fe61a40383a81093302a13c3d8ca3dfb9a99"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2013.0,
+        "abstract": "In the present work, we have studied the effect of doping Te at the Se-site on the superconducting properties, such as transition temperature (Tc), upper critical field (Hc2) and irreversibility field (Hirr) of FeSe. The polycrystalline samples have been prepared via solid state reaction route with nominal compositions FeSe1−xTex (x = 0.0, 0.25, 0.50 and 0.75). The X-ray diffraction results show the tetragonal α-FeSe phase with the p4/nmm space group symmetry in all the samples. The values of Hc2(0) estimated from Werthamer-Helfand-Hohenberg (WHH) and Ginzburg-Landau (GL) theories are found to follow the same trends and maximum Hc2(0) is found for the composition x = 0.50. The irreversibility field, Hirr and activation energy, U0 were also calculated to see the vortex motion behavior in the samples.",
+        "title": "Effect of Te doping on structural and superconducting properties of FeSe superconductor",
+        "doi": "10.1063/1.4810247",
+        "relevance_score": 44.806065,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "AIP conference proceedings",
+        "doc_id": "4e32dfe99a6b62a04f809c0fbbb556910fbae0cc92002963e7a86134a7b03b58"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "abstract": "Recently, we have grown low-tellurium-doped FeSe single crystals with concentration of Tellurium x ~ 0.15 and 0.33 successfully by the chemical vapor transport method. Our previous inelastic neutron scattering measurements have revealed strong spin fluctuations at the stripe and Néel wave vectors in FeSe, both of which are strongly coupled with nematicity. The nematic transition temperature in FeSe decreases with increasing tellurium concentration, and a nematic critical point is further proposed by transport measurements. Tc exhibits a highly unusual non-monotonic behaviour, reaching a local minimum of about 6 K at the critical tellurium concentration ~ 0.3 and displays two domes riding on the minum at x ~ 0.3. To understand these exotic phenomena, studying Fe(Te,Se) from FeSe side, i.e., with low tellurium dopant level is important. In this experiment, we propose to map out the spin fluctuation spectrum and its interplay with nematicity and superconductivity in FeSe0.67Te0.33 and FeSe0.85Te0.15. The success of the proposed experiment, combined with the previous results, will lead to a comprehensive understanding of the magnetic ground state and its relationship with nematicity and superconductivity in Fe(Te, Se) system and offer important indications on the roles of the stripe and the Néel spin fluctuations in iron chalcogenides.",
+        "title": "Investigation of spin fluctuations' evolution in newly available low-Tellurium-doped FeSe single crystals",
+        "doi": "10.5286/isis.e.rb2510478",
+        "relevance_score": 44.57571,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Science and Technology Facilities Council"
+      },
+      {
+        "citation_count": 19.0,
+        "publication_published_year": 2019.0,
+        "abstract": "We reported the enhanced superconducting performance of Nb doped FeSe prepared by solid-state sintering. With the increase of Nb doping, Nb incorporated FeSe lattice and substituted Fe sites. Thus the texture of tetragonal FeSe become more compact, the superconducting transition temperature is distinctly enhanced up to 13.6K in FeNb<sub>0.04</sub>Se, which is enhanced by 27% as compared with that of undoped FeSe, and the upper critical field is enhanced up to 28T. Moreover, Nb doping can significantly suppress the decay of critical current density with magnetic fields, and then improve the transport performance of FeSe at high magnetic fields.",
+        "title": "Effect of Nb doping on the microstructure and superconducting properties of FeSe",
+        "doi": "10.1016/j.scriptamat.2019.05.012",
+        "relevance_score": 44.283005,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Scripta Materialia",
+        "doc_id": "694b10c4ea4815df0bbde12544aad01716e3c1e0deb74d587d4ca1565a026ce2"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "abstract": "Recently, we have grown low-tellurium-doped FeSe single crystals with concentration of Tellurium x ~ 0.15 and 0.33 successfully by the chemical vapor transport method. Our previous inelastic neutron scattering measurements have revealed strong spin fluctuations at the stripe and Néel wave vectors in FeSe, both of which are strongly coupled with nematicity. The nematic transition temperature in FeSe decreases with increasing tellurium concentration, and a nematic critical point is further proposed by transport measurements. Tc exhibits a highly unusual non-monotonic behaviour, reaching a local minimum of about 6 K at the critical tellurium concentration ~ 0.3 and displays two domes riding on the minum at x ~ 0.3. To understand these exotic phenomena, studying Fe(Te,Se) from FeSe side, i.e., with low tellurium dopant level is important. In this experiment, we propose to map out the spin fluctuation spectrum and its interplay with nematicity and superconductivity in FeSe0.67Te0.33 and FeSe0.85Te0.15. The success of the proposed experiment, combined with the previous results, will lead to a comprehensive understanding of the magnetic ground state and its relationship with nematicity and superconductivity in Fe(Te, Se) system and offer important indications on the roles of the stripe and the Néel spin fluctuations in iron chalcogenides.",
+        "title": "Investigation of spin fluctuations' evolution in newly available low-Tellurium-doped FeSe single crystals",
+        "doi": "10.5286/isis.e.rb2510478-1",
+        "relevance_score": 44.015354,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Science and Technology Facilities Council"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2018.0,
+        "abstract": "Recent superconducting transition temperatures (Tc) over 100 K for monolayer FeSe on SrTiO3 have renewed interest in the bulk parent compound. In KCl:AlCl3 flux-transport-grown crystals of FeSe0.94Be0.06, FeSe0.97Be0.03 and, for comparison, FeSe, this work reports doping of FeSe using Be, among the smallest of possible dopants, corresponding to an effective chemical pressure. According to lattice parameter measurements, 6% Be doping shrank the tetragonal FeSe lattice equivalent to a physical pressure of 0.75 GPa. Using this flux-transport method of sample preparation, 6% of Be was the maximum amount of dopant achievable. At this maximal composition of FeSe0.94Be0.06, the lattice unit cell shrinks by 2.4%, Tc - measured in the bulk via specific heat - increases by almost 10%, the Tc vs pressure behavior shifts its peak Tconset downwards by ~1 GPa, the high temperature structural transition around TS = 89 K increases by 1.9 K (in contrast to other dopants in FeSe which uniformly depress TS), and the low temperature specific heat gamma increases by 10 % compared to pure FeSe. Also, upon doping by 6% Be the residual resistivity ratio, rho(300K)/rho(T-&gt;0), increases by almost a factor of four, while rho(300K)/rho(T=Tc+) increases by 50%.",
+        "title": "Unusual Effects of Be doping in the Iron Based Superconductor FeSe",
+        "doi": "10.48550/arxiv.1810.02480",
+        "relevance_score": 43.539837,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 33.0,
+        "publication_published_year": 2017.0,
+        "abstract": "The measurements of DC magnetization as a function of the temperature M(T), magnetic field M(H), and time M(t) have been performed in order to compare the superconducting and pinning properties of an undoped FeSe0.94 sample and a silver doped FeSe0.94 + 6 wt% Ag sample. The M(T) curves indicate an improvement of the superconducting critical temperature and a reduction of the non-superconducting phase Fe7Se8 due to the silver doping. This is confirmed by the field and temperature dependent critical current density Jc(H,T) extracted from the superconducting hysteresis loops at different temperatures within the Bean critical state model. Moreover, the combined analysis of the Jc(T) and of the pinning force Fp(H/Hirr) indicate that the pinning mechanisms in both samples can be described in the framework of the collective pinning theory. The U*(T, J) curves show a pinning crossover from an elastic creep regime of intermediate size flux bundles, for low temperatures, to a plastic creep regime at higher temperatures for both the samples. Finally, the vortex hopping attempt time has been evaluated for both samples and the results are comparable with the values reported in the literature for high Tc materials.",
+        "title": "Critical current and flux dynamics in Ag-doped FeSe superconductor",
+        "doi": "10.1088/1361-6668/30/2/025013",
+        "relevance_score": 43.532967,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Superconductor Science and Technology",
+        "doc_id": "ad6e0183e8505f45e6ec91417123be5e1b3ee86e446c8d8ec399ea8b9b586afb"
+      },
+      {
+        "citation_count": 4.0,
+        "publication_published_year": 2021.0,
+        "abstract": "Fluorine doping Fe1.2Se polycrystalline were prepared by solid-state sintering method. The influences of fluorine doping content and sintering temperatures on phase composition, lattice parameters, microstructure as well as superconducting properties were discussed in detail. It was found that fluorine doping could effectively reduce the content of non-superconducting hexagonal δ-FeSe phase. Besides, the content of hexagonal δ-FeSe phase and grain size of superconducting tetragonal β-FeSe phase were decreased with the sintering temperature increasing. Scanning electron microscopes (SEM) images indicated that the morphology of β-FeSe phase was a typical lamellar structure with the small particles of hexagonal δ-FeSe phase. Meanwhile, a higher critical temperature Tc of 8.3K and larger shield volume fraction were obtained with high sintering temperature of 950°C and proper F doping content.",
+        "title": "Influences of fluorine doping on the superconducting properties of β-FeSe",
+        "doi": "10.1007/s10854-021-05693-0",
+        "relevance_score": 43.107113,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Materials Science: Materials in Electronics",
+        "doc_id": "1e9c4f7b9120c789170934387523e84969673b82cc3be89e22feccaab5fcb3e5"
+      },
+      {
+        "citation_count": 5.0,
+        "publication_published_year": 2018.0,
+        "abstract": "Recent superconducting transition temperatures (Tc) over 100K for monolayer FeSe on SrTiO3 have renewed interest in the bulk parent compound. In KCl:AlCl3 flux-transport-grown crystals of FeSe0.94Be0.06, FeSe0.97Be0.03 and, for comparison, FeSe, this work reports doping of FeSe using Be—among the smallest of possible dopants, corresponding to an effective ‘chemical pressure’. According to lattice parameter measurements, 6% Be doping shrank the tetragonal FeSe lattice equivalent to a physical pressure of 0.75GPa. Using this flux-transport method of sample preparation, 6% of Be was the maximum amount of dopant achievable. At this maximal composition of FeSe0.94Be0.06, the lattice unit cell shrinks by 2.4%, Tc—measured in the bulk via specific heat—increases by almost 10%, the Tc versus pressure behavior shifts its peak downwards by ~1GPa, the high temperature structural transition around TS=89K increases by 1.9K (in contrast to other dopants in FeSe which uniformly depress TS), and the low temperature specific heat γ increases by 10% compared to pure FeSe. Also, upon doping by 6% Be the residual resistivity ratio, ρ(300K)/ρ(T→0), increases by almost a factor of four, while ρ(300K)/ρ() increases by 50%.",
+        "title": "Unusual effects of Be doping in the iron-based superconductor FeSe",
+        "doi": "10.1088/1361-648x/aae3cf",
+        "relevance_score": 43.0432,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Physics: Condensed Matter",
+        "doc_id": "8c821d51caa3e2389e6719a4bbb9bb1c9871af29e17855e84c2aad5d8a9b01c6"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2019.0,
+        "abstract": "Several unambiguous experimental observations clearly showed that the critical temperature of FeSe superconductor depends significantly on the microstructure. Experiments also showed that the critical temperature can be greatly enhanced by the application of external pressure. The present paper deals with the effect of pressure on charge transfer and self-doping properties of the superconducting compound FeSe, based on the investigation of the pressure dependence of the Fermi surface by means of first-principles methods. From the numerically evaluated electronic and crystalline properties, the pressure-induced modifications of the FeSe Fermi surface's topology are determined. The Luttinger theorem was also used to evaluate the carrier concentration on the Fe atomic sites from the evolution of the Fermi surface. We have found that the electronic density at the Fe sites increases with the increase in external pressure, following the distortion of Fermi surface. Our simulations reveal that the pressure-induced charge transfer from the Se atoms to the Fe atoms in the FeSe superconductor can be interpreted as a direct correlation between the electron carrier concentration and the applied pressure. The pressure dependence of superconducting properties of FeSe can be reasonably ascribed to a self-doping effect. The predictions about the electronic density on the Fe sites (reaching a value of 0.1, where the corresponding pressure is about 8.6 GPa) are in good agreement with experimental data available in the literature. The interpretation of the pressure-induced Tc enhancement in FeSe caused by the electron transfer and self-doping effect is carried out, which can be the correct approach to explain the Tc behavior under a wide type of mechanical loading.",
+        "title": "Self-Doping Effect in FeSe Superconductor by Pressure-Induced Charge Transfer",
+        "doi": "10.1007/s10948-019-05350-y",
+        "relevance_score": 42.835083,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Superconductivity and Novel Magnetism",
+        "doc_id": "15bbd44532da07f313682a9a4810a7c8651cdca05ba76971352a7238345aabb3"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 88.1092,
+    "next_cursor": "eyJzIjpbNDIuODM1MDgzLCJwYXBlcjoxMC4xMDA3L3MxMDk0OC0wMTktMDUzNTAteSJdfQ==",
+    "request_tokens": 4,
+    "response_tokens": 3521,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

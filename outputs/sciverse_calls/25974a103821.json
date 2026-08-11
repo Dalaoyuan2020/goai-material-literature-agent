@@ -1,0 +1,198 @@
+{
+  "timestamp": "2026-08-11 11:44:30",
+  "request": {
+    "query": "transition metal doping iron arsenide superconductor",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2012.0,
+        "abstract": "Iron arsenide superconductors based on the material LaFeAsO1-xFx are characterized by a two-dimensional Fermi surface (FS) consisting of hole and electron pockets yielding structural and antiferromagnetic transitions at x = 0. Electron doping by substituting O2- with F- suppresses these transitions and gives rise to superconductivity with a maximum Tc = 26 K at x = 0.1. However, the over-doped region cannot be accessed due to the poor solubility of F- above x = 0.2. Here we overcome this problem by doping LaFeAsO with hydrogen. We report the phase diagram of LaFeAsO1-xHx (x &lt; 0.53) and, in addition to the conventional superconducting dome seen in LaFeAsO1-xFx, we find a second dome in the range 0.21 &lt; x &lt; 0.53, with a maximum Tc of 36 K at x = 0.3. Density functional theory calculations reveal that the three Fe 3d bands (xy, yz, zx) become degenerate at x = 0.36, whereas the FS nesting is weakened monotonically with x. These results imply that the band degeneracy has an important role to induce high Tc.",
+        "title": "Two-dome structure in electron-doped iron arsenide superconductors",
+        "doi": "10.48550/arxiv.1207.0583",
+        "relevance_score": 56.72276,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 229.0,
+        "publication_published_year": 2012.0,
+        "abstract": "Iron arsenide superconductors based on the material LaFeAsO(1-x)F(x) are characterized by a two-dimensional Fermi surface (FS) consisting of hole and electron pockets yielding structural and antiferromagnetic transitions at x=0. Electron doping by substituting O(2-) with F(-) suppresses these transitions and gives rise to superconductivity with a maximum T(c) of 26 K at x=0.1. However, the over-doped region cannot be accessed due to the poor solubility of F(-) above x=0.2. Here we overcome this problem by doping LaFeAsO with hydrogen. We report the phase diagram of LaFeAsO(1-x)H(x) (x<0.53) and, in addition to the conventional superconducting dome seen in LaFeAsO(1-x)F(x), we find a second dome in the range 0.21<x<0.53, with a maximum T(c) of 36 K at x=0.3. Density functional theory calculations reveal that the three Fe 3d bands (xy, yz and zx) become degenerate at x=0.36, whereas the FS nesting is weakened monotonically with x. These results imply that the band degeneracy has an important role to induce high T(c).",
+        "title": "Two-dome structure in electron-doped iron arsenide superconductors",
+        "doi": "10.1038/ncomms1913",
+        "relevance_score": 56.389336,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Nature Communications",
+        "doc_id": "a73db06754b2e3436608ec706c8a418c9143e05fe65c89b132d7129e2a013fab"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2011.0,
+        "abstract": "We investigate the currently debated issue concerning whether transition metal substitutions dope carriers in iron based superconductors. From first-principles calculations of the configuration-averaged spectral function of BaFe$_2$As$_2$ with disordered Co/Zn substitutions of Fe, important doping effects are found beyond merely changing the carrier density. While the chemical potential shifts suggest doping of a large amount of carriers, a reduction of the coherent carrier density is found due to the loss of spectral weight. Therefore, none of the change in the Fermi surface, density of states, or charge distribution can be solely used for counting doped coherent carriers, let alone presenting the full effects of the disordered substitutions. Our study highlights the necessity of including disorder effects in the studies of doped materials in general.",
+        "title": "Do Transition Metal Substitutions Dope Carriers in Iron Based Superconductors?",
+        "doi": "10.48550/arxiv.1112.4858",
+        "relevance_score": 56.09774,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 119.0,
+        "publication_published_year": 2012.0,
+        "abstract": "We investigate the currently debated issue concerning whether transition-metal substitutions dope carriers in iron-based superconductors. From first-principles calculations of the configuration-averaged spectral function of BaFe2As2 with disordered Co or Zn substitutions of Fe, important doping effects are found beyond merely changing the carrier density. While the chemical potential shifts suggest doping of a large amount of carriers, a reduction of the coherent carrier density is found due to the loss of spectral weight. Therefore, none of the change in the Fermi surface, density of states, or charge distribution can be solely used for counting doped coherent carriers, let alone presenting the full effects of the disordered substitutions. Our study highlights the necessity of including disorder effects in the studies of doped materials in general.",
+        "title": "Do Transition-Metal Substitutions Dope Carriers in Iron-Based Superconductors?",
+        "doi": "10.1103/physrevlett.108.207003",
+        "relevance_score": 55.653793,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review Letters",
+        "doc_id": "19878dc90c451ba19913fcb5265208694c5ef76f4001f31e3daaf76d226731fc"
+      },
+      {
+        "citation_count": 21.0,
+        "publication_published_year": 2010.0,
+        "abstract": "The normal state of the iron chalcogenide superconductors shows a range of inexplicable features. Both bad metallic resistivity, characteristic pseudogap features and proximity to insulating states mark these systems as correlated non-Fermi liquid metals. Here, using the LDA+DMFT scheme with sizable multi-orbital correlations, we show how the incoherent non-Fermi liquid metallic state of tetragonal-FeSe superconductor is inherently unstable to the specific kind of insulator seen in experiments. We describe the metal-insulator transition in electron-doped FeSe microscopically, along with implications for the low-temperature specific heat and static spin susceptibility.",
+        "title": "Low-temperature metal-insulator transition in the electron-doped iron chalcogenide FeSe superconductor",
+        "doi": "10.1209/0295-5075/91/27001",
+        "relevance_score": 52.96767,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "EPL (Europhysics Letters)",
+        "doc_id": "07f080b3a2ae89e458e09e52befb2eed61190d592247407c61eb37e9afccc1d7"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2014.0,
+        "abstract": "Abstract The solid solutions (Ca 1– y RE y Fe 1– x Pd x As) 10 Pd z As 8 with RE = La, Ce, and Pr were synthesized by solid state methods and characterized by X‐ray powder diffraction with subsequent Rietveld refinements [(CaFeAs) 10 Pt 3 As 8 ‐type structure (“1038 type”), P $\\bar{1}$ , Z = 1]. Substitution levels (Ca/ RE , Fe/Pd, and Pd/□) obtained from Rietveld refinements coincide well with the nominal values according to EDS and the linear courses of the lattice parameters as expected from the ionic radii. The RE atoms favor the one out of five calcium sites, which is eightfold coordinated by arsenic. This leads to significant stabilization of the structure, and especially prevents palladium over‐doping in the iron‐arsenide layers as observed in the pristine compound (CaFe 1– x Pd x As) 10 Pd z As 8 . While the stabilization energy is estimated to about 40 kJ · mol –1 by electronic structure calculations, the reason for the diminished Fe/Pd substitution through RE doping is still not yet understood. We suggest that the electrons transferred from RE 3+ to the (Fe 1– x Pd x )As layer makes higher palladium concentrations unfavorable. Anyway the reduced palladium doping enables superconductivity with critical temperatures up to 20 K (onset) in the RE doped Pd1038 samples, which could not be obtained earlier due to palladium over‐doping in the active iron‐arsenide layers.",
+        "title": "Site Preference of Rare Earth Doping in Palladium‐Iron‐Arsenide Superconductors",
+        "doi": "10.1002/zaac.201400268",
+        "relevance_score": 52.21288,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Zeitschrift für anorganische und allgemeine Chemie",
+        "doc_id": "affebf54b25419087fd4cf32946a2180acffd58368fa2beca492cc2940999f03"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "abstract": "ABSTRACT Superconductivity and magnetism were previously thought as incompatible until the discovery of some rare earth ternary compounds that shows the coexistence of superconductivity and magnetism. In some of the recently discovery iron based layered superconductors, superconductivity and magnetism are coexisted. In current paper works with interplay between magnetism and superconductivity in hole doped barium iron arsenide superconductors. we use model Hamiltonian for the system and Green’s function formalism, we should obtain mathematical expression of superconducting transition temperature (Tc), superconducting order parameter ( ), magnetic transition temperature ( ), and magnetic order parameter ( .containing three different elements in the compound of iron arsenide BaFe2As2 becomes superconducting by hole doping which was achieved by partial substitution of the barium site with potassium. We also investigate the effect of antiferromagnetism and superconductivity are coexistence for (Ba1−xKxF e2As2). Using phase diagram and the effect of doping on the transition temperature. The phase diagram of superconducting transition temperature and magnetic transition temperature as a function of magnetic order parameter for Ba1-xKxFe2As2 show that the superconducting transition temperature decreases as the magnetic order parameter increases while the magnetic transition temperature increases with the increase of magnetic order parameter and finally emerged this two graph intersection region have been shown the possible coexistence of superconducting and magnetism in Ba1-xKxFe2As2superconductor where x is found 0",
+        "title": "INTERPLAY BETWEEN MAGNETISM AND SUPERCONDUCTIVITY IN HOLE DOPED IRON ARSENIDE (Ba1- xKxFe2As2) SUPERCONDUCTOR",
+        "doi": "10.20372/nadre:19824",
+        "relevance_score": 51.468327,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "National Academic Digital Repository of Ethiopia"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "abstract": "ABSTRACT Superconductivity and magnetism were previously thought as incompatible until the discovery of some rare earth ternary compounds that shows the coexistence of superconductivity and magnetism. In some of the recently discovery iron based layered superconductors, superconductivity and magnetism are coexisted. In current paper works with interplay between magnetism and superconductivity in hole doped barium iron arsenide superconductors. we use model Hamiltonian for the system and Green’s function formalism, we should obtain mathematical expression of superconducting transition temperature (Tc), superconducting order parameter ( ), magnetic transition temperature ( ), and magnetic order parameter ( .containing three different elements in the compound of iron arsenide BaFe2As2 becomes superconducting by hole doping which was achieved by partial substitution of the barium site with potassium. We also investigate the effect of antiferromagnetism and superconductivity are coexistence for (Ba1−xKxF e2As2). Using phase diagram and the effect of doping on the transition temperature. The phase diagram of superconducting transition temperature and magnetic transition temperature as a function of magnetic order parameter for Ba1-xKxFe2As2 show that the superconducting transition temperature decreases as the magnetic order parameter increases while the magnetic transition temperature increases with the increase of magnetic order parameter and finally emerged this two graph intersection region have been shown the possible coexistence of superconducting and magnetism in Ba1-xKxFe2As2superconductor where x is found 0",
+        "title": "INTERPLAY BETWEEN MAGNETISM AND SUPERCONDUCTIVITY IN HOLE DOPED IRON ARSENIDE (Ba1- xKxFe2As2) SUPERCONDUCTOR",
+        "doi": "10.20372/nadre:19823",
+        "relevance_score": 51.38754,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "National Academic Digital Repository of Ethiopia"
+      },
+      {
+        "citation_count": 12.0,
+        "publication_published_year": 2012.0,
+        "abstract": "We study theoretically the variation of the magnetic and the structural transition temperatures of the iron arsenide superconductors with external uniaxial stress. We show that the increase of the transition temperatures reported in recent experiments is compatible with a simple magneto-elastic model in which the physical origin of this variation is linked to the fact that antiferromagnetic bonds are longer than the ferromagnetic ones in the magnetic phase. We make predictions which can be verified in order to test the relevance of this model.",
+        "title": "Effect of uniaxial pressure on the magnetostructural transitions of iron arsenide superconductors",
+        "doi": "10.1103/physrevb.85.155133",
+        "relevance_score": 51.03731,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review B",
+        "doc_id": "5a6ec29fc1e012c9dfa840e1fb1102900874032c6634088ae2505fce816b2b7a"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "abstract": "Abstract Superconductivity and magnetism often thought to be incompatible each other. However, superconductivity often emerges in competition with magnetism in iron based superconductor. In the present work, the competition between superconductivity and magnetism have been examined in rhodium doped barium iron arsenide (Ba(Fe1-xRhx)2As2) superconductors based on two band model of Hamiltonian. Employing retarded double time temperature dependent green’s function with the model Hamiltonian, the expression for superconducting transition temperature (ܶ஼) and spin density wave transition temperature (ܶ௠) as a function of magnetic order parameter (M) have been found. The plotted graph of superconducting transition temperature (ܶ஼) as a function of magnetic order parameter reveals the superconducting transition temperature decreases as the magnetic order parameter increases. The graph of magnetic transition temperature as a function of magnetic order parameter show that SDW transition temperature increases with the increase of magnetic order parameter. The region under the intersection of the two merged graphs of ܶ஼ as a function of magnetic order parameter and ܶ௠ as a function of magnetic order parameter show that the possible coexistence of superconductivity and spin density wave in Ba(Fe1-xRhx)2As2 superconductors between the region 0.46≤ ܯ ≥ 0.59.",
+        "title": "SUPERCONDUCTIVITY AND MAGNETISM IN RHODIUM DOPED BARIUM IRON ARSENIDE Ba(Fe1-xRhx)2As2 SUPERCONDUCTOR",
+        "doi": "10.20372/nadre:19855",
+        "relevance_score": 49.225613,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "National Academic Digital Repository of Ethiopia"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "abstract": "Abstract Superconductivity and magnetism often thought to be incompatible each other. However, superconductivity often emerges in competition with magnetism in iron based superconductor. In the present work, the competition between superconductivity and magnetism have been examined in rhodium doped barium iron arsenide (Ba(Fe1-xRhx)2As2) superconductors based on two band model of Hamiltonian. Employing retarded double time temperature dependent green’s function with the model Hamiltonian, the expression for superconducting transition temperature (ܶ஼) and spin density wave transition temperature (ܶ௠) as a function of magnetic order parameter (M) have been found. The plotted graph of superconducting transition temperature (ܶ஼) as a function of magnetic order parameter reveals the superconducting transition temperature decreases as the magnetic order parameter increases. The graph of magnetic transition temperature as a function of magnetic order parameter show that SDW transition temperature increases with the increase of magnetic order parameter. The region under the intersection of the two merged graphs of ܶ஼ as a function of magnetic order parameter and ܶ௠ as a function of magnetic order parameter show that the possible coexistence of superconductivity and spin density wave in Ba(Fe1-xRhx)2As2 superconductors between the region 0.46≤ ܯ ≥ 0.59.",
+        "title": "SUPERCONDUCTIVITY AND MAGNETISM IN RHODIUM DOPED BARIUM IRON ARSENIDE Ba(Fe1-xRhx)2As2 SUPERCONDUCTOR",
+        "doi": "10.20372/nadre:19856",
+        "relevance_score": 49.098866,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "National Academic Digital Repository of Ethiopia"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2013.0,
+        "abstract": "",
+        "title": "Correction: Corrigendum: Two-dome structure in electron-doped iron arsenide superconductors",
+        "doi": "10.1038/ncomms4058",
+        "relevance_score": 48.754486,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Nature Communications",
+        "doc_id": "cc3985c2eb501431720b6e9d37c127c6cc2b30a20f00549e8cb8b1d454b1ca21"
+      },
+      {
+        "citation_count": 84.0,
+        "publication_published_year": 2011.0,
+        "abstract": "Iron based superconductors sent material scientists into a renewed excitement reminiscent of the time when the first high-Tc superconductors were discovered 25 years ago. This feature article reviews relationships between structural chemistry and magnetic as well as superconducting properties of iron arsenide compounds, which are outstandingly rich and uniquely coupled. Particular attention is paid to the nature of the structural phase transitions of the parent compounds and their possible origins, on effects of doping on the crystal structures and on the coexistence of magnetic ordering and superconductivity. In spite of the many fascinating insights that have already enriched the research on superconductivity, many questions are still open and prove iron based superconductors to be a good recipe for future discoveries in this lively field.",
+        "title": "Structure–property relationships of iron arsenide superconductors",
+        "doi": "10.1039/c1jm12318a",
+        "relevance_score": 48.730186,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Materials Chemistry",
+        "doc_id": "7c6aebf0de49e59b8e6159029c6e96bc6892a2c788d21c7e436256d3d00a9bb5"
+      },
+      {
+        "citation_count": 5.0,
+        "publication_published_year": 2020.0,
+        "abstract": "In the iron-pnictide material CeFeAsO not only the Fe moments, but also the local 4f moments of the Ce order antiferromagnetically at low temperatures. We elucidate on the peculiar role of the Ce on the emergence of superconductivity. While application of pressure suppresses the iron SDW ordering temperature monotonously up to 4 GPa, the Ce-4f magnetism is stabilized until both types of magnetic orders disappear abruptly and a narrow SC dome develops. With further increasing pressure characteristics of a Kondo-lattice system become more and more apparent in the electrical resistivity. This suggests a connection of the emergence of superconductivity with the extinction of the magnetic order and the onset of Kondo screening of the Ce-4f moments.",
+        "title": "Electron Doping of the Iron-Arsenide Superconductor CeFeAsO Controlled by Hydrostatic Pressure",
+        "doi": "10.1103/physrevlett.125.207001",
+        "relevance_score": 48.551186,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review Letters",
+        "doc_id": "428c9258676a787bb0d1870526f540d55dfd546fdcf1bb6ce01a119bf118e76d"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2012.0,
+        "abstract": "We study theoretically the variation of the magnetic and the structural transition temperatures of the iron arsenide superconductors with external uniaxial stress. We show that the increase of the transition temperatures reported in recent experiments is compatible with a simple magneto-elastic model in which the physical origin of this variation is linked to the fact that antiferromagnetic bonds are longer than the ferromagnetic ones in the magnetic phase. We make predictions which can be verified in order to test the relevance of this model.",
+        "title": "Effect of uniaxial pressure on the magneto-structural transitions of iron arsenide superconductors",
+        "doi": "10.48550/arxiv.1201.5594",
+        "relevance_score": 48.348587,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 164.48112,
+    "next_cursor": "eyJzIjpbNDguMzQ4NTg3LCJwYXBlcjoxMC40ODU1MC9hcnhpdi4xMjAxLjU1OTQiXX0=",
+    "request_tokens": 6,
+    "response_tokens": 2978,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

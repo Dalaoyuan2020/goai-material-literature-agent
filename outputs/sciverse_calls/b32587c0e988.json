@@ -1,0 +1,199 @@
+{
+  "timestamp": "2026-08-11 11:44:24",
+  "request": {
+    "query": "nickel oxide superconductor pressure",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2020.0,
+        "abstract": "",
+        "title": "Nickel oxide superconductor has cuprate-like electronic properties",
+        "doi": "10.1063/pt.6.1.20200214a",
+        "relevance_score": 37.529526,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physics Today"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2023.0,
+        "abstract": "<p indent=\"0mm\">According to the band theory of solid-state physics, the electrical conductivity of solids is determined by their band structure. For insulators or semiconductors with an energy gap, the pressure-induced broadening of the bands can close the energy gap and lead the system to transfer into a normal metallic or superconducting ground state. This type of insulator-metal phase transition is known as the Wilson phase transition. However, a pressure-induced transition from the metallic or superconducting phase to the insulating phase is beyond the predictability of the classic theory. In this study, we primarily introduced the recent discovery of the pressure-induced, superconducting-insulating quantum phase transition (QPT) in hole-doped bismuth-based copper oxide high-temperature superconductors (HTSCs), and discussed and analyzed the universality of the QPT. This finding offers a new paradigm for generating exotic quantum states under pressure in strongly correlated electron systems, demonstrating the intrinsic connections between superconductivity and adjacent quantum states. Moreover, it provides new experimental evidence for a deeper understanding of the relationship between the superconducting state and other quantum states in strongly correlated electron systems. Furthermore, we analyzed the universality of this superconducting-insulating QPT and proposed some important issues for future research, aiming to provide useful information for further elucidating the underlying mechanism of HTSC.",
+        "title": "Pressure-induced superconducting-insulating phase transition in copper oxide superconductors",
+        "doi": "10.1360/sspma-2023-0260",
+        "relevance_score": 36.76671,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Zhongguo kexue. Wulixue Lixue Tianwenxue"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "abstract": "",
+        "title": "Meissner Diamagnetism Measurement of Nickel Oxide High-Temperature Superconductors",
+        "doi": "10.4131/jshpreview.35.188",
+        "relevance_score": 36.41242,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "The Review of High Pressure Science and Technology"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "abstract": "Superconductivity was first discovered in metallic systems and has evolved into copper oxides, iron systems, hydrides, and nickel oxides. The metallic, copper oxide, and iron-based systems were discovered first through experiments, while hydride and nickel oxide were discovered first through theory. This is a kind of game change in research. The discovery of superconductivity in hydrides and nickel oxides required high pressure. In other words, theoretical prediction is essential for a labor-intensive experiment such as high pressure. In this article, we will discuss the “electrode fabricated diamond anvil,” an item in the search for superconductivity under high pressure and briefly introduce the recently discovered nickel oxide superconductors.",
+        "title": "Development of Electrode Fabricated DAC and Physical Properties of Layered Nickel Oxide Superconductors",
+        "doi": "10.4131/jshpreview.35.180",
+        "relevance_score": 36.24507,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "The Review of High Pressure Science and Technology"
+      },
+      {
+        "citation_count": 173.0,
+        "publication_published_year": 2009.0,
+        "abstract": "The chemical potential of oxygen in natural and experimental samples is commonly reported relative to a specific oxygen fugacity (fO2) buffer. These buffers are precisely known at 1 bar, but under high pressures the diffusion coefficient can be very small. The diffusion coefficients of these buffers are 0.2 - 0.5 mM (1 bar) J2O2 buffers can be integrated to high pressure conditions by integrating the difference in volume between the solid phases, provided that their equations of state are known. In this work, the equations of state and volume difference between the metal-oxide pairs Fe-FeO and Ni-NiO were measured using the same method as for the pure phase. The diffusion coefficients of these two phases can be used to construct high pressure J2O2 buffer curves for these systems. The difference between the Fe-FeO and Ni-NiO buffers is observed to decrease significantly, by several log units, over 80 GPa. The results can be used to understand the interpretation of high pressure experiments, specifically Fe-Ni exchange between metallic and organic phases.",
+        "title": "High pressure effects on the iron–iron oxide and nickel–nickel oxide oxygen fugacity buffers",
+        "doi": "10.1016/j.epsl.2009.07.022",
+        "relevance_score": 35.702396,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Earth and Planetary Science Letters",
+        "doc_id": "834723cd4aad92e2b5c9741224694c293efd2aa010a3ac8f39c1036c8a151127"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2026.0,
+        "abstract": "In 2023, superconductivity in La$_3$Ni$_2$O$_7$ was discovered under high pressures above approximately 14 GPa. In addition to its high transition temperature ($T_{\\mathrm{c}} \\simeq 80$ K), the structural resemblance to high-$T_{\\mathrm{c}}$ cuprates has strongly stimulated research, soon followed by the discovery of superconductivity in La$_4$Ni$_3$O$_{10}$. These compounds belong to the Ruddlesden--Popper phases, comprising double- and triple-layered NiO$_2$ square lattices separated by LaO rock-salt slabs.\n  Research on these systems has rapidly developed along three major directions, as in other prominent families of superconductors such as the cuprates and iron arsenides: expanding the chemical variety of compounds, enhancing $T_{\\mathrm{c}}$ through elemental substitution, and elucidating the superconducting mechanism. These challenges, being closely interconnected, continue to drive the field. The clarification of the pairing mechanism encounters a particular difficulty, since the key experiments must be performed under high pressures. This situation highlights the significance of developing nickel oxides that exhibit superconductivity at much lower pressures, ideally at ambient pressure, which would in turn broaden the scope of chemical tuning and detailed physical characterization.\n  In this context, it is timely and meaningful to summarize the present state of knowledge. Here, we emphasize sample synthesis and characterization, which are already well established and often decisive for progress in unconventional superconductors, while providing a brief overview of the currently available electronic properties.",
+        "title": "Superconducting Lanthanum Nickel Oxides with Bilayered and Trilayered Crystal Structures",
+        "doi": "10.48550/arxiv.2603.17657",
+        "relevance_score": 35.548454,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)",
+        "doc_id": "ecd0f82b19128ac18ad6adca0adb876ea0178fa930123d6319cd0ec92f4cd4f2"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2024.0,
+        "abstract": "The discovery of superconductivity in the Ba-La-Cu-O system (the cuprate) at the 30 K range in 1986 marked a significant breakthrough, as it far exceeded the highest known critical temperature ($T_c$) at the time and surpassed the predicted 30 K limit, which was thought to be the maximum before phonon-mediated electron pairing would break down due to thermal excitation. Despite recent successful observations of superconductivity in nickel-oxide-based compounds (the nickelate), superconductivity above 30 K at ambient pressure in a system that is isostructural and isoelectronic to the cuprate but without copper has remained elusive. Here, we report a superconducting $T_c$ above 35 K under ambient pressure in hole-doped, late rare-earth infinite-layer nickel oxide (Sm-Eu-Ca-Sr)NiO$_2$ thin films. Electron microscopy reveals a small thickness of ~2 nm of infinite-layer phase stabilised at present, which indicates a higher temperature superconductivity should be observable in clean bulk crystals.",
+        "title": "High-temperature Superconducting Oxide without Copper at Ambient Pressure",
+        "doi": "10.48550/arxiv.2410.00144",
+        "relevance_score": 35.53164,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)",
+        "doc_id": "d11d79a2007b5fd356a30383ef4d06be6852875e7f15eb7b6579f6d11d6b7b75"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2023.0,
+        "abstract": "Ρhysique des nickelates supracοnductrices a partir de calculs de premiers principes La compréhension de l’origine de la supraconductivité haute température est entravée parl’absence de matériaux analogues aux cuprates. Bien que proposée depuis longtemps dans lesoxydes de nickel de formule générale Rn+1NinO2n+2, matériaux isoélectronique aux cuprates, lasupraconductivité n’a été observée qu’en 2019 mais les mécanismes mis en jeu reste à déterminer.Dans cette thèse, nous présentons une étude des oxydes de nickel supraconducteurs à partirde simulations de premiers principes basées sur la théorie fonctionnelle de la densité. Nousrévélons que les composés RNiO2 à couche infinie non dopés présentent une phase métalliqueantiferromagnétique à basse température. Un fort couplage de Hund qui domine le champcristallin explique la coexistence entre l’antiferromagnétisme et le comportement métallique. En étudiant le diagramme de phase en fonction de n, nous identifions un ordre de charge entredes Ni1+ et Ni2+ pour n = 2. Il est la conséquence d’une instabilité électronique du degréd’oxydation 1.5+ des Ni qui préfère dismuter vers les degrés 1+ et 2+ qui sont plus stables,produisant une distorsion Boc des complexes NiO4 pour accomoder les différents charges. Àpartir de ce point, le dopage en électron supprime progressivement l’ordre de charge et il disparaità proximité de la région supraconductrice observée expérimentalent. Nous construisons alorsun modèle supraconducteur basé sur les modes de phonons Boc reproduisant quantitativementle dôme de température critique supraconductrice en fonction du dopage. Nous discutons enoutre de l’importance de la structure cristalline lors de la conception de nouveaux composéssupraconducteurs et de la relation entre ces supraconducteurs à base de nickel et d’autrescomposés supraconducteurs. Enfin, nous étendons le modèle à d’autres composés tels que lesruthénates, expliquant leurs propriétés supraconductrices en tant que matériaux massifs etnanofilms.",
+        "title": "Physics of superconducting nickel oxides from first principles calculations",
+        "doi": "10.70675/656e16f0zac22z4056zbdedz85f854400a8f",
+        "relevance_score": 35.400883,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": ""
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2026.0,
+        "abstract": "Abstract La 3 Ni 2 O 7 exhibits superconductivity below <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\"> <mml:mrow> <mml:msub> <mml:mi>T</mml:mi> <mml:mrow> <mml:mrow> <mml:mi mathvariant=\"normal\">c</mml:mi> </mml:mrow> </mml:mrow> </mml:msub> <mml:mo>≃</mml:mo> <mml:mn>80</mml:mn> </mml:mrow> </mml:math> K under high pressures exceeding approximately 14 GPa. The discovery of this superconductivity immediately attracted considerable attention because of its high transition temperature and its structural resemblance to high- <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\"> <mml:mrow> <mml:msub> <mml:mi>T</mml:mi> <mml:mrow> <mml:mrow> <mml:mi mathvariant=\"normal\">c</mml:mi> </mml:mrow> </mml:mrow> </mml:msub> </mml:mrow> </mml:math> cuprates, which subsequently led to the discovery of superconductivity in La 4 Ni 3 O 10 . These compounds belong to the Ruddlesden–Popper phases, consisting of double- and triple-layered NiO 2 square lattices separated by LaO rock-salt slabs. Research on these systems has rapidly advanced along three major directions, as observed in other prominent families of superconductors such as the cuprates and iron arsenides: expansion of the chemical variety of compounds, enhancement of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\"> <mml:mrow> <mml:msub> <mml:mi>T</mml:mi> <mml:mrow> <mml:mrow> <mml:mi mathvariant=\"normal\">c</mml:mi> </mml:mrow> </mml:mrow> </mml:msub> </mml:mrow> </mml:math> through elemental substitution, and elucidation of the superconducting mechanism. These closely interconnected challenges continue to drive progress in the field. Clarifying the pairing mechanism poses a particular difficulty, as key experiments must be conducted under high pressures. This situation underscores the importance of developing nickel oxides that exhibit superconductivity at much lower pressures, ideally at ambient pressure, which would substantially broaden the scope for chemical tuning and detailed physical characterization. In this context, it is timely and meaningful to summarize the current state of knowledge. Here, we focus on sample synthesis and characterization, which are already well established and often decisive for progress in unconventional superconductors, while also providing a brief overview of the electronic properties reported to date.",
+        "title": "Superconducting lanthanum nickel oxides with bilayered and trilayered crystal structures",
+        "doi": "10.1088/1361-648x/ae4155",
+        "relevance_score": 35.38736,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of physics. Condensed matter : an Institute of Physics journal"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2003.0,
+        "abstract": "We have investigated the pressure dependence of superconducting transition temperature \\\\((T_{\\\\mathrm{c}})\\\\) in FeSrZr:YCuO\\\\(_3\\\\) oxide superconductor (Fe1212). The superconducting Fe1212 samples were synthesized by solid-state reaction with multiple annealing process. The \\\\(T_{\\\\mathrm{c}}\\\\) -onset of this sample was about \\\\(60~\\\\mathrm{K}\\\\) at ambient pressure. The pressure dependence of \\\\(T_{\\\\mathrm{c}}\\\\) was obtained to be about 2.1 K/GPa up to 2 GPa.",
+        "title": "Pressure effects on the superconductivity in FeSr2YCu2O7+δ oxide superconductor",
+        "doi": "10.1016/s0921-4534(02)02510-8",
+        "relevance_score": 34.75903,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physica C: Superconductivity",
+        "doc_id": "98d6c18d49f7d5b0ee65656d97450509f4eb575e3a81152b5a846108fea06167"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2013.0,
+        "abstract": "Nickel oxide thin films have been successfully deposited by dc reactive magnetron sputtering technique on glass substrates at different oxygen partial pressures. X-ray diffraction analysis revealed that the preferred orientation changed from (200) to (220) with increasing oxygen partial pressure. Fine grains with RMS roughness of 9.4nm were observed at an oxygen partial pressure of 6×10−4 mbar.",
+        "title": "Oxygen Partial Pressure Dependent Properties of Nanocrystalline Nickel Oxide Films",
+        "doi": "10.1007/978-3-642-34216-5_17",
+        "relevance_score": 34.606358,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Springer Proceedings in Physics",
+        "doc_id": "c5820e7ecadc9d7322cdd10d0280f3a80cda3a756d5714a66f4e2e934eb6d7ad"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2006.0,
+        "abstract": "We have investigated the pressure dependence of superconducting transition temperature Tc in MoSr2YCu2O8−δ oxide superconductor (Mo1212). The superconducting Mo1212 samples were synthesized by solid‐state reaction with multiple annealing process. The Tc ‐onset of this sample exhibited about 38 K at an ambient pressure. The pressure dependence of Tc was obtained about 7.1 K/GPa up to 2 GPa.",
+        "title": "Pressure Effects on The Superconductivity in MoSr2YCu2O8−δ Oxide Superconductor",
+        "doi": "10.1063/1.2354819",
+        "relevance_score": 34.40318,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "AIP conference proceedings",
+        "doc_id": "576a3014ec259519e3a5993e757d5739867f691c05167acdea8261567074c51f"
+      },
+      {
+        "citation_count": 7.0,
+        "publication_published_year": 2008.0,
+        "abstract": "We have performed electrical resistivity and powder X-ray diffraction measurements under high pressures for nickel-based superconducors LaNiXO (X = P and As). Superconducting transition temperatures T c of X = P and As increase to 3.78 K at 1.67 GPa and 3.14 K at 0.75 GPa, respectively. A compressibility of the lattice parameter c of LaNiPO is 1.5 times larger than that of the lattice parameter a , resulting in a linear decrease of an axial ratio c / a .",
+        "title": "Pressure Effects on Superconducting and Structural Properties for Nickel-Based Superconductors LaNiXO (X = P and As)",
+        "doi": "10.1143/jpsjs.77sc.119",
+        "relevance_score": 34.331882,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of the Physical Society of Japan",
+        "doc_id": "6181e776d6511cce0318cfb289688650add1fa2319d51eff69aa8215a92d4388"
+      },
+      {
+        "citation_count": 139.0,
+        "publication_published_year": 2004.0,
+        "abstract": "Nickel nanoparticles prepared from \\\\mathrm{Ni}(\\\\mathrm{NO}_3)_2\\\\cdot 6\\\\mathrm{H}_2\\\\mathrm{O}\\\\) by using a low pressure spray pyrolysis (LPSP) are reported in this paper. Effects of pressure, carrier gas flow rate, concentration of precursor and type of reducing agents on the size, morphology and crystallinity of nickel nanoparticles were investigated. It is found that pressure and carrier gas flow rate play crucial roles in the reduction of NiO to nickel in the LPSP process. A relatively higher solution concentration is suitable for the generation of nanoparticles. Cosolvents such as, formic acid and ethanol, as well as \\\\mathsf{H}_{2}\\\\) were treated as the reductives in the synthesis of nickel (nanoparticles) in this work. Weak NiO peaks, together with strong nickel peaks, in powder XRD patterns, indicated that nickel nanoparticles are easier to be oxidized compared with the submicron-sized nanoparticles. The results showed that the reduction of NiO is possible, but no reasonable reason may come from the incomplete reduction in very short residence time because of the decrease of \\\\mathsf{H}_{2}\\\\) amount in some cases. A possible mechanism of nickel nanoparticles formation has been suggested based on the demonstration of our previous research as well.",
+        "title": "Nickel and nickel oxide nanoparticles prepared from nickel nitrate hexahydrate by a low pressure spray pyrolysis",
+        "doi": "10.1016/j.mseb.2004.03.024",
+        "relevance_score": 34.249634,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Materials Science and Engineering: B",
+        "doc_id": "02a808acb68f177f6208c1e173b0b85ddd99161b33ae4b71a6d06f3767b82509"
+      },
+      {
+        "citation_count": 6.0,
+        "publication_published_year": 2016.0,
+        "abstract": "The transient oxidation behaviour of a nickel-base superalloy in different oxygen partial pressures studied using electron and ion microscopy showed that at high pO2, a triple-layered oxide developed: outer nickel oxide, then a complex aluminium-chromium oxide, and inner alumina layer. Lower pO2 produced only alumina, as reduced oxygen activity suppressed nickel oxide formation. An aluminium-depleted region in the alloy with width proportional to pO2 was observed.",
+        "title": "Transient Oxidation of a Nickel-Base Superalloy with Varying Oxygen Partial Pressure",
+        "doi": "10.1007/s11085-015-9569-9",
+        "relevance_score": 33.97301,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Oxidation of Metals",
+        "doc_id": "171cf135148d8ea1ef73d790e11e441fc417601cdd3a4236771eaa2dc19a25f4"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 163.59866,
+    "next_cursor": "eyJzIjpbMzMuOTczMDEsInBhcGVyOjEwLjEwMDcvczExMDg1LTAxNS05NTY5LTkiXX0=",
+    "request_tokens": 4,
+    "response_tokens": 3292,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

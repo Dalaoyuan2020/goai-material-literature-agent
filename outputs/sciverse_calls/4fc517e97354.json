@@ -1,0 +1,197 @@
+{
+  "timestamp": "2026-08-11 11:44:28",
+  "request": {
+    "query": "kagome superconductor doping",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 183.0,
+        "publication_published_year": 2009.0,
+        "abstract": "A Chern-Simons theory for the doped spin-1/2 kagome system is constructed, from which it is shown that the system is an exotic superconductor that breaks time-reversal symmetry. It is also shown that the system carries minimal vortices of flux $hc/4e$ (as opposed to the usual $hc/2e$ in conventional superconductors) and contains fractional quasiparticles (including fermionic quasiparticles with semionic mutual statistics and spin-1/2 quasiparticles with bosonic self-statistics) in addition to the usual spin-1/2 fermionic Bogoliubov quasiparticles. Two Chern-Simons theorieschar22{}one with an auxiliary gauge field kept and one with the auxiliary field and a redundant matter field directly eliminatedchar22{}are presented and shown to be consistent with each other.",
+        "title": "Doped kagome system as exotic superconductor",
+        "doi": "10.1103/physrevb.79.214502",
+        "relevance_score": 47.640526,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review B",
+        "doc_id": "944f669006728a1fd3cfed5848924dca3bc986107199afac6cc34e3031bfb9c2"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2008.0,
+        "abstract": "A Chern--Simons theory for the doped spin-1/2 kagomé system is constructed, from which it is shown that the system is an exotic superconductor that breaks time-reversal symmetry. It is also shown that the system carries minimal vortices of flux $hc/4e$ (as opposed to the usual $hc/2e$ in conventional superconductors) and contains fractional quasiparticles (including fermionic quasiparticles with \\emph{semionic} mutual statistics and spin-1/2 quasiparticles with \\emph{bosonic} self-statistics) in addition to the usual spin-1/2 fermionic Bougoliubov quasiparticle. Two Chern--Simons theories--one with an auxiliary gauge field kept and one with the auxiliary field and a redundant matter field directly eliminated--are presented and shown to be consistent with each other.",
+        "title": "Doped Kagome System as Exotic Superconductor",
+        "doi": "10.48550/arxiv.0804.1359",
+        "relevance_score": 47.299065,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 80.0,
+        "publication_published_year": 2022.0,
+        "abstract": "The vanadium-based kagome superconductor CsV3Sb5 has attracted tremendous attention due to its unexcepted anomalous Hall effect (AHE), charge density waves (CDWs), nematicity, and a pseudogap pair density wave (PDW) coexisting with unconventional strong-coupling superconductivity. The origins of CDWs, unconventional superconductivity, and their correlation with different electronic states in this kagome system are of great significance, but so far, are still under debate. Chemical doping in the kagome layer provides one of the most direct ways to reveal the intrinsic physics, but remains unexplored. Here, we report, for the first time, the synthesis of Ti-substituted CsV3Sb5 single crystals and its rich phase diagram mapping the evolution of intertwining electronic states. The Ti atoms directly substitute for V in the kagome layers. CsV3-xTixSb5 shows two distinct superconductivity phases upon substitution. The Ti slightly-substituted phase displays an unconventional V-shaped superconductivity gap, coexisting with weakening CDW, PDW, AHE, and nematicity. The Ti highly-substituted phase has a U-shaped superconductivity gap concomitant with a short-range rotation symmetry breaking CDW, while long-range CDW, twofold symmetry of in-plane resistivity, AHE, and PDW are absent. Furthermore, we also demonstrate the chemical substitution of V atoms with other elements such as Cr and Nb, showing a different modulation on the superconductivity phases and CDWs. These findings open up a way to synthesise a new family of doped CsV3Sb5 materials, and further represent a new platform for tuning the different correlated electronic states and superconducting pairing in kagome superconductors.",
+        "title": "Titanium doped kagome superconductor CsV3−Ti Sb5 and two distinct phases",
+        "doi": "10.1016/j.scib.2022.10.015",
+        "relevance_score": 44.55201,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Science Bulletin",
+        "doc_id": "78f7092c620d4118191c71a766a74904599bbb10a0c02166fd4ca7b4779b1b75"
+      },
+      {
+        "citation_count": 4.0,
+        "publication_published_year": 2021.0,
+        "abstract": "The vanadium-based kagome superconductor CsV3Sb5 has attracted tremendous attention due to its unexcepted anomalous Hall effect (AHE), charge density waves (CDWs), nematicity, and a pseudogap pair density wave (PDW) coexisting with unconventional strong-coupling superconductivity (SC). The origins of CDWs, unconventional SC, and their correlation with different electronic states in this kagome system are of great significance, but so far, are still under debate. Chemical doping in the kagome layer provides one of the most direct ways to reveal the intrinsic physics, but remains unexplored. Here, we report, for the first time, the synthesis of Ti-substituted CsV3Sb5 single crystals and its rich phase diagram mapping the evolution of intertwining electronic states. The Ti atoms directly substitute for V in the kagome layers. CsV3-xTixSb5 shows two distinct SC phases upon substitution. The Ti slightly-substituted phase displays an unconventional V-shaped SC gap, coexisting with weakening CDW, PDW, AHE, and nematicity. The Ti highly-substituted phase has a U-shaped SC gap concomitant with a short-range rotation symmetry breaking CDW, while long-range CDW, twofold symmetry of in-plane resistivity, AHE, and PDW are absent. Furthermore, we also demonstrate the chemical substitution of V atoms with other elements such as Cr and Nb, showing a different modulation on the SC phase and CDWs. These findings open up a way to synthesise a new family of doped CsV3Sb5 materials, and further representing a new platform for tuning the different correlated electronic states and superconducting pairing in kagome superconductors.",
+        "title": "Titanium doped kagome superconductor CsV3-xTixSb5 and two distinct phases",
+        "doi": "10.48550/arxiv.2110.11228",
+        "relevance_score": 42.563587,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)",
+        "doc_id": "510c42226445ac21e36a05ca1063def7d686734178689b8ccd6ef2c143dc051a"
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2022.0,
+        "abstract": "<sec>The newly discovered Kagome superconductors <inline-formula><tex-math id=\"M1\">\begin{document}$ A{mathrm{V}}_{3}{mathrm{S}mathrm{b}}_{5}(A=mathrm{K},mathrm{R}mathrm{b},mathrm{C}mathrm{s}) $end{document}</tex-math><alternatives><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M1.jpg\"/><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M1.png\"/></alternatives></inline-formula> provide a platform to investigate the interplay of the topological property, superconductivity and geometrical frustration. Since their discovery, many research groups, especially many groups in China, have made tremendous progress in this field, including time-reversal-symmetry-breaking (TRSB), charge density wave (CDW), electronic nematicity, superconductivity properties and pair density wave (PDW). In this paper, we introduce the <inline-formula><tex-math id=\"M2\">\begin{document}$ A{mathrm{V}}_{3}{mathrm{S}mathrm{b}}_{5} $end{document}</tex-math><alternatives><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M2.jpg\"/><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M2.png\"/></alternatives></inline-formula>properties, discuss the recent research progress and highlight the future focus of this Kagome superconductor.</sec><sec>The paper is organized as follows. We start from the exotic normal states of <inline-formula><tex-math id=\"M3\">\begin{document}$ A{mathrm{V}}_{3}{mathrm{S}mathrm{b}}_{5} $end{document}</tex-math><alternatives><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M3.jpg\"/><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M3.png\"/></alternatives></inline-formula>, where a CDW emerges at the temperature around 70–100 K depending on <inline-formula><tex-math id=\"M4\">\begin{document}$ A $end{document}</tex-math><alternatives><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M4.jpg\"/><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M4.png\"/></alternatives></inline-formula>. This CDW enlarges the unit cell size to 2×2 with additional <i>c</i>-direction modulation as observed by scanning tunneling microscope (STM) and X-ray scattering experiments. Interestingly, this CDW behaves differently under opposite magnetic fields. Namely, this CDW may break the time reversal symmetry. To confirm this property, the zero field muon spin relaxation (ZFμSR) experiment is performed with increasing relaxation rates after the CDW transition. Additionally, the intrinsic anomalous Hall effect is also observed, which may relate to this time reversal symmetry breaking (TRSB). Since there are no long-range magnetic orders observed in the elastic neutron scattering experiment and μSR, the TRSB is not related to the electron spin degree of freedom. To explain the TRSB, the chiral flux phase (CFP) with orbital magnetism is theoretically proposed. Moreover, the electronic nematicity is also observed at about 30–50 K below the CDW transition temperature. This phase breaks the <inline-formula><tex-math id=\"M5\">\begin{document}$ {C}_{6} $end{document}</tex-math><alternatives><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M5.jpg\"/><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M5.png\"/></alternatives></inline-formula> rotation symmetry of the Kagome lattice as confirmed by STM and nuclear magnetic resonance (NMR). What is the microscopic origin of this nematicity is still under investigation.</sec><sec>Then, we move to the superconducting properties of <inline-formula><tex-math id=\"M6\">\begin{document}$ A{mathrm{V}}_{3}{mathrm{S}mathrm{b}}_{5} $end{document}</tex-math><alternatives><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M6.jpg\"/><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M6.png\"/></alternatives></inline-formula>. Combining the inversion symmetry property found in optical measurement and decreasing of the spin susceptibility found in NMR, the <inline-formula><tex-math id=\"M7\">\begin{document}$ A{mathrm{V}}_{3}{mathrm{S}mathrm{b}}_{5} $end{document}</tex-math><alternatives><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M7.jpg\"/><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M7.png\"/></alternatives></inline-formula> superconductor is proven to be a spin-singlet superconductor. Experiments in NMR, angle-resolved photoemission, superfluid density and specific heat further confirm the superconductivity in Kagome superconductors is a conventional s-wave superconductor. Although this superconductor is conventional, <inline-formula><tex-math id=\"M8\">\begin{document}$ A{mathrm{V}}_{3}{mathrm{S}mathrm{b}}_{5} $end{document}</tex-math><alternatives><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M8.jpg\"/><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M8.png\"/></alternatives></inline-formula> also contains the unconventional property. Importantly, a PDW is observed in <inline-formula><tex-math id=\"M9\">\begin{document}$ mathrm{C}mathrm{s}{mathrm{V}}_{3}{mathrm{S}mathrm{b}}_{5} $end{document}</tex-math><alternatives><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M9.jpg\"/><graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"11-20220891_M9.png\"/></alternatives></inline-formula> by high-resolution STM. What is the PDW origin or microscopic mechanism is still an open question. These new progress reveal the intriguing physical properties behind the Kagome superconductors and also bring many unsolved questions, which calls for further investigations.</sec>",
+        "title": "Kagome superconductors",
+        "doi": "10.7498/aps.71.20220891",
+        "relevance_score": 41.117294,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Acta Physica Sinica",
+        "doc_id": "67275e1794eeca2debccb417b9f416568caa8774b8fa839ce1ffb96bf08e55f7"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2023.0,
+        "abstract": "The two-dimensional kagome lattice can host a variety of exotic electronic physics, such as quantum spin liquids, various topological states, and a wide array of instabilities, ranging from bond density wave order to charge fractionalization, charge density waves, and unconventional superconductivity. We propose a muon spin spectroscopy investigation of the superconducting state of the newly discovered CsV3Sb5 two-dimensional Kagome compound as a function of the electron doping driven by the Te/Sb heterovalent partial substitution. Transverse field measurements will be used to investigate the superconducting gap nature and to measure the London penetration depth evolution with doping. Zero field measurements will be performed to study the possible presence of time-reversal symmetry breaking in the superconducting state induced by the doping. This study is expected to give significant experimental outcomes to understand the exotic and rich quantum behaviour arising from the 2D kagome lattice.",
+        "title": "Exploring the electron-doping effect on the CsV3Sb5 2D kagome superconductor",
+        "doi": "10.5286/isis.e.rb2310508-1",
+        "relevance_score": 40.617058,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Science and Technology Facilities Council"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2023.0,
+        "abstract": "The two-dimensional kagome lattice can host a variety of exotic electronic physics, such as quantum spin liquids, various topological states, and a wide array of instabilities, ranging from bond density wave order to charge fractionalization, charge density waves, and unconventional superconductivity. We propose a muon spin spectroscopy investigation of the superconducting state of the newly discovered CsV3Sb5 two-dimensional Kagome compound as a function of the electron doping driven by the Te/Sb heterovalent partial substitution. Transverse field measurements will be used to investigate the superconducting gap nature and to measure the London penetration depth evolution with doping. Zero field measurements will be performed to study the possible presence of time-reversal symmetry breaking in the superconducting state induced by the doping. This study is expected to give significant experimental outcomes to understand the exotic and rich quantum behaviour arising from the 2D kagome lattice.",
+        "title": "Exploring the electron-doping effect on the CsV3Sb5 2D kagome superconductor",
+        "doi": "10.5286/isis.e.rb2310508",
+        "relevance_score": 40.470192,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Science and Technology Facilities Council"
+      },
+      {
+        "citation_count": 13.0,
+        "publication_published_year": 2024.0,
+        "abstract": "Kagome superconductors AV3Sb5 (A = K, Rb, and Cs) have attracted enormous interest due to the coexistence of charge density wave (CDW) order, unconventional superconductivity (SC) and anomalous Hall effect (AHE). In this paper, we reported an intensive investigation on Cs(V1-xTax)3Sb5 single crystals with systematic Ta doping. Ta was confirmed to be doped into V-site in the Kagome layer from both single crystal X-ray diffraction structural refinement and scanning transmission electron microscopy observation. The highest Ta doping level was found to be about 16%, which is more than twice as much as 7% in Nb-doped CsV3Sb5. With the increase of Ta doping, CDW order was gradually suppressed and finally vanished when the doping level reached to more than 8%. Meanwhile, superconductivity was enhanced with a maximum critical temperature (Tc) of 5.3 K, which is the highest Tc in the bulk crystal of this Kagome system at ambient pressure so far. The μ0Hc2(T) behavior demonstrates that the system is still a two-band superconductor after Ta doping. Based on the electrical transport measurement, a phase diagram was set up to exhibit the evolution of CDW and SC in the Cs(V1-xTax)3Sb5 system. These findings pave a new way to search for new superconductors with higher Tc in the AV3Sb5 family and establish a new platform for tuning and controlling the multiple orders and superconducting states.",
+        "title": "Enhancement of superconductivity and phase diagram of Ta-doped Kagome superconductor CsV3Sb5",
+        "doi": "10.1038/s41598-024-59518-1",
+        "relevance_score": 40.40608,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Scientific Reports"
+      },
+      {
+        "citation_count": 19.0,
+        "publication_published_year": 2023.0,
+        "abstract": "The recent discovery of superconductivity (SC) and charge density wave (CDW) in kagome metals AV3Sb5 (A = K, Rb, Cs) provides an ideal playground for the study of emergent electronic orders. Application of moderate pressure leads to a two-dome-shaped SC phase regime in CsV3Sb5 accompanied by the destabilizing of CDW phase. Nonetheless, the nature of this pressure-tuned SC state and its interplay with the CDW are yet to be explored. Here, we perform soft point-contact spectroscopy (SPCS) measurements in CsV3Sb5 to investigate the evolution of superconducting order parameter with pressure. Surprisingly, we find that the superconducting gap is significantly enhanced between the two SC domes, at which the zero-resistance temperature is suppressed and the transition is remarkably broadened. Moreover, the temperature-dependence of the SC gap in this pressure range severely deviates from the conventional Bardeen-Cooper-Schrieffer (BCS) behavior, evidencing for strong Cooper pair phase fluctuations. These findings reveal the complex intertwining of the CDW with SC in the compressed CsV3Sb5, suggesting striking parallel to the cuprate superconductor La2-xBaxCuO4. Our results point to the essential role of charge degree of freedom in the development of intertwining electronic orders, and thus provide new constraints for theories.",
+        "title": "Emergent superconducting fluctuations in compressed kagome superconductor CsV3Sb5",
+        "doi": "10.1016/j.scib.2023.01.020",
+        "relevance_score": 40.21375,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Science Bulletin",
+        "doc_id": "4da4160bcfc9587d943c1d82620a8e53610b72208de15629d25b3fd4f197191d"
+      },
+      {
+        "citation_count": 160.0,
+        "publication_published_year": 2024.0,
+        "abstract": "The recent discovery of the AV$_3$Sb$_5$ (A=K, Rb, Cs) kagome superconductors launched a growing field of research investigating electronic instabilities in kagome metals. Specifically, the AV$_3$Sb$_5$ family naturally exhibits a Fermi level tuned to the Van Hove singularities associated with the saddle points formed from the prototypical kagome band structure. The charge density wave and superconducting states that form within the kagome networks of these compounds exhibit a number of anomalous properties reminiscent of theoretical predictions of exotic states in kagome metals tuned close to their Van Hove fillings. Here we provide an overview of the key structural and electronic features of AV$_3$Sb$_5$ compounds and review the status of investigations into their unconventional electronic phase transitions.",
+        "title": "AV3Sb5 kagome superconductors",
+        "doi": "10.1038/s41578-024-00677-y",
+        "relevance_score": 39.89103,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Nature Reviews Materials",
+        "doc_id": "8ebe60ef18f2c36ba8239dad304f681953a4527102df835742fe206ba2436911"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2024.0,
+        "abstract": "",
+        "title": "Probing multiband superconductivity in Ta-doped CsV3Sb5 kagome superconductor",
+        "doi": "10.5291/ill-data.5-71-9",
+        "relevance_score": 39.73642,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Institut Laue-Langevin"
+      },
+      {
+        "citation_count": 7.0,
+        "publication_published_year": 2024.0,
+        "abstract": "",
+        "title": "Synthesis and physical properties of Cr-doped Kagome superconductor CsV3Sb5",
+        "doi": "10.1016/j.cap.2024.01.011",
+        "relevance_score": 39.305794,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Current Applied Physics"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2025.0,
+        "abstract": "Data underlying the figures in the paper \"Evolution of charge correlations in the hole-doped kagome superconductor CsV3-xTixSb5\" published in Physical Review Materials",
+        "title": "Evolution of charge correlations in the hole-doped kagome superconductor CsV3-xTixSb5",
+        "doi": "10.5281/zenodo.16988470",
+        "relevance_score": 39.05005,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Zenodo (CERN European Organization for Nuclear Research)"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "abstract": "Data underlying the figures in the paper \"Evolution of charge correlations in the hole-doped kagome superconductor CsV3-xTixSb5\" published in Physical Review Materials",
+        "title": "Evolution of charge correlations in the hole-doped kagome superconductor CsV3-xTixSb5",
+        "doi": "10.5281/zenodo.16988469",
+        "relevance_score": 38.93212,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Zenodo (CERN European Organization for Nuclear Research)"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2023.0,
+        "abstract": "Angle-resolved photo-emission spectroscopy measurements demonstrate that different types of three-dimensional charge-order pattern are realized in distinct members of a newly discovered family of superconductors with underlying kagome lattices.",
+        "title": "Kagome superconductors charge ahead",
+        "doi": "10.1038/s41563-022-01418-8",
+        "relevance_score": 37.5585,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Nature Materials",
+        "doc_id": "7b06e27be9d5bb38f433e8634545e556185bade693bcfa2bfdfc1d7f7eccdf89"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 64.30807,
+    "next_cursor": "eyJzIjpbMzcuNTU4NSwicGFwZXI6MTAuMTAzOC9zNDE1NjMtMDIyLTAxNDE4LTgiXX0=",
+    "request_tokens": 3,
+    "response_tokens": 4089,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

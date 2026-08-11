@@ -1,0 +1,198 @@
+{
+  "timestamp": "2026-08-11 11:44:32",
+  "request": {
+    "query": "hydride superconductor high pressure",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 9.0,
+        "publication_published_year": 2020.0,
+        "abstract": "There are also efforts on the investigate for high-temperature superconductors in hydrogen-rich system, since the \\\\mathrm{La(II)_2}\\\\ (250-260 K) and \\\\mathrm{Sb(II)}\\\\ (201 K) compounds have been studied. The results of these investigations show that the superconducting superconductor structure is formed by the formation of superconducting superhydrides under pressures, using our in-house developed GALPROP structure searching method in combination with density functional theory. New THzI, and THzI\\\\(_3\\\\) structures are found as thermodynamically stable phases at atmospheric pressure. As a result of the analysis of the electronic properties in those predicted structures, we can understand the behavior of the superconducting superhydrides under pressure. This work will be used to further study the superconductivity. Our results enrich the knowledge in the Th-h-T system and provide insights into designing superconducting hydrides under high pressure.",
+        "title": "Superconducting thorium hydrides under high pressure",
+        "doi": "10.1016/j.ssc.2020.113820",
+        "relevance_score": 53.17277,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Solid State Communications",
+        "doc_id": "706fd3a6ea71c44c54509844ce6b8203d983876c54c63f4e68e5a8ad44cee2d1"
+      },
+      {
+        "citation_count": 59.0,
+        "publication_published_year": 2021.0,
+        "abstract": "Achieving room‐temperature superconductivity is an important goal in chemistry and physics. Excitingly, pressure‐induced superconducting hydrides, a typical representative of LaH10 with a critical temperature (Tc) of 250–260 K around 180–200 GPa, bring this goal within reach, igniting an irresistible wave of discovering new H‐containing superconductors. Moreover, this breakthrough finding was achieved under the guidance of theoretical prediction. Thus far, the superconductivity of binary hydrides has been extensively explored. However, the high‐temperature superconductor, facilitating practical application, is still rare. Ternary hydrides can provide more abundant structures resulting from diverse chemical compositions and synergistic charge transfer, combine the merits of different elements, and induce strong electron–phonon coupling, which make them an appealing contender for superconductors. Recently, much research progress has been made in pressure‐induced superconducting ternary hydrides. In this regard, we summarize the recent development of superconducting ternary hydrides, highlighting the chemical composition, structure, pressure, and Tc value as well as the study of doping/substitution on the known superconducting binary hydrides. The recent state‐of‐the‐art of theoretical approaches for predicting superconductors and fundamental characters of ternary hydrides with high Tc are outlined. On the other hand, the problems, challenges, and opportunities are presented, providing an outlook for future research. This article is categorized under:Structure and Mechanism > Computational Materials ScienceElectronic Structure Theory > Density Functional Theory",
+        "title": "Superconducting ternary hydrides under high pressure",
+        "doi": "10.1002/wcms.1582",
+        "relevance_score": 52.630146,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "WIREs: Computational Molecular Science, 2022, Vol 12, Issue 3, p1",
+        "doc_id": "b55dfd2a2cb9055e1f7124ad8abe986cec4c4eee49e250f4cd53366a2dec7256"
+      },
+      {
+        "citation_count": 4.0,
+        "publication_published_year": 2023.0,
+        "abstract": "Contrary to the current consensus, I argue that the existing evidence for high temperature superconductivity in hydrides under high pressure is not compelling. I suggest that the focus of the field should urgently shift to establish unequivocally experimentally whether or not superconductivity in pressurized hydrides exists, instead of continuing to search for new materials that might show elusive signals of unproven superconductivity at ever higher temperatures. The implications of a negative finding for the theoretical understanding of superconductivity are discussed.",
+        "title": "Are hydrides under high pressure high temperature superconductors?",
+        "doi": "10.31219/osf.io/5pqdj",
+        "relevance_score": 52.14097,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": ""
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2024.0,
+        "abstract": "The abundant chemical compositions in ternary hydrides bring much more possibility to explore high temperature superconductors under lower pressure. Here we constructed 115 ternary hydrides on the basis of the elements substitution using 16 metal elements within 5 reported prototype structures. We conducted a three-step approach to screen and study these candidate structures in the aspects of dynamical stability, formation energy and relative enthalpy, respectively. Based on this approach, we found three meta-stable compounds with hydrogen clathrate cages in the space group of P-3m1, including Y2CdH18, Y2InH18 and Ca2SnH18. All of the structures are superconductive under high pressure with Tc above 110 K, which is larger than the superconductive temperature of liquid nitrogen. Our study enriches the database of novel ternary hydrides under high pressure, and provides insight for future theoretical and experimental researches.",
+        "title": "Novel Superconducting Ternary Hydrides under High Pressure",
+        "doi": "10.48550/arxiv.2411.11674",
+        "relevance_score": 51.63941,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)",
+        "doc_id": "ce90b99d97a3062a912f940045d3d8355825c4662ed82db157f86c90fa891596"
+      },
+      {
+        "citation_count": 20.0,
+        "publication_published_year": 2023.0,
+        "abstract": "Contrary to the current consensus, I argue that the existing evidence for high-temperature superconductivity in hydrides under high pressure is not compelling. I suggest that the focus of the field should urgently shift to establish unequivocally experimentally whether or not superconductivity in pressurized hydrides exists, instead of continuing to search for new materials that might show elusive signals of unproven superconductivity at ever higher temperatures. The implications of a negative finding for the theoretical understanding of superconductivity are discussed.",
+        "title": "Are hydrides under high-pressure–high-temperature superconductors?",
+        "doi": "10.1093/nsr/nwad174",
+        "relevance_score": 51.44153,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Natl Sci Rev"
+      },
+      {
+        "citation_count": 267.0,
+        "publication_published_year": 2020.0,
+        "abstract": "The measurement of superconductivity at above 200K in compressed samples of hydrogen sulfide and lanthanum hydride at 250K is reinvigorating the search for conventional high temperature superconductors. At the same time it exposes a fascinating interplay between theory, computation and experiment. Conventional superconductivity is well understood, and theoretical tools are available for accurate predictions of the superconducting critical temperature. These predictions depend on knowing the microscopic structure of the material under consideration, and can now be provided through computational first principles structure predictions. The experiments at the megabar pressures required are extremely challenging, but for some groups at least, permit the experimental exploration of materials space. We discuss the prospects for the search for new superconductors, ideally at lower pressures.",
+        "title": "Superconducting Hydrides Under Pressure",
+        "doi": "10.1146/annurev-conmatphys-031218-013413",
+        "relevance_score": 50.860725,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Annual Review of Condensed Matter Physics",
+        "doc_id": "5de40d878dc37f4f013cd5b135004451244e955af378df09c4052fcca4672835"
+      },
+      {
+        "citation_count": 28.0,
+        "publication_published_year": 2022.0,
+        "abstract": "The recent findings of high-temperature hydrides ushered a new era of superconductivity research under high pressure. However, the stable pressure for these remarkable hydrides remains extremely high. In this work, we performed the extensive simulations on a series of hydrides with the prototype structure of UH8and UH7. Our results indicate several compounds possess superconducting critical temperature (Tc) above liquid nitrogen temperature below 100 GPa, such as CeBeH8and ThBeH8that are dynamical stable with aTcof 201 K at 30 GPa and aTcof 98 K at 10 GPa, respectively. Further formation enthalpy calculations suggest that thermodynamical stable pressure of CeBeH8and ThBeH8compounds is above 50 GPa and 88 GPa with respect to binary compounds and solid elements. Moreover, we also found that ThBeH7could be dynamically stable down to 20 GPa with aTcof 70 K. Our further simulations suggested this newly predicted ThBeH7is thermodynamically stable above pressure of 33 GPa with respect to binary compounds and solid elements. The present results shed light on future design and discovery of high-temperature superconductor at moderate pressure.",
+        "title": "Prediction for high superconducting ternary hydrides below megabar pressure",
+        "doi": "10.1088/1361-648x/ac9bba",
+        "relevance_score": 50.787148,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "J Phys Condens Matter",
+        "doc_id": "d7ce936b162155de818e26bafad065fce08ca6777c610409b11446896e17dfe6"
+      },
+      {
+        "citation_count": 118.0,
+        "publication_published_year": 2018.0,
+        "abstract": "In a systematic investigation of scandium hydrides with high hydrogen content we predict seven phases of scandium hydrides (ScH4, ScH6, ScH7, ScH8, ScH9, ScH10, and ScH12), which are stable above 150 GPa. Zero point energies are essential in determining the phases and pressure ranges within which they are stable. The interconversion of the various hydrides is intriguing; in one case there is a “return” to a lower hydrogen content hydride with increasing pressure. We argue that these hydrides may be synthesized by compressing mixtures of ScH3 and H2 above 150 GPa. New H bonding motifs are uncovered, including “H5” pentagons or “H8” octagons in ScH9, ScH10, and ScH12. High Tcs are predicted for ScH6, ScH7, ScH9, ScH10, and ScH12, with superconducting transition temperatures (Tcs) of 120–169 K above 250 GPa, as estimated by the Allen–Dynes modified McMillan equation.",
+        "title": "High Hydrides of Scandium under Pressure: Potential Superconductors",
+        "doi": "10.1021/acs.jpcc.7b12124",
+        "relevance_score": 50.70754,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "The Journal of Physical Chemistry C",
+        "doc_id": "45c2b7c590bd1e039e4fe73f775690169331d1c6d761bc23112ec5a4e0920d4e"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2015.0,
+        "abstract": "Observation of high-temperature superconductivity in sulfur hydrides at megabar pressures has generated an irresistible wave on searching for new superconductors in other compressed hydrogen-rich compounds. An immediate effort is towards exploration of the relevant candidate of tellurium hydrides, where tellurium is isoelectronic to sulfur but it has a heavier atomic mass and much weaker electronegativity. The hitherto unknown phase diagram of tellurium hydrides at high pressures was investigated by a first-principles swarm structure search. Four energetically stable and metallic stoichiometries of H4Te, H5Te2, HTe and HTe3 were uncovered above 140 GPa, showing a distinct potential energy map of tellurium hydrides from those in sulfur and selenium hydrides. The two hydrogen-rich H4Te and H5Te2 species adopt ionic structures containing exotic quasi-molecular H2 and linear H3 units, respectively. Strong electron-phonon couplings associated with the intermediate-frequency H-derived wagging and bending modes make them good superconductors with high Tc in the range of 46-104 K.",
+        "title": "Tellurium Hydrides at High Pressures: High-temperature Superconductors",
+        "doi": "10.48550/arxiv.1503.00396",
+        "relevance_score": 50.354034,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 165.0,
+        "publication_published_year": 2016.0,
+        "abstract": "Observation of high-temperature superconductivity in compressed sulfur hydrides has generated an irresistible wave of searches for new hydrogen-containing superconductors. We herein report the prediction of high-T_{c} superconductivity in tellurium hydrides stabilized at megabar pressures identified by first-principles calculations in combination with a swarm structure search. Although tellurium is isoelectronic to sulfur or selenium, its heavier atomic mass and weaker electronegativity makes tellurium hydrides fundamentally distinct from sulfur or selenium hydrides in stoichiometries, structures, and chemical bondings. We identify three metallic stoichiometries of H_{4}Te, H_{5}Te_{2}, and HTe_{3}, which are not predicted or known stable structures for sulfur or selenium hydrides. The two hydrogen-rich H_{4}Te and H_{5}Te_{2} phases are primarily ionic and contain exotic quasimolecular H_{2} and linear H_{3} units, respectively. Their high-T_{c} (e.g., 104 K for H_{4}Te at 170 GPa) superconductivity originates from the strong electron-phonon couplings associated with intermediate-frequency H-derived wagging and bending modes, a superconducting mechanism which differs substantially with those in sulfur or selenium hydrides where the high-frequency H-stretching vibrations make considerable contributions.",
+        "title": "Tellurium Hydrides at High Pressures: High-Temperature Superconductors",
+        "doi": "10.1103/physrevlett.116.057002",
+        "relevance_score": 50.14925,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review Letters",
+        "doc_id": "10c32b01e7471f9077323b96092a4e85698304097c30652cf048a9d408a0ca71"
+      },
+      {
+        "citation_count": 36.0,
+        "publication_published_year": 2021.0,
+        "abstract": "The discovery of a record high superconducting transition temperature (Tc) of 288 K in a pressurized hydride inspires new hope to realize ambient-condition superconductivity. Here, we give a perspective on the theoretical and experimental studies of hydride superconductivity. Predictions based on the BCS–Eliashberg–Midgal theory with the aid of density functional theory have been playing a leading role in the research and guiding the experimental realizations. To date, about twenty hydrides experiments have been reported to exhibit high-Tc superconductivity and their Tc agree well with the predicted values. However, there are still some controversies existing between the predictions and experiments, such as no significant transition temperature broadening observed in the magnetic field, the experimental electron-phonon coupling beyond the Eliashberg–Midgal limit, and the energy dependence of density of states around the Fermi level. To investigate these controversies and the origin of the highest Tc in hydrides, key experiments are required to determine the structure, bonding, and vibrational properties associated with H atoms in these hydrides.",
+        "title": "Future Study of Dense Superconducting Hydrides at High Pressure",
+        "doi": "10.3390/ma14247563",
+        "relevance_score": 49.779724,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Materials",
+        "doc_id": "1371a93877ceb73197d03770d596b15cd3b4fccf2410832bb345f778223321b4"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2019.0,
+        "abstract": "The measurement of superconductivity at above 200K in compressed samples of hydrogen sulfide and lanthanum hydride at 250K is reinvigorating the search for conventional high temperature superconductors. At the same time it exposes a fascinating interplay between theory, computation and experiment. Conventional superconductivity is well understood, and theoretical tools are available for accurate predictions of the superconducting critical temperature. These predictions depend on knowing the microscopic structure of the material under consideration, and can now be provided through computational first principles structure predictions. The experiments at the megabar pressures required are extremely challenging, but for some groups at least, permit the experimental exploration of materials space. We discuss the prospects for the search for new superconductors, ideally at lower pressures.",
+        "title": "Superconducting hydrides under pressure",
+        "doi": "10.48550/arxiv.1910.00385",
+        "relevance_score": 49.716373,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2021.0,
+        "abstract": "The discovery of a record high superconducting transition temperature (Tc) of 288 K in a pressurized hydride inspires new hope to realize ambient condition superconductivity. Here, we give a perspective on the theoretical and experimental studies of hydride superconductivity. Predictions based on the BCS-Eliashberg-Midgal theory with the aid of density functional theory have been playing a leading role in the research and guiding the experimental realizations. To date, about twenty hydrides experiments have been reported to exhibit high-Tc superconductivity and their Tc agree well with the predicted values. However, there are still some controversies existing between the predictions and experiments, such as no significant transition temperature broadening observed in the magnetic field, the experimental electron-phonon coupling beyond the Eliashberg-Midgal limit, and the energy dependence of density of states around the Fermi level. To investigate these controversies and the origin of the highest Tc in hydrides, key experiments are required to determine the structure, bonding, and vibrational properties associated with H atoms in these hydrides.",
+        "title": "Future Study of Dense Superconducting Hydrides at High Pressure",
+        "doi": "10.48550/arxiv.2112.09862",
+        "relevance_score": 49.54346,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2019.0,
+        "abstract": "The measurement of superconductivity at above 200K in compressed samples of hydrogen sulfide and in lanthanum hydride at 250K is rein- vigorating the search for conventional high temperature superconduc- tors. At the same time it exposes a fascinating interplay between the- ory, computation and experiment. Conventional superconductivity is well understood, and theoretical tools are available for accurate predic- tions of the superconducting critical temperature. These predictions depend on knowing the microscopic structure of the material under consideration, and can now be provided through computational first principles structure predictions. The experiments at the megabar pres- sures required are extremely challenging, but, for some groups at least, permit the experimental exploration of materials space. We discuss the prospects for the search for new superconductors, ideally at lower pressures.",
+        "title": "Superconducting hydrides under pressure",
+        "doi": "10.17863/cam.42995",
+        "relevance_score": 49.523724,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Apollo (University of Cambridge)"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2021.0,
+        "abstract": "High-temperature conventional superconductivity in hydrogen-rich materials under high pressure has been reportedly found in twelve different compounds in recent years. However, the experimental evidence on which these claims are based has recently been called into question. Here we discuss the measurement of trapped magnetic flux, that should establish definitively that these materials are indeed high-temperature superconductors. Its absence should confirm claims to the contrary.",
+        "title": "Flux trapping in superconducting hydrides under high pressure",
+        "doi": "10.48550/arxiv.2104.03925",
+        "relevance_score": 49.361294,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 269.76935,
+    "next_cursor": "eyJzIjpbNDkuMzYxMjk0LCJwYXBlcjoxMC40ODU1MC9hcnhpdi4yMTA0LjAzOTI1Il19",
+    "request_tokens": 4,
+    "response_tokens": 2763,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "timestamp": "2026-08-11 11:44:33",
+  "request": {
+    "query": "cuprate rare earth substitution superconductor",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2000.0,
+        "abstract": "The discovery of superconductivity at 35K by Bodnorz and Müller (1986) in the BaLaCuO system has induced the exploration of cuprates by a considerable number of researchers. In fact the study of these oxides, started as early as 1980, shows that the crystal chemistry is very complex. This is especially the case for the so-discovered cuprate crystals, which have been studied for over 20 years [17-20] but in fact La2+, Ba2CuO4 (Michel and Raveau 1984) prepared several years before. All these high-Tc superconductors derive from the perovskite structure by disconnecting the CuO4 octahedra along one direction so that [CuO2]∞ layers are formed, which are responsible for superconductivity at high temperature. In these materials, rare-earth cations do not play a direct role for the appearance of superconductivity, but due to their relatively large size and to their trivalent character, they allow in many cases such layered cuprates to be unobligatable. In the present chapter we give an overview of the relationship between crystal structure extended defects and superconducting properties of rare-earth-based cuprates.",
+        "title": "Chapter 188 Crystal chemistry of superconducting rare-earth cuprates",
+        "doi": "10.1016/s0168-1273(00)30005-8",
+        "relevance_score": 58.309322,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Handbook on The Physics and Chemistry of Rare Earths",
+        "doc_id": "55f3ef4c30f27ce34c456308ac454f1091a06861cdf23daf4b602764f2bedf1b"
+      },
+      {
+        "citation_count": 22.0,
+        "publication_published_year": 2004.0,
+        "abstract": "Precursor materials for superconductors with nominal starting compositions of (Tl0.6Pb0.5)(Ba0.2Sr0.8)2(Ca,RE)2Cu3Oy (RE: Y, La, Pr, Sm, Dy) were made via the evaporation of aqueous strontium–barium–calcium–copper–nitrate solutions followed by calcination at 900 °C in air. The stoichiometric amounts of the doping oxides were added by co-attrition. Sintering of the specimens was carried out inside a silver foil under flowing oxygen at 925 °C for 12 min and at 910 °C for 10 h. High quality Tl-1223 and Tl-1212 materials with well connected grains and Tc (0) values between 75 and 115 K were produced. The ΔT(90−10%) values ranged from 2 to 18 K. Bulk phase jc-values between 40 and 1400 A cm−2 were obtained. Annealing improved the critical current densities. Two-step transitions were generally observed for samples containing rare earth cations.",
+        "title": "Thallium-based cuprate superconductors doped with rare earth oxides",
+        "doi": "10.1088/0953-2048/18/1/014",
+        "relevance_score": 53.85831,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Superconductor Science and Technology",
+        "doc_id": "a58fe35bc05e380eacbca29ea5c2ca069f639b3e2965520ae108a9c03075d2f0"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2007.0,
+        "abstract": "Applying pressure to a La–Ba–Cu–O sample caused an 8 K increase of Tc at a pressure of 14kbar-1. This immediately led to the amazing discovery of 94 K superconductivity in the same material. The results were confirmed by the XRD patterns of the La site of La1.5X0.5Cu0.5O24 (214). The starting composition was Y1.7Ba0.3Cu0.6O7-x, which followed the 214 formula of the K2NiF4 structure. Soon after the discovery, a number of laboratories were able to synthesize the 94 K superconductors and found that the superconducting transition temperature was 1000K (Fig. 1a). The YBa2Cu0O7 → (12)3N+. Further studies on replacement of Y by rare earth elements (Nd, Gd, Sm etc.) led to a series of 90-96 Superconductors[26,27]. Later, two new phases with different compositions were observed: Y2Ba2Cu0O7 → (12)3N+ and Y2Ba2Cu0O7 → (12)3N+ were also found to be superconducting at 80 and 90 K, respectively. It was found that the change of x from 0 to 1.0 resulted in a structural change from orthorhombic to tetragonal. The transition occurs at α = 0.5. The orthorhombic phase (0 < x < 0.5) is superconducting at Tc values ranging from 94 to 0K depending on the doping content 14, whereas the tetragonal phase (0.5 < x < 1.0) is semiconducting.12,16 XRD data showed that the structure of YBa2Cu3O1-x is an oxygen-deficient perovskite with tripling of the c axis caused by ordering of the Ba and Y atoms as shown in Figure 1 and belongs to the space group Pmm′′. Compared to the ideal perovskite, YBa2Cu3O1-x, two has oxygen-deficient layers in the first, the Cu layer (at x = 0), two oxygen atoms are missing at the midpoint of opposite axes, respectively. The corresponding XRD patterns are shown in Fig. 2. The XRD patterns are located at two positions labeled Cu(1) and Cu(2). Cu(1) has fourfold planar coordination with two O(1) neighboring atoms along the c axis at a distance of -1.85Å and two O(4) atoms along the b axis at a distance of -1.94Å. Cu(2) has fivefold pyramidal",
+        "title": "Rare‐Earth‐Based Cuprates",
+        "doi": "10.1002/9780470145333.ch193",
+        "relevance_score": 52.912632,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Inorganic reactions and methods",
+        "doc_id": "6643585314a7cbd273d046e24e1af377552984ef7e8ce5c5cc4ec888c51f41a0"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2009.0,
+        "abstract": "We report the development of a new high oxygen pressure synthesis method of orthorhombic and twin-free RE2Ba4Cu7Oy (RE247, RE = rare earth elements) superconductors and their tri-axial orientation using by a modulated rotation magnetic field. By the new synthesis method using quartz ampoule and a chemical reaction generating additional source of oxygen pressure in it, we have successfully fabricated RE247 (RE=Y, Er) polycrystals in the almost same synthesis conditions with those using a high oxygen pressure furnace. Furthermore, tri-axial orientation of these RE247 powders has been successfully accomplished using a modulated rotation magnetic field. Although our experimental studies on the magnetic orientation were performed in epoxy resin, high degrees of in-plane orientation less than 6° were achieved. Especially for RE=Y, the degree of in-plane orientation was found to be less than 1.5°, and high effectiveness of this tri-axial orientation technique was shown in principle.",
+        "title": "Magnetic tri-axial orientation in rare-earth-based cuprate superconductors",
+        "doi": "10.1088/1757-8981/1/1/012015",
+        "relevance_score": 51.210983,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "IOP Conference Series: Materials Science and Engineering",
+        "doc_id": "fa69a73096ada2b81bb4b2511bb54cbd9962a7a4514ff1d049b34cd48f847a04"
+      },
+      {
+        "citation_count": 15.0,
+        "publication_published_year": 2023.0,
+        "abstract": "Chemical solution deposition is widely used in the preparation of rare-earth-based cuprate superconducting thin films, namely RE<sub>x</sub>Ba<sub>2</sub>Cu<sub>3</sub>O<sub>7-</sub><sub>y</sub> (RE = rare earth element). The crystallographic orientation of the films is strongly dependent on the degree of supersaturation during crystallization. In this paper, we systematically studied the crucial factors affecting supersaturation, such as the type and stoichiometry of the rare earth element and the sintering temperature. Furthermore, the relationship between c-axis orientation and supersaturation was established. The results demonstrate that a small RE ionic radius (e.g., RE = Yb) and reduced rE-stoichiometry, studied on the example of yttrium, are beneficial for the growth of c-axis-oriented films at lower temperatures. In addition, a Y-O/Ba-Cu-O stacked-layer structure was proposed to regulate the diffusion distance to the reaction site. Compared with a Y-Ba-Cu-O single-layer, a c-axis orientation percentage of more than 40 % is achieved in the Y-O/Ba-Cu-O stacked-layer at even lower sintering temperatures. The results suggest that a low supersaturation is favorable to promote the growth of c-axis-oriented nuclei and therefore suppresses the growth of random orientations. This paper provides a new strategy to realize orientation modulation of rare-earth-based cuprate superconducting thin films by controlled chemical solution method.",
+        "title": "Supersaturation and crystallization behaviors of rare-earth based cuprate superconducting films grown by chemical solution deposition",
+        "doi": "10.1016/j.apsusc.2022.155820",
+        "relevance_score": 47.013138,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Applied Surface Science",
+        "doc_id": "651ffa21538270d88896461e7c8de6a5fc36037bb005b29173cb2a991d7b0a7f"
+      },
+      {
+        "citation_count": 2.0,
+        "publication_published_year": 2016.0,
+        "abstract": "Modulated rotating magnetic field (MRF) enables bi-axial grain arrangement of substances with tri-axial magnetic anisotropy. Even feeble magnetic (paramagnetic and diamagnetic) substances become target materials for the magnetic grain alignment by using a 10 telsa-class strong magnet. In this review article, the authors introduce high potential of the magnetic alignment technique using MRF as a fabrication process of bi-axially grain-oriented rare-earth(RE)-based cuprate superconductors. In the former topic, the bi-axial magnetic alignment of RE-based cuprate superconductors without twin microstructures at room temperature are reported for the clarification of RE-dependent magnetization axes and tri-axial magnetic anisotropies. In the latter topic, the authors show the bi-axial magnetic alignment of practical RE-based superconductors, REBa2Cu3Oy (RE123), with twin microstructures. The inplane orientation degrees in RE123 were lowered compared with those in RE-based cuprates without twin microstructures; however, bi-axial magnetic alignment has been successfully achieved even in RE123 with twin microstructures.",
+        "title": "Three Dimensional Crystal Orientation in Rare-earth-based Cuprate Superconductors by Modulated Rotating Magnetic Field",
+        "doi": "10.2497/jjspm.63.947",
+        "relevance_score": 46.115856,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of the Japan Society of Powder and Powder Metallurgy",
+        "doc_id": "20e4b1c3430ee0baba3d6b2d3f6718df8478a05e911727daa05f0288aa7c1413"
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2001.0,
+        "abstract": "Measurements of the infrared transmission spectra up to ∼10000 cm<sup>−1</sup>, ab-initio calculations based on the density functional theory and the use of an anisotropic exchange Hamiltonian to describe the magnetic coupling of rare earth (RE)–Cu are new instruments shown in this paper to provide an additional insight into the nature of the 4f splitting in rare earth (RE) cuprates. (i) Sets of the parameters of the crystal field Hamiltonian for trivalent Nd and Sm in regular as well as in Ba-sites in RE<sub>1+x</sub>Ba<sub>2−x</sub>Cu<sub>3</sub>O<sub>6+y</sub> are determined; (ii) Nd<sub>2</sub>CuO<sub>4</sub> is found to be an exceptionally suitable system to study the anisotropy of the exchange interaction: Kramers doublet splittings due to the superexchange Cu–Nd interaction, deduced from the intermultiplet transitions spectra, are interpreted in terms of an effective Hamiltonian for the Nd<sup>3+</sup> ion expressed in terms of single electron spherical tensor operators up to the sixth order; (iii) it is shown that the defects in Nd<sub>2</sub>CuO<sub>4</sub>, Nd<sub>2−x</sub>Gd<sub>x</sub>CuO<sub>4</sub> and Nd<sub>2−x</sub>Ce<sub>x</sub>CuO<sub>4</sub>, that give rise to satellites in the spectra of 4f excitations, are universal and related to a local lattice deformation associated with a charge inhomogeneity.",
+        "title": "4f-levels in rare earth cuprates:",
+        "doi": "10.1016/s0925-8388(01)01141-0",
+        "relevance_score": 45.989864,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Alloys and Compounds",
+        "doc_id": "7cd8027cf9b97c47879c0eb14e685aa967a41a9f29a7fc693a5ec9f0b9806647"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2016.0,
+        "abstract": "The growth of high quality and centimeter-sized YBa2Cu3O7-δ\n          YBaCuO\n          \n         and RE–Ba–Cu–ORE–Ba–Cu–O\n         (RE = rare earth) single crystals can be achieved using either flux or traveling solvent floating zone (TSSG) method. The oxygen content of crystals can be tuned through the oxygenation/deoxygenation of the same sample by post growth annealing. The as-grown twinned single crystals are detwinned and enabled to probe the charge reservoir in CuO2 planes, which induced no carrier contributions from the other layers, such as CuO chains. YBa2Cu4O8 is another important compound for the study of its chemical and physical properties since it is twin-free and shows higher thermal stability with oxygen stoichiometry. The KOH flux growth of YBa2Cu4O8\n          YBaCuO\n          \n         single crystal provided a simple way to access the reasonable size of the samples. In this chapter, we present detailed procedures for the best quality crystal growth. Various attempts to improve the crystal quality are described. Large single crystal growth of some other rare earth cuprates is also presented.",
+        "title": "YBCO and Some Other Rare Earth Cuprates",
+        "doi": "10.1007/978-3-319-31548-5_2",
+        "relevance_score": 45.717766,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Springer series in materials science",
+        "doc_id": "739e6b81fd28b92881d9eee3e21fc9e99f642e14fd1ae5d286a811d8368f99a0"
+      },
+      {
+        "citation_count": 130.0,
+        "publication_published_year": 2004.0,
+        "abstract": "Enhanced in-field critical current densities (Jc’s) have been obtained in epitaxial superconducting (RE1,RE2)Ba2Cu3O7−x (RE1=rare-earthion 1, and RE2=rare earth ion 2) films grown on both single crystal and buffered metallic substrates. For a constant average RE ionic radius (equal to that of yttrium), there is a systematic dependence of the in-field Jc on the RE ion size variance, with a small, but nonzero, variance being optimum. Compared to the standard YBa2Cu3O7−x composition, a factor of two improvement in Jc(75.5K) is reproducibly observed at 0.2T(‖c) for the composition Dy1∕3Ho2∕3Ba2Cu3O7−x on both single crystal and buffered-metallic substrates. Angular dependent magnetic field studies and transmission electron microscopy indicate the presence of additional pointlike random defects.",
+        "title": "Systematic enhancement of in-field critical current density with rare-earth ion size variance in superconducting rare-earth barium cuprate films",
+        "doi": "10.1063/1.1766394",
+        "relevance_score": 45.62948,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Applied Physics Letters",
+        "doc_id": "77b037e832d1e7447cdeff21e6d11e3f821d8a8a6bf6604ce72ecff1ecf5cb61"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2010.0,
+        "abstract": "Abstract ChemInform is a weekly Abstracting Service, delivering concise information at a glance that was extracted from about 100 leading journals. To access a ChemInform Abstract of an article which was published elsewhere, please select a “Full Text” option. The original article is trackable via the “References” option.",
+        "title": "ChemInform Abstract: Rare‐Earth Magnetism in Cuprates",
+        "doi": "10.1002/chin.199539317",
+        "relevance_score": 45.126087,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "ChemInform",
+        "doc_id": "8dba65bb2f8a620294ea625e52b9bb520a3b859be1d48b51af911fc5776720b2"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2009.0,
+        "abstract": "<jats:title>Abstract</jats:title><jats:p>Sintering effects in YBa2Cu3Oz samples with quasi-equal rare earth substitution have been investigated. It has been shown that the Y-123 type compound can be formed when gadolinium is partially substituted (in this case 50% atomic substitution) for yttrium. The superconducting compound was obtained by the optimized ceramic method, including solid-state reaction, melting and sintering, controlled by X-ray diffraction. The microstructure was investigated by SEM and energy dispersive X-ray analyses. An AC susceptibility measurement has shown that T c =93 K. Temperature-dependece of the thermal conductivity (4.5–300 K) of the polycrystalline Y0.5Gd0.5Ba2Cu3O6.94 sample was also measured.</jats:p>",
+        "title": "Microstructure and thermal properties of quasi-equal rare earth substitution Y0.5Gd0.5Ba2Cu3O6.94 superconductor",
+        "doi": "10.2478/s11534-008-0133-y",
+        "relevance_score": 44.797955,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Open Physics",
+        "doc_id": "58018a1fabfb913b4b642fedb003ba9089300bbc10de7054b5348eb93e672fa6"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2007.0,
+        "abstract": "Crystal structure, magnetic microstructure, and electrical properties of cuprates of rare-earth elements with a partial substitution of the atoms of strontium for rare-earth elements (REEs) and iron for copper have been investigated. The detailed analysis of the Mössbauer spectra of cuprates made it possible to assume that the substitution of strontium for REEs in iron-substituted cuprates of neodymium leads to a recharging of part of iron cations, and in praseodymium cuprates, of lanthanide ions. The measurements of electrical conductivity and thermopower of the samples confirmed this assumption.",
+        "title": "Magnetic microstructure and the electrical properties of rare-earth Fe-substituted cuprates of the 8-8-20 type",
+        "doi": "10.1134/s0031918x07100043",
+        "relevance_score": 44.366932,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "The Physics of Metals and Metallography",
+        "doc_id": "11574d0781b4f11029bcc9adcd41ffdc3567971523c935ac04523103e487971d"
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2020.0,
+        "abstract": "Superconductivity is a macroscopic quantum phenomenon occurring in metallic matter, characterized by zero electrical resistivity and perfect diamagnetism below a critical temperature (Tc). Superconducting cables can carry a thousand times more current as a copper cable without any loss or heat generation. Magnets with Tc values of less than 10^4 K are considered to be constant magnetic fields which allow for techniques like magnetic resonance tomography in hospitals, magnetic levitation trains, or high-power wind generators [1]. It was the Dutch physicist Heike Kammerling-Honnes, who discovered the abrupt loss of resistivity in mercury metal at 4.2 K in 1911, and coined the term superconductivity. More than 20 years later, the German physicists Walther Meissner and Robert Ochsfeld found that superconductors completely expel magnetic fields from their interior, which means perfect diamagnetism. It took again more than two decades until the formulation of a physical explanation, the famous BCs-theory. In 1968, Carl S. Gleason, Cooper, Schleffer, who won the 1972 Nobel Prize in Physics. Meanwhile, more than thousand superconducting materials had been discovered, but one has still thought that the phenomenon is limited to metals and alloys at extremely low temperatures. This changed with the discovery of the first copper oxide superconductors in 1986 by Georg Bednorz and Karl Alexander Müller, who won the Nobel Prize in 1987. These ceramic compounds are superconducting at temperatures as high as 138 K, which no one has ever thought possible. The term high-temperature superconductivity (high-Tc) was born, which mesmerizes material scientists till today. It took another two decades until a second class of high-Tc materials emerged, the iron based superconductors. Iron was for a long time neglected in the search for new superconductors because of its magnetic properties. However, it turned out that the iron-based superconductors were not necessarily superconductible. Amazingly enough, it turned out that superconductivity in iron compounds occurs just in the proximity of magnetic ordering, and theory presumes that magnetic spin-fluctuation is one ingredient of the still incompletely understood mechanism of high-Tc superconductivity. Nevertheless, it is true that localized magnetic spins and especially ferromagnetism often destroy superconductivity, which is the reason why rare earth elements with unpaired electrons in partially filled 4f-shells appear rather detrimental to the superconducting state. One may therefore expect that superconductivity occurs in the superconducting state at low temperatures. However, even in the superconducting state, low temperatures. Indeed, only lanthanum is superconducting at ambient pressure, while the others require high-pressure conditions. The outstanding superconducting properties of lanthanum, among the nonmagnetic rare earth elements, are still not fully understood, and often referred to as the \"lanthanum problem\" [2]. However, a remarkable number of rare earth compounds are superconductors, including several high-Tc cuprates and some of the iron based materials. Rare earth based superconductors have been studied in the context of superconducting and co-existence of magnetic order with the superconducting state. They have significantly contributed to the understanding of both actually antagonistic phenomena.",
+        "title": "4.12 Rare earth based superconducting materials",
+        "doi": "10.1515/9783110654929-035",
+        "relevance_score": 44.24787,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "",
+        "doc_id": "bacb3e20c1cda0f4c9b31aac987df29258bd3598c2f347343840f6d00b28f650"
+      },
+      {
+        "citation_count": 22.0,
+        "publication_published_year": 2008.0,
+        "abstract": "The possible use of rare-earth cuprates R<sub>2</sub>BaCuO<sub>5</sub> and R<sub>2</sub>Cu<sub>2</sub>O<sub>5</sub> (R = rare earth) type compounds for high temperature (above 1000 °C) ceramic pigment application is presented in this paper. The traditional ceramic powder mixing method was adopted for the manufacture of various samples (pigment powders) used in this study. Yellow-green coloured powders with a variation in the intensity were obtained with R<sub>2</sub>BaCuO<sub>5</sub> (R = Sm) at different calcination temperatures (950–1050 °C) and soaking time up to 12 h. These powders were then optimized in terms of colour by altering the calcinations temperature. The products with the most attractive colour were obtained with the sample calcined at 1050 °C. The same yellow-green colour powders were observed when Sm was replaced by other rare earth oxides such as Ho, Yb, Er and calcined at the same temperature, except for Y. In the case of the Y addition, a dark green coloured powder was observed. The X-ray diffraction pattern of the samples indicated R<sub>2</sub>BaCuO<sub>5</sub> (R = rare earth) to be the major phase present in each case, although traces of CuO and the respective rare earth oxides were still present. For R<sub>2</sub>Cu<sub>2</sub>O<sub>5</sub> (R = Dy), a bluish-green coloured pigment powders with a variation in their intensity were observed when calcined between (950 and 1050 °C) with a 2 h soaking time. The best result (as far as intense colour is concerned) was noticed with the sample calcined at 950 °C. The same bluish-green colour powders were observed when Dy was replaced by other rare earths such as Yb, Ho, Er and Y. SEM micrographs of both types of compounds (R<sub>2</sub>BaCuO<sub>5</sub> and R<sub>2</sub>Cu<sub>2</sub>O<sub>5</sub>) obtained at various calcination temperatures revealed the presence of agglomerates in the samples, with an average grain size in the range 1–3 μm. All the pigment powders of the type R<sub>2</sub>BaCuO<sub>5</sub> with the exception of the Sm-doped materials were unstable at 1070 °C and produced a bubble rich surface (yttrium being the worst) when introduced into an unleaded commercial transparent glaze. In the case of Sm the yellow-green coloured powder turned to a light green. Similarly all the bluish-green coloured powders were unstable in the glaze except R = Dy and Y. In the case of Dy, a raindrop effect was observed on the surface of the ceramic tiles.",
+        "title": "Rare-earth cuprates for ceramic colouring application—An investigation",
+        "doi": "10.1016/j.jallcom.2007.01.124",
+        "relevance_score": 44.040085,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Alloys and Compounds",
+        "doc_id": "6a394ed626cf6ab4400f1b1d4f2c4b759e22588fef39de02a53594ee54826162"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2019.0,
+        "abstract": "The use of superconductivity is well-known as a method to increase the average field of a cyclotron and thereby to allow a substantial reduction of its size and mass. We present a compact high-field design for the first superconducting cyclotron with rare-earth (holmium) poles. Our design supports stable acceleration of protons to Ek = 70 MeV with no significant limit in beam current, suitable for wide applications in ocular therapy, isotope production, radiobiological studies and nuclear physics.",
+        "title": "Compact Rare-Earth Superconducting Cyclotron",
+        "doi": "10.48550/arxiv.1906.07642",
+        "relevance_score": 43.961823,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)",
+        "doc_id": "f7d0c07750a3da04a04c5d9687dce14e14740b993547ea39218f7b3a2765badb"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 112.01171,
+    "next_cursor": "eyJzIjpbNDMuOTYxODIzLCJwYXBlcjoxMC40ODU1MC9hcnhpdi4xOTA2LjA3NjQyIl19",
+    "request_tokens": 5,
+    "response_tokens": 4316,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "timestamp": "2026-08-11 11:44:29",
+  "request": {
+    "query": "iron-based superconductor chemical pressure",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2011.0,
+        "abstract": "Electrical and magnetic measurements for 1111 type Ca(Fe1-xCox)AsF and 11 type Fe(Se1-xTex) have been performed under high pressure. Superconductivity appeared with Co substitution for Ca(Fe1-xCox)AsF. For superconducting Ca(Fe1-xCox)AsF, pressure does not enhance the superconductivity so much. Disorder induced by the Co substitution in the FeAs superconducting layer is considered to be related to the pressure dependence of Tc. Pressure-induced superconductivity was observed for x = 0.0 and 0.05. For Fe(Se1-xTex), Tc exhibits the maximum value at x = 0.5 and decreases with increasing Te concentration. The enhancement of Tc with pressure was suppressed by increasing Te concentration for Fe(Se1-xTex) (x ≧0.5). For non-superconducting FeTe, pressure-induced superconductivity was not detected under high pressure up to 19 GPa.",
+        "title": "High-Pressure Studies for Iron-Based Superconductors",
+        "doi": "10.7567/jjap.50.05fd01",
+        "relevance_score": 46.881874,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Jpn. J. Appl. Phys."
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2022.0,
+        "abstract": "Unconventional superconductors are promising systems that can be used in practical applications, due to their large critical temperature, critical current densities and upper critical fields. This thesis investigates the electronic and superconducting behaviour of a new family of unconventional iron-chalcogenide superconductors tuned by applied hydrostatic pressure. I will present transport measurements, at low temperatures and high magnetic fields of different single crystals of the FeSe family, to understand their complex electronic phase diagrams under pressure. The parent compound shows an unexpected fourfold increase in superconductivity under pressure, whereas as a monolayer on a substrate it displays superconductivity above the liquid nitrogen temperature. Furthermore, bulk FeSe has an unusual electronic nematic phase, but applied pressure stabilises an additional magnetic order which manifests as an upturn in resistivity. Firstly, I report the effect of impurity scattering on the electronic behaviour induced by copper substitution in the conducting iron planes. This substitution is strongly disruptive to the nematic and superconducting phases which are quickly suppressed. The enhanced impurity scattering leads to a marked increase in resistivity and strongly reduced charge carrier mobilities, as determined from magnetotransport measurements. As the amount of impurities increases, both the suppression of critical temperatures and the temperature dependence of the upper critical field are consistent with a superconductor having a sign changing order parameter. In a subsequent study of Fe<sub>1−<em>x</em></sub>Cu<em><sub>x</sub></em>Se under pressure I find that, even in the presence of a small amount of Cu impurity, the high-<em>T<sub>c</sub></em> high pressure superconducting phase is robust. Surprisingly, no signatures of the pressure stabilised magnetic order are found in zero field, only in strong magnetic fields. In the next chapters, I investigate the phase diagrams of systems with isoelectronic substitution of sulphur for selenium outside of the iron planes. The first system, FeSe<sub>0.82</sub>S<sub>0.18</sub>, explores the electronic structure in the absence of nematicity, which displays a threefold enhancement in the superconducting transition temperature in the high pressure phase. Quantum oscillations in high magnetic fields and simulations probe the expansion and topology of the large Fermi surface under pressure. Despite the enhanced critical temperature under pressure, the quasiparticle effective masses are almost pressure independent. Notably, the quantum oscillations of a different system, FeSe<sub>0.96</sub>Se<sub>0.04</sub>, only display small frequencies in the high pressure phase. I find its phase diagram shows no signature of magnetic order outside of the nematic phase in zero field, but upturns in resistivity are observed inside the nematic phase in zero field and at high pressures in strong magnetic fields. Overall, the high pressure phase of all systems investigated display an enhanced superconducting phase, and highlight the sensitivity of the magnetic phase to chemical substitution and magnetic fields.",
+        "title": "High pressure studies of iron-based superconductors",
+        "doi": "10.5287/ora-nojyp8pkn",
+        "relevance_score": 44.950424,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Oxford University Research Archive (ORA) (University of Oxford)"
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2011.0,
+        "abstract": "Electrical and magnetic measurements for 1111 type Ca(Fe 1- x Co x )AsF and 11 type Fe(Se 1- x Te x ) have been performed under high pressure. Superconductivity appeared with Co substitution for Ca(Fe 1- x Co x )AsF. For superconducting Ca(Fe 1- x Co x )AsF, pressure does not enhance the superconductivity so much. Disorder induced by the Co substitution in the FeAs superconducting layer is considered to be related to the pressure dependence of T c . Pressure-induced superconductivity was observed for x = 0.0 and 0.05. For Fe(Se 1- x Te x ), T c exhibits the maximum value at x = 0.5 and decreases with increasing Te concentration. The enhancement of T c with pressure was suppressed by increasing Te concentration for Fe(Se 1- x Te x ) ( x ≧0.5). For non-superconducting FeTe, pressure-induced superconductivity was not detected under high pressure up to 19 GPa.",
+        "title": "High-Pressure Studies for Iron-Based Superconductors",
+        "doi": "10.1143/jjap.50.05fd01",
+        "relevance_score": 44.50119,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Japanese Journal of Applied Physics",
+        "doc_id": "64c5255fd6473fcffd1cec8854b6272422e367dbaec2e1d8be9e1adc53a2b801"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2013.0,
+        "abstract": "Since the discovery of superconductivity in \n              \n                \n              \n              $$\\mathrm{LaFeAsO }_{1-x}\\mathrm{F }_x$$\n              \n                  \n                \n            , which generated a new route to solve the problem of high-\n              \n                \n              \n              $$T_c$$\n              \n                  \n                \n             superconductivity, tremendous efforts have been devoted for identifying the pairing mechanism of this new class of superconductors. So far, various theories have been proposed for the pairing symmetry in this system, ranging from an \n              \n                \n              \n              $$s_{\\pm }$$\n              \n                  \n                \n            -wave state with opposite signs between hole and electron pockets or \n              \n                \n              \n              $$s_{++}$$\n              \n                  \n                \n            -wave state without sign change, to nodal \n              \n                \n              \n              $$s_{\\pm }$$\n              \n                  \n                \n            -wave or \n              \n                \n              \n              $$d$$\n              \n                  \n                \n            -wave state, and more exotic order parameter such as \n              \n                \n              \n              $$p$$\n              \n                  \n                \n            -wave state, but a consensus for the pairing symmetry in this system is still lacking. Therefore, the first experimental task is to clarify the superconducting pairing symmetry in the iron-based superconductors. In this chapter, we will briefly review the experimental and theoretical studies of iron-based superconductors.",
+        "title": "Iron-Based Superconductors",
+        "doi": "10.1007/978-4-431-54294-0_3",
+        "relevance_score": 42.553497,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Springer theses",
+        "doc_id": "388f69b86028dea449f818e9845f0e9aaf2338ddbfe527a8ab3494ac7c955950"
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2017.0,
+        "abstract": "Since Hideo Hosono discovered electron-doped iron-pnictide superconductor La[O\n                \n                  \n                \n                $$_{1-x}$$\n              F\n                \n                  \n                \n                $$_{x}$$\n              ]FeAs (Kamihara et al. in J Am Chem Soc 130:3296 (2008), [1]), scientists discovered various iron-pnictide superconductors containing FeAs layers and iron-selenide superconductors consisting of FeSe (and interstitial) layers.",
+        "title": "Iron-Based Superconductors",
+        "doi": "10.1007/978-981-10-4998-9_2",
+        "relevance_score": 42.152893,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Springer theses"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2011.0,
+        "abstract": "We investigated pressure effects on transition temperature (Tc) of the new iron-based superconductor K0.8Fe2Se2 using a BeCu/NiCrAl hybrid-type clamped piston-cylinder cell. The Tc(onset) was 33K at 0.85 GPa. With increasing pressure, Tc(onset) gradually increased and reached 36.6 K at 2.03 GPa.",
+        "title": "Pressure study of the new iron-based superconductor K0.8Fe2Se2",
+        "doi": "10.48550/arxiv.1101.0896",
+        "relevance_score": 42.04613,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2010.0,
+        "abstract": "We investigate pressure effects on an iron-based superconductor LaFeAlO using first-principles calculations. As the pressure increases, we find a structural transition from the orthorhombic to the tetragonal crystal with disappearance of the antiferromagnetically ordered magnetic moment at \\\\(24\\\\mathrm{GPa}\\\\) in agreement with the previous observation. Moreover, the calculations reveal that the structural transition is almost of the second order.",
+        "title": "Pressure effects on iron-based superconductors: A first-principles study",
+        "doi": "10.1016/j.physc.2009.12.024",
+        "relevance_score": 42.005814,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physica C: Superconductivity",
+        "doc_id": "06922a66e4e15225b5c5a5a3f1fe4660933b04c332732cb001fb8eef2791046a"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2016.0,
+        "abstract": "In this article, we present an experimental setup for high-pressure resistivity measurements up to 3.2 GPa and its application to EuFe2As2, a mother compound of iron-based superconductors. Hydrostatic and nonhydrostatic pressures are produced by Daphne 7474 and Stycast 1266 pressure transmitting media, respectively, using a piston-cylinder-type NiCrAl/CuBe high-pressure apparatus. It is found that, in EuFe2As2, application of hydrostatic pressure is essential for the appearance of bulk superconductivity at Tc～30 K in the limited range of 2.5-3.0 GPa. Quality of pressure generated via Daphne 7373 and 7474 are also evaluated by use of two Manganin wires arranged parallel and vertical to the load axis.",
+        "title": "Hydrostatic and Nonhydrostatic Pressure Effects on the Pressure-Induced Iron-Based Superconductor",
+        "doi": "10.4131/jshpreview.26.27",
+        "relevance_score": 41.53187,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "The Review of High Pressure Science and Technology",
+        "doc_id": "11e2fd700a21ff3643704e683a93e2181babcec9ffbf483f591cbfb811c7467f"
+      },
+      {
+        "citation_count": 2.0,
+        "publication_published_year": 2018.0,
+        "abstract": "The discovery of Fe-based superconductor in 2018 opened an illustrious chapter in the history of high temperature superconductors. Over the past ten years, many progresses on experiments, theories and applications have been achieved in the studies of Fe-based superconductors, which have greatly enriched the basic knowledge on the superconductivity of high temperature (Tc) superconductors and laid a solid foundation for uncovering superconducting mechanism of high-Tc superconductors and expanding their applications. In this review article, we present some important progresses and new phenomena/physics exhibited in the pressurized Fe-based superconductors, including pressure-induced superconductivity, pressure-induced reemergence of superconductivity, pressure-enhanced superconducting temperature, the prediction on the highest superconducting temperature for Fe-based superconductors via high pressure studies, the effect of the separated phase structure on the superconductivity and the discovery of a bi-critical point between antiferromagnetic and superconducting phases. It is expected that these high pressure experimental results on Fe-based superconductors, together with the results reported in the same issue through other experimental and theoretical methods, can aid to outline a more complete physical picture for a more comprehensive and deeper understanding on Fe-based superconductors.",
+        "title": "Pressure-induced phenomena and physics in iron-based superconductors",
+        "doi": "10.7498/aps.67.20181651",
+        "relevance_score": 41.457687,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Acta Physica Sinica",
+        "doc_id": "aaccc86fca82f8806351244738a8ea3c62324d8f13253c37f2e366a77ea29db9"
+      },
+      {
+        "citation_count": 108.0,
+        "publication_published_year": 2011.0,
+        "abstract": "Insight into the mechanism of high-temperature superconductivity can be gained by pressure-dependent studies of structural, thermodynamics and transport data. The role of pressure may be complicated by the level of hydrostaticity. High-pressure studies on two iron-based families of RFeAsO (R = rare-earth metals) and AFe2As2 (A = alkaline-earth metals) are reviewed here.",
+        "title": "Pressure effects on two superconducting iron-based families",
+        "doi": "10.1088/0034-4885/74/12/124502",
+        "relevance_score": 41.152905,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Reports on Progress in Physics",
+        "doc_id": "2b894a7cc9eff537580b49d47bbafa2a7da90bcf2f6abc64be3378b6bf72ea9e"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2016.0,
+        "abstract": "",
+        "title": "Pressure Effect on Iron Based Superconducting Materials",
+        "doi": "",
+        "relevance_score": 41.04722,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": ""
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2023.0,
+        "abstract": "CaAFe4As4 with A = K, Rb, and Cs are close to the doped 122 system, and the parent material can reach a superconducting transition temperature of 31-36 K without doping. To study the role of alkali metals, we investigated the induced hole doping and chemical pressure effects as a result of the introduction of alkali metals using density-functional-based methods. These two effects can affect the superconducting transition temperature by changing the number of electrons and the structure of the FeAs conductive layer, respectively. Our study shows that the dxz and dyz orbitals, which are degenerate in CaFe2As2, become nondegenerate in CaAFe4As4 due to two nonequivalent arsenic atoms (As1 and As2). The unusual oblate ellipsoid hole pocket at Γ point in CaAFe4As4 results from a divalent cation Ca2+ replaced by a monovalent cation A+. It shows one of the main differences in fermiology compared to a particular form of CaFe2As2 with reduced 1144 symmetry, due to the enhancement of As2-Fe hybridization. The unusual band appears in CaFe2As2 (1144) and gradually disappears in the change of K to Cs. Further analysis shows that this band is contributed by As1 and has strong dispersion perpendicular to the FeAs layer, suggesting that it is related to the peculiar van Hove singularity below the Fermi level. In addition, various aspects of CaFe2As2 (1144) and CaAFe4As4 in the ground state are discussed in terms of the influence of hole doping and chemical pressure.",
+        "title": "Role of Doping Effect and Chemical Pressure Effect Introduced by Alkali Metal Substitution on 1144 Iron-Based Superconductors",
+        "doi": "10.3390/ma16093343",
+        "relevance_score": 41.007687,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Materials (Basel)",
+        "doc_id": "73d1a200720d035028371bcc8f0680e178708ac7c7729276f0389d2a39de2b9c"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2009.0,
+        "abstract": "In this article, we review recent NMR studies of Fe-based superconductors. We also report our 75As-NMR and dc resistivity measurement of BaFe2As2 under high pressure P. The T-P phase diagram of BaFe2As2 determined from resistivity anomalies and the 75As-NMR clearly revealed that the antiferromagnetic anomaly is quite robust against P. The NMR measurement under P beyond 3 GPa is needed in order to determine the ground state of BaFe2As2 under P. In addition, we report recent development of NMR technique under high P.",
+        "title": "NMR Study of Iron-Based Superconductor under High Pressure",
+        "doi": "10.4131/jshpreview.19.129",
+        "relevance_score": 40.87684,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "The Review of High Pressure Science and Technology",
+        "doc_id": "26b5fded5b828a65cc43010bc218483db9bad9fd9c7cb3f3041a4011c84563c6"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2010.0,
+        "abstract": "In the recent development of the studies in iron-based superconductors, high-pressure experiments have been played an important role. Large enhancement of Tc with applying pressure and pressure-induced superconductivity were reported in LaFeAsO1-xFx. In this work, electrical, magnetic and structural measurements on 1111 type Ca(Fe1-xCox)AsF and 11 type Fe(Se1-xTex)0.92 under high pressure have been performed. For Ca(Fe1-xCox)AsF, the substitution of Co suppressed the magnetic and structural transitions and raised superconductivity. Pressure-induced superconductivity was observed for x = 0.0 and 0.05. The highest Tc was obtained in parent compound under high pressure, in contrast to LaFeAsO1-xFx. These results suggest that the substitution of Co increases carrier concentration and induces disorder in the FeAs superconducting layer. For FeTe0.92, pressure-induced superconductivity was not detected under high pressure up to 19 GPa, although the resistive anomaly due to the structural and magnetic phase transition was suppressed by applying pressure.",
+        "title": "Pressure Studies for 1111 and 11 Type Iron-based Superconductors",
+        "doi": "10.1557/proc-1254-l02-02",
+        "relevance_score": 40.02551,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "MRS Proceedings",
+        "doc_id": "1ab31a16157cad48f2a0cc43474d89861f8f87397d73fc3c29b7702eaaf1117f"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2012.0,
+        "abstract": "This Chapter gives a short overview of the recently discovered family of iron-based superconductors and a comparison to the cuprates, the first and most profoundly studied family of high-temperature superconductors. Additionally, a short overview of theoretical calculations of the electronic band structure, expected magnetic instabilities and the Fermi surface topology will be given. A knowledge of the latter is necessary for the understanding of possible gap symmetries and the impact of intraband and interband impurity scattering processes, mainly when discussing the temperature dependence of the spin-lattice relaxation rate in the superconducting state of LaO0.9F0.1FeAs1-δ in Section 7.2.",
+        "title": "Iron-based Superconductors",
+        "doi": "10.1007/978-3-8348-2423-3_4",
+        "relevance_score": 39.787094,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Magnetism and Superconductivity in Iron-based Superconductors as Probed by Nuclear Magnetic Resonance",
+        "doc_id": "a69a4a9e29c7fc28ad0fe81573927a5281256eabc4c5bdd09f5dc162f3d28525"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 464.46973,
+    "next_cursor": "eyJzIjpbMzkuNzg3MDk0LCJwYXBlcjoxMC4xMDA3Lzk3OC0zLTgzNDgtMjQyMy0zXzQiXX0=",
+    "request_tokens": 6,
+    "response_tokens": 2884,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

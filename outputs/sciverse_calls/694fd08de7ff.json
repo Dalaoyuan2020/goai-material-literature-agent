@@ -1,0 +1,197 @@
+{
+  "timestamp": "2026-08-11 11:44:18",
+  "request": {
+    "query": "iron pnictide doping superconductor",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2020.0,
+        "abstract": "The nature of the nematicity in iron pnictides is studied with a proposed magnetic fluctuation. The spin-driven order in the iron-based superconductor has been realized in two categories: stripe SDW state and nematic state. The stripe SDW order opens a gap in the band structure and causes a deformed Fermi surface. The nematic order does not make any gap in the band structure and still deforms the Fermi surface. The electronic mechanism of nematicity is discussed in an effective model by solving the self-consistent Bogoliubov-de Gennes equations. The nematic order can be visualized as crisscross horizontal and vertical stripes. Both stripes have the same period with different magnitudes. The appearance of the orthorhombic magnetic fluctuations generates two uneven pairs of peaks at (cid:1) π ; 0 ð Þ and 0 ; (cid:1) π ð Þ in its Fourier transformation. In addition, the nematic order breaks the degeneracy of d xz and d yz orbitals and causes the elliptic Fermi surface near the Γ point. The spatial image of the local density of states reveals a d x 2 -y 2 -symmetry form factor density wave.",
+        "title": "Nematicity in Electron-Doped Iron-Pnictide Superconductors",
+        "doi": "10.5772/intechopen.84408",
+        "relevance_score": 58.835037,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "On the Properties of Novel Superconductors"
+      },
+      {
+        "citation_count": 16.0,
+        "publication_published_year": 2010.0,
+        "abstract": "The doping dependence of spin excitations in Ba(Fe$_{1-x}$Co$_{x}$)$_{2}$As$_{2}$ is studied based on a two-orbital model under RPA approximation. The interplay between the spin-density-wave (SDW) and superconductivity (SC) is considered in our calculation. Our results for the spin susceptibility are in good agreement with neutron scattering (NS) experiments in various doping ranges at temperatures (T) above and below the superconducting transition temperature T$_{c}$. For the overdoped sample where one of the two hole pockets around $Gamma$ point disappears according to ARPES, we show that the imaginary part of the spin susceptibility in both SC and normal phases exhibits a gap-like behavior. This feature is consistent with the \"pseudogap\" as observed by recent NMR and NS experiments.",
+        "title": "Spin dynamics in electron-doped iron pnictide superconductors",
+        "doi": "10.1103/physrevb.82.104520",
+        "relevance_score": 56.98374,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review B",
+        "doc_id": "3102838db7aee5ccb415cae67eb28bb1d4173b54f9a27a816a4ea820e92dede2"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2022.0,
+        "abstract": "Nematicity in the heavily hole-doped iron pnictide superconductors remains controversial. Sizeable nematic fluctuations and even nematic orders far from a magnetic instability were declared in RbFe$_2$As$_2$ and its sister compounds. Here we report a systematic elastoresistance study of series of isovalent- and electron-doped KFe$_2$As$_2$ crystals. We found divergent elastoresistance upon cooling for all the crystals along their [110] direction. The amplitude of elastoresistivity diverges if K is substituted with larger ions or if the system is driven towards a Lifshitz transition. However, we conclude none of them necessarily indicates an independent nematic critical point. Instead, the increased nematicity can be associated with another electronic criticality. In particular, we propose a mechanism how elastoresistivity is enhanced at a Lifshitz transition.",
+        "title": "Elastoresistivity of heavily hole doped 122 iron pnictides superconductors",
+        "doi": "10.48550/arxiv.2205.13663",
+        "relevance_score": 56.511703,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 12.0,
+        "publication_published_year": 2017.0,
+        "abstract": "This book covers different aspects of the physics of iron-based superconductors ranging from the theoretical, the numerical and computational to the experimental ones. It starts from the basic theory",
+        "title": "The Iron Pnictide Superconductors",
+        "doi": "10.1007/978-3-319-56117-2",
+        "relevance_score": 56.376797,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "The Iron Pnictide Superconductors",
+        "doc_id": "1aaf15e36f5001fd8f026152b0b4111667db5687f6e3b3f6014c0c8c7f594d5d"
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2022.0,
+        "abstract": "Nematicity in heavily hole-doped iron pnictide superconductors remains controversial. Sizeable nematic fluctuations and even nematic orders far from magnetic instability were declared in RbFe2As2 and its sister compounds. Here, we report a systematic elastoresistance study of a series of isovalent- and electron-doped KFe2As2 crystals. We found divergent elastoresistance on cooling for all the crystals along their [110] direction. The amplitude of elastoresistivity diverges if K is substituted with larger ions or if the system is driven toward a Lifshitz transition. However, we conclude that none of them necessarily indicates an independent nematic critical point. Instead, the increased nematicity can be associated with another electronic criticality. In particular, we propose a mechanism for how elastoresistivity is enhanced at a Lifshitz transition.",
+        "title": "Elastoresistivity of Heavily Hole-Doped 122 Iron Pnictide Superconductors",
+        "doi": "10.3389/fphy.2022.853717",
+        "relevance_score": 56.153126,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Frontiers of Physics",
+        "doc_id": "838b78808655315cb6f079e30ac51050c07e6545b3bcbe205c9d185388489efa"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2022.0,
+        "abstract": "Nematicity in heavily hole-doped iron pnictide superconductors remains controversial. Sizeable nematic fluctuations and even nematic orders far from magnetic instability were declared in RbFe2As2 and its sister compounds. Here, we report a systematic elastoresistance study of a series of isovalent- and electron-doped KFe2As2 crystals. We found divergent elastoresistance on cooling for all the crystals along their [110] direction. The amplitude of elastoresistivity diverges if K is substituted with larger ions or if the system is driven toward a Lifshitz transition. However, we conclude that none of them necessarily indicates an independent nematic critical point. Instead, the increased nematicity can be associated with another electronic criticality. In particular, we propose a mechanism for how elastoresistivity is enhanced at a Lifshitz transition.",
+        "title": "Elastoresistivity of Heavily Hole-Doped 122 Iron Pnictide Superconductors",
+        "doi": "10.34657/8828",
+        "relevance_score": 55.642178,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "TIB Repositorium"
+      },
+      {
+        "citation_count": 44.0,
+        "publication_published_year": 2020.0,
+        "abstract": "Electronic nematicity, a correlated state that spontaneously breaks rotational symmetry, is observed in several layered quantum materials. In contrast to their liquid-crystal counterparts, the nematic director cannot usually point in an arbitrary direction (XY nematics), but is locked by the crystal to discrete directions (Ising nematics), resulting in strongly anisotropic fluctuations above the transition. Here, we report on the observation of nearly isotropic XY-nematic fluctuations, via elastoresistance measurements, in hole-doped Ba1-x Rb x Fe2As2 iron-based superconductors. While for [Formula: see text], the nematic director points along the in-plane diagonals of the tetragonal lattice, for [Formula: see text], it points along the horizontal and vertical axes. Remarkably, for intermediate doping, the susceptibilities of these two symmetry-irreducible nematic channels display comparable Curie-Weiss behavior, thus revealing a nearly XY-nematic state. This opens a route to assess this elusive electronic quantum liquid-crystalline state.",
+        "title": "Novel electronic nematicity in heavily hole-doped iron pnictide superconductors",
+        "doi": "10.1073/pnas.1909172117",
+        "relevance_score": 55.581436,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Proceedings of the National Academy of Sciences",
+        "doc_id": "36393f2b99d56419ec0a2c5f5b4e467f79f3566589b5f6ad35dac403f8e4b338"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2010.0,
+        "abstract": "Based on a phenomenological model with competing spin-density-wave (SDW) and extended $s-$wave superconductivity, the vortex states in Ba$_{1-x}$K$_{x}$Fe$_{2}$As$_{2}$ are investigated by solving Bogoliubov-de Gennes equations. Our result for the optimally doped compound without induced SDW is in qualitative agreement with recent scanning tunneling microscopy experiment. We also propose that the main effect of the SDW on the vortex states is to reduce the intensity of the in-gap peak in the local density of states and transfer the spectral weight to form additional peaks outside the gap.",
+        "title": "Vortex states in hole-doped iron-pnictide superconductors",
+        "doi": "10.48550/arxiv.1008.3885",
+        "relevance_score": 54.063786,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2014.0,
+        "abstract": "The electronic structure of the intercalated iron-based superconductor Ba2Ti2Fe2As4O (Tc - 21.5 K) has been investigated by using angle-resolved photoemission spectroscopy and combined local density approximation and dynamical mean field theory calculations. The electronic states near the Fermi level are dominated by both the Fe 3d and Ti 3d orbitals, indicating that the spacing layers separating different FeAs layers are also metallic. By counting the enclosed volumes of the Fermi surface sheets, we observe a large self-doping effect, i.e. 0.25 electrons per unit cell are transferred from the FeAs layer to the Ti2As2O layer, leaving the FeAs layer in a hole-doped state. This exotic behavior is successfully reproduced by our dynamical mean field calculations, in which the self-doping effect is attributed to the electronic correlations in the Fe 3d shell. Our work provides an alternative route of effective doping without element substitution for iron-based superconductors.",
+        "title": "Correlation-induced self-doping in intercalated iron-pnictide superconductor Ba2Ti2Fe2As4O",
+        "doi": "10.48550/arxiv.1409.4090",
+        "relevance_score": 54.042538,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 4.0,
+        "publication_published_year": 2011.0,
+        "abstract": "",
+        "title": "Iron pnictide superconductors",
+        "doi": "10.5282/edoc.13019",
+        "relevance_score": 52.826233,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": ""
+      },
+      {
+        "citation_count": 96.0,
+        "publication_published_year": 2010.0,
+        "abstract": "The electrodynamic properties of Ba(Fe0.92Co0.08)2As2 and Ba(Fe0.95Ni0.05)2As2 single crystals have been investigated by reflectivity measurements in a wide frequency range. In the metallic state, the optical conductivity consists of a broad incoherent background and a narrow Drude-like component which determines the transport properties; only the latter contribution strongly depends on the composition and temperature. This subsystem reveals a T 2 behavior in the dc resistivity and scattering rate disclosing a hidden Fermi-liquid behavior in the 122 iron-pnictide family. An extended Drude analysis yields the frequency dependence of the effective mass (with m � =mb � 5 in the static limit) and scattering rate that does not disclose a simple power law. The spectral weight shifts to lower energies upon cooling; a significant fraction is not recovered within the infrared range of frequencies.",
+        "title": "Electrodynamics of electron-doped iron pnictide superconductors: Normal-state properties",
+        "doi": "10.1103/physrevb.82.054518",
+        "relevance_score": 52.69649,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review B",
+        "doc_id": "6f3314bb32f6aacbbdae9028451de6dde08929e53569b1127b61d328b7b144de"
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2016.0,
+        "abstract": "Motivated by recent experimental findings, we investigate the evolution of the superconducting gap anisotropy in 122 iron pnictides as a function of hole doping. Employing both a functional and a weak coupling renormalization group approach (FRG and WRG), we analyze the Fermi surface instabilities of an effective 122 model band structure at different hole dopings x, and derive the gap anisotropy from the leading superconducting instability. In the transition regime from collinear magnetism to s± ‐wave, where strong correlations are present, we employ FRG to identify a non‐monotonous change of the gap anisotropy in qualitative agreement with new experimental findings. From the WRG, which is asymptotically exact in the weak coupling limit, we find an s± ‐wave to d‐wave transition as a function of hole doping, complementing previous findings from FRG [Thomale et al., Phys. Rev. Lett. 107, 117001 (2011)]. The gap anisotropy of the s± ‐wave monotonously increases towards the transition to d‐wave as a function of x.",
+        "title": "Evolution of superconducting gap anisotropy in hole‐doped 122 iron pnictides",
+        "doi": "10.1002/pssb.201600350",
+        "relevance_score": 52.657642,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "physica status solidi (b)",
+        "doc_id": "6d0cd523914790ac0ffe3ac730c754ff0ba3ff83b2cad5a45e049d1a00310389"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2010.0,
+        "abstract": "The electrodynamic properties of Ba(Fe$_{0.92}$Co$_{0.08})_2$As$_{2}$ and Ba(Fe$_{0.95}$Ni$_{0.05})_As$_{2}$ single crystals have been investigated by reflectivity measurements in a wide frequency range. In the metallic state, the optical conductivity consists of a broad incoherent background and a narrow Drude-like component which determines the transport properties; only the latter contribution strongly depends on the composition and temperature. This subsystem reveals a $T^2$ behavior in the dc resistivity and scattering rate disclosing a hidden Fermi-liquid behavior in the 122 iron-pnictide family. An extended Drude analysis yields the frequency dependence of the effective mass (with $m^*/m_b\\approx 5$ in the static limit) and scattering rate that does not disclose a simple power law. The spectral weight shifts to lower energies upon cooling; a significant fraction is not recovered within the infrared range of frequencies.",
+        "title": "Electrodynamics of electron doped iron-pnictide superconductors: Normal state properties",
+        "doi": "10.48550/arxiv.1004.1658",
+        "relevance_score": 52.44293,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 174.0,
+        "publication_published_year": 2009.0,
+        "abstract": "Anisotropies of electrical resistivity, upper critical field, London penetration depth and critical currents have been measured in single crystals of the optimally doped iron pnictide superconductor Ba(Fe1−xCox)2As2, x=0.074 and Tc ∼23 K. The normal state resistivity anisotropy was obtained by employing both the Montgomery technique and direct measurements on samples cut along principal crystallographic directions. The ratio γρ = ρc/ρa is about 4±1 just above Tc and becomes half of that at room temperature. The anisotropy of the upper critical field, γH = Hc2,ab/Hc2,c, as determined from specific heat measurements close to Tc, is in the range of 2.1 to 2.6, depending on the criterion used. A comparable low anisotropy of the London penetration depth, γλ = λc/λab, was recorded from TDR measurements and found to persist deep into the superconducting state. An anisotropy of comparable magnitude was also found in the critical currents, γj = jc,ab/jc,c, as determined from both direct transport measurements (∼1.5) and from the analysis of the magnetization data (∼3). Overall, our results show that iron pnictide superconductors manifest anisotropies consistent with essentially three-dimensional intermetallic compound and bear little resemblance to cuprates.",
+        "title": "Anisotropy of the Optimally-Doped Iron Pnictide Superconductor Ba(Fe0.926Co0.074)2As2",
+        "doi": "10.1103/physrevb.79.094507",
+        "relevance_score": 52.03367,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review B",
+        "doc_id": "6c100baedae370b51650134220e00ceb69b5d7970ad293747e5255a39d3b96da"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2013.0,
+        "abstract": "We investigate the doping dependence of the magnetic excitations in two-superconducting-dome-system LaFeAsO1-xDx. Using inelastic neutron scattering, spin fluctuations at different wavenumbers were observed under both superconducting domes around x = 0.1 and 0.4, but vanished at x = 0.2 corresponding to the Tc valley. Theoretical calculations indicate that the characteristic doping dependence of spin fluctuations is rationally explained as a consequence of the switching of the two intra-orbital nestings within Fe-3dYZ, ZX and 3dX2-Y2 by electron doping. The present results imply that the multi-orbital nature plays an important role in the doping and / or material dependence of the Tc of the iron pnictide superconductors.",
+        "title": "Switching of intra-orbital spin excitations in electron-doped iron pnictide superconductors",
+        "doi": "10.48550/arxiv.1307.7016",
+        "relevance_score": 52.031506,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 78.04533,
+    "next_cursor": "eyJzIjpbNTIuMDMxNTA2LCJwYXBlcjoxMC40ODU1MC9hcnhpdi4xMzA3LjcwMTYiXX0=",
+    "request_tokens": 4,
+    "response_tokens": 2667,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "timestamp": "2026-08-11 11:44:23",
+  "request": {
+    "query": "MgB2 doping superconductor",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 2.0,
+        "publication_published_year": 2008.0,
+        "abstract": "We report the effect of adipic acid (C6H10O4) doping on lattice parameters, microstructure, critical temperature (Tc), current density (Jc), and irreversibility field (Hirr) for MgB2 superconductor. Actual carbon (C) substitution level for boron (B) is estimated to be from 0.40 percent to 2.95 percent for different doping levels. A reduction in Tc from 38.43 to 34.93 K and in lattice parameter a from 3.084(3) A to 3.075(6) Ais observed for the10 wt percent C6H10O4 doped sample in comparison to pristine MgB2. This is an indication of C substitution at boron sites, with the C coming from the decomposition of C6H10O4 at the time of reaction. Interestingly the doped samples have resulted in significant enhancement of Jc and Hirr. All the doped samples exhibit the Jc value of the order of 10^4 A/cm2 at 5 K and 8 T, which is higher by an order of magnitude as compared to undoped sample. This result indicates that C6H10O4 is a promising material for MgB2 for obtaining the excellent Jc values under higher magnetic fields.",
+        "title": "Superconducting Properties of adipic acid doped Bulk MgB2 Superconductor",
+        "doi": "10.48550/arxiv.0811.2646",
+        "relevance_score": 48.95874,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "IR@NPL (CSIR-The National Physical Laboratory(NPL))"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2011.0,
+        "abstract": "A systematic study was conducted on the fabrication, structural characterization, and magnetic properties of MgB2 wire-like nanostructures with C doping between 0% and 20%. Based on chemical vapor deposition technique, non/C-doped MgB2 nanowires (NWs) with an average diameter of 60 nm and length up to several micrometers were produced by homemade MgB2 nanotubes, the mixture gases (Ar + CH4 + H2), and Ni catalyst. Electron and X-ray diffraction confirm that the as-synthesized non/C-doped MgB2 NWs are single crystalline with primitive hexagonal lattice structure. DC magnetization measurements indicate a high superconducting transition temperature (39 K) for nondoping MgB2 NWs and that on increasing the carbon content the transition broadens and shifts toward lower temperatures. The technique is an attractive synthetic method since its flexibility allows for optimization of the doping synthesis. In particular, a comprehensive investigation of influence of NW doping on superconductivity is reported for the first time.",
+        "title": "Synthesis of carbon-doped MgB2 superconducting nanowires",
+        "doi": "10.1016/j.matchemphys.2011.10.010",
+        "relevance_score": 48.82624,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Materials Chemistry and Physics",
+        "doc_id": "ef521ad753c4b853126736072b7d94ed88207c0d3975f525b89c19721c001502"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2012.0,
+        "abstract": "The effects of \\\\mathrm{Ti}_{1.5}\\\\mathrm{SiC}_2\\\\) doping on lattice parameter \\\\((a)\\\\), microstructure, critical temperature \\\\((T_{\\\\mathrm{c}})\\\\) and critical current density \\\\((J_{\\\\mathrm{c}})\\\\) of \\\\mathrm{MgBi_2}\\\\) superconductors were studied. Carbon substitution for boron could be confirmed by the shrinkage of the lattice parameter \\\\a\\\\) with increasing of \\\\mathrm{Ti}_{1.5}\\\\mathrm{SiC}_2\\\\) doping level. A reduction of \\\\T_{\\\\mathrm{c}}\\\\) from 37.15 K to 36.55 K with increasing of \\\\mathrm{Ti}_{1.5}\\\\mathrm{SiC}_2\\\\) doping was observed. The \\\\J_{\\\\mathrm{c}}\\\\) values were determined by \\\\M - H\\\\) bysteresis loops. Results show that in low magnetic field region, the \\\\J_{\\\\mathrm{c}}\\\\) value for the undoped sample is higher than those for the doped samples. However, with the increase of the magnetic field, the \\\\J_{\\\\mathrm{c}}\\\\) for the properly doped samples will be enhanced.",
+        "title": "Superconducting Properties of Ti3SiC2-Doped Bulk MgB2 Superconductor",
+        "doi": "10.1016/s1875-5372(12)60056-3",
+        "relevance_score": 48.74376,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Rare Metal Materials and Engineering",
+        "doc_id": "4e8e126960bc33c0b92536148b487169572720dcf8c4945fc364d90c95ae90ce"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2002.0,
+        "abstract": "The evolution of the superconducting properties of the carbon-doped MgB2 superconductors, MgB(2-x)Cx (x= 0.02, 0.04, 0.06) have been investigated by the transverse-field muon spin rotation (TF-muSR) technique. The low-temperature depolarisation rate, sigma(0) at 0.6 T which is proportional to the second moment of the field distribution of the vortex lattice decreases monotonically with increasing electron doping and decreasing Tc. In addition, the temperature dependence of sigma(T) has been analysed in terms of a two-gap model. The size of the two superconducting gaps decreases linearly as the carbon content increases, while the doping effect is more pronounced for the smaller gap related to the 3D pi-sheets of the Fermi surface.",
+        "title": "muSR study of carbon-doped MgB2 superconductors",
+        "doi": "10.48550/arxiv.cond-mat/0211142",
+        "relevance_score": 48.49132,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 48.0,
+        "publication_published_year": 2002.0,
+        "abstract": "Magnesium diboride, recently discovered as superconductor, is extremely interesting in respect to pairing mechanisms and phonon-mediated superconductivity, but its transition temperature (39 K) is decidedly too low for practical applications. A rush for substitutions started, intended to raise T-c and possibly maintain acceptable critical current density. The difficult introduction of Cu was attempted, through a complex procedure employing CuB24 instead of metallic Cu: owing to the tendency of Cu to form inter-metallic compounds with Mg, only a maximum of 3 mol% of Cu was safely substituted to Mg in MgB2 lattice and a small parameters contraction proportional to Cu content was recorded. The results are a decrease in T-c of about 0.5 K, not far from that found with Al addition, whose reasons are discussed and interpreted in terms of holes doping. (C) 2002 Elsevier Science Ltd. All rights reserved.",
+        "title": "Effects of copper doping in MgB2 superconductor",
+        "doi": "10.1016/s0038-1098(01)00514-2",
+        "relevance_score": 47.616455,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Solid State Communications",
+        "doc_id": "c1da30d2ae702f0a41ba7853cc2fbbc88c449295adf4d8b54fa87bee1b2f20f1"
+      },
+      {
+        "citation_count": 10.0,
+        "publication_published_year": 2012.0,
+        "abstract": "The effects of Y2O3/SiC co-doping on impurities and superconducting properties of bulk MgB2 sample were investigated. The temperature range for the formation of YB4 was determined through thermal analysis of the sintering process. Y2O3 and nano-SiC addition improved the critical current density (J\n                        c) of bulk MgB2 sample at high field without significant degradation of superconducting transition temperature (T\n                        c), and the T\n                        c value was about 38 K. Besides boron dislocation caused by C substitution, Mg2Si and YB4 inclusions also contribute to the optimization of J\n                        c. In addition, minor flux jumps caused by low stability of magnetic flux occurred at a low field of 20K and, together with weak intergranular connectivity, were responsible for inferior J\n                        c performance.",
+        "title": "Superconducting properties of Y2O3/SiC Co-doped bulk MgB2",
+        "doi": "10.1007/s10948-011-1316-0",
+        "relevance_score": 47.49459,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Superconductivity and Novel Magnetism",
+        "doc_id": "41b3c9ecddf28908b03c41536de1ceb8f6fb56cd0c40b1d3483eb6fda5743d35"
+      },
+      {
+        "citation_count": 34.0,
+        "publication_published_year": 2002.0,
+        "abstract": "High-resolution synchrotron X-ray powder diffraction measurements have been carried out on superconducting MgB2-xCx (0less than or equal toxless than or equal to0.1) phases. The carbon miscibility in the hexagonal AlB2-type structure is very small, x<0.04. At higher carbon contents, macroscopic phase separation occurs leading to the coexistence of at least two phases, isostructural with the parent MgB2 compound. The coexisting phases differ mainly in their in-plane lattice constants, suggesting that boron is substituted by carbon in the boron layers, but in different concentrations. The multiphase samples still show a clear one-step superconducting transition and full shielding. chi = -1/4pi. (C) 2002 Elsevier Science B.V. All rights reserved.",
+        "title": "Phase separation in carbon-doped MgB2 superconductors",
+        "doi": "10.1016/s0921-4526(02)00811-6",
+        "relevance_score": 47.064884,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physica B: Condensed Matter",
+        "doc_id": "4d0a3275b80d332f13ccbb49112876c2a2f8aa0fdc77dd1b7e8abf7fc54d1bc3"
+      },
+      {
+        "citation_count": 6.0,
+        "publication_published_year": 2010.0,
+        "abstract": "The discovery of superconductivity in magnesium diboride (MgB2: 39 K, in January 2001) (Nagamatsu et al., 2001) has generated enormous interest and excitement in the superconductivity community and the world in general, but especially among researchers into superconductivity in non-oxide and boron related compounds. MgB2 possesses an AlB2type hexagonal structure (space group P6/mmm) with alternating boron honeycomb planes and magnesium triangular planes, as shown in Fig. 1. Each Mg atom is located at the center of a hexagon formed by boron, and it donates its electrons to the boron planes; hence, the BB bonding is strongly anisotropic. The unit cell parameters are a = 0.3086 nm and c = 0.3524 nm at room temperature. These values of lattice parameters for MgB2 are in the middle of the values of lattice parameters of AlB2-type compounds. Owing to the simple hexagonal structure with space group P6/mmm, four optical modes at the Г point of the Brillouin zone are predicted for MgB2 (An & Pickett, 2001): a silent B1g mode (at 87.1 meV, ~700 cm-1), the E2g Raman mode (at 74.5 meV, ~600 cm-1), and the infrared active E1u (at 40.7 meV, ~330 cm1) and A2u (at 49.8 meV, ~400 cm-1) modes. The E2g mode is responsible for the high transition temperature, Tc, in MgB2.",
+        "title": "Superconducting Properties of Carbonaceous Chemical Doped MgB2",
+        "doi": "10.5772/10121",
+        "relevance_score": 46.79839,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Sciyo eBooks",
+        "doc_id": "ad43262d8bfe300d26dd6fcdd6fd300d80f0a849c95d283d637c196b5a5fe12f"
+      },
+      {
+        "citation_count": 11.0,
+        "publication_published_year": 2012.0,
+        "abstract": "Superconducting properties of MgB2 wires with and without carbon doping up to 10 at.% have been investigated. Carbon particles consisted of 10 - 40 nm nano-tubes or 10 – 20 nm size SiC. Wires were made by “in-situ” technique. The regimes of ultrasound homogenization of the mixture of nano- and micro-particles were elaborated. Mixture homogeneity was determined by SEM analysis. The influence of carbon on MgB2 synthesis con ditions (temperature and anneal time), lattice parameters was studied by metallographic and X-ray analysis. Superconducting properties (Ic, Tc) of MgB2 wires were also studied. Tc value dropped from 39 K for pure MgB2 to 35 K in the case of carbontubes doping and to 32 K in the case of SiC doping. Critical current density values in magnetic fields 2 – 12 T (4.2 K) were compared for wires with pure and carbon-doped MgB2. Ic significant improvement was fixed in the fields higher than 4 T.",
+        "title": "Influence of Carbon Doping on MgB2 Superconducting Properties",
+        "doi": "10.1016/j.phpro.2012.06.118",
+        "relevance_score": 46.66203,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physics Procedia",
+        "doc_id": "6866e4dd5ce6489eda538bf701004ba0747abfad77de57180c29e60a1e37b635"
+      },
+      {
+        "citation_count": 28.0,
+        "publication_published_year": 2009.0,
+        "abstract": "Bulk polycrystalline samples of \\\\mathrm{Eu}_{2}\\\\mathrm{O}_{3}\\\\-doped \\\\mathrm{MgB}_2\\\\ have been synthesized by a standard solid state reaction route and their structural and superconducting properties have been investigated. As a function of temperature, the structure of \\\\mathrm{Eu}_{2}\\\\mathrm{O}_{3}\\\\ doped \\\\mathrm{MgB}_2\\\\ samples has been studied by XRD (Fig. 1a) and XRD (Fig. 1b) in the magnetic field \\\\((E_{\\\\mathrm{H}})\\\\) in the magnetic field range 0–6.1. The XRD results reveal the presence of \\\\mathrm{MgO}\\\\ and \\\\mathrm{EuB}_2\\\\ secondary phases along with the main hexagonal phase of \\\\mathrm{MgB}_2\\\\. The strain values and the lattice distortions have been found to increase almost linearly with the nominal \\\\mathrm{Eu}_{2}\\\\mathrm{O}_{3}\\\\ content. The observed significant changes in the bulk-doped \\\\mathrm{MgB}_2\\\\ sample, thus is mainly attributed to the lattice distortions introduced by \\\\mathrm{Eu}_{2}\\\\mathrm{O}_{3}\\\\ doping.",
+        "title": "Enhanced superconducting properties of Eu2O3-doped MgB2",
+        "doi": "10.1016/j.physc.2009.05.014",
+        "relevance_score": 46.439034,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physica C: Superconductivity",
+        "doc_id": "db3c29ab2b675584d678553b43c9138c272569dc662b775c697d6706af17bb3d"
+      },
+      {
+        "citation_count": 78.0,
+        "publication_published_year": 2008.0,
+        "abstract": "The results from magnetotransport and magnetization of nanodiamond doped MgB2-nDx are reported. Superconducting transition temperature (Tc) is not affected significantly by x up to x=0.05 and latter decreases slightly for higher x>0.05. R(T) vs H measurements show higher Tc values under same applied magnetic fields for the nanodiamond added samples, resulting in higher estimated Hc2 values. From the magnetization measurements, it was found that irreversibility field value Hirr for the pristine sample is 7.5T at 4K and the same is increased to 13.5T for 3wt% nD added sample at the same temperature. The Jc(H) plots at all temperatures show that Jc value is lowest at all applied fields for pristine MgB2 and the sample doped with 3wt% nD gives the best Jc values at all fields. These results are discussed in terms of extrinsic pinning due to dispersed n-diamond in the host MgB2 matrix along with the intrinsic pinning due to possible substitution of C at boron site and increased interband scattering for highly ...",
+        "title": "High field performance of nanodiamond doped MgB2 superconductor",
+        "doi": "10.1063/1.2831778",
+        "relevance_score": 46.37105,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Applied Physics",
+        "doc_id": "2b771e5a9e6984d18a85df64960e1af7661dbe3a0394631079664101eca498d2"
+      },
+      {
+        "citation_count": 14.0,
+        "publication_published_year": 2011.0,
+        "abstract": "Flux pinning is a very significant mechanism to improve critical current density in MgB2 for many applications, such as developing the performance of wires and tapes. In this study, we have done a systematic study of SiC inclusions in the main matrix of MgB2. Sample production in the form of MgB2−x\n                        (SiC)\n                  x\n                 was carried out by using solid state reaction method (x=0,0.01,0.02,0.04,0.06,0.10) in the argon atmosphere. The structural and magnetic properties of the prepared samples were investigated. Structural characterization of samples was performed by the X-ray powder diffraction (XRD) technique and the Scanning Electron Microscopy (SEM) measurements. Magnetic properties were determined by M–H loops, magnetization-temperature (M–T), and AC susceptibility measurements. The T\n                        c of the samples was determined by the M–T measurements while the J\n                        c is determined through the M–H measurements. SiC inclusions up to some ratios (x=0.06) increase the critical current density by up to about 50%, while the critical temperature T\n                        c remains unchanged in compatible with the literature.",
+        "title": "Magnetic Characterization of SiC Doped Bulk MgB2 Superconductor",
+        "doi": "10.1007/s10948-010-1048-6",
+        "relevance_score": 46.35599,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Superconductivity and Novel Magnetism",
+        "doc_id": "afc9e05e9e3f840366662299c6a67a09a8e6a1c82b60b16388d21e740edd3ae0"
+      },
+      {
+        "citation_count": 43.0,
+        "publication_published_year": 2009.0,
+        "abstract": "The high field magnetization and magneto transport measurements are carried out to determine the critical superconducting parameters of MgB2-xCx system. The synthesized samples are pure phase and the lattice parameters evaluation is carried out using the Rietveld refinement. The R-T(H) measurements are done up to a field of 140 kOe. The upper critical field values, Hc2 are obtained from this data based upon the criterion of 90% of normal resistivity i.e. Hc2=H at which Rho=90%Rho; where RhoN is the normal resistivity i.e., resistivity at about 40 K in our case. The Werthamer-Helfand-Hohenberg (WHH) prediction of Hc(0) underestimates the critical field value even below than the field up to which measurement is carried out. After this the model, the Ginzburg Landau theory (GL equation) is applied to the R-T(H) data which not only calculates the Hc2(0) value but also determines the dependence of Hc2 on temperature in the low temperature high field region. The estimated Hc(0)=157.2 kOe for pure MgB2 is profoundly enhanced to 297.5 kOe for the x=0.15 sample in MgB2-xCx series. Magnetization measurements are done up to 120 kOe at different temperatures and the other parameters like irreversibility field, Hirr and critical current density Jc(H) are also calculated. The nano carbon doping results in substantial enhancement of critical parameters like Hc2, Hirr and Jc(H) in comparison to the pure MgB2 sample.",
+        "title": "Enhanced critical parameters of nanocarbon doped MgB2 superconductor",
+        "doi": "10.1063/1.3186048",
+        "relevance_score": 46.32225,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Applied Physics",
+        "doc_id": "bc98cb9dbf44854b0b08f122e0815cff9ffc7714a9d0f129c143c24ce64b032b"
+      },
+      {
+        "citation_count": 41.0,
+        "publication_published_year": 2011.0,
+        "abstract": "The effects of graphene doping on the superconducting properties of MgB<sub>2</sub> were studied. We found that small addition of graphene significantly improves the superconducting properties of MgB<sub>2</sub>, with only a small reduction in T<sub>c</sub>. Low resistivity, high critical fields and enhanced flux-flow activation energy were observed for the optimally doped bulk sample. The spatial fluctuation in the transition temperature (δT<sub>c</sub> pinning) is the flux pinning mechanism in graphene-doped MgB<sub>2</sub>.",
+        "title": "Flux pinning mechanisms in graphene-doped MgB2 superconductors",
+        "doi": "10.1016/j.scriptamat.2011.06.047",
+        "relevance_score": 45.967644,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Scripta Materialia",
+        "doc_id": "f88ec88970b18470cc2b2c58e589f668edd6e77683fbde163f1ed895e7c5a1bf"
+      },
+      {
+        "citation_count": 10.0,
+        "publication_published_year": 2013.0,
+        "abstract": "Magnetization measurements have been performed on Mg1−x\n                        Al\n                  x\n                B2 (0≤x≤0.1) at various temperatures below T\n                        \n                  c\n                 and in fields up to 9T. The reversible magnetization has been used to calculate the thermodynamic critical field (H\n                        \n                  c\n                ) which is then used to obtain a new universal behavior for both the critical current density (J\n                        \n                  c\n                ) and the pinning force (P\n                        \n                  f\n                ). This approach is based on vortex core energy (\n                  ${\\sim}H^{2}_{c}$\n                ) and clearly exhibits the deviation from single vortex pinning with increasing temperature and higher concentration of Al-doping.",
+        "title": "Scaling Behavior in Aluminum Doped MgB2 Superconductor",
+        "doi": "10.1007/s10948-012-1879-4",
+        "relevance_score": 45.541813,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Superconductivity and Novel Magnetism",
+        "doc_id": "f7a5e1d1c0841f87dd69f6c4ed60c0a609de98a044ab82ed82f9796cbed13faf"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 72.846344,
+    "next_cursor": "eyJzIjpbNDUuNTQxODEzLCJwYXBlcjoxMC4xMDA3L3MxMDk0OC0wMTItMTg3OS00Il19",
+    "request_tokens": 3,
+    "response_tokens": 3420,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

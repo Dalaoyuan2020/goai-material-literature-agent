@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-08-11 11:33:17",
+  "request": {
+    "query": "superconductor cobalt doping iron pnictide",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 5,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2010
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2020.0,
+        "abstract": "The nature of the nematicity in iron pnictides is studied with a proposed magnetic fluctuation. The spin-driven order in the iron-based superconductor has been realized in two categories: stripe SDW state and nematic state. The stripe SDW order opens a gap in the band structure and causes a deformed Fermi surface. The nematic order does not make any gap in the band structure and still deforms the Fermi surface. The electronic mechanism of nematicity is discussed in an effective model by solving the self-consistent Bogoliubov-de Gennes equations. The nematic order can be visualized as crisscross horizontal and vertical stripes. Both stripes have the same period with different magnitudes. The appearance of the orthorhombic magnetic fluctuations generates two uneven pairs of peaks at (cid:1) π ; 0 ð Þ and 0 ; (cid:1) π ð Þ in its Fourier transformation. In addition, the nematic order breaks the degeneracy of d xz and d yz orbitals and causes the elliptic Fermi surface near the Γ point. The spatial image of the local density of states reveals a d x 2 -y 2 -symmetry form factor density wave.",
+        "title": "Nematicity in Electron-Doped Iron-Pnictide Superconductors",
+        "doi": "10.5772/intechopen.84408",
+        "relevance_score": 58.835037,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "On the Properties of Novel Superconductors"
+      },
+      {
+        "citation_count": 16.0,
+        "publication_published_year": 2010.0,
+        "abstract": "The doping dependence of spin excitations in Ba(Fe$_{1-x}$Co$_{x}$)$_{2}$As$_{2}$ is studied based on a two-orbital model under RPA approximation. The interplay between the spin-density-wave (SDW) and superconductivity (SC) is considered in our calculation. Our results for the spin susceptibility are in good agreement with neutron scattering (NS) experiments in various doping ranges at temperatures (T) above and below the superconducting transition temperature T$_{c}$. For the overdoped sample where one of the two hole pockets around $Gamma$ point disappears according to ARPES, we show that the imaginary part of the spin susceptibility in both SC and normal phases exhibits a gap-like behavior. This feature is consistent with the \"pseudogap\" as observed by recent NMR and NS experiments.",
+        "title": "Spin dynamics in electron-doped iron pnictide superconductors",
+        "doi": "10.1103/physrevb.82.104520",
+        "relevance_score": 56.98374,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review B",
+        "doc_id": "3102838db7aee5ccb415cae67eb28bb1d4173b54f9a27a816a4ea820e92dede2"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2022.0,
+        "abstract": "Nematicity in the heavily hole-doped iron pnictide superconductors remains controversial. Sizeable nematic fluctuations and even nematic orders far from a magnetic instability were declared in RbFe$_2$As$_2$ and its sister compounds. Here we report a systematic elastoresistance study of series of isovalent- and electron-doped KFe$_2$As$_2$ crystals. We found divergent elastoresistance upon cooling for all the crystals along their [110] direction. The amplitude of elastoresistivity diverges if K is substituted with larger ions or if the system is driven towards a Lifshitz transition. However, we conclude none of them necessarily indicates an independent nematic critical point. Instead, the increased nematicity can be associated with another electronic criticality. In particular, we propose a mechanism how elastoresistivity is enhanced at a Lifshitz transition.",
+        "title": "Elastoresistivity of heavily hole doped 122 iron pnictides superconductors",
+        "doi": "10.48550/arxiv.2205.13663",
+        "relevance_score": 56.511703,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 12.0,
+        "publication_published_year": 2017.0,
+        "abstract": "This book covers different aspects of the physics of iron-based superconductors ranging from the theoretical, the numerical and computational to the experimental ones. It starts from the basic theory",
+        "title": "The Iron Pnictide Superconductors",
+        "doi": "10.1007/978-3-319-56117-2",
+        "relevance_score": 56.374752,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "The Iron Pnictide Superconductors",
+        "doc_id": "1aaf15e36f5001fd8f026152b0b4111667db5687f6e3b3f6014c0c8c7f594d5d"
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2022.0,
+        "abstract": "Nematicity in heavily hole-doped iron pnictide superconductors remains controversial. Sizeable nematic fluctuations and even nematic orders far from magnetic instability were declared in RbFe2As2 and its sister compounds. Here, we report a systematic elastoresistance study of a series of isovalent- and electron-doped KFe2As2 crystals. We found divergent elastoresistance on cooling for all the crystals along their [110] direction. The amplitude of elastoresistivity diverges if K is substituted with larger ions or if the system is driven toward a Lifshitz transition. However, we conclude that none of them necessarily indicates an independent nematic critical point. Instead, the increased nematicity can be associated with another electronic criticality. In particular, we propose a mechanism for how elastoresistivity is enhanced at a Lifshitz transition.",
+        "title": "Elastoresistivity of Heavily Hole-Doped 122 Iron Pnictide Superconductors",
+        "doi": "10.3389/fphy.2022.853717",
+        "relevance_score": 56.153126,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Frontiers of Physics",
+        "doc_id": "838b78808655315cb6f079e30ac51050c07e6545b3bcbe205c9d185388489efa"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 5,
+    "total_pages": 2000,
+    "search_time_ms": 71.65086,
+    "next_cursor": "eyJzIjpbNTYuMTUzMTI2LCJwYXBlcjoxMC4zMzg5L2ZwaHkuMjAyMi44NTM3MTciXX0=",
+    "request_tokens": 5,
+    "response_tokens": 828,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

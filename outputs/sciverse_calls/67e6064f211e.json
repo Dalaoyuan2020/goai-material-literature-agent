@@ -1,0 +1,198 @@
+{
+  "timestamp": "2026-08-11 11:44:19",
+  "request": {
+    "query": "cuprate substitution superconductor",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 15,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2000
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 7.0,
+        "publication_published_year": 2021.0,
+        "abstract": "The discovery of so-called high-temperature superconductors by Johannes Georg Bednorz and Karl Alexander Müller in 1986 marked the beginning of a new era in the field of superconductivity. The two had found a sudden decrease in electrical resistance by at least three orders of magnitude in compounds of barium (Ba), lanthanum (La), copper (Cu) and oxygen (O) with falling temperature.",
+        "title": "Cuprate Superconductors",
+        "doi": "10.1007/978-3-658-32380-6_9",
+        "relevance_score": 41.207985,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "History and Theory of Superconductors"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2014.0,
+        "abstract": "HgBa2Ca2Cu3O8+δ superconductor (Hg-1223) still has the highest critical temperature in various superconductors, which is a layered perovskite with the space group of P4/mmm. A structural unit of cation-layers is stacked in a sequence of -HgO-BaO-CuO-Ca- along the c-axis. The substitution of Hg by Pb enhances the stability of the Hg-1223 phase because the high steam pressure of Hg lowers the chemical stability in synthesis. However, the doping into Hg layers is related to an interstitial oxygen defect. On the other hand, the substitution of Ba by Sr improves the hole doping of CuO2 planes. Thus, the element substitution in Hg and Ba sites becomes a key factor in synthesizing high-quality superconductors. Therefore, the cation distribution in the two sites has been examined by the two-wavelengths anomalous dispersion (TWAD) method of synchrotron X-ray resonant scattering. Single crystals of Hg-1223 were grown at T = 1130 K by the liquid-assisted solid-state recrystallization method from the precursor powder prepared by spray drying or evaporation of the nitrate solutions. Oxygen contents in the precursors were determined by iodometric titrations. Four samples of Hg0.45Pb0.30Ba1.63Sr0.50Ca1.94Cu3O8 (Tc = 128 K), Hg0.42Pb0.41Ba1.19Sr1.06Ca1.97Cu3O8 (125 K), Hg0.50Pb0.50Ba0.59Sr1.24Ca1.83Cu3.34O8 (116 K) and Hg0.34Pb0.54Ba0.61Sr1.17Ca1.88Cu3O8 (115 K) were selected for single-crystal intensity measurements. A conventional measurement to determine the Ba-site occupancy was made to use a Rigaku AFC-5 four-circle diffractometer with Mo Kα radiation. After the absorption correction by the arbitrary-shape grid-integration method, crystal-structure refinements were successfully performed with R factors ranging 6.4 to 6.7 %. The site preference of Hg, Pb and Cu in the Hg site was determined with a vertical-type four-circle diffractometer in PF-BL-10A, where wavelengths of λ = 1.3906 and 1.0191 Å were used at Cu K and Hg LIII absorption edges, respectively. In the TWAD method with least-squares calculations, a variation of the residual factors gives a minimum against the contents of Hg or Cu, suggesting, for example, that Cu does not occupy the Hg site for all samples. In the presentation the site preference and structural change will be discussed in the aspects of superconductivity.",
+        "title": "Substitution effect in high-Tc mercury-based cuprate superconductor",
+        "doi": "10.1107/s2053273314086355",
+        "relevance_score": 40.67899,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Acta Crystallographica Section A: Foundations and Advances"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2000.0,
+        "abstract": "We have demonstrated that using a transition metal ion to partially substitute Cu ion of the YSr2Cu3Oy can stabilize its crystal structure and retain superconductivity. The superconducting transition temperature in YSr2(Cu1-xMx)3Oy, where M is transition metal ion, ranges from 40K to 80K depending on the specific M ion. Lattice contraction due to Sr substitution makes the Ba/Sr ion to move closer to CuO plane, and consequently leads to a charge transfer between oxygen. Our study shows that the key factor controlling the structural stability in Y-Sr-Cu-O system is the effective ionic radius Sr in lattice. The introduction of transition metal doping is to increase the effective ionic radius of Sr through the increase of oxygen content.",
+        "title": "Ion Substitution Effects on the Structure Stability of Cuprate Superconductors",
+        "doi": "10.6180/jase.2000.3.3.03",
+        "relevance_score": 40.644073,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Tamkang University Institutional Repository (TKUIR)"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2002.0,
+        "abstract": "We have derived the effective low energy Hamiltonian for Zn or Ni substituted high-T_c cuprates from microscopic three-band models consisting of the most relevant Cu or impurity 3d and O 2p orbitals. We find that both scattering potential and hopping integral induced by impurities have a finite range but decay very fast with distance from the impurity. The Zn scattering potential is very strong and attractive for electrons. The Ni scattering potential is much weaker than the Zn case, resulting from the hybridization between Ni ions and O holes. This profound difference is due to neither the electric charge nor d-level location, but rather because of the interplay between the valence state of the impurity and the strong correlation background. It gives a natural account for the unusual effect of Ni and Zn on the reduction of superconducting transition temperature. The interlayer hopping of electrons is highly anisotropic and nonlocal, determined by the in-plane electronic structure. This leads to a quantum interference of states from different sites and affects strongly the scanning tunneling spectrum perpendicular to CuO_2 planes.",
+        "title": "Microscopic Hamiltonian for Zn or Ni substituted high temperature cuprate superconductors",
+        "doi": "10.48550/arxiv.cond-mat/0205607",
+        "relevance_score": 40.464462,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 13.0,
+        "publication_published_year": 2002.0,
+        "abstract": "We have derived the effective low-energy Hamiltonian for Zn- or Ni-substituted high-T-c cuprates from microscopic three-band models consisting of the most relevant Cu or impurity 3d and O 2p orbitals. We find that both the scattering potential and hopping integral induced by impurities have a finite range but decay very fast with distance from the impurity. The Zn scattering potential is very strong and attractive for electrons. The Ni scattering potential is much weaker than the Zn case, resulting from the hybridization between Ni ions and O holes. This profound difference is due to neither the electric charge nor d-level location, but rather because of the interplay between the valence state of the impurity and the strong correlation background. It gives a natural account of the unusual effect of Ni and Zn on the reduction of the superconducting transition temperature. The interlayer hopping of electrons is highly anisotropic and nonlocal, determined by the in-plane electronic structure. This leads to a quantum interference of states from different sites and affects strongly the scanning tunneling spectrum perpendicular to CuO2 planes.",
+        "title": "Microscopic Hamiltonian for Zn- or Ni-substituted high-temperature cuprate superconductors",
+        "doi": "10.1103/physrevb.66.174504",
+        "relevance_score": 40.176445,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Physical Review B",
+        "doc_id": "cf407ab25cde0e40cf15a13c1621e0081c56177dfd8787196597e7a8ef1552a0"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2013.0,
+        "abstract": "",
+        "title": "Cuprate superconductors",
+        "doi": "10.1093/acprof:oso/9780199652556.003.0010",
+        "relevance_score": 40.062134,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Oxford University Press eBooks"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2003.0,
+        "abstract": "The doping effect of Ca substitution in Y0.7Ca0.3Ba2Cu3O\n                  y\n                 has been studied for y=6.9 and 6 by the x-ray absorption near edge spectroscopy (XANES). While Ca doping leads to an obvious increase in hole concentration in the CuO2 planes in Y0.7Ca0.3Ba2Cu3O6.9, XANES indicates absence of this doping effect in Y0.7Ca0.3Ba2Cu3O6. These two contradict results suggest that the doping effect by Ca substitution could be sensitive to the oxygen content when y∼6.0. Comparisons with others' works are made.",
+        "title": "Peculiar Hole Doping by Ca Substitution in Cuprate Superconductors",
+        "doi": "10.1023/a:1022953909161",
+        "relevance_score": 39.958412,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Journal of Low Temperature Physics",
+        "doc_id": "d45ac8d76dd8eadae8284c093400ca1b6b06853218b5a9bea988b37f8c961efa"
+      },
+      {
+        "citation_count": 33.0,
+        "publication_published_year": 2014.0,
+        "abstract": "High-Tc superconducting cuprates exhibit gap nodes. Recent experiments have revealed the existence of a node-free superconducting-like energy gap in deeply underdoped cuprates. Now it is argued that such systems are topological superconductors with antiferromagnetic order. Superconductivity in copper oxide (cuprate) high-transition-temperature superconductors follows from the chemical doping of an antiferromagnetic insulating state. The consensus that the wavefunction of the superconducting carrier, the Cooper pair, has dx2−y2 symmetry1,2 has long been reached. This pairing symmetry implies the existence of nodes in the superconducting energy gap. Recently, a series of angle-resolved photoemission spectroscopy experiments3,4,5,6,7,8,9 have revealed that deeply underdoped cuprates exhibit a particle–hole symmetric3 superconducting-like energy gap at the momentum–space locations where the dx2−y2 gap nodes are expected. Here we discuss the possibility that this phenomenon is caused by a fully gapped topological superconducting state that coexists with the antiferromagnetic order. If experimentally confirmed, this result will completely change our view of how exactly the high-temperature superconductivity state evolves from the insulating antiferromagnet.",
+        "title": "Underdoped superconducting cuprates as topological superconductors",
+        "doi": "10.1038/nphys3021",
+        "relevance_score": 39.646008,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Nature Physics",
+        "doc_id": "b1bcb5dc8a359571558958877302c76ba251a4c9ee3d33ddec04ebccd9869f91"
+      },
+      {
+        "citation_count": 2.0,
+        "publication_published_year": 2005.0,
+        "abstract": "'Thallium-Based Superconducting Cuprates' published in 'Frontiers in Superconducting Materials'",
+        "title": "Thallium-Based Superconducting Cuprates",
+        "doi": "10.1007/3-540-27294-1_22",
+        "relevance_score": 39.640858,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Frontiers in Superconducting Materials",
+        "doc_id": "69291c13616a974f9d7913304dbac517d64e93d0a04237602a5c8a0363f36d39"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2015.0,
+        "abstract": "In this chapter, the preparation of high-Tc superconductor films and their performance are described. The preparation conditions and the properties of numerous bismuth-, thallium- and mercury-based films are tabulated. In the case of the RE-123 high-Tc superconductors, only films deposited onto single-crystal substrates are considered. The deposition of the RE-123 layers of coated conductors is presented in Chapter 15. In relation to the properties of multilayer and ultrathin films, the question is addressed of whether a single CuO2 layer can be superconducting. Also discussed is the effect of epitaxial strain on the critical temperature of very thin cuprate superconductor films.",
+        "title": "Cuprate Superconductor Films",
+        "doi": "10.1002/9781118696644.ch16",
+        "relevance_score": 39.57583,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "",
+        "doc_id": "c6d5d68eeb9c6df9238c8dee711b5f94f006ec32523590d3eab4606fb040be6c"
+      },
+      {
+        "citation_count": 222.0,
+        "publication_published_year": 2010.0,
+        "abstract": "High-Temperature Cuprate Superconductors provides an up-to-date and comprehensive review of the properties of these fascinating materials. The essential properties of high-temperature cuprate supercon",
+        "title": "High-Temperature Cuprate Superconductors",
+        "doi": "10.1007/978-3-642-12633-8",
+        "relevance_score": 39.333122,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Springer series in solid-state sciences",
+        "doc_id": "9141599d118b10856e0ba9016a6d1df600edef93501df511542c147dabcc3dbf"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2022.0,
+        "abstract": "After the first discovery of high temperature superconductivity in the La-Ba-Cu-O system [1], a superconducting \n              \n                \n              \n              $$T_{c}$$\n              \n             that far exceeds the BCS limit was subsequently observed in various forms of copper oxides, as shown in Fig.2.1a. Although differences in their chemical compositions and crystal structures exist between different cuprate compounds, they commonly have a layered structure consisting of \n              \n                \n              \n              $$\\mathrm{CuO}_{2}$$\n              \n             planes (Fig.2.1b) sandwiched by charge reservoir layers.",
+        "title": "High Temperature Cuprate Superconductors",
+        "doi": "10.1007/978-3-030-99898-1_2",
+        "relevance_score": 38.99859,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Uniaxial Pressure Study of Charge Density Waves in a High-T꜀ Cuprate Superconductor"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2015.0,
+        "abstract": "Due to the layering of the crystal structures, the superconducting properties of cuprate high-Tc superconductors are anisotropic. The characteristic length scales (coherence length and penetration depth) are considered. Measured values of the energy gap of various cuprate superconductors are tabulated. The magnetic phase diagram of cuprate high-Tc superconductors is compared with that of metallic Type II superconductors. A characteristic feature of the high-Tc superconductors is the existence of an irreversibility line well below the upper critical field. Above the irreversibility line, the pinning force for the vortices is negligible, and hence the material is a superconductor with vanishing critical current density. Values of the anisotropic upper and lower critical fields of various cuprate superconductors are presented. Finally, the critical current densities and their limitations (weak-link behavior) are discussed.",
+        "title": "Superconducting Properties of Cuprate High‐Tc Superconductors",
+        "doi": "10.1002/9781118696644.ch9",
+        "relevance_score": 38.976192,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "",
+        "doc_id": "05f43e4c778d22136840f9b5ef5b8481e586ddda734cd3506e9294b85d89d11b"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2015.0,
+        "abstract": "When Bednorz and Müller discovered the superconductivity in a compound La-Ba-Cu-O in 1986, it was considered as a breakthrough in the research of the superconductivity. This leads to the discovery of the other cuprate superconductors, and immediately the transition temperature of the synthesized materials reached to the liquid nitrogen temperature. Today the maximum transition temperature of the cuprate superconductors changes from 35K for La\n              \n                \n              \n              $$_{2-x}$$\n            Sr\n              \n                \n              \n              $$_x$$\n            CuO\n              \n                \n              \n              $$_4$$\n             to 138K for Hg\n              \n                \n              \n              $$_{1-x}$$\n            Tl\n              \n                \n              \n              $$_x$$\n            Ba\n              \n                \n              \n              $$_2$$\n            Ca\n              \n                \n              \n              $$_2$$\n            Cu\n              \n                \n              \n              $$_3$$\n            O\n              \n                \n              \n              $$_y$$\n             (the highest record under normal pressure, which extends to \n              \n                \n              \n              $$\\sim $$\n            160K at high pressure) [1].",
+        "title": "High Temperature Cuprate Superconductors",
+        "doi": "10.1007/978-4-431-55510-0_2",
+        "relevance_score": 38.89917,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Springer theses"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2015.0,
+        "abstract": "Short review of the topical comprehension of Cuprate High-Temperature Superconductors, featuring structural and metallurgical aspects that optimize their superconducting properties with respect to technical applications.",
+        "title": "Cuprate High‐Temperature Superconductors",
+        "doi": "10.1002/3527600434.eap738",
+        "relevance_score": 38.86721,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "digital Encyclopedia of Applied Physics",
+        "doc_id": "b5b20c55932b06c49dbcc91b4e48396719213de4391759d3cc6ad13a2952cf8c"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 15,
+    "total_pages": 667,
+    "search_time_ms": 76.821686,
+    "next_cursor": "eyJzIjpbMzguODY3MjEsInBhcGVyOjEwLjEwMDIvMzUyNzYwMDQzNC5lYXA3MzgiXX0=",
+    "request_tokens": 3,
+    "response_tokens": 2379,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}
