@@ -123,3 +123,9 @@
 - 四家族重跑：122 33→52、1111 56→96、11 56→96、MgB2 44→76；每家族后续轮观察 16 个首轮外 ID，10 份审计齐全，真实 LLM 成功数为 0。
 - 历史 1111 首轮基线为 49；远端新增 `CeFeAsO_P` 等证据后当前首轮为 56。验收改为“不得低于 49 且必须增长”，避免把真实新增证据误判为结构回归。
 - `src/verify_search.py` 总结果 PASS，四个 `verify_search_case.py` 单案例结果均 PASS；全套 17/17 测试通过。重生成 6 张 PNG + 1 份 Mermaid，候选池增长图视觉检查无溢出。
+
+## 2026-08-12 · GitHub API 最终同步
+
+- 164 个变更文件逐一创建 Git blob；API SHA 与 Windows 工作树原始字节 SHA 164/164 一致。文本与本地 Git 对象的 SHA 差异仅来自 Windows CRLF / Git LF 规范化，25 个二进制对象与本地 Git blob 直接一致。
+- 以远端最新 `610354a7f037d732d1ef375329cfe0f311835866` 为基础树，原子创建远端提交 `de8e8bcec6e8a717194a62e8896689f1b55e3d76`，随后以 `force=false` 快进 `master` 成功，没有覆盖并发改动。
+- API 回读确认：新提交相对 `610354a` 为 ahead 1 / behind 0；`knowledge/edges.csv` 为 81 条数据记录；`outputs/search_verification_1111.json` 为 PASS、池 56→96；`CODEX_OVERNIGHT_MASTER.md` 与 `docs/frontend/frontend_dev_spec.md` 仍存在。
