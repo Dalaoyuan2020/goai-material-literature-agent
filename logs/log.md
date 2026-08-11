@@ -45,3 +45,11 @@
 - 全部图统一：核心 DOI 证据为深色实线，MatKG 弱证据为浅色阴影/虚线，未验证假设为橙色虚线；方法图明确注明 MatKG 被排除在强证据与类比源之外。视觉 QA 修正了流程框文字溢出、关系图标签/图注间距和缺字字体问题。
 - 提交前再次执行 `git fetch origin master` 已成功，把远端指针从 `dd31af3` 更新到 `e3dbdf4`；稍后提交后会在该最新任务说明提交之上 rebase，不覆盖远端新增文档。
 - rebase 后普通 `git push origin master` 连续 2 次失败：第 1 次为 `Recv failure: Connection was reset`，第 2 次为 443 端口 21 秒连接超时。按总控规则停止继续重试 Git 传输，改用已认证的 GitHub API 以远端 `e3dbdf4` 为父提交写入同一份已验证文件树。
+
+## 2026-08-12 · 夜间 P0-1：轮次驱动的候选池扩张
+
+- 开工前 `git fetch origin` 按 30 秒间隔最多尝试 3 次，均未能连接 GitHub 443；按夜间规则停止等待，使用本地完整基线继续。
+- 根因确认：`find_analogy_source()` 只返回每个关系类型的全局最优证据对，`run_family_search()` 又在循环前一次性静态生成候选；原来的“多轮”只是在同一个池里切片，搜索空间不会增长。
+- 修复：保留旧调用兼容性，同时新增 `ranked_pairs=True` 完整排序接口；搜索初始只开放每种关系的首个来源，每轮结束用显式决策状态选择“继续深挖”或“换方向”，随后才开放下一排名来源。候选 ID 现同时包含源变换和参考变换，避免不同证据方向碰撞。
+- 诚信边界：本阶段扩张决策仍明确标为 `heuristic_approximation_not_real_llm`；真实 LLM 决策在下一提交接入，不提前声称已调用。
+- 验证：`E:\Anaconda3\python.exe -m unittest tests.test_search -v` 共 5 项全部通过；其中 1111 回归测试确认第 2 轮候选 ID 至少有一个不属于第 1 轮完整候选池，且最终池严格增长。`py_compile` 通过。

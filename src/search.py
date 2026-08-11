@@ -30,8 +30,18 @@ FAMILY_RUNS = {
 HEURISTIC_MODE = "heuristic_approximation_not_real_llm"
 
 
-def _candidate_id(relation_type: str, source_pair: tuple[str, str], target: str) -> str:
-    return f"{relation_type}|{source_pair[0]}->{source_pair[1]}|{target}"
+def _candidate_id(
+    relation_type: str,
+    source_pair: tuple[str, str],
+    reference_pair: tuple[str, str],
+    target: str,
+) -> str:
+    """Identify the evidence direction as well as the transfer target."""
+
+    return (
+        f"{relation_type}|{source_pair[0]}->{source_pair[1]}"
+        f"~{reference_pair[0]}->{reference_pair[1]}|{target}"
+    )
 
 
 def warmstart_candidates(
@@ -45,6 +55,9 @@ def warmstart_candidates(
     comp_dims=None,
     family=None,
     target_materials=None,
+    source_evidence=None,
+    source_rank=0,
+    exposed_round=1,
 ):
     """Generate deterministic warmstart candidates from core evidence.
 
@@ -61,7 +74,17 @@ def warmstart_candidates(
         if list(els) != list(derived_els) or list(families) != list(derived_families):
             raise ValueError("els/families do not match materials vectorization")
     comp_dims = len(els) if comp_dims is None else comp_dims
-    source = find_analogy_source(core_edges, materials, vecs, comp_dims, relation_type)
+    source = source_evidence
+    if source is None:
+        ranked_sources = find_analogy_source(
+            core_edges,
+            materials,
+            vecs,
+            comp_dims,
+            relation_type,
+            ranked_pairs=True,
+        )
+        source = ranked_sources[source_rank] if source_rank < len(ranked_sources) else None
     if source is None:
         return []
 
@@ -90,11 +113,15 @@ def warmstart_candidates(
             continue
         candidates.append(
             {
-                "candidate_id": _candidate_id(relation_type, source_pair, target),
+                "candidate_id": _candidate_id(
+                    relation_type, source_pair, reference_pair, target
+                ),
                 "relation_type": relation_type,
                 "family": materials[target]["structure_family"],
                 "source_pair": list(source_pair),
                 "reference_pair": list(reference_pair),
+                "source_rank": source_rank,
+                "exposed_round": exposed_round,
                 "source_cosine_hint": round(source["cosine"], 4),
                 "target_base": target,
                 "prediction": prediction,
@@ -180,11 +207,96 @@ def propose_next_round(scored_candidates, history, batch_size=4):
     ]
     unseen.sort(
         key=lambda candidate: (
+            -candidate.get("exposed_round", 1),
             -abs(candidate.get("source_cosine_hint", candidate.get("score", 0.0))),
             candidate["candidate_id"],
         )
     )
     return unseen[:batch_size]
+
+
+def _heuristic_expansion_decision(history, ranked_sources, exposed_depths):
+    """Choose one evidence direction to deepen, or switch when it is exhausted.
+
+    This temporary policy is explicit heuristic control.  The LLM integration
+    replaces this decision point without changing the round-expansion state
+    machine.
+    """
+
+    expandable = [
+        relation_type
+        for relation_type, sources in ranked_sources.items()
+        if exposed_depths.get(relation_type, 0) < len(sources)
+    ]
+    if not expandable:
+        return {
+            "action": "stop_no_unexposed_source",
+            "relation_types": [],
+            "mode": HEURISTIC_MODE,
+            "reason": "all ranked non-degenerate source pairs are exposed",
+        }
+
+    last_candidates = history[-1].get("candidates", []) if history else []
+    best_by_relation = {}
+    for candidate in last_candidates:
+        relation_type = candidate["relation_type"]
+        best_by_relation[relation_type] = max(
+            best_by_relation.get(relation_type, 0.0), candidate.get("score", 0.0)
+        )
+    deepenable = [item for item in expandable if item in best_by_relation]
+    if deepenable:
+        selected = max(
+            deepenable,
+            key=lambda item: (best_by_relation[item], -exposed_depths[item], item),
+        )
+        action = "deepen"
+        reason = "best scored relation from the completed round still has ranked sources"
+    else:
+        selected = max(
+            expandable,
+            key=lambda item: (
+                len(ranked_sources[item]) - exposed_depths.get(item, 0),
+                item,
+            ),
+        )
+        action = "switch"
+        reason = "completed-round relations are exhausted; switch to an unexposed direction"
+    return {
+        "action": action,
+        "relation_types": [selected],
+        "mode": HEURISTIC_MODE,
+        "reason": reason,
+    }
+
+
+def _candidates_for_source(
+    relation_type,
+    source_rank,
+    ranked_sources,
+    materials,
+    els,
+    families,
+    core_edges,
+    vecs,
+    comp_dims,
+    family,
+    family_targets,
+    exposed_round,
+):
+    return warmstart_candidates(
+        relation_type,
+        materials,
+        els,
+        families,
+        core_edges=core_edges,
+        vecs=vecs,
+        comp_dims=comp_dims,
+        family=family,
+        target_materials=family_targets,
+        source_evidence=ranked_sources[relation_type][source_rank],
+        source_rank=source_rank,
+        exposed_round=exposed_round,
+    )
 
 
 def convergence_reason(round_number, consecutive_no_new, max_rounds=5):
@@ -219,25 +331,49 @@ def run_family_search(
         if materials[name]["structure_family"] == family
     ]
 
-    candidate_pool = []
     relation_types = sorted({edge["关系类型"] for edge in core_edges})
-    for relation_type in relation_types:
+    ranked_sources = {
+        relation_type: find_analogy_source(
+            core_edges,
+            materials,
+            vecs,
+            comp_dims,
+            relation_type,
+            ranked_pairs=True,
+        )
+        for relation_type in relation_types
+    }
+    ranked_sources = {
+        relation_type: sources
+        for relation_type, sources in ranked_sources.items()
+        if sources
+    }
+    exposed_depths = {relation_type: 1 for relation_type in ranked_sources}
+    candidate_pool = []
+    for relation_type in ranked_sources:
         candidate_pool.extend(
-            warmstart_candidates(
+            _candidates_for_source(
                 relation_type,
+                0,
+                ranked_sources,
                 materials,
                 els,
                 families,
-                core_edges=core_edges,
-                vecs=vecs,
-                comp_dims=comp_dims,
-                family=family,
-                target_materials=family_targets,
+                core_edges,
+                vecs,
+                comp_dims,
+                family,
+                family_targets,
+                1,
             )
         )
     candidate_pool = list(
         {candidate["candidate_id"]: candidate for candidate in candidate_pool}.values()
     )
+    initial_candidate_ids = {candidate["candidate_id"] for candidate in candidate_pool}
+    candidate_pool_growth = [
+        {"round_available": 1, "candidate_pool_count": len(candidate_pool)}
+    ]
 
     history = []
     consecutive_no_new = 0
@@ -281,10 +417,53 @@ def run_family_search(
         if stop_reason:
             break
 
+        expansion = _heuristic_expansion_decision(
+            history, ranked_sources, exposed_depths
+        )
+        new_candidates = []
+        for relation_type in expansion["relation_types"]:
+            source_rank = exposed_depths[relation_type]
+            new_candidates.extend(
+                _candidates_for_source(
+                    relation_type,
+                    source_rank,
+                    ranked_sources,
+                    materials,
+                    els,
+                    families,
+                    core_edges,
+                    vecs,
+                    comp_dims,
+                    family,
+                    family_targets,
+                    round_number + 1,
+                )
+            )
+            exposed_depths[relation_type] += 1
+        existing_ids = {candidate["candidate_id"] for candidate in candidate_pool}
+        new_candidates = [
+            candidate
+            for candidate in new_candidates
+            if candidate["candidate_id"] not in existing_ids
+        ]
+        candidate_pool.extend(new_candidates)
+        expansion["new_candidate_ids"] = [
+            candidate["candidate_id"] for candidate in new_candidates
+        ]
+        expansion["new_candidate_count"] = len(new_candidates)
+        expansion["candidate_pool_count_after_expansion"] = len(candidate_pool)
+        history[-1]["expansion_decision"] = expansion
+        candidate_pool_growth.append(
+            {
+                "round_available": round_number + 1,
+                "candidate_pool_count": len(candidate_pool),
+            }
+        )
+
     report = {
         "run_name": run_name,
         "structure_family": family,
-        "method": "bayesian_optimization_style_search",
+        "method": "interpretable_cosine_search_with_llm_guided_expansion",
         "llm_integration_mode": HEURISTIC_MODE,
         "real_llm_api_called": False,
         "surrogate_model": "interpretable_rules.cosine_not_black_box",
@@ -297,7 +476,23 @@ def run_family_search(
         },
         "family_core_materials": family_targets,
         "family_core_materials_count": len(family_targets),
+        "initial_candidate_pool_count": len(initial_candidate_ids),
+        "initial_candidate_ids": sorted(initial_candidate_ids),
         "candidate_pool_count": len(candidate_pool),
+        "candidate_pool_growth": candidate_pool_growth,
+        "ranked_source_counts": {
+            relation_type: len(sources)
+            for relation_type, sources in ranked_sources.items()
+        },
+        "exposed_source_depths": exposed_depths,
+        "later_round_novel_vs_round1_count": len(
+            {
+                candidate["candidate_id"]
+                for round_item in history[1:]
+                for candidate in round_item["candidates"]
+            }
+            - initial_candidate_ids
+        ),
         "rounds_run": len(history),
         "round_candidate_counts": [item["proposed_count"] for item in history],
         "retained_candidate_count": len(set(accepted_ids)),
