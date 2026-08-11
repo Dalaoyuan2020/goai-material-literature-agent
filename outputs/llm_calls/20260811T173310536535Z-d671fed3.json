@@ -1,0 +1,365 @@
+{
+  "call_id": "20260811T173310536535Z-d671fed3",
+  "timestamp_utc": "2026-08-11T17:33:10.536535+00:00",
+  "task": "candidate_ranking",
+  "request": {
+    "system_prompt": "你是材料类比搜索的候选筛选器。只能返回 JSON。候选都是未验证假设；不得把 MatKG 弱证据当强证据。兼顾高余弦证据与新开放方向，只能从给定 ID 中排序。",
+    "payload": {
+      "instruction": "选出并排序最多 4 个候选",
+      "history_summary": {
+        "run_name": "11",
+        "structure_family": "11",
+        "round": 4,
+        "observed_candidate_count": 12,
+        "candidate_pool_count": 50
+      },
+      "candidates": [
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|FeSe",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "FeSe",
+          "source_cosine_hint": 0.4898,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|FeSe-BTO_mono",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "FeSe-BTO_mono",
+          "source_cosine_hint": 0.4898,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|FeSe-STO_mono",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "FeSe-STO_mono",
+          "source_cosine_hint": 0.4898,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|FeSe0.5Te0.5",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5",
+          "source_cosine_hint": 0.4898,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|FeSe0.5Te0.5_P",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5_P",
+          "source_cosine_hint": 0.4898,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|FeSe1-xSx",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "FeSe1-xSx",
+          "source_cosine_hint": 0.4898,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|FeTe",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "FeTe",
+          "source_cosine_hint": 0.4898,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|FeSe-BTO_mono",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "FeSe-BTO_mono",
+          "source_cosine_hint": 0.9992,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|FeSe-STO_mono",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "FeSe-STO_mono",
+          "source_cosine_hint": 0.9992,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|FeSe0.5Te0.5",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5",
+          "source_cosine_hint": 0.9992,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|FeSe0.5Te0.5_P",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5_P",
+          "source_cosine_hint": 0.9992,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|FeSe1-xSx",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "FeSe1-xSx",
+          "source_cosine_hint": 0.9992,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|FeTe",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "FeTe",
+          "source_cosine_hint": 0.9992,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|FeSe",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "FeSe",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|FeSe-BTO_mono",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "FeSe-BTO_mono",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|FeSe-STO_mono",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "FeSe-STO_mono",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|FeSe0.5Te0.5",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|FeSe0.5Te0.5_P",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5_P",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|FeSe1-xSx",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "FeSe1-xSx",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|FeTe",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "FeTe",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|FeSe",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "FeSe",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|FeSe-BTO_mono",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "FeSe-BTO_mono",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|FeSe0.5Te0.5",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|FeSe0.5Te0.5_P",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5_P",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|FeSe1-xSx",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "FeSe1-xSx",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|FeTe",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "FeTe",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|FeSe",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "FeSe",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|FeSe-BTO_mono",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "FeSe-BTO_mono",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|FeSe-STO_mono",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "FeSe-STO_mono",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|FeSe0.5Te0.5",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|FeSe0.5Te0.5_P",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "FeSe0.5Te0.5_P",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|FeSe1-xSx",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "FeSe1-xSx",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|FeTe",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "FeTe",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|FeSe-BTO_mono",
+          "relation_type": "R3",
+          "source_rank": 3,
+          "target_base": "FeSe-BTO_mono",
+          "source_cosine_hint": 0.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|FeSe-STO_mono",
+          "relation_type": "R3",
+          "source_rank": 3,
+          "target_base": "FeSe-STO_mono",
+          "source_cosine_hint": 0.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|FeSe0.5Te0.5_P",
+          "relation_type": "R3",
+          "source_rank": 3,
+          "target_base": "FeSe0.5Te0.5_P",
+          "source_cosine_hint": 0.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|FeSe1-xSx",
+          "relation_type": "R3",
+          "source_rank": 3,
+          "target_base": "FeSe1-xSx",
+          "source_cosine_hint": 0.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|FeTe",
+          "relation_type": "R3",
+          "source_rank": 3,
+          "target_base": "FeTe",
+          "source_cosine_hint": 0.0,
+          "score": null
+        }
+      ],
+      "required_schema": {
+        "ranked_candidate_ids": [
+          "candidate_id"
+        ],
+        "reason": "string"
+      }
+    }
+  },
+  "secret_paths_loaded": [
+    "C:\\Users\\WinnerSheep\\Documents\\Claude_Mini_agent\\_digital_assets\\api_keys.env",
+    "C:\\Users\\WinnerSheep\\.goai_agent_secrets\\api_keys.env"
+  ],
+  "credentials_written_to_audit": false,
+  "attempts": [
+    {
+      "provider": "step",
+      "status": "skipped_missing_configuration"
+    },
+    {
+      "provider": "gemini",
+      "status": "skipped_missing_configuration"
+    },
+    {
+      "provider": "heuristic",
+      "status": "fallback_used",
+      "reason": "no configured provider returned valid JSON"
+    }
+  ],
+  "result": {
+    "value": {
+      "ranked_candidate_ids": [
+        "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|FeSe-BTO_mono",
+        "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|FeSe-STO_mono",
+        "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|FeSe0.5Te0.5_P",
+        "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|FeSe1-xSx"
+      ],
+      "reason": "deterministic evidence score ordering"
+    },
+    "provider": "heuristic",
+    "model": null,
+    "mode": "heuristic_fallback_not_real_llm",
+    "real_llm_api_called": false
+  }
+}

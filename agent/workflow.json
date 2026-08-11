@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "frontend_dev_spec.section_04.material_literature_agent",
+  "python_path": "src",
+  "intents": [
+    {
+      "intent": "search_122_family",
+      "description": "运行 122 家族逐轮候选扩张",
+      "action": "search.run_family_search",
+      "params": {"run_name": "122", "family": "122"},
+      "artifacts": ["outputs/search_runs/122.json", "outputs/llm_calls/*.json"]
+    },
+    {
+      "intent": "search_1111_family",
+      "description": "运行旗舰 1111 家族逐轮候选扩张",
+      "action": "search.run_family_search",
+      "params": {"run_name": "1111", "family": "1111"},
+      "artifacts": ["outputs/search_runs/1111.json", "outputs/llm_calls/*.json"]
+    },
+    {
+      "intent": "search_11_family",
+      "description": "运行 11 家族逐轮候选扩张",
+      "action": "search.run_family_search",
+      "params": {"run_name": "11", "family": "11"},
+      "artifacts": ["outputs/search_runs/11.json", "outputs/llm_calls/*.json"]
+    },
+    {
+      "intent": "search_mgb2_family",
+      "description": "运行 MgB2/diboride 家族逐轮候选扩张",
+      "action": "search.run_family_search",
+      "params": {"run_name": "MgB2", "family": "diboride"},
+      "artifacts": ["outputs/search_runs/MgB2.json", "outputs/llm_calls/*.json"]
+    },
+    {
+      "intent": "run_all_family_searches",
+      "description": "依次运行四个家族搜索",
+      "action": "search.run_all",
+      "params": {},
+      "artifacts": ["outputs/search_runs/*.json", "outputs/llm_calls/*.json"]
+    },
+    {
+      "intent": "verify_one_family_search",
+      "description": "按主任务标准核验一个家族的搜索报告和审计链",
+      "action": "verify_search_case.verify_run",
+      "params": {"run_name": "1111"},
+      "artifacts": ["outputs/search_verification_1111.json"]
+    },
+    {
+      "intent": "compile_knowledge_pipeline",
+      "description": "编译核心知识边、弱证据扩展和规则报告",
+      "action": "pipeline.run",
+      "params": {},
+      "artifacts": ["outputs/pipeline_report.json"]
+    },
+    {
+      "intent": "generate_visualizations",
+      "description": "生成流程、证据和候选池增长图",
+      "action": "visualize.generate_all",
+      "params": {},
+      "artifacts": ["outputs/visualizations/*"]
+    }
+  ],
+  "evidence_policy": {
+    "strong_source": "knowledge/edges.csv DOI-backed core only",
+    "weak_context": "knowledge/edges_matkg.csv vector-space context only",
+    "hypothesis_status": "候选假设(未验证)"
+  }
+}

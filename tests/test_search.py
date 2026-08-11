@@ -1,4 +1,5 @@
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -6,7 +7,14 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from search import convergence_reason, propose_next_round, score_candidate  # noqa: E402
+from application import find_analogy_source  # noqa: E402
+from llm_client import AuditedLLMClient  # noqa: E402
+from search import (  # noqa: E402
+    convergence_reason,
+    propose_next_round,
+    run_family_search,
+    score_candidate,
+)
 
 
 class SearchTests(unittest.TestCase):
@@ -40,6 +48,68 @@ class SearchTests(unittest.TestCase):
             "reference_pair": ["Sr", "SrMn"],
         }
         self.assertEqual(score_candidate(candidate, vecs, comp_dims=2), 0.5)
+
+    def test_ranked_analogy_sources_preserve_best_source_compatibility(self):
+        edges = [
+            {"关系类型": "R", "材料A": "a", "材料B": "b"},
+            {"关系类型": "R", "材料A": "c", "材料B": "d"},
+            {"关系类型": "R", "材料A": "e", "材料B": "f"},
+        ]
+        vecs = {
+            "a": [0.0, 0.0, 1.0],
+            "b": [1.0, 0.0, 1.0],
+            "c": [0.0, 1.0, 1.0],
+            "d": [1.0, 1.0, 1.0],
+            "e": [0.0, 0.0, 1.0],
+            "f": [0.8, 0.6, 1.0],
+        }
+        ranked = find_analogy_source(
+            edges, {}, vecs, 2, "R", ranked_pairs=True
+        )
+        best = find_analogy_source(edges, {}, vecs, 2, "R")
+        self.assertGreater(len(ranked), 1)
+        self.assertEqual(best, ranked[0])
+        self.assertGreaterEqual(abs(ranked[0]["cosine"]), abs(ranked[1]["cosine"]))
+
+        excluded = find_analogy_source(
+            edges,
+            {},
+            vecs,
+            2,
+            "R",
+            exclude_pairs={frozenset((ranked[0]["pair1"], ranked[0]["pair2"]))},
+            ranked_pairs=True,
+        )
+        self.assertNotIn(best["source_key"], {item["source_key"] for item in excluded})
+
+    def test_round_expansion_exposes_id_impossible_in_first_round(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            llm_client = AuditedLLMClient(
+                config={}, audit_dir=Path(temp_dir) / "llm_calls"
+            )
+            report = run_family_search(
+                "1111-test",
+                "1111",
+                max_rounds=3,
+                batch_size=4,
+                output_dir=Path(temp_dir),
+                llm_client=llm_client,
+            )
+            audit_count = len(
+                list((Path(temp_dir) / "llm_calls").glob("*.json"))
+            )
+        first_round_possible = set(report["initial_candidate_ids"])
+        second_round_ids = {
+            candidate["candidate_id"]
+            for candidate in report["history"][1]["candidates"]
+        }
+        self.assertGreater(report["candidate_pool_count"], report["initial_candidate_pool_count"])
+        self.assertTrue(second_round_ids - first_round_possible)
+        self.assertFalse(report["real_llm_api_called"])
+        self.assertEqual(report["llm_call_count"], report["rounds_run"] * 2)
+        self.assertEqual(
+            audit_count, report["llm_call_count"]
+        )
 
 
 if __name__ == "__main__":

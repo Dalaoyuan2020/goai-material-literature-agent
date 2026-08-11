@@ -1,0 +1,505 @@
+{
+  "passed": true,
+  "expected_families": [
+    "122",
+    "1111",
+    "11",
+    "MgB2"
+  ],
+  "missing_reports": [],
+  "family_results": [
+    {
+      "run_name": "122",
+      "passed": true,
+      "summary": {
+        "initial_candidate_pool_count": 33,
+        "final_candidate_pool_count": 52,
+        "rounds_run": 5,
+        "observed_candidate_count": 20,
+        "later_round_novel_count": 16,
+        "llm_call_count": 10,
+        "real_llm_api_called": false
+      },
+      "checks": [
+        {
+          "name": "known_family",
+          "passed": true,
+          "details": "122"
+        },
+        {
+          "name": "family_mapping",
+          "passed": true,
+          "details": "expected=122, actual=122"
+        },
+        {
+          "name": "honest_method_name",
+          "passed": true,
+          "details": "llm_guided_iterative_candidate_expansion_and_pruning"
+        },
+        {
+          "name": "initial_pool_count_matches_ids",
+          "passed": true,
+          "details": "count=33, ids=33"
+        },
+        {
+          "name": "candidate_pool_grew",
+          "passed": true,
+          "details": "33->52"
+        },
+        {
+          "name": "pool_growth_is_strict_by_round",
+          "passed": true,
+          "details": [
+            33,
+            38,
+            43,
+            48,
+            52
+          ]
+        },
+        {
+          "name": "observed_ids_are_unique",
+          "passed": true,
+          "details": "observed=20, unique=20"
+        },
+        {
+          "name": "every_later_round_contains_id_impossible_in_round_1",
+          "passed": true,
+          "details": [
+            {
+              "round": 2,
+              "novel_count": 4
+            },
+            {
+              "round": 3,
+              "novel_count": 4
+            },
+            {
+              "round": 4,
+              "novel_count": 4
+            },
+            {
+              "round": 5,
+              "novel_count": 4
+            }
+          ]
+        },
+        {
+          "name": "all_outputs_are_unverified_hypotheses",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "evidence_tiers_remain_separate",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "two_audited_llm_decisions_per_round",
+          "passed": true,
+          "details": "rounds=5, call_ids=10"
+        },
+        {
+          "name": "all_llm_audits_exist",
+          "passed": true,
+          "details": {
+            "missing": [],
+            "loaded": 10
+          }
+        },
+        {
+          "name": "audit_tasks_cover_ranking_and_expansion",
+          "passed": true,
+          "details": {
+            "candidate_ranking": 5,
+            "round_expansion_decision": 5
+          }
+        },
+        {
+          "name": "real_llm_flag_matches_audits",
+          "passed": true,
+          "details": "report=False, audits=False"
+        },
+        {
+          "name": "audits_declare_no_credentials",
+          "passed": true,
+          "details": "audit_count=10"
+        }
+      ]
+    },
+    {
+      "run_name": "1111",
+      "passed": true,
+      "summary": {
+        "initial_candidate_pool_count": 56,
+        "final_candidate_pool_count": 96,
+        "rounds_run": 5,
+        "observed_candidate_count": 20,
+        "later_round_novel_count": 16,
+        "llm_call_count": 10,
+        "real_llm_api_called": false
+      },
+      "checks": [
+        {
+          "name": "known_family",
+          "passed": true,
+          "details": "1111"
+        },
+        {
+          "name": "family_mapping",
+          "passed": true,
+          "details": "expected=1111, actual=1111"
+        },
+        {
+          "name": "honest_method_name",
+          "passed": true,
+          "details": "llm_guided_iterative_candidate_expansion_and_pruning"
+        },
+        {
+          "name": "initial_pool_count_matches_ids",
+          "passed": true,
+          "details": "count=56, ids=56"
+        },
+        {
+          "name": "candidate_pool_grew",
+          "passed": true,
+          "details": "56->96"
+        },
+        {
+          "name": "pool_growth_is_strict_by_round",
+          "passed": true,
+          "details": [
+            56,
+            66,
+            76,
+            86,
+            96
+          ]
+        },
+        {
+          "name": "observed_ids_are_unique",
+          "passed": true,
+          "details": "observed=20, unique=20"
+        },
+        {
+          "name": "every_later_round_contains_id_impossible_in_round_1",
+          "passed": true,
+          "details": [
+            {
+              "round": 2,
+              "novel_count": 4
+            },
+            {
+              "round": 3,
+              "novel_count": 4
+            },
+            {
+              "round": 4,
+              "novel_count": 4
+            },
+            {
+              "round": 5,
+              "novel_count": 4
+            }
+          ]
+        },
+        {
+          "name": "all_outputs_are_unverified_hypotheses",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "evidence_tiers_remain_separate",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "two_audited_llm_decisions_per_round",
+          "passed": true,
+          "details": "rounds=5, call_ids=10"
+        },
+        {
+          "name": "all_llm_audits_exist",
+          "passed": true,
+          "details": {
+            "missing": [],
+            "loaded": 10
+          }
+        },
+        {
+          "name": "audit_tasks_cover_ranking_and_expansion",
+          "passed": true,
+          "details": {
+            "candidate_ranking": 5,
+            "round_expansion_decision": 5
+          }
+        },
+        {
+          "name": "real_llm_flag_matches_audits",
+          "passed": true,
+          "details": "report=False, audits=False"
+        },
+        {
+          "name": "audits_declare_no_credentials",
+          "passed": true,
+          "details": "audit_count=10"
+        }
+      ]
+    },
+    {
+      "run_name": "11",
+      "passed": true,
+      "summary": {
+        "initial_candidate_pool_count": 56,
+        "final_candidate_pool_count": 96,
+        "rounds_run": 5,
+        "observed_candidate_count": 20,
+        "later_round_novel_count": 16,
+        "llm_call_count": 10,
+        "real_llm_api_called": false
+      },
+      "checks": [
+        {
+          "name": "known_family",
+          "passed": true,
+          "details": "11"
+        },
+        {
+          "name": "family_mapping",
+          "passed": true,
+          "details": "expected=11, actual=11"
+        },
+        {
+          "name": "honest_method_name",
+          "passed": true,
+          "details": "llm_guided_iterative_candidate_expansion_and_pruning"
+        },
+        {
+          "name": "initial_pool_count_matches_ids",
+          "passed": true,
+          "details": "count=56, ids=56"
+        },
+        {
+          "name": "candidate_pool_grew",
+          "passed": true,
+          "details": "56->96"
+        },
+        {
+          "name": "pool_growth_is_strict_by_round",
+          "passed": true,
+          "details": [
+            56,
+            66,
+            76,
+            86,
+            96
+          ]
+        },
+        {
+          "name": "observed_ids_are_unique",
+          "passed": true,
+          "details": "observed=20, unique=20"
+        },
+        {
+          "name": "every_later_round_contains_id_impossible_in_round_1",
+          "passed": true,
+          "details": [
+            {
+              "round": 2,
+              "novel_count": 4
+            },
+            {
+              "round": 3,
+              "novel_count": 4
+            },
+            {
+              "round": 4,
+              "novel_count": 4
+            },
+            {
+              "round": 5,
+              "novel_count": 4
+            }
+          ]
+        },
+        {
+          "name": "all_outputs_are_unverified_hypotheses",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "evidence_tiers_remain_separate",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "two_audited_llm_decisions_per_round",
+          "passed": true,
+          "details": "rounds=5, call_ids=10"
+        },
+        {
+          "name": "all_llm_audits_exist",
+          "passed": true,
+          "details": {
+            "missing": [],
+            "loaded": 10
+          }
+        },
+        {
+          "name": "audit_tasks_cover_ranking_and_expansion",
+          "passed": true,
+          "details": {
+            "candidate_ranking": 5,
+            "round_expansion_decision": 5
+          }
+        },
+        {
+          "name": "real_llm_flag_matches_audits",
+          "passed": true,
+          "details": "report=False, audits=False"
+        },
+        {
+          "name": "audits_declare_no_credentials",
+          "passed": true,
+          "details": "audit_count=10"
+        }
+      ]
+    },
+    {
+      "run_name": "MgB2",
+      "passed": true,
+      "summary": {
+        "initial_candidate_pool_count": 44,
+        "final_candidate_pool_count": 76,
+        "rounds_run": 5,
+        "observed_candidate_count": 20,
+        "later_round_novel_count": 16,
+        "llm_call_count": 10,
+        "real_llm_api_called": false
+      },
+      "checks": [
+        {
+          "name": "known_family",
+          "passed": true,
+          "details": "MgB2"
+        },
+        {
+          "name": "family_mapping",
+          "passed": true,
+          "details": "expected=diboride, actual=diboride"
+        },
+        {
+          "name": "honest_method_name",
+          "passed": true,
+          "details": "llm_guided_iterative_candidate_expansion_and_pruning"
+        },
+        {
+          "name": "initial_pool_count_matches_ids",
+          "passed": true,
+          "details": "count=44, ids=44"
+        },
+        {
+          "name": "candidate_pool_grew",
+          "passed": true,
+          "details": "44->76"
+        },
+        {
+          "name": "pool_growth_is_strict_by_round",
+          "passed": true,
+          "details": [
+            44,
+            52,
+            60,
+            68,
+            76
+          ]
+        },
+        {
+          "name": "observed_ids_are_unique",
+          "passed": true,
+          "details": "observed=20, unique=20"
+        },
+        {
+          "name": "every_later_round_contains_id_impossible_in_round_1",
+          "passed": true,
+          "details": [
+            {
+              "round": 2,
+              "novel_count": 4
+            },
+            {
+              "round": 3,
+              "novel_count": 4
+            },
+            {
+              "round": 4,
+              "novel_count": 4
+            },
+            {
+              "round": 5,
+              "novel_count": 4
+            }
+          ]
+        },
+        {
+          "name": "all_outputs_are_unverified_hypotheses",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "evidence_tiers_remain_separate",
+          "passed": true,
+          "details": "candidate_count=20"
+        },
+        {
+          "name": "two_audited_llm_decisions_per_round",
+          "passed": true,
+          "details": "rounds=5, call_ids=10"
+        },
+        {
+          "name": "all_llm_audits_exist",
+          "passed": true,
+          "details": {
+            "missing": [],
+            "loaded": 10
+          }
+        },
+        {
+          "name": "audit_tasks_cover_ranking_and_expansion",
+          "passed": true,
+          "details": {
+            "candidate_ranking": 5,
+            "round_expansion_decision": 5
+          }
+        },
+        {
+          "name": "real_llm_flag_matches_audits",
+          "passed": true,
+          "details": "report=False, audits=False"
+        },
+        {
+          "name": "audits_declare_no_credentials",
+          "passed": true,
+          "details": "audit_count=10"
+        }
+      ]
+    }
+  ],
+  "flagship_1111_checks": [
+    {
+      "name": "flagship_1111_meets_or_exceeds_historical_49_baseline",
+      "passed": true,
+      "details": 56
+    },
+    {
+      "name": "flagship_1111_expands_beyond_baseline",
+      "passed": true,
+      "details": 96
+    },
+    {
+      "name": "flagship_1111_has_later_round_novel_ids",
+      "passed": true,
+      "details": 16
+    }
+  ]
+}

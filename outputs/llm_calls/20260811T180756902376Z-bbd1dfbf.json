@@ -1,0 +1,509 @@
+{
+  "call_id": "20260811T180756902376Z-bbd1dfbf",
+  "timestamp_utc": "2026-08-11T18:07:56.903377+00:00",
+  "task": "candidate_ranking",
+  "request": {
+    "system_prompt": "你是材料类比搜索的候选筛选器。只能返回 JSON。候选都是未验证假设；不得把 MatKG 弱证据当强证据。兼顾高余弦证据与新开放方向，只能从给定 ID 中排序。",
+    "payload": {
+      "instruction": "选出并排序最多 4 个候选",
+      "history_summary": {
+        "run_name": "1111",
+        "structure_family": "1111",
+        "round": 1,
+        "observed_candidate_count": 0,
+        "candidate_pool_count": 56
+      },
+      "candidates": [
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|CeFeAsO",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "CeFeAsO",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|CeFeAsO_P",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "CeFeAsO_P",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|GdFeAsO",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "GdFeAsO",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|GdFeAsO1-xFx",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "GdFeAsO1-xFx",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|LaFeAsO",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "LaFeAsO",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|LaFeAsO1-xFx",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "LaFeAsO1-xFx",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|NdFeAsO",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "NdFeAsO",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|PrFeAsO",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "PrFeAsO",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|SmFeAsO",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "SmFeAsO",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|SmFeAsO1-xFx",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "SmFeAsO1-xFx",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "CeFeAsO",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO_P",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "CeFeAsO_P",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "GdFeAsO",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO1-xFx",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "GdFeAsO1-xFx",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|LaFeAsO",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "LaFeAsO",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|LaFeAsO1-xFx",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "LaFeAsO1-xFx",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|NdFeAsO",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "NdFeAsO",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|PrFeAsO",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "PrFeAsO",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|SmFeAsO",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "SmFeAsO",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|SmFeAsO1-xFx",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "SmFeAsO1-xFx",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|CeFeAsO",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "CeFeAsO",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|CeFeAsO_P",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "CeFeAsO_P",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|GdFeAsO",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "GdFeAsO",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|GdFeAsO1-xFx",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "GdFeAsO1-xFx",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|LaFeAsO",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "LaFeAsO",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|LaFeAsO1-xFx",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "LaFeAsO1-xFx",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|NdFeAsO",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "NdFeAsO",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|PrFeAsO",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "PrFeAsO",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|SmFeAsO",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "SmFeAsO",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|SmFeAsO1-xFx",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "SmFeAsO1-xFx",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|CeFeAsO_P",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "CeFeAsO_P",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|GdFeAsO",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "GdFeAsO",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|GdFeAsO1-xFx",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "GdFeAsO1-xFx",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|LaFeAsO1-xFx",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "LaFeAsO1-xFx",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|PrFeAsO",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "PrFeAsO",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|SmFeAsO",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "SmFeAsO",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|SmFeAsO1-xFx",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "SmFeAsO1-xFx",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|CeFeAsO",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "CeFeAsO",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|CeFeAsO_P",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "CeFeAsO_P",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|GdFeAsO",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "GdFeAsO",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|GdFeAsO1-xFx",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "GdFeAsO1-xFx",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|LaFeAsO",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "LaFeAsO",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|LaFeAsO1-xFx",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "LaFeAsO1-xFx",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|NdFeAsO",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "NdFeAsO",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|PrFeAsO",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "PrFeAsO",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|SmFeAsO",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "SmFeAsO",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|CeFeAsO",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "CeFeAsO",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|CeFeAsO_P",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "CeFeAsO_P",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|GdFeAsO",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "GdFeAsO",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|GdFeAsO1-xFx",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "GdFeAsO1-xFx",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|LaFeAsO",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "LaFeAsO",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|LaFeAsO1-xFx",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "LaFeAsO1-xFx",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|NdFeAsO",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "NdFeAsO",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|PrFeAsO",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "PrFeAsO",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|SmFeAsO",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "SmFeAsO",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|SmFeAsO1-xFx",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "SmFeAsO1-xFx",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        }
+      ],
+      "required_schema": {
+        "ranked_candidate_ids": [
+          "candidate_id"
+        ],
+        "reason": "string"
+      }
+    }
+  },
+  "secret_paths_loaded": [
+    "C:\\Users\\WinnerSheep\\Documents\\Claude_Mini_agent\\_digital_assets\\api_keys.env",
+    "C:\\Users\\WinnerSheep\\.goai_agent_secrets\\api_keys.env"
+  ],
+  "credentials_written_to_audit": false,
+  "attempts": [
+    {
+      "provider": "step",
+      "status": "skipped_missing_configuration"
+    },
+    {
+      "provider": "gemini",
+      "status": "skipped_missing_configuration"
+    },
+    {
+      "provider": "heuristic",
+      "status": "fallback_used",
+      "reason": "no configured provider returned valid JSON"
+    }
+  ],
+  "result": {
+    "value": {
+      "ranked_candidate_ids": [
+        "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO",
+        "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO_P",
+        "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO",
+        "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO1-xFx"
+      ],
+      "reason": "deterministic evidence score ordering"
+    },
+    "provider": "heuristic",
+    "model": null,
+    "mode": "heuristic_fallback_llm_unreachable",
+    "real_llm_api_called": false
+  }
+}

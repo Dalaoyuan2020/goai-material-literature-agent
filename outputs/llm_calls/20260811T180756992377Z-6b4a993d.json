@@ -1,0 +1,509 @@
+{
+  "call_id": "20260811T180756992377Z-6b4a993d",
+  "timestamp_utc": "2026-08-11T18:07:56.992377+00:00",
+  "task": "candidate_ranking",
+  "request": {
+    "system_prompt": "你是材料类比搜索的候选筛选器。只能返回 JSON。候选都是未验证假设；不得把 MatKG 弱证据当强证据。兼顾高余弦证据与新开放方向，只能从给定 ID 中排序。",
+    "payload": {
+      "instruction": "选出并排序最多 4 个候选",
+      "history_summary": {
+        "run_name": "MgB2",
+        "structure_family": "diboride",
+        "round": 4,
+        "observed_candidate_count": 12,
+        "candidate_pool_count": 68
+      },
+      "candidates": [
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|MgB2",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "MgB2",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|MgB2+Eu2O3",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "MgB2+Eu2O3",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|MgB2+SiC",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "MgB2+SiC",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|MgB2+Ti3SiC2",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "MgB2+Ti3SiC2",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|MgB2+Y2O3/SiC",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "MgB2+Y2O3/SiC",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|MgB2+graphene",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "MgB2+graphene",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|MgB2+nanodiamond",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "MgB2+nanodiamond",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|MgB2-xCx",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "MgB2-xCx",
+          "source_cosine_hint": 0.9958,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|MgB2+Y2O3/SiC",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "MgB2+Y2O3/SiC",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|MgB2+graphene",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "MgB2+graphene",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|MgB2+nanodiamond",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "MgB2+nanodiamond",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|MgB2-xCx",
+          "relation_type": "R2",
+          "source_rank": 0,
+          "target_base": "MgB2-xCx",
+          "source_cosine_hint": 1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "MgB2",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2+Eu2O3",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "MgB2+Eu2O3",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2+SiC",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "MgB2+SiC",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2+Ti3SiC2",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "MgB2+Ti3SiC2",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2+Y2O3/SiC",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "MgB2+Y2O3/SiC",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2+graphene",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "MgB2+graphene",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2+nanodiamond",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "MgB2+nanodiamond",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2-xCx",
+          "relation_type": "R3",
+          "source_rank": 0,
+          "target_base": "MgB2-xCx",
+          "source_cosine_hint": -1.0,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "MgB2",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2+Eu2O3",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "MgB2+Eu2O3",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2+SiC",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "MgB2+SiC",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2+Ti3SiC2",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "MgB2+Ti3SiC2",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2+Y2O3/SiC",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "MgB2+Y2O3/SiC",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2+graphene",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "MgB2+graphene",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2+nanodiamond",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "MgB2+nanodiamond",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2-xCx",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "MgB2-xCx",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|MgB2+Eu2O3",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "MgB2+Eu2O3",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|MgB2+SiC",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "MgB2+SiC",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|MgB2+Ti3SiC2",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "MgB2+Ti3SiC2",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|MgB2+Y2O3/SiC",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "MgB2+Y2O3/SiC",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|MgB2+graphene",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "MgB2+graphene",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|MgB2+nanodiamond",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "MgB2+nanodiamond",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|MgB2-xCx",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "MgB2-xCx",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|MgB2+SiC",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "MgB2+SiC",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|MgB2+Ti3SiC2",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "MgB2+Ti3SiC2",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|MgB2+graphene",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "MgB2+graphene",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|MgB2+nanodiamond",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "MgB2+nanodiamond",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|MgB2-xCx",
+          "relation_type": "R9",
+          "source_rank": 0,
+          "target_base": "MgB2-xCx",
+          "source_cosine_hint": 0.8442,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|MgB2+Y2O3/SiC",
+          "relation_type": "R2",
+          "source_rank": 1,
+          "target_base": "MgB2+Y2O3/SiC",
+          "source_cosine_hint": 0.9999,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|MgB2+graphene",
+          "relation_type": "R2",
+          "source_rank": 1,
+          "target_base": "MgB2+graphene",
+          "source_cosine_hint": 0.9999,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|MgB2+nanodiamond",
+          "relation_type": "R2",
+          "source_rank": 1,
+          "target_base": "MgB2+nanodiamond",
+          "source_cosine_hint": 0.9999,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|MgB2-xCx",
+          "relation_type": "R2",
+          "source_rank": 1,
+          "target_base": "MgB2-xCx",
+          "source_cosine_hint": 0.9999,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|MgB2+Y2O3/SiC",
+          "relation_type": "R2",
+          "source_rank": 2,
+          "target_base": "MgB2+Y2O3/SiC",
+          "source_cosine_hint": 0.9999,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|MgB2+graphene",
+          "relation_type": "R2",
+          "source_rank": 2,
+          "target_base": "MgB2+graphene",
+          "source_cosine_hint": 0.9999,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|MgB2+nanodiamond",
+          "relation_type": "R2",
+          "source_rank": 2,
+          "target_base": "MgB2+nanodiamond",
+          "source_cosine_hint": 0.9999,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|MgB2-xCx",
+          "relation_type": "R2",
+          "source_rank": 2,
+          "target_base": "MgB2-xCx",
+          "source_cosine_hint": 0.9999,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2",
+          "relation_type": "R2",
+          "source_rank": 3,
+          "target_base": "MgB2",
+          "source_cosine_hint": 0.9994,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2+Eu2O3",
+          "relation_type": "R2",
+          "source_rank": 3,
+          "target_base": "MgB2+Eu2O3",
+          "source_cosine_hint": 0.9994,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2+SiC",
+          "relation_type": "R2",
+          "source_rank": 3,
+          "target_base": "MgB2+SiC",
+          "source_cosine_hint": 0.9994,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2+Ti3SiC2",
+          "relation_type": "R2",
+          "source_rank": 3,
+          "target_base": "MgB2+Ti3SiC2",
+          "source_cosine_hint": 0.9994,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2+Y2O3/SiC",
+          "relation_type": "R2",
+          "source_rank": 3,
+          "target_base": "MgB2+Y2O3/SiC",
+          "source_cosine_hint": 0.9994,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2+graphene",
+          "relation_type": "R2",
+          "source_rank": 3,
+          "target_base": "MgB2+graphene",
+          "source_cosine_hint": 0.9994,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2+nanodiamond",
+          "relation_type": "R2",
+          "source_rank": 3,
+          "target_base": "MgB2+nanodiamond",
+          "source_cosine_hint": 0.9994,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2-xCx",
+          "relation_type": "R2",
+          "source_rank": 3,
+          "target_base": "MgB2-xCx",
+          "source_cosine_hint": 0.9994,
+          "score": null
+        }
+      ],
+      "required_schema": {
+        "ranked_candidate_ids": [
+          "candidate_id"
+        ],
+        "reason": "string"
+      }
+    }
+  },
+  "secret_paths_loaded": [
+    "C:\\Users\\WinnerSheep\\Documents\\Claude_Mini_agent\\_digital_assets\\api_keys.env",
+    "C:\\Users\\WinnerSheep\\.goai_agent_secrets\\api_keys.env"
+  ],
+  "credentials_written_to_audit": false,
+  "attempts": [
+    {
+      "provider": "step",
+      "status": "skipped_missing_configuration"
+    },
+    {
+      "provider": "gemini",
+      "status": "skipped_missing_configuration"
+    },
+    {
+      "provider": "heuristic",
+      "status": "fallback_used",
+      "reason": "no configured provider returned valid JSON"
+    }
+  ],
+  "result": {
+    "value": {
+      "ranked_candidate_ids": [
+        "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2",
+        "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2+Eu2O3",
+        "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2+SiC",
+        "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|MgB2+Ti3SiC2"
+      ],
+      "reason": "deterministic evidence score ordering"
+    },
+    "provider": "heuristic",
+    "model": null,
+    "mode": "heuristic_fallback_llm_unreachable",
+    "real_llm_api_called": false
+  }
+}

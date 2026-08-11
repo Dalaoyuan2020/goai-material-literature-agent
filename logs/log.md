@@ -54,3 +54,72 @@
 - 查重：与现有 36 条边三元组无重复；候选内跳过 11 条重复边、20 条无明确证据边
 - 新关系类型发现：**氧位H-掺杂 O→H（1111系）**（LaFeAsO→LaFeAsO1-xHx，10.1038/ncomms1913，2012，第二超导穹顶 Tc 36K@x=0.3）——现有 R4 仅定义 O→F，O→H 不属于任何现有类型，按铁律不强行归类，仅记录候选，供后续 schema 扩展决策（R4 是否需要泛化为"氧位阴离子掺杂"）
 - 规模变化：材料点 35→91，边 36→79（注：合并远程 MatKG 提交后，知识层含核心 edges.csv 79 条 + 扩展 edges_matkg.csv 210 条）
+
+## 2026-08-12 · 夜间 P0-1：轮次驱动的候选池扩张
+
+- 开工前 `git fetch origin` 按 30 秒间隔最多尝试 3 次，均未能连接 GitHub 443；按夜间规则停止等待，使用本地完整基线继续。
+- 根因确认：`find_analogy_source()` 只返回每个关系类型的全局最优证据对，`run_family_search()` 又在循环前一次性静态生成候选；原来的“多轮”只是在同一个池里切片，搜索空间不会增长。
+- 修复：保留旧调用兼容性，同时新增 `ranked_pairs=True` 完整排序接口；搜索初始只开放每种关系的首个来源，每轮结束用显式决策状态选择“继续深挖”或“换方向”，随后才开放下一排名来源。候选 ID 现同时包含源变换和参考变换，避免不同证据方向碰撞。
+- 诚信边界：本阶段扩张决策仍明确标为 `heuristic_approximation_not_real_llm`；真实 LLM 决策在下一提交接入，不提前声称已调用。
+- 验证：`E:\Anaconda3\python.exe -m unittest tests.test_search -v` 共 5 项全部通过；其中 1111 回归测试确认第 2 轮候选 ID 至少有一个不属于第 1 轮完整候选池，且最终池严格增长。`py_compile` 通过。
+
+## 2026-08-12 · 夜间 P0-2：审计型 LLM 决策链路
+
+- 新增标准库实现的 `src/llm_client.py`：每个逻辑调用先尝试 STEP（`STEP_API_KEY` + `STEP_BASE`），失败再尝试 Gemini（`GEMINI_KEY`），两者均不可用或未返回有效 JSON 时使用显式启发式兜底。凭证只进入请求头，不写审计；`.gitignore` 新增环境文件保护。
+- 两个接入点均已生效：每轮候选筛选排序不再直接依赖 `sort()` 作为最终决策；每轮结束都调用轮次控制器回答“继续深挖还是换方向”。provider 返回的陌生候选 ID 和不可扩张 relation type 会被本地白名单拒绝。
+- 本机环境与约定 `_digital_assets/api_keys.env` 均没有 STEP/Gemini 三个必要变量（该文件只含 Sciverse 配置），因此四家族实跑的 40 个逻辑调用全部明确记录 `heuristic_fallback_not_real_llm`，没有伪装成真实调用。每个调用在 `outputs/llm_calls/` 有独立 JSON，报告均为 `real_llm_api_called=false`。
+- `method` 已改为“可解释余弦评分 + LLM引导扩张与剪枝”。这是余弦物理代理信号加语言模型决策接口，没有高斯过程、后验分布或 Expected Improvement，不再称为贝叶斯优化。
+- 四家族候选池均随轮次严格增长：122 为 12→24，1111 为 49→85，11 为 38→55，MgB2 为 5→9。每家族运行 5 轮、每轮 2 次逻辑调用；已观察候选 ID 在各家族内全部唯一。
+- 验证：真实网络不可用场景、模拟 STEP 成功路径、密钥不落审计、候选白名单、轮次扩张等相关单测合计 7 项全部通过；`py_compile` 通过。
+
+## 2026-08-12 · 夜间 P0-3：Agent 双端口契约
+
+- 新增 `agent/CLAUDE.md`，从根目录规范提炼 raw 只读、核心/MatKG 证据隔离、未验证假设标记、真实 LLM 诚信、密钥保护、轮次新 ID 与允许操作边界。
+- 新增 `agent/workflow.json`，以 `frontend_dev_spec.section_04.material_literature_agent` 为契约标识，将文献检索、构图、向量化、类比源、单家族/全家族搜索、主管线和可视化 8 个意图映射到实际 Python 公共函数，并声明入参、产物与副作用。
+- 本地没有 `frontend_dev_spec.md`，且 GitHub 443 不可达；因此按用户提供的完整接口要求，以现有真实函数签名构建同构契约，没有虚构不存在的可调用入口。
+- 验证：`agent/workflow.json` 通过标准 JSON 解析；契约测试逐个 import 并确认 8 个函数均可调用，同时检查 agent 铁律包含证据边界、假设状态和 LLM 诚信字段，2/2 通过。
+
+## 2026-08-12 · 夜间 P0-4：四家族搜索自查
+
+- 新增 `src/verify_search.py`，一条命令核对四份报告及其审计链：家族映射、诚实方法名、候选池严格增长、已观察 ID 唯一、每个后续轮含首轮完整池外 ID、候选假设状态、核心/MatKG 证据隔离、每轮两次 LLM 逻辑调用、审计文件存在、真实调用标志一致、凭证不入审计。
+- 旗舰 1111 另设硬检查：首轮基线池必须为 49、最终池必须大于 49、后续轮新增 ID 必须大于 0。当前结果为 49→85、后续轮观察到 16 个首轮外 ID，全部通过。
+- 四家族自查结果：122 12→24（后续新 ID 12）、1111 49→85（16）、11 38→55（15）、MgB2 5→9（4）；每家族 10 份审计，真实 LLM 均为 false 且与审计一致。
+- `agent/workflow.json` 同步新增 `search.verify -> verify_search.verify_all` 意图。验证报告写入 `outputs/search_verification.json`；自查、契约和编译测试合计 3 项全部通过。
+
+## 2026-08-12 · 夜间 P1-1：全量回归与候选池增长图
+
+- 全量测试首次为 13/14：唯一失败发生在 `E:\Anaconda3` base 的 Matplotlib Path 内部。诊断确认该环境目录同时存在 `numpy-1.26.4.dist-info`、`numpy-2.2.6.dist-info`，Python 实际载入 2.2.6，而 Matplotlib/C 扩展产生另一套 `numpy.uint8` 类型；随后又暴露 `ERR_IGNORE` 导入缺失，属于混装 ABI，不是搜索代码回归。
+- 未改动或重装全局环境；改用机器上已有且相容的 `E:\Anaconda3\envs\camel_agent`（NumPy 1.26.4 / Matplotlib 3.10.1），全套 14 项测试全部通过。`CLAUDE.md` 已把可视化命令切到该环境。
+- `src/visualize.py` 新增 `04_candidate_pool_growth.png`，从四份报告的 `candidate_pool_growth` 动态读取数据：122 12→24、1111 49→85、11 38→55、MgB2 5→9。图注明确增长代表搜索空间扩张，不代表实验确认。
+- 流程图同步把旧的 `BO-style search` 改为 `Iterative search`，当前结果明确标注 4 家族、51 个保留的非退化候选与 `audited heuristic fallback`。增长图与流程图均完成逐图视觉检查，标签、图例和图注无溢出。
+
+## 2026-08-12 · 夜间 P1-2：1111 旗舰案例 walkthrough
+
+- 新增 `outputs/flagship_case_1111_walkthrough.md`，按五轮实际记录解释候选池从 49→58→67→76→85 的过程，以及 R3 来源 rank 0–4 如何逐轮开放。
+- 文档区分 85 个累计池、20 个实际观察、12 个正分非退化保留、8 个零分剪枝和 16 个后续轮首轮外 ID，避免把池规模包装成“发现 85 个材料”。
+- 具体展开 CeFeAsO 候选的模板、参考变换、余弦与成分增量，并明确指出分数只评价证据方向、不同目标会同分，跨家族迁移和非位点化成分向量都不能直接当实验配方。
+- LLM 部分如实写明 5 轮共 10 个逻辑调用均为审计型启发式降级，真实 API 成功数为 0。关键数字同步测试读取 `1111.json` 自动比对，1/1 通过。
+
+## 2026-08-12 · 夜间 P1-3：技术总结
+
+- 新增 `logs/tonight_technical_summary.md`，汇总静态池根因、多源轮次扩张、审计型 LLM 链路、agent 双端口、自查、可视化、1111 案例与 GitHub 网络状态。
+- 总结明确列出四家族的初始/最终池、实际观察、保留、后续轮新 ID、审计数和真实 API 状态，并单列 6 项仍存在的科学/工程局限。
+- 使用相容可视化环境重新运行全套测试，搜索、LLM、agent 契约、MatKG、自查、可视化与 walkthrough 共 15/15 通过。
+
+## 2026-08-12 · 夜间 P2：Sciverse 增量入库与全链回归
+
+- Sciverse 检索 `La4Ni3O10 pressure induced superconductivity` 与 `BaFe2As2 ruthenium substitution superconductivity`，两次 HTTP 200、各返回 10 条并分别审计为 `30f701db4f80`、`c1f9ff5c42d9`。
+- 严格筛选后只追加 2 条核心边：`La4Ni3O10-delta→La4Ni3O10-delta_P`（R7，Nature 2024，DOI `10.1038/s41586-024-07553-3`）和 `BaFe2As2→BaFe1.9Pt0.1As2`（R2，PRB 2010，DOI `10.1103/PhysRevB.81.104525`）。两条均保留短摘要原文证据；数据集 DOI、仅 arXiv 或关系不明确结果未入库。
+- CSV 解析确认核心边 36→38，新增 DOI 无重复，schema 未变。完整 pipeline 为 22 篇唯一 DOI 文献、38 核心边/38 核心材料、210 MatKG 弱边、85 总向量节点、50 组非退化核心证据、4 个 L4 未验证候选。
+- 入库后重跑四家族搜索：122 13→19（保留 19）、1111 49→85（保留 12）、11 38→59（保留 20）、MgB2 5→9（保留 7）；四家族自查全部 PASS，当前四份报告各引用新生成的 10 份 LLM 降级审计。
+- 重生成全部 6 张 PNG + 1 份 Mermaid；增长图视觉检查通过。更新回归期望后，全套 15/15 测试通过。
+
+## 2026-08-12 · 远端 610354a 安全对齐与最终验收
+
+- 普通 push 连续 2 次因 GitHub 443 失败后，通过已认证 GitHub App 读取远端最新提交 `610354a7f037d732d1ef375329cfe0f311835866`。发现远端已新增第二轮 Sciverse 的 43 条核心边，故没有用本地 38 条版本覆盖远端。
+- 以远端 79 条完整 `knowledge/edges.csv` 为基线，再合并本地 2 条 DOI 边，最终 CSV 为 81 条且 schema 不变；同时保留远端最新 `CLAUDE.md`、`logs/log.md` 与前端接口规范。
+- 按主任务精确接口补齐 `exclude_pairs`、`exclude_source_pairs`、`rank_within_relation_type`、`pool_growth_by_round`、`expansion_source_by_round`、`agent/soul.json`、列表式 `agent/workflow.json` 和 `src/verify_search_case.py --run`。
+- 完整 pipeline：53 篇唯一 DOI、81 条核心边、94 个核心材料、210 条 MatKG 弱边、140 个向量节点、326 组非退化核心证据、6 个 L4 未验证候选。
+- 四家族重跑：122 33→52、1111 56→96、11 56→96、MgB2 44→76；每家族后续轮观察 16 个首轮外 ID，10 份审计齐全，真实 LLM 成功数为 0。
+- 历史 1111 首轮基线为 49；远端新增 `CeFeAsO_P` 等证据后当前首轮为 56。验收改为“不得低于 49 且必须增长”，避免把真实新增证据误判为结构回归。
+- `src/verify_search.py` 总结果 PASS，四个 `verify_search_case.py` 单案例结果均 PASS；全套 17/17 测试通过。重生成 6 张 PNG + 1 份 Mermaid，候选池增长图视觉检查无溢出。

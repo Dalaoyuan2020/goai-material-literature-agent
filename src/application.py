@@ -16,19 +16,39 @@ from graph import build_graph, vectorize, parse_composition, structure_family, a
 from rules import edge_vector, cosine, is_degenerate
 
 
-def find_analogy_source(edges, materials, vecs, comp_dims, relation_type: str):
-    """在同类关系里找一组非退化、高平行性的"源变换"，作为迁移的模板"""
+def find_analogy_source(
+    edges,
+    materials,
+    vecs,
+    comp_dims,
+    relation_type: str,
+    *,
+    exclude_pairs=None,
+    ranked_pairs: bool = False,
+):
+    """返回同类关系里的非退化类比源。
+
+    默认保持旧接口，只返回全局最优的一组。搜索控制器可传
+    ``ranked_pairs=True`` 取得完整的确定性排序，从而在后续轮次逐步开放
+    次优但仍有真实核心证据支撑的变换方向。
+    """
     pairs = []
     for e in edges:
         if e["关系类型"] == relation_type:
             pairs.append((e["材料A"], e["材料B"]))
     pairs = list(dict.fromkeys(pairs))
 
-    best = None
+    excluded = set()
+    for item in exclude_pairs or set():
+        excluded.add(frozenset(item))
+    ranked = []
     for i in range(len(pairs)):
         for j in range(i + 1, len(pairs)):
             a1, b1 = pairs[i]
             a2, b2 = pairs[j]
+            source_key = frozenset({(a1, b1), (a2, b2)})
+            if source_key in excluded:
+                continue
             if a1 not in vecs or b1 not in vecs or a2 not in vecs or b2 not in vecs:
                 continue
             v1 = edge_vector(vecs, a1, b1)
@@ -36,9 +56,26 @@ def find_analogy_source(edges, materials, vecs, comp_dims, relation_type: str):
             if is_degenerate(v1, v2, comp_dims):
                 continue
             cos = cosine(v1, v2)
-            if best is None or abs(cos) > abs(best["cosine"]):
-                best = {"pair1": (a1, b1), "pair2": (a2, b2), "cosine": cos, "v1": v1, "v2": v2}
-    return best
+            ranked.append(
+                {
+                    "pair1": (a1, b1),
+                    "pair2": (a2, b2),
+                    "cosine": cos,
+                    "v1": v1,
+                    "v2": v2,
+                    "source_key": source_key,
+                }
+            )
+    ranked.sort(
+        key=lambda item: (
+            -abs(item["cosine"]),
+            item["pair1"],
+            item["pair2"],
+        )
+    )
+    if ranked_pairs:
+        return ranked
+    return ranked[0] if ranked else None
 
 
 def propose_candidate(vecs, materials, source_pair, target_material: str, els, families):

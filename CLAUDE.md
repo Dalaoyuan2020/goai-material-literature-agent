@@ -41,8 +41,8 @@
 
 ## 搜索与可视化
 
-- `python src/search.py` 在 122/1111/11/MgB2 四个家族运行贝叶斯优化风格的搜索控制器。当前热启动、判断和采样是**启发式近似，非真实 LLM 调用**；代理信号直接复用 `rules.cosine` 的核心边变换平行性，结果写入 `outputs/search_runs/`。
-- `E:\Anaconda3\python.exe src/visualize.py` 从 `outputs/pipeline_report.json` 和 `outputs/search_runs/` 生成流程、分布与方法图。可视化是仓库中唯一允许使用第三方库的部分，依赖 `matplotlib` 与 `numpy`；计算主管线和搜索层仍使用 Python 标准库。
+- `python src/search.py` 在 122/1111/11/MgB2 四个家族运行逐轮扩张的可解释搜索控制器。候选排序和轮次扩张决策依次尝试 STEP、Gemini，并在两者不可用时明确降级为启发式；每个逻辑调用都审计到 `outputs/llm_calls/`，报告的 `real_llm_api_called` 如实记录是否成功使用真实 API。数值信号直接复用 `rules.cosine` 的核心边变换平行性；没有后验分布或 Expected Improvement，因此不称为贝叶斯优化。
+- `E:\Anaconda3\envs\camel_agent\python.exe src/visualize.py` 从 `outputs/pipeline_report.json` 和 `outputs/search_runs/` 生成流程、分布与方法图。该环境使用相容的 NumPy 1.26.4 / Matplotlib 3.10.1；不要使用当前同时残留 NumPy 1.x/2.x 文件的 `E:\Anaconda3\python.exe` base 环境。可视化是仓库中唯一允许使用第三方库的部分；计算主管线和搜索层仍使用 Python 标准库。
 - 全项目统一视觉语义：核心 DOI 证据使用深色/实线，MatKG 聚合弱证据使用浅色/虚线或阴影；候选假设使用橙色虚线并明确标注“未验证”。
 
 **关系类型体系（R1-R9）**：
@@ -61,3 +61,12 @@
 2. **原料层只读**：`raw/` 一旦写入不再修改，要更正就在 `knowledge/` 层标注
 3. **点边定义变更要走 CLAUDE.md**：改 schema 就更新本文件，不要让 schema 隐式漂移
 4. **私有仓库**：这是内部知识库，不进行公开开源宣传，比赛提交是附带产物不是目标
+
+## Agent 四端口
+
+- `agent/CLAUDE.md`：运行边界与铁律的人类可读版本。
+- `agent/soul.json`：身份、语气、证据立场和诚实降级原则的机器可读版本。
+- `agent/workflow.json`：与 `docs/frontend/frontend_dev_spec.md` 第 04 节一致的意图到真实 Python 函数映射。
+- `src/verify_search_case.py --run <122|1111|11|MgB2>`：单家族验收端口；输出结构扩张、LLM 参与率、证据层级、探索多样性、下一步动作和审计完整性。
+
+搜索方法字段固定为 `llm_guided_iterative_candidate_expansion_and_pruning`。STEP 与 Gemini 都不可达时固定标注 `heuristic_fallback_llm_unreachable`，不得伪装为真实 LLM 调用。
