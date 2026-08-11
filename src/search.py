@@ -1,10 +1,9 @@
-"""Evidence-aware Bayesian-optimization-style search controller.
+"""Evidence-aware iterative search controller.
 
-The three LLAMBO positions are represented explicitly, but this run does not
-call an LLM API.  Candidate warmstarting, judgement, and sampling are a
-deterministic heuristic approximation, not an LLM result.  The surrogate
-signal is not a fitted black box: it reuses ``rules.cosine`` on DOI-backed core
-transformations.  MatKG remains weak vector-space context only.
+Candidate ranking and round-expansion decisions use the audited STEP -> Gemini
+-> explicit heuristic fallback in ``llm_client``.  The numerical signal is not
+a fitted black box or Bayesian posterior: it reuses ``rules.cosine`` on
+DOI-backed core transformations.  MatKG remains weak vector-space context only.
 """
 
 from __future__ import annotations
@@ -16,6 +15,7 @@ from typing import Iterable
 
 from application import find_analogy_source, propose_candidate
 from graph import build_graph, load_core_edges, vectorize
+from llm_client import AuditedLLMClient
 from rules import cosine, edge_vector, is_degenerate
 
 
@@ -191,12 +191,19 @@ def _observed_candidate_ids(history: Iterable[dict]) -> set[str]:
     return observed
 
 
-def propose_next_round(scored_candidates, history, batch_size=4):
-    """Select unseen candidates for the LLAMBO sampling position.
+def propose_next_round(
+    scored_candidates,
+    history,
+    batch_size=4,
+    *,
+    llm_client=None,
+    context=None,
+    return_metadata=False,
+):
+    """Select unseen candidates using audited LLM ranking when configured.
 
-    This is deterministic heuristic sampling, not an LLM call.  The hard
-    LLAMBO constraint is enforced: an observed candidate ID is never returned
-    again.
+    The hard constraint is enforced locally regardless of provider output: an
+    observed candidate ID is never returned again, and invented IDs are ignored.
     """
 
     observed = _observed_candidate_ids(history)
@@ -205,14 +212,53 @@ def propose_next_round(scored_candidates, history, batch_size=4):
         for candidate in scored_candidates
         if candidate["candidate_id"] not in observed
     ]
-    unseen.sort(
+    heuristic_order = sorted(
+        unseen,
         key=lambda candidate: (
             -candidate.get("exposed_round", 1),
             -abs(candidate.get("source_cosine_hint", candidate.get("score", 0.0))),
             candidate["candidate_id"],
-        )
+        ),
     )
-    return unseen[:batch_size]
+    metadata = {
+        "provider": "heuristic",
+        "mode": HEURISTIC_MODE,
+        "real_llm_api_called": False,
+        "reason": "deterministic evidence score ordering",
+    }
+    selected = heuristic_order[:batch_size]
+    if llm_client is not None and unseen:
+        result = llm_client.rank_candidates(
+            unseen,
+            context or {"observed_candidate_count": len(observed)},
+            batch_size,
+        )
+        value = result.get("value") if isinstance(result, dict) else None
+        ranked_ids = value.get("ranked_candidate_ids", []) if isinstance(value, dict) else []
+        allowed = {candidate["candidate_id"]: candidate for candidate in unseen}
+        valid_ids = []
+        for candidate_id in ranked_ids if isinstance(ranked_ids, list) else []:
+            if candidate_id in allowed and candidate_id not in valid_ids:
+                valid_ids.append(candidate_id)
+        for candidate in heuristic_order:
+            if len(valid_ids) >= batch_size:
+                break
+            if candidate["candidate_id"] not in valid_ids:
+                valid_ids.append(candidate["candidate_id"])
+        selected = [allowed[candidate_id] for candidate_id in valid_ids[:batch_size]]
+        metadata = {
+            "provider": result["provider"],
+            "model": result.get("model"),
+            "mode": result["mode"],
+            "real_llm_api_called": result["real_llm_api_called"],
+            "call_id": result["call_id"],
+            "reason": value.get("reason") if isinstance(value, dict) else None,
+            "invalid_or_missing_ids_filled_heuristically": len(valid_ids)
+            != len(ranked_ids) if isinstance(ranked_ids, list) else True,
+        }
+    if return_metadata:
+        return selected, metadata
+    return selected
 
 
 def _heuristic_expansion_decision(history, ranked_sources, exposed_depths):
@@ -269,6 +315,83 @@ def _heuristic_expansion_decision(history, ranked_sources, exposed_depths):
     }
 
 
+def _expansion_directions(history, ranked_sources, exposed_depths):
+    last_candidates = history[-1].get("candidates", []) if history else []
+    latest_scores = {}
+    for candidate in last_candidates:
+        relation_type = candidate["relation_type"]
+        latest_scores[relation_type] = max(
+            latest_scores.get(relation_type, 0.0), candidate.get("score", 0.0)
+        )
+    return [
+        {
+            "relation_type": relation_type,
+            "latest_best_score": latest_scores.get(relation_type),
+            "exposed_source_count": exposed_depths.get(relation_type, 0),
+            "total_ranked_source_count": len(sources),
+            "expandable": exposed_depths.get(relation_type, 0) < len(sources),
+        }
+        for relation_type, sources in sorted(ranked_sources.items())
+    ]
+
+
+def _llm_expansion_decision(history, ranked_sources, exposed_depths, llm_client):
+    heuristic = _heuristic_expansion_decision(
+        history, ranked_sources, exposed_depths
+    )
+    if llm_client is None:
+        return heuristic
+    directions = _expansion_directions(history, ranked_sources, exposed_depths)
+    result = llm_client.decide_expansion(
+        {
+            "round": history[-1]["round"],
+            "proposed_count": history[-1]["proposed_count"],
+            "new_non_degenerate_count": history[-1]["new_non_degenerate_count"],
+            "candidate_scores": [
+                {
+                    "candidate_id": item["candidate_id"],
+                    "relation_type": item["relation_type"],
+                    "score": item["score"],
+                    "degenerate": item["degenerate"],
+                }
+                for item in history[-1]["candidates"]
+            ],
+        },
+        directions,
+        lambda: dict(heuristic),
+    )
+    raw = result.get("value") if isinstance(result, dict) else None
+    expandable = {
+        item["relation_type"] for item in directions if item["expandable"]
+    }
+    selected = raw.get("relation_types", []) if isinstance(raw, dict) else []
+    selected = [
+        relation_type
+        for relation_type in selected if relation_type in expandable
+    ] if isinstance(selected, list) else []
+    action = raw.get("action") if isinstance(raw, dict) else None
+    valid_action = action in {"deepen", "switch", "stop_no_unexposed_source"}
+    if not valid_action or (expandable and action != "stop_no_unexposed_source" and not selected):
+        decision = dict(heuristic)
+        decision["validation_fallback"] = "provider decision was outside expandable directions"
+    else:
+        decision = {
+            "action": action,
+            "relation_types": selected[:1],
+            "reason": raw.get("reason", ""),
+        }
+    decision.update(
+        {
+            "provider": result["provider"],
+            "model": result.get("model"),
+            "mode": result["mode"],
+            "real_llm_api_called": result["real_llm_api_called"],
+            "call_id": result["call_id"],
+        }
+    )
+    return decision
+
+
 def _candidates_for_source(
     relation_type,
     source_rank,
@@ -315,7 +438,10 @@ def run_family_search(
     patience=2,
     batch_size=4,
     output_dir=OUTPUT_DIR,
+    llm_client=None,
 ):
+    llm_client = AuditedLLMClient() if llm_client is None else llm_client
+    first_llm_call_index = len(llm_client.calls)
     materials, vector_edges = build_graph(include_extended=True)
     core_edges = load_core_edges()
     vecs, els, families = vectorize(materials)
@@ -380,14 +506,27 @@ def run_family_search(
     stop_reason = None
     accepted_ids = []
     for round_number in range(1, max_rounds + 1):
-        proposed = propose_next_round(candidate_pool, history, batch_size=batch_size)
+        proposed, ranking_decision = propose_next_round(
+            candidate_pool,
+            history,
+            batch_size=batch_size,
+            llm_client=llm_client,
+            context={
+                "run_name": run_name,
+                "structure_family": family,
+                "round": round_number,
+                "observed_candidate_count": len(_observed_candidate_ids(history)),
+                "candidate_pool_count": len(candidate_pool),
+            },
+            return_metadata=True,
+        )
         scored = []
         new_non_degenerate = 0
         for candidate in proposed:
             item = dict(candidate)
             details = _score_details(item, vecs, comp_dims)
             item.update(details)
-            item["decision_mode"] = HEURISTIC_MODE
+            item["decision_mode"] = ranking_decision["mode"]
             item["decision"] = "retain_for_external_validation" if details["score"] > 0 else "prune"
             item["status"] = "候选假设(未验证)"
             scored.append(item)
@@ -404,6 +543,7 @@ def run_family_search(
                 "proposed_count": len(proposed),
                 "new_non_degenerate_count": new_non_degenerate,
                 "consecutive_no_new": consecutive_no_new,
+                "ranking_decision": ranking_decision,
                 "candidates": scored,
             }
         )
@@ -414,12 +554,15 @@ def run_family_search(
         )
         if consecutive_no_new >= patience:
             stop_reason = "converged_two_rounds_without_new_non_degenerate_candidate"
+        expansion = _llm_expansion_decision(
+            history, ranked_sources, exposed_depths, llm_client
+        )
         if stop_reason:
+            expansion["applied"] = False
+            expansion["not_applied_reason"] = stop_reason
+            history[-1]["expansion_decision"] = expansion
             break
 
-        expansion = _heuristic_expansion_decision(
-            history, ranked_sources, exposed_depths
-        )
         new_candidates = []
         for relation_type in expansion["relation_types"]:
             source_rank = exposed_depths[relation_type]
@@ -452,6 +595,7 @@ def run_family_search(
         ]
         expansion["new_candidate_count"] = len(new_candidates)
         expansion["candidate_pool_count_after_expansion"] = len(candidate_pool)
+        expansion["applied"] = True
         history[-1]["expansion_decision"] = expansion
         candidate_pool_growth.append(
             {
@@ -463,9 +607,24 @@ def run_family_search(
     report = {
         "run_name": run_name,
         "structure_family": family,
-        "method": "interpretable_cosine_search_with_llm_guided_expansion",
-        "llm_integration_mode": HEURISTIC_MODE,
-        "real_llm_api_called": False,
+        "method": "可解释余弦评分 + LLM引导扩张与剪枝",
+        "llm_integration_mode": (
+            "real_llm_api_with_audited_fallback"
+            if any(
+                call["real_llm_api_called"]
+                for call in llm_client.calls[first_llm_call_index:]
+            )
+            else "heuristic_fallback_not_real_llm"
+        ),
+        "real_llm_api_called": any(
+            call["real_llm_api_called"]
+            for call in llm_client.calls[first_llm_call_index:]
+        ),
+        "llm_call_count": len(llm_client.calls[first_llm_call_index:]),
+        "llm_call_ids": [
+            call["call_id"] for call in llm_client.calls[first_llm_call_index:]
+        ],
+        "llm_provider_availability": llm_client.provider_availability,
         "surrogate_model": "interpretable_rules.cosine_not_black_box",
         "evidence_policy": {
             "source_transformations": "core_doi_backed_only",
@@ -526,7 +685,10 @@ def run_all():
             f"retained={report['retained_candidate_count']}, "
             f"stop={report['stop_reason']}"
         )
-    print("诚信声明：本轮候选生成/判断/采样是启发式近似，非真实 LLM 调用。")
+    if any(report["real_llm_api_called"] for report in reports):
+        print("LLM 声明：至少一个排序/扩张决策成功使用真实 API；逐次结果见 outputs/llm_calls。")
+    else:
+        print("诚信声明：STEP/Gemini 均未成功调用，本轮使用显式启发式兜底；逐次原因已审计。")
     print("证据声明：核心 DOI 边用于搜索证据；MatKG 仅作弱向量空间背景。")
     return reports
 

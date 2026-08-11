@@ -1,9 +1,26 @@
 {
   "run_name": "MgB2",
   "structure_family": "diboride",
-  "method": "bayesian_optimization_style_search",
-  "llm_integration_mode": "heuristic_approximation_not_real_llm",
+  "method": "可解释余弦评分 + LLM引导扩张与剪枝",
+  "llm_integration_mode": "heuristic_fallback_not_real_llm",
   "real_llm_api_called": false,
+  "llm_call_count": 10,
+  "llm_call_ids": [
+    "20260811T173310551533Z-fec0fb42",
+    "20260811T173310552532Z-434122c5",
+    "20260811T173310554533Z-c4b4bd0d",
+    "20260811T173310556534Z-157e47a7",
+    "20260811T173310558535Z-fca6873c",
+    "20260811T173310559532Z-4b6918e2",
+    "20260811T173310561533Z-1d6d609d",
+    "20260811T173310562532Z-d3fe9b74",
+    "20260811T173310563533Z-5f8edcfe",
+    "20260811T173310565533Z-2d629873"
+  ],
+  "llm_provider_availability": {
+    "step": false,
+    "gemini": false
+  },
   "surrogate_model": "interpretable_rules.cosine_not_black_box",
   "evidence_policy": {
     "source_transformations": "core_doi_backed_only",
@@ -16,15 +33,63 @@
     "MgB2"
   ],
   "family_core_materials_count": 1,
-  "candidate_pool_count": 5,
-  "rounds_run": 4,
+  "initial_candidate_pool_count": 5,
+  "initial_candidate_ids": [
+    "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|MgB2",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|MgB2",
+    "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2",
+    "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2",
+    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|MgB2"
+  ],
+  "candidate_pool_count": 9,
+  "candidate_pool_growth": [
+    {
+      "round_available": 1,
+      "candidate_pool_count": 5
+    },
+    {
+      "round_available": 2,
+      "candidate_pool_count": 6
+    },
+    {
+      "round_available": 3,
+      "candidate_pool_count": 7
+    },
+    {
+      "round_available": 4,
+      "candidate_pool_count": 8
+    },
+    {
+      "round_available": 5,
+      "candidate_pool_count": 9
+    }
+  ],
+  "ranked_source_counts": {
+    "R1": 6,
+    "R2": 9,
+    "R3": 6,
+    "R5": 6,
+    "R8": 3,
+    "R9": 15
+  },
+  "exposed_source_depths": {
+    "R1": 1,
+    "R2": 1,
+    "R3": 5,
+    "R5": 1,
+    "R8": 1,
+    "R9": 1
+  },
+  "later_round_novel_vs_round1_count": 4,
+  "rounds_run": 5,
   "round_candidate_counts": [
     4,
+    2,
     1,
-    0,
-    0
+    1,
+    1
   ],
-  "retained_candidate_count": 5,
+  "retained_candidate_count": 7,
   "stop_reason": "converged_two_rounds_without_new_non_degenerate_candidate",
   "converged": true,
   "status": "completed",
@@ -34,9 +99,18 @@
       "proposed_count": 4,
       "new_non_degenerate_count": 4,
       "consecutive_no_new": 0,
+      "ranking_decision": {
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310551533Z-fec0fb42",
+        "reason": "deterministic evidence score ordering",
+        "invalid_or_missing_ids_filled_heuristically": false
+      },
       "candidates": [
         {
-          "candidate_id": "R3|FeSe->FeSe0.5Te0.5|MgB2",
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|MgB2",
           "relation_type": "R3",
           "family": "diboride",
           "source_pair": [
@@ -47,6 +121,8 @@
             "FeTe",
             "FeSe0.5Te0.5"
           ],
+          "source_rank": 0,
+          "exposed_round": 1,
           "source_cosine_hint": -1.0,
           "target_base": "MgB2",
           "prediction": {
@@ -73,11 +149,11 @@
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision_mode": "heuristic_fallback_not_real_llm",
           "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2|MgB2",
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|MgB2",
           "relation_type": "R2",
           "family": "diboride",
           "source_pair": [
@@ -88,6 +164,8 @@
             "SrFe2As2",
             "SrFe1.8Mn0.2As2"
           ],
+          "source_rank": 0,
+          "exposed_round": 1,
           "source_cosine_hint": 0.9992,
           "target_base": "MgB2",
           "prediction": {
@@ -116,29 +194,31 @@
           ],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision_mode": "heuristic_fallback_not_real_llm",
           "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R5|LaFeAsO->SmFeAsO|MgB2",
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|MgB2",
           "relation_type": "R5",
           "family": "diboride",
           "source_pair": [
             "LaFeAsO",
-            "SmFeAsO"
+            "CeFeAsO"
           ],
           "reference_pair": [
             "LaFeAsO",
-            "CeFeAsO"
+            "NdFeAsO"
           ],
+          "source_rank": 0,
+          "exposed_round": 1,
           "source_cosine_hint": 0.5,
           "target_base": "MgB2",
           "prediction": {
-            "source_transform": "LaFeAsO → SmFeAsO",
+            "source_transform": "LaFeAsO → CeFeAsO",
             "target_base": "MgB2",
             "predicted_composition_delta": {
-              "La": -0.25,
-              "Sm": 0.25
+              "Ce": 0.25,
+              "La": -0.25
             },
             "predicted_structure_family": "diboride",
             "status": "候选假设(未验证)",
@@ -157,11 +237,11 @@
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision_mode": "heuristic_fallback_not_real_llm",
           "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R9|BaFe2As2->SrFe2As2|MgB2",
+          "candidate_id": "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|MgB2",
           "relation_type": "R9",
           "family": "diboride",
           "source_pair": [
@@ -172,6 +252,8 @@
             "BaFe2As2",
             "KFe2As2"
           ],
+          "source_rank": 0,
+          "exposed_round": 1,
           "source_cosine_hint": 0.5,
           "target_base": "MgB2",
           "prediction": {
@@ -198,19 +280,89 @@
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision_mode": "heuristic_fallback_not_real_llm",
           "decision": "retain_for_external_validation"
         }
-      ]
+      ],
+      "expansion_decision": {
+        "action": "deepen",
+        "relation_types": [
+          "R3"
+        ],
+        "reason": "best scored relation from the completed round still has ranked sources",
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310552532Z-434122c5",
+        "new_candidate_ids": [
+          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|MgB2"
+        ],
+        "new_candidate_count": 1,
+        "candidate_pool_count_after_expansion": 6,
+        "applied": true
+      }
     },
     {
       "round": 2,
-      "proposed_count": 1,
-      "new_non_degenerate_count": 1,
+      "proposed_count": 2,
+      "new_non_degenerate_count": 2,
       "consecutive_no_new": 0,
+      "ranking_decision": {
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310554533Z-c4b4bd0d",
+        "reason": "deterministic evidence score ordering",
+        "invalid_or_missing_ids_filled_heuristically": false
+      },
       "candidates": [
         {
-          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO|MgB2",
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|MgB2",
+          "relation_type": "R3",
+          "family": "diboride",
+          "source_pair": [
+            "FeSe",
+            "FeSe0.5Te0.5"
+          ],
+          "reference_pair": [
+            "FeSe",
+            "FeSe1-xSx"
+          ],
+          "source_rank": 1,
+          "exposed_round": 2,
+          "source_cosine_hint": 0.5,
+          "target_base": "MgB2",
+          "prediction": {
+            "source_transform": "FeSe → FeSe0.5Te0.5",
+            "target_base": "MgB2",
+            "predicted_composition_delta": {
+              "Se": -0.25,
+              "Te": 0.25
+            },
+            "predicted_structure_family": "diboride",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.5,
+          "signed_cosine": 0.5,
+          "absolute_cosine": 0.5,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision": "retain_for_external_validation"
+        },
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|MgB2",
           "relation_type": "R1",
           "family": "diboride",
           "source_pair": [
@@ -221,6 +373,8 @@
             "BaFe2As2",
             "Ba0.6K0.4Fe2As2"
           ],
+          "source_rank": 0,
+          "exposed_round": 1,
           "source_cosine_hint": 0.4898,
           "target_base": "MgB2",
           "prediction": {
@@ -250,24 +404,262 @@
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision_mode": "heuristic_fallback_not_real_llm",
           "decision": "retain_for_external_validation"
         }
-      ]
+      ],
+      "expansion_decision": {
+        "action": "deepen",
+        "relation_types": [
+          "R3"
+        ],
+        "reason": "best scored relation from the completed round still has ranked sources",
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310556534Z-157e47a7",
+        "new_candidate_ids": [
+          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|MgB2"
+        ],
+        "new_candidate_count": 1,
+        "candidate_pool_count_after_expansion": 7,
+        "applied": true
+      }
     },
     {
       "round": 3,
-      "proposed_count": 0,
-      "new_non_degenerate_count": 0,
-      "consecutive_no_new": 1,
-      "candidates": []
+      "proposed_count": 1,
+      "new_non_degenerate_count": 1,
+      "consecutive_no_new": 0,
+      "ranking_decision": {
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310558535Z-fca6873c",
+        "reason": "deterministic evidence score ordering",
+        "invalid_or_missing_ids_filled_heuristically": false
+      },
+      "candidates": [
+        {
+          "candidate_id": "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|MgB2",
+          "relation_type": "R3",
+          "family": "diboride",
+          "source_pair": [
+            "FeTe",
+            "FeSe0.5Te0.5"
+          ],
+          "reference_pair": [
+            "FeSe",
+            "FeSe1-xSx"
+          ],
+          "source_rank": 2,
+          "exposed_round": 3,
+          "source_cosine_hint": -0.5,
+          "target_base": "MgB2",
+          "prediction": {
+            "source_transform": "FeTe → FeSe0.5Te0.5",
+            "target_base": "MgB2",
+            "predicted_composition_delta": {
+              "Se": 0.25,
+              "Te": -0.25
+            },
+            "predicted_structure_family": "diboride",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.5,
+          "signed_cosine": -0.5,
+          "absolute_cosine": 0.5,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision": "retain_for_external_validation"
+        }
+      ],
+      "expansion_decision": {
+        "action": "deepen",
+        "relation_types": [
+          "R3"
+        ],
+        "reason": "best scored relation from the completed round still has ranked sources",
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310559532Z-4b6918e2",
+        "new_candidate_ids": [
+          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|MgB2"
+        ],
+        "new_candidate_count": 1,
+        "candidate_pool_count_after_expansion": 8,
+        "applied": true
+      }
     },
     {
       "round": 4,
-      "proposed_count": 0,
+      "proposed_count": 1,
+      "new_non_degenerate_count": 0,
+      "consecutive_no_new": 1,
+      "ranking_decision": {
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310561533Z-1d6d609d",
+        "reason": "deterministic evidence score ordering",
+        "invalid_or_missing_ids_filled_heuristically": false
+      },
+      "candidates": [
+        {
+          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|MgB2",
+          "relation_type": "R3",
+          "family": "diboride",
+          "source_pair": [
+            "BaFe2As2",
+            "BaFe2(As0.7P0.3)2"
+          ],
+          "reference_pair": [
+            "FeSe",
+            "FeSe0.5Te0.5"
+          ],
+          "source_rank": 3,
+          "exposed_round": 4,
+          "source_cosine_hint": 0.0,
+          "target_base": "MgB2",
+          "prediction": {
+            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
+            "target_base": "MgB2",
+            "predicted_composition_delta": {
+              "As": -0.225,
+              "Ba": 0.05,
+              "Fe": 0.1,
+              "P": 0.075
+            },
+            "predicted_structure_family": "diboride",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.0,
+          "signed_cosine": 0.0,
+          "absolute_cosine": 0.0,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision": "prune"
+        }
+      ],
+      "expansion_decision": {
+        "action": "deepen",
+        "relation_types": [
+          "R3"
+        ],
+        "reason": "best scored relation from the completed round still has ranked sources",
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310562532Z-d3fe9b74",
+        "new_candidate_ids": [
+          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|MgB2"
+        ],
+        "new_candidate_count": 1,
+        "candidate_pool_count_after_expansion": 9,
+        "applied": true
+      }
+    },
+    {
+      "round": 5,
+      "proposed_count": 1,
       "new_non_degenerate_count": 0,
       "consecutive_no_new": 2,
-      "candidates": []
+      "ranking_decision": {
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310563533Z-5f8edcfe",
+        "reason": "deterministic evidence score ordering",
+        "invalid_or_missing_ids_filled_heuristically": false
+      },
+      "candidates": [
+        {
+          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|MgB2",
+          "relation_type": "R3",
+          "family": "diboride",
+          "source_pair": [
+            "BaFe2As2",
+            "BaFe2(As0.7P0.3)2"
+          ],
+          "reference_pair": [
+            "FeSe",
+            "FeSe1-xSx"
+          ],
+          "source_rank": 4,
+          "exposed_round": 5,
+          "source_cosine_hint": 0.0,
+          "target_base": "MgB2",
+          "prediction": {
+            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
+            "target_base": "MgB2",
+            "predicted_composition_delta": {
+              "As": -0.225,
+              "Ba": 0.05,
+              "Fe": 0.1,
+              "P": 0.075
+            },
+            "predicted_structure_family": "diboride",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.0,
+          "signed_cosine": 0.0,
+          "absolute_cosine": 0.0,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision": "prune"
+        }
+      ],
+      "expansion_decision": {
+        "action": "deepen",
+        "relation_types": [
+          "R3"
+        ],
+        "reason": "best scored relation from the completed round still has ranked sources",
+        "provider": "heuristic",
+        "model": null,
+        "mode": "heuristic_fallback_not_real_llm",
+        "real_llm_api_called": false,
+        "call_id": "20260811T173310565533Z-2d629873",
+        "applied": false,
+        "not_applied_reason": "converged_two_rounds_without_new_non_degenerate_candidate"
+      }
     }
   ]
 }

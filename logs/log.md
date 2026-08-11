@@ -53,3 +53,12 @@
 - 修复：保留旧调用兼容性，同时新增 `ranked_pairs=True` 完整排序接口；搜索初始只开放每种关系的首个来源，每轮结束用显式决策状态选择“继续深挖”或“换方向”，随后才开放下一排名来源。候选 ID 现同时包含源变换和参考变换，避免不同证据方向碰撞。
 - 诚信边界：本阶段扩张决策仍明确标为 `heuristic_approximation_not_real_llm`；真实 LLM 决策在下一提交接入，不提前声称已调用。
 - 验证：`E:\Anaconda3\python.exe -m unittest tests.test_search -v` 共 5 项全部通过；其中 1111 回归测试确认第 2 轮候选 ID 至少有一个不属于第 1 轮完整候选池，且最终池严格增长。`py_compile` 通过。
+
+## 2026-08-12 · 夜间 P0-2：审计型 LLM 决策链路
+
+- 新增标准库实现的 `src/llm_client.py`：每个逻辑调用先尝试 STEP（`STEP_API_KEY` + `STEP_BASE`），失败再尝试 Gemini（`GEMINI_KEY`），两者均不可用或未返回有效 JSON 时使用显式启发式兜底。凭证只进入请求头，不写审计；`.gitignore` 新增环境文件保护。
+- 两个接入点均已生效：每轮候选筛选排序不再直接依赖 `sort()` 作为最终决策；每轮结束都调用轮次控制器回答“继续深挖还是换方向”。provider 返回的陌生候选 ID 和不可扩张 relation type 会被本地白名单拒绝。
+- 本机环境与约定 `_digital_assets/api_keys.env` 均没有 STEP/Gemini 三个必要变量（该文件只含 Sciverse 配置），因此四家族实跑的 40 个逻辑调用全部明确记录 `heuristic_fallback_not_real_llm`，没有伪装成真实调用。每个调用在 `outputs/llm_calls/` 有独立 JSON，报告均为 `real_llm_api_called=false`。
+- `method` 已改为“可解释余弦评分 + LLM引导扩张与剪枝”。这是余弦物理代理信号加语言模型决策接口，没有高斯过程、后验分布或 Expected Improvement，不再称为贝叶斯优化。
+- 四家族候选池均随轮次严格增长：122 为 12→24，1111 为 49→85，11 为 38→55，MgB2 为 5→9。每家族运行 5 轮、每轮 2 次逻辑调用；已观察候选 ID 在各家族内全部唯一。
+- 验证：真实网络不可用场景、模拟 STEP 成功路径、密钥不落审计、候选白名单、轮次扩张等相关单测合计 7 项全部通过；`py_compile` 通过。

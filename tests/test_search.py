@@ -8,6 +8,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from application import find_analogy_source  # noqa: E402
+from llm_client import AuditedLLMClient  # noqa: E402
 from search import (  # noqa: E402
     convergence_reason,
     propose_next_round,
@@ -72,12 +73,19 @@ class SearchTests(unittest.TestCase):
 
     def test_round_expansion_exposes_id_impossible_in_first_round(self):
         with tempfile.TemporaryDirectory() as temp_dir:
+            llm_client = AuditedLLMClient(
+                config={}, audit_dir=Path(temp_dir) / "llm_calls"
+            )
             report = run_family_search(
                 "1111-test",
                 "1111",
                 max_rounds=3,
                 batch_size=4,
                 output_dir=Path(temp_dir),
+                llm_client=llm_client,
+            )
+            audit_count = len(
+                list((Path(temp_dir) / "llm_calls").glob("*.json"))
             )
         first_round_possible = set(report["initial_candidate_ids"])
         second_round_ids = {
@@ -86,6 +94,11 @@ class SearchTests(unittest.TestCase):
         }
         self.assertGreater(report["candidate_pool_count"], report["initial_candidate_pool_count"])
         self.assertTrue(second_round_ids - first_round_possible)
+        self.assertFalse(report["real_llm_api_called"])
+        self.assertEqual(report["llm_call_count"], report["rounds_run"] * 2)
+        self.assertEqual(
+            audit_count, report["llm_call_count"]
+        )
 
 
 if __name__ == "__main__":
