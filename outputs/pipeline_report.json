@@ -1,18 +1,97 @@
 {
+  "L1_sources": {
+    "unique_doi_backed_literature_count": 51,
+    "core_source": "manual_verification",
+    "extended_source": "MatKG_aggregate_without_row_level_doi"
+  },
   "L2_structure": {
-    "materials_count": 91,
-    "edges_count": 79,
-    "composition_dims": 49,
+    "materials_count": 137,
+    "edges_count": 289,
+    "core_materials_count": 91,
+    "core_edges_count": 79,
+    "extended_nodes_count": 46,
+    "extended_edges_count": 210,
+    "composition_dims": 53,
     "structure_families": [
       "11",
       "1111",
       "122",
       "214",
       "diboride",
+      "entity:dsc",
+      "entity:pro",
+      "entity:smt",
+      "entity:spl",
       "other"
-    ]
+    ],
+    "vector_space_sources": [
+      "core",
+      "matkg"
+    ],
+    "core_relation_counts": {
+      "R1": 15,
+      "R2": 13,
+      "R3": 5,
+      "R4": 5,
+      "R5": 6,
+      "R6": 2,
+      "R7": 15,
+      "R8": 3,
+      "R9": 15
+    },
+    "matkg_relation_counts": {
+      "MKG-DOPING": 30,
+      "MKG-SUBSTITUTION": 0,
+      "MKG-SYNTHESIS": 34,
+      "MKG-STRUCTURE": 146
+    },
+    "family_coverage": {
+      "families": [
+        "122",
+        "1111",
+        "11",
+        "214",
+        "diboride",
+        "other"
+      ],
+      "node_assignment": "node structure_family; heterogeneous MatKG entity:* nodes collapse to other",
+      "edge_assignment": "source endpoint structure_family to avoid double counting",
+      "core_nodes": {
+        "122": 6,
+        "1111": 10,
+        "11": 10,
+        "214": 2,
+        "diboride": 8,
+        "other": 55
+      },
+      "matkg_extended_nodes": {
+        "122": 0,
+        "1111": 0,
+        "11": 0,
+        "214": 1,
+        "diboride": 0,
+        "other": 45
+      },
+      "core_edges": {
+        "122": 18,
+        "1111": 15,
+        "11": 11,
+        "214": 3,
+        "diboride": 10,
+        "other": 22
+      },
+      "matkg_extended_edges": {
+        "122": 11,
+        "1111": 0,
+        "11": 13,
+        "214": 7,
+        "diboride": 26,
+        "other": 153
+      }
+    }
   },
   "L3_rules": {
+    "evidence_source": "core_only",
     "total_pairwise_comparisons": 411,
     "non_degenerate_evidence": 313,
     "top_parallel_evidence": [
@@ -51,23 +130,2543 @@
         "cosine": 0.9999,
         "degenerate": false
       }
-    ]
+    ],
+    "non_degenerate_evidence_records": [
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "cosine": 1.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R3",
+        "pair1": "FeSe→FeSe0.5Te0.5",
+        "pair2": "FeTe→FeSe0.5Te0.5",
+        "cosine": -1.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R3",
+        "pair1": "FeTe→FeSe0.5Te0.5",
+        "pair2": "FeSe→FeSe1-xTex",
+        "cosine": -1.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "cosine": 0.9999,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "cosine": 0.9999,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "cosine": 0.9992,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "cosine": 0.9992,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "CaFe2As2→CaKFe4As4",
+        "cosine": 0.9958,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaKFe4As4",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": 0.995,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaKFe4As4",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.995,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaRbFe4As4",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.995,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "cosine": 0.9928,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "cosine": 0.9928,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "cosine": 0.9928,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "cosine": 0.9928,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "cosine": 0.9928,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "cosine": 0.9927,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "cosine": 0.9927,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "cosine": 0.9924,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": 0.9923,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "cosine": 0.9923,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": 0.9919,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.9919,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "SrFe2As2→SrFe2-xRuxAs2",
+        "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "SrFe2As2→SrFe2-xPtxAs2",
+        "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "SrFe2As2→SrFe2-xRuxAs2",
+        "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "SrFe2As2→SrFe2-xPtxAs2",
+        "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "SrFe2As2→SrFe2-xRuxAs2",
+        "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "SrFe2As2→SrFe2-xPtxAs2",
+        "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "BaFe2As2→Ba1-xRbxFe2As2",
+        "cosine": 0.9895,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "SrFe2As2→SrFe2-xPtxAs2",
+        "cosine": 0.9864,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.9858,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xPtxAs2",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.9858,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "CaFe2As2→CaKFe4As4",
+        "cosine": 0.9834,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.9834,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "cosine": 0.9832,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xPtxAs2",
+        "pair2": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "cosine": 0.9832,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "cosine": 0.9829,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xPtxAs2",
+        "pair2": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "cosine": 0.9829,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "cosine": 0.9828,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xPtxAs2",
+        "pair2": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "cosine": 0.9828,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.9824,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.9821,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.982,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "MgB2→Mg1-xCuxB2",
+        "cosine": 0.9616,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Y2O3/SiC",
+        "pair2": "MgB2→MgB2+Eu2O3",
+        "cosine": 0.8442,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2-xCx",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.8238,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+SiC",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.8068,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2-xCx",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.7334,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Y2O3/SiC",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.7323,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Y2O3/SiC",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.695,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "cosine": 0.6154,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2-xCx",
+        "pair2": "MgB2→MgB2+Y2O3/SiC",
+        "cosine": 0.6032,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Eu2O3",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.5512,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Eu2O3",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.5214,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "LaFeAsO→CeFeAsO",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "LaFeAsO→NdFeAsO",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "LaFeAsO→PrFeAsO",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→CeFeAsO",
+        "pair2": "LaFeAsO→NdFeAsO",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→CeFeAsO",
+        "pair2": "LaFeAsO→PrFeAsO",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→NdFeAsO",
+        "pair2": "LaFeAsO→PrFeAsO",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R3",
+        "pair1": "FeSe→FeSe0.5Te0.5",
+        "pair2": "FeSe→FeSe1-xSx",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R3",
+        "pair1": "FeTe→FeSe0.5Te0.5",
+        "pair2": "FeSe→FeSe1-xSx",
+        "cosine": -0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R3",
+        "pair1": "FeSe→FeSe1-xSx",
+        "pair2": "FeSe→FeSe1-xTex",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "BaFe2As2→KFe2As2",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "LaFeAsO→GdFeAsO",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "SmFeAsO→GdFeAsO",
+        "cosine": -0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "SmFeAsO→GdFeAsO",
+        "cosine": 0.5,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "FeSe→FeNb0.04Se",
+        "cosine": 0.4997,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "FeSe→FeNb0.04Se",
+        "cosine": 0.4997,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "FeSe→FeNb0.04Se",
+        "cosine": 0.4997,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "pair2": "FeSe→FeNb0.04Se",
+        "cosine": 0.4959,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "pair2": "FeSe→FeNb0.04Se",
+        "cosine": 0.4957,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "FeSe→FeNb0.04Se",
+        "cosine": 0.4956,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xPtxAs2",
+        "pair2": "FeSe→FeNb0.04Se",
+        "cosine": 0.4956,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "pair2": "FeSe→FeNb0.04Se",
+        "cosine": 0.4956,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "FeSe→FeNb0.04Se",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.4956,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "cosine": 0.4898,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "CaFe2As2→CaKFe4As4",
+        "cosine": 0.4889,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": 0.4889,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.4889,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "BaFe2As2→Ba1-xRbxFe2As2",
+        "cosine": 0.4866,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "MgB2→Mg1-xAlxB2",
+        "cosine": 0.4833,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "MgB2→Mg1-xCuxB2",
+        "cosine": 0.4833,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "CaFe2As2→CaKFe4As4",
+        "cosine": 0.4824,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": 0.4824,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.4824,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xCuxB2",
+        "pair2": "CaFe2As2→CaKFe4As4",
+        "cosine": 0.4824,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xCuxB2",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": 0.4824,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xCuxB2",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.4824,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "BaFe2As2→Ba1-xRbxFe2As2",
+        "cosine": 0.4792,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "MgB2→Mg1-xCuxB2",
+        "cosine": 0.4792,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "MgB2→Mg1-xAlxB2",
+        "cosine": 0.4765,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "MgB2→Mg1-xCuxB2",
+        "cosine": 0.4765,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2-xCx",
+        "pair2": "MgB2→MgB2+Eu2O3",
+        "cosine": 0.4295,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R8",
+        "pair1": "MgB2→SmFeAsO1-xFx",
+        "pair2": "SmFeAsO1-xFx→FeSe-STO_mono",
+        "cosine": -0.4179,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.3557,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.3557,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.3557,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "YBa2Cu3O7→Dy1/3Ho2/3Ba2Cu3O7",
+        "pair2": "YBa2Cu3Oz→Y0.5Gd0.5Ba2Cu3O6.94",
+        "cosine": -0.1904,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "pair2": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "cosine": 0.1428,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.094,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.0926,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.0805,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "pair2": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "cosine": -0.0769,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R8",
+        "pair1": "BaLaCuO→YBa2Cu3O7",
+        "pair2": "SmFeAsO1-xFx→FeSe-STO_mono",
+        "cosine": -0.0572,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R8",
+        "pair1": "BaLaCuO→YBa2Cu3O7",
+        "pair2": "MgB2→SmFeAsO1-xFx",
+        "cosine": 0.0539,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "pair2": "CaFe2As2→CaKFe4As4",
+        "cosine": -0.0498,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": -0.0498,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": -0.0498,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": -0.0454,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": -0.0454,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": -0.0454,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.04,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.04,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "pair2": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "cosine": -0.0379,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.033,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xPtxAs2",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.033,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.033,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "pair2": "MgB2→Mg1-xCuxB2",
+        "cosine": -0.032,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.02,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "pair2": "MgB2→Mg1-xCuxB2",
+        "cosine": -0.0157,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0155,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0155,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0155,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0118,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0118,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0118,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "CsV3Sb5→CsV3-xTixSb5",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": -0.0117,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "cosine": 0.0084,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "cosine": 0.0083,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "pair2": "CaFe2As2→CaKFe4As4",
+        "cosine": 0.0077,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": 0.0077,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.0077,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0074,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0074,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.007,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.007,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.007,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "cosine": 0.0061,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "FeSe→FeNb0.04Se",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.0049,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaKFe4As4",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0045,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaKFe4As4",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0045,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaKFe4As4",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0045,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaRbFe4As4",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0045,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaRbFe4As4",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0045,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaRbFe4As4",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0045,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaCsFe4As4",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0045,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaCsFe4As4",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0045,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "CaFe2As2→CaCsFe4As4",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0045,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "cosine": 0.0041,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "cosine": 0.0041,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "pair2": "CaFe2As2→CaKFe4As4",
+        "cosine": 0.0038,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": 0.0038,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.0038,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0034,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0034,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0034,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "cosine": 0.003,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Eu2O3",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.002,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Y2O3/SiC",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0016,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "GdFeAsO→Gd1-xThxFeAsO",
+        "pair2": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba0.6K0.4Fe2As2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "MgB2→Mg1-xAlxB2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "BaFe2As2→Ba1-xRbxFe2As2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "MgB2→Mg1-xCuxB2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "CaFe2As2→CaKFe4As4",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "CaFe2As2→CaRbFe4As4",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "CaFe2As2→CaCsFe4As4",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "NdNiO2→Nd0.8Sr0.2NiO2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "HgBa2Ca2Cu3O8→Hg1-xPbxBa2Ca2Cu3O8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "HgBa2Ca2Cu3O8→HgBa2-xSrxCa2Cu3O8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xAlxB2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "BaFe2As2→Ba1-xRbxFe2As2",
+        "pair2": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "YBa2Cu3Oy→Y0.7Ca0.3Ba2Cu3Oy",
+        "pair2": "MgB2→Mg1-xCuxB2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xCuxB2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yLayFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xCuxB2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yCeyFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R1",
+        "pair1": "MgB2→Mg1-xCuxB2",
+        "pair2": "(CaFe1-xPdxAs)10PdzAs8→(Ca1-yPryFe1-xPdxAs)10PdzAs8",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "YBa2Cu3O7→Dy1/3Ho2/3Ba2Cu3O7",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "YBa2Cu3Oz→Y0.5Gd0.5Ba2Cu3O6.94",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→CeFeAsO",
+        "pair2": "YBa2Cu3O7→Dy1/3Ho2/3Ba2Cu3O7",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→CeFeAsO",
+        "pair2": "YBa2Cu3Oz→Y0.5Gd0.5Ba2Cu3O6.94",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→NdFeAsO",
+        "pair2": "YBa2Cu3O7→Dy1/3Ho2/3Ba2Cu3O7",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→NdFeAsO",
+        "pair2": "YBa2Cu3Oz→Y0.5Gd0.5Ba2Cu3O6.94",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→PrFeAsO",
+        "pair2": "YBa2Cu3O7→Dy1/3Ho2/3Ba2Cu3O7",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R5",
+        "pair1": "LaFeAsO→PrFeAsO",
+        "pair2": "YBa2Cu3Oz→Y0.5Gd0.5Ba2Cu3O6.94",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "CsV3Sb5→CsV3-xTixSb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "CsV3Sb5→CsV3-xTixSb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "CsV3Sb5→CsV3-xTixSb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "CsV3Sb5→CsV3-xTixSb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xPtxAs2",
+        "pair2": "CsV3Sb5→CsV3-xTixSb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xPtxAs2",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "pair2": "CsV3Sb5→CsV3-xTixSb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.92Co0.08)2As2",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "pair2": "CsV3Sb5→CsV3-xTixSb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.95Ni0.05)2As2",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "pair2": "CsV3Sb5→CsV3-xTixSb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→Ba(Fe0.926Co0.074)2As2",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "FeSe→FeNb0.04Se",
+        "pair2": "CsV3Sb5→CsV3-xTixSb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "FeSe→FeNb0.04Se",
+        "pair2": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "CsV3Sb5→CsV3-xTixSb5",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "CsV3Sb5→CsV3-xTixSb5",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "pair2": "CaFeAsF→Ca(Fe1-xCox)AsF",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "CsV3Sb5→Cs(V1-xTax)3Sb5",
+        "pair2": "BaFe2As2→BaFe2-xZnxAs2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R3",
+        "pair1": "BaFe2As2→BaFe2(As0.7P0.3)2",
+        "pair2": "FeSe→FeSe0.5Te0.5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R3",
+        "pair1": "BaFe2As2→BaFe2(As0.7P0.3)2",
+        "pair2": "FeTe→FeSe0.5Te0.5",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R3",
+        "pair1": "BaFe2As2→BaFe2(As0.7P0.3)2",
+        "pair2": "FeSe→FeSe1-xSx",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R3",
+        "pair1": "BaFe2As2→BaFe2(As0.7P0.3)2",
+        "pair2": "FeSe→FeSe1-xTex",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "LaFeAsO→SmFeAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "LaFeAsO→GdFeAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "FeSe→FeTe",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "SmFeAsO→GdFeAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "MgB2→MgB2-xCx",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "MgB2→MgB2+Y2O3/SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "MgB2→MgB2+Eu2O3",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "MgB2→MgB2+nanodiamond",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→SrFe2As2",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "LaFeAsO→SmFeAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "LaFeAsO→GdFeAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "FeSe→FeTe",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "SmFeAsO→GdFeAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "MgB2→MgB2-xCx",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "MgB2→MgB2+Y2O3/SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "MgB2→MgB2+Eu2O3",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "MgB2→MgB2+nanodiamond",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "BaFe2As2→KFe2As2",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "FeSe→FeTe",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "MgB2→MgB2-xCx",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "MgB2→MgB2+Y2O3/SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "MgB2→MgB2+Eu2O3",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "MgB2→MgB2+nanodiamond",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→SmFeAsO",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "FeSe→FeTe",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2-xCx",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+Y2O3/SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+Eu2O3",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+nanodiamond",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "LaFeAsO→GdFeAsO",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "SmFeAsO→GdFeAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "MgB2→MgB2-xCx",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "MgB2→MgB2+Y2O3/SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "MgB2→MgB2+Eu2O3",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "MgB2→MgB2+nanodiamond",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "FeSe→FeTe",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "SmFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2-xCx",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "SmFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+Y2O3/SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "SmFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+Eu2O3",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "SmFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+nanodiamond",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "SmFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "SmFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "SmFeAsO→GdFeAsO",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "SmFeAsO→GdFeAsO",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "SmFeAsO→GdFeAsO",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2-xCx",
+        "pair2": "MgB2→MgB2+nanodiamond",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2-xCx",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2-xCx",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2-xCx",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Y2O3/SiC",
+        "pair2": "MgB2→MgB2+nanodiamond",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Y2O3/SiC",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Y2O3/SiC",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Eu2O3",
+        "pair2": "MgB2→MgB2+nanodiamond",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Eu2O3",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Eu2O3",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+nanodiamond",
+        "pair2": "MgB2→MgB2+SiC",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+nanodiamond",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+nanodiamond",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+nanodiamond",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+SiC",
+        "pair2": "MgB2→MgB2+graphene",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+SiC",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+SiC",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+graphene",
+        "pair2": "MgB2→MgB2+Ti3SiC2",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+graphene",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+graphene",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Ti3SiC2",
+        "pair2": "La3Ni2O7→La4Ni3O10",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "MgB2→MgB2+Ti3SiC2",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R9",
+        "pair1": "La3Ni2O7→La4Ni3O10",
+        "pair2": "LaNiPO→LaNiAsO",
+        "cosine": 0.0,
+        "degenerate": false
+      }
+    ],
+    "random_baseline": {
+      "method": "uniform sample of non-degenerate pairings across unique DOI-backed core edge vectors",
+      "seed": 20260811,
+      "eligible_pairings": 2617,
+      "sample_size": 313,
+      "cosines": [
+        0.013649,
+        0.0,
+        0.0,
+        0.484458,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.04454,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.487293,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.077909,
+        0.151511,
+        0.0,
+        0.0,
+        0.615385,
+        0.0,
+        0.0,
+        0.0,
+        -0.453279,
+        0.0,
+        0.00254,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.004497,
+        0.0,
+        0.443791,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.733359,
+        0.0,
+        0.0,
+        0.0,
+        0.844191,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.996019,
+        0.0,
+        0.0,
+        -0.013649,
+        0.95613,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.053908,
+        0.0,
+        0.0,
+        -0.004901,
+        0.0,
+        0.0,
+        0.0,
+        -0.112509,
+        0.0,
+        0.994242,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.004992,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.48033,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.033023,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.992678,
+        0.0,
+        -0.046026,
+        0.0,
+        0.0,
+        0.0,
+        -0.618213,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.000276,
+        0.0,
+        0.0,
+        -0.024759,
+        0.984799,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.053911,
+        0.603249,
+        0.415607,
+        0.0,
+        0.567596,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.440236,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.292159,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.497447,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.049162,
+        0.0,
+        0.0,
+        0.022704,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.326464,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.408669,
+        0.0,
+        0.0,
+        0.429928,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.484775,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.091565,
+        0.984799,
+        -0.014019,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0016,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.006533,
+        0.0,
+        0.0,
+        0.991868,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.99505,
+        0.017046,
+        0.0,
+        0.0,
+        0.0,
+        0.491509,
+        0.0,
+        0.494882,
+        0.0,
+        0.984586,
+        0.479176,
+        0.0,
+        0.0,
+        0.0,
+        0.089594,
+        0.169321,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.049486,
+        0.0,
+        0.00344,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.417929,
+        0.0,
+        0.994242,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.732317,
+        0.994242,
+        0.0,
+        0.011775,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.495302,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.033023
+      ],
+      "mean": 0.07047,
+      "population_std": 0.239206,
+      "evidence_source": "core_only",
+      "matkg_excluded": true
+    }
   },
   "L4_application": {
+    "source_edges": "core_only",
+    "target_nodes": "core_only",
     "candidates_generated": 6,
     "candidates": [
       {
-        "source_transform": "LaFeAsO → SmFeAsO",
-        "target_base": "LaFeAsO1-xFx",
+        "source_transform": "BaFe2As2 → Ba0.6K0.4Fe2As2",
+        "target_base": "SrFe2As2",
         "predicted_composition_delta": {
-          "La": -0.25,
-          "Sm": 0.25
+          "Ba": -0.08,
+          "K": 0.08
         },
-        "predicted_structure_family": "1111",
+        "predicted_structure_family": "122",
         "status": "候选假设(未验证)",
         "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap",
-        "relation_type": "R5",
-        "source_cosine": 0.5
+        "relation_type": "R1",
+        "source_cosine": 0.9958
       },
       {
         "source_transform": "BaFe2As2 → Ba(Fe0.92Co0.08)2As2",
@@ -98,34 +2697,17 @@
         "source_cosine": -1.0
       },
       {
-        "source_transform": "BaFe2As2 → Ba0.6K0.4Fe2As2",
-        "target_base": "SrFe2As2",
+        "source_transform": "LaFeAsO → SmFeAsO",
+        "target_base": "LaFeAsO1-xFx",
         "predicted_composition_delta": {
-          "Ba": -0.08,
-          "K": 0.08
+          "La": -0.25,
+          "Sm": 0.25
         },
-        "predicted_structure_family": "122",
+        "predicted_structure_family": "1111",
         "status": "候选假设(未验证)",
         "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap",
-        "relation_type": "R1",
-        "source_cosine": 0.9958
-      },
-      {
-        "source_transform": "MgB2 → MgB2+Y2O3/SiC",
-        "target_base": "MgB2-xCx",
-        "predicted_composition_delta": {
-          "B": -0.4667,
-          "C": 0.1,
-          "Mg": -0.2333,
-          "O": 0.3,
-          "Si": 0.1,
-          "Y": 0.2
-        },
-        "predicted_structure_family": "diboride",
-        "status": "候选假设(未验证)",
-        "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap",
-        "relation_type": "R9",
-        "source_cosine": 0.8442
+        "relation_type": "R5",
+        "source_cosine": 0.5
       },
       {
         "source_transform": "MgB2 → SmFeAsO1-xFx",
@@ -144,6 +2726,23 @@
         "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap",
         "relation_type": "R8",
         "source_cosine": -0.4179
+      },
+      {
+        "source_transform": "MgB2 → MgB2+Y2O3/SiC",
+        "target_base": "MgB2-xCx",
+        "predicted_composition_delta": {
+          "B": -0.4667,
+          "C": 0.1,
+          "Mg": -0.2333,
+          "O": 0.3,
+          "Si": 0.1,
+          "Y": 0.2
+        },
+        "predicted_structure_family": "diboride",
+        "status": "候选假设(未验证)",
+        "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap",
+        "relation_type": "R9",
+        "source_cosine": 0.8442
       }
     ]
   }

@@ -8,6 +8,7 @@ L3 运算规则：边向量 = vec(B) - vec(A)；平行性 = 两条边向量的�
 - 编码退化：如果两条边的化学计量比增量完全相同，cos≈1 是构造保证的，不是实测证据
 """
 import math
+import sys
 from graph import build_graph, vectorize
 
 
@@ -66,6 +67,8 @@ def relation_type_pairs(edges, materials, vecs, comp_dims):
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     materials, edges = build_graph()
     vecs, els, families = vectorize(materials)
     comp_dims = len(els)

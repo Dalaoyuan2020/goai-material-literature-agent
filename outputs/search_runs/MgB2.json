@@ -1,0 +1,273 @@
+{
+  "run_name": "MgB2",
+  "structure_family": "diboride",
+  "method": "bayesian_optimization_style_search",
+  "llm_integration_mode": "heuristic_approximation_not_real_llm",
+  "real_llm_api_called": false,
+  "surrogate_model": "interpretable_rules.cosine_not_black_box",
+  "evidence_policy": {
+    "source_transformations": "core_doi_backed_only",
+    "candidate_targets": "core_doi_backed_only",
+    "matkg_extension": "weak_vector_space_context_only",
+    "core_edges_count": 36,
+    "matkg_extended_edges_count": 210
+  },
+  "family_core_materials": [
+    "MgB2"
+  ],
+  "family_core_materials_count": 1,
+  "candidate_pool_count": 5,
+  "rounds_run": 4,
+  "round_candidate_counts": [
+    4,
+    1,
+    0,
+    0
+  ],
+  "retained_candidate_count": 5,
+  "stop_reason": "converged_two_rounds_without_new_non_degenerate_candidate",
+  "converged": true,
+  "status": "completed",
+  "history": [
+    {
+      "round": 1,
+      "proposed_count": 4,
+      "new_non_degenerate_count": 4,
+      "consecutive_no_new": 0,
+      "candidates": [
+        {
+          "candidate_id": "R3|FeSe->FeSe0.5Te0.5|MgB2",
+          "relation_type": "R3",
+          "family": "diboride",
+          "source_pair": [
+            "FeSe",
+            "FeSe0.5Te0.5"
+          ],
+          "reference_pair": [
+            "FeTe",
+            "FeSe0.5Te0.5"
+          ],
+          "source_cosine_hint": -1.0,
+          "target_base": "MgB2",
+          "prediction": {
+            "source_transform": "FeSe → FeSe0.5Te0.5",
+            "target_base": "MgB2",
+            "predicted_composition_delta": {
+              "Se": -0.25,
+              "Te": 0.25
+            },
+            "predicted_structure_family": "diboride",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 1.0,
+          "signed_cosine": -1.0,
+          "absolute_cosine": 1.0,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision": "retain_for_external_validation"
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2|MgB2",
+          "relation_type": "R2",
+          "family": "diboride",
+          "source_pair": [
+            "BaFe2As2",
+            "BaFe1.8Co0.2As2"
+          ],
+          "reference_pair": [
+            "SrFe2As2",
+            "SrFe1.8Mn0.2As2"
+          ],
+          "source_cosine_hint": 0.9992,
+          "target_base": "MgB2",
+          "prediction": {
+            "source_transform": "BaFe2As2 → BaFe1.8Co0.2As2",
+            "target_base": "MgB2",
+            "predicted_composition_delta": {
+              "Co": 0.04,
+              "Fe": -0.04
+            },
+            "predicted_structure_family": "diboride",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.4996,
+          "signed_cosine": 0.9992,
+          "absolute_cosine": 0.9992,
+          "degenerate": false,
+          "penalty_factor": 0.5,
+          "penalty_reasons": [
+            "known Co/Mn counterexample boundary: composition cosine cannot infer effect direction"
+          ],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision": "retain_for_external_validation"
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->SmFeAsO|MgB2",
+          "relation_type": "R5",
+          "family": "diboride",
+          "source_pair": [
+            "LaFeAsO",
+            "SmFeAsO"
+          ],
+          "reference_pair": [
+            "LaFeAsO",
+            "CeFeAsO"
+          ],
+          "source_cosine_hint": 0.5,
+          "target_base": "MgB2",
+          "prediction": {
+            "source_transform": "LaFeAsO → SmFeAsO",
+            "target_base": "MgB2",
+            "predicted_composition_delta": {
+              "La": -0.25,
+              "Sm": 0.25
+            },
+            "predicted_structure_family": "diboride",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.5,
+          "signed_cosine": 0.5,
+          "absolute_cosine": 0.5,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision": "retain_for_external_validation"
+        },
+        {
+          "candidate_id": "R9|BaFe2As2->SrFe2As2|MgB2",
+          "relation_type": "R9",
+          "family": "diboride",
+          "source_pair": [
+            "BaFe2As2",
+            "SrFe2As2"
+          ],
+          "reference_pair": [
+            "BaFe2As2",
+            "KFe2As2"
+          ],
+          "source_cosine_hint": 0.5,
+          "target_base": "MgB2",
+          "prediction": {
+            "source_transform": "BaFe2As2 → SrFe2As2",
+            "target_base": "MgB2",
+            "predicted_composition_delta": {
+              "Ba": -0.2,
+              "Sr": 0.2
+            },
+            "predicted_structure_family": "diboride",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.5,
+          "signed_cosine": 0.5,
+          "absolute_cosine": 0.5,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision": "retain_for_external_validation"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "proposed_count": 1,
+      "new_non_degenerate_count": 1,
+      "consecutive_no_new": 0,
+      "candidates": [
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO|MgB2",
+          "relation_type": "R1",
+          "family": "diboride",
+          "source_pair": [
+            "GdFeAsO",
+            "Gd1-xThxFeAsO"
+          ],
+          "reference_pair": [
+            "BaFe2As2",
+            "Ba0.6K0.4Fe2As2"
+          ],
+          "source_cosine_hint": 0.4898,
+          "target_base": "MgB2",
+          "prediction": {
+            "source_transform": "GdFeAsO → Gd1-xThxFeAsO",
+            "target_base": "MgB2",
+            "predicted_composition_delta": {
+              "As": -0.0278,
+              "Fe": -0.0278,
+              "Gd": -0.1389,
+              "O": -0.0278,
+              "Th": 0.2222
+            },
+            "predicted_structure_family": "diboride",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.4898,
+          "signed_cosine": 0.4898,
+          "absolute_cosine": 0.4898,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_approximation_not_real_llm",
+          "decision": "retain_for_external_validation"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "proposed_count": 0,
+      "new_non_degenerate_count": 0,
+      "consecutive_no_new": 1,
+      "candidates": []
+    },
+    {
+      "round": 4,
+      "proposed_count": 0,
+      "new_non_degenerate_count": 0,
+      "consecutive_no_new": 2,
+      "candidates": []
+    }
+  ]
+}

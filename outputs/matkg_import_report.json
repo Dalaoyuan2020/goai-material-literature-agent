@@ -1,0 +1,21 @@
+{
+  "input_path": "..\\.tmp\\matkg\\SUBRELOBJ.csv",
+  "input_size_bytes": 184088025,
+  "output_path": "H:\\Codex_Agent\\knowage\\goai-material-literature-agent\\knowledge\\edges_matkg.csv",
+  "source": "MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024)",
+  "raw_rows_processed": 5411478,
+  "material_layer_matches": 878,
+  "relation_layer_matches": 210,
+  "malformed_rows_skipped": 0,
+  "selected_rows": 210,
+  "selected_by_scope": {
+    "DOPING": 30,
+    "SUBSTITUTION": 0,
+    "SYNTHESIS": 34,
+    "STRUCTURE": 146
+  },
+  "row_level_doi_available": false,
+  "strong_evidence_eligible_rows": 0,
+  "selected_unique_nodes": 51,
+  "matched_material_entities": 13
+}

@@ -8,9 +8,14 @@ L2 基本结构：点(材料) + 边(文献关系) + 向量化
 """
 import csv
 import re
+import sys
 from collections import defaultdict
+from pathlib import Path
 
-DATA_DIR = __file__.rsplit("/", 2)[0] + "/knowledge"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = REPO_ROOT / "knowledge"
+CORE_EDGES_PATH = DATA_DIR / "edges.csv"
+EXTENDED_EDGES_PATH = DATA_DIR / "edges_matkg.csv"
 
 # 结构家族识别规则：按化学计量比模式分类（超导材料学界公认的家族命名）
 STRUCTURE_FAMILIES = [
@@ -52,25 +57,94 @@ def parse_composition(formula: str) -> dict:
     return {el: n / total for el, n in comp.items()}
 
 
-def load_edges():
+def load_core_edges(path: Path = CORE_EDGES_PATH):
     edges = []
-    with open(f"{DATA_DIR}/edges.csv", encoding="utf-8") as f:
+    with path.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
+            row["_source"] = "core"
+            row["_subject_type"] = "CHM"
+            row["_object_type"] = "CHM"
             edges.append(row)
     return edges
 
 
-def build_graph():
-    edges = load_edges()
+def load_extended_edges(path: Path = EXTENDED_EDGES_PATH):
+    if not path.exists():
+        return []
+
+    edges = []
+    with path.open(encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        required = {"实体A", "实体B", "扩展关系类型", "MatKG关系标签"}
+        missing = required.difference(reader.fieldnames or ())
+        if missing:
+            raise ValueError(f"MatKG 扩展集缺少列: {sorted(missing)}")
+        for row in reader:
+            tags = row["MatKG关系标签"].split("-")
+            edges.append({
+                **row,
+                "材料A": row["实体A"],
+                "材料B": row["实体B"],
+                "关系类型": row["扩展关系类型"],
+                "关系类型定义": row.get("扩展关系类型定义", ""),
+                "_source": "matkg",
+                "_subject_type": tags[0] if tags else "UNKNOWN",
+                "_object_type": tags[-1] if tags else "UNKNOWN",
+            })
+    return edges
+
+
+def load_edges(
+    include_extended: bool = False,
+    core_path: Path = CORE_EDGES_PATH,
+    extended_path: Path = EXTENDED_EDGES_PATH,
+):
+    edges = load_core_edges(core_path)
+    if include_extended:
+        edges.extend(load_extended_edges(extended_path))
+    return edges
+
+
+def build_graph(
+    include_extended: bool = False,
+    core_path: Path = CORE_EDGES_PATH,
+    extended_path: Path = EXTENDED_EDGES_PATH,
+):
+    """Build the graph used for vectorization.
+
+    The safe default is core-only.  Callers may opt into MatKG's weak,
+    heterogeneous extension for vector-space coverage, but evidence code must
+    continue to receive ``load_core_edges()`` explicitly.
+    """
+    edges = load_edges(
+        include_extended=include_extended,
+        core_path=core_path,
+        extended_path=extended_path,
+    )
     materials = {}
     for e in edges:
-        for m in (e["材料A"], e["材料B"]):
+        endpoints = (
+            (e["材料A"], e.get("_subject_type", "CHM")),
+            (e["材料B"], e.get("_object_type", "CHM")),
+        )
+        for m, node_type in endpoints:
             if m not in materials:
+                is_material = node_type == "CHM"
                 materials[m] = {
                     "formula": m,
+                    "composition": parse_composition(m) if is_material else {},
+                    "structure_family": structure_family(m) if is_material else f"entity:{node_type.lower()}",
+                    "node_type": node_type,
+                    "is_core_material": e["_source"] == "core",
+                }
+            elif e["_source"] == "core":
+                # Core rows are authoritative when a label also appears in MatKG.
+                materials[m].update({
                     "composition": parse_composition(m),
                     "structure_family": structure_family(m),
-                }
+                    "node_type": "CHM",
+                    "is_core_material": True,
+                })
     return materials, edges
 
 
@@ -94,6 +168,8 @@ def vectorize(materials: dict):
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     materials, edges = build_graph()
     vecs, els, families = vectorize(materials)
     print(f"点(材料): {len(materials)} 个")
