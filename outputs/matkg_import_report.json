@@ -1,74 +1,21 @@
 {
-  "status": "blocked_before_full_import",
-  "generated_at": "2026-08-11",
-  "matkg_download": {
-    "url": "https://zenodo.org/records/10022727/files/SUBRELOBJ.csv?download=1",
-    "expected_size_bytes_from_curl": 184088025,
-    "attempts": [
-      {
-        "attempt": 1,
-        "mode": "fresh",
-        "end_percent": 3.4,
-        "result": "curl error 18: end of response",
-        "bytes_missing": 177779793
-      },
-      {
-        "attempt": 2,
-        "mode": "resume",
-        "end_percent": 7.1,
-        "result": "curl error 18: end of response",
-        "bytes_missing": 170979109
-      },
-      {
-        "attempt": 3,
-        "mode": "resume",
-        "end_percent": 23.4,
-        "result": "curl error 18: end of response",
-        "bytes_missing": 141097733
-      }
-    ],
-    "retry_limit_reached": true,
-    "additional_download_attempts_made": false
+  "input_path": "..\\.tmp\\matkg\\SUBRELOBJ.csv",
+  "input_size_bytes": 184088025,
+  "output_path": "H:\\Codex_Agent\\knowage\\goai-material-literature-agent\\knowledge\\edges_matkg.csv",
+  "source": "MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024)",
+  "raw_rows_processed": 5411478,
+  "material_layer_matches": 878,
+  "relation_layer_matches": 210,
+  "malformed_rows_skipped": 0,
+  "selected_rows": 210,
+  "selected_by_scope": {
+    "DOPING": 30,
+    "SUBSTITUTION": 0,
+    "SYNTHESIS": 34,
+    "STRUCTURE": 146
   },
-  "observed_format": {
-    "columns": [
-      "Subject",
-      "Object",
-      "Rel",
-      "Count"
-    ],
-    "relation_semantics": "Rel is a pair of NER entity tags, not an R1-R9 semantic relation",
-    "count_semantics": "number of distinct co-occurring DOIs before aggregation",
-    "row_level_doi_available": false
-  },
-  "partial_prefix_diagnostic_only": {
-    "input_size_bytes": 42990292,
-    "raw_rows_processed": 1295587,
-    "material_layer_matches": 150,
-    "selected_rows_after_both_layers": 44,
-    "selected_unique_nodes": 31,
-    "matched_material_entities": 10,
-    "selected_by_scope": {
-      "DOPING": 6,
-      "SUBSTITUTION": 0,
-      "SYNTHESIS": 4,
-      "STRUCTURE": 34
-    },
-    "malformed_trailing_rows_skipped": 1,
-    "committed_as_edges_matkg": false,
-    "reason": "The prefix is only 23.4% of the source and must not be represented as the complete MatKG subset"
-  },
-  "fallback": {
-    "route": "Sciverse meta-search",
-    "status": "blocked",
-    "reason": "SCIVERSE_KEY is absent from both the environment and the documented api_keys.env path",
-    "new_calls_made": 0
-  },
-  "knowledge_base_result": {
-    "core_materials": 35,
-    "core_edges": 36,
-    "extended_edges_committed": 0,
-    "scale_growth_claimed": false,
-    "strong_evidence_source": "core_only"
-  }
+  "row_level_doi_available": false,
+  "strong_evidence_eligible_rows": 0,
+  "selected_unique_nodes": 51,
+  "matched_material_entities": 13
 }

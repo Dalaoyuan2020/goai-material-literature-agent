@@ -1,0 +1,211 @@
+实体A,实体B,扩展关系类型,扩展关系类型定义,MatKG关系标签,共现文献数,材料匹配依据,关系筛选依据,来源数据集,文献DOI,证据等级,强证据资格
+122,Fe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,37,A:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+122,Iron,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,31,A:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+122,Superconductivity,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-PRO,35,A:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+122,Superconductor,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-PRO,56,A:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Annealed,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,56,B:core:MgB2,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Annealing,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,74,B:core:MgB2,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Annealing,YBa2Cu3O7,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,37,B:core:YBa2Cu3O7,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Annealing,YBa2Cu3O7-X,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,38,B:family:cuprate-formula,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Co-Doped,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-DSC,33,A:core:BaFe2As2,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,34,A:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Crystal Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,30,A:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Doped,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-DSC,92,A:core:BaFe2As2,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Doping,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-SMT,57,A:core:BaFe2As2,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Orthorhombic,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,57,A:core:BaFe2As2,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Phase Diagram,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,37,A:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Single Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,72,A:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Structural,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,40,A:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+BaFe2As2,Tetragonal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,58,A:core:BaFe2As2,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Band Structure,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,45,B:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+CaFe2As2,Tetragonal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,46,A:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Co-Doped,BaFe2As2,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,DSC-CHM,33,B:core:BaFe2As2,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal,BaFe2As2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,34,B:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal,Cuprate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,30,B:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,50,B:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,64,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal,YBa2Cu3O7,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,66,B:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal,YBa2Cu3O7-Δ,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,43,B:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal Structure,BaFe2As2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,30,B:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal Structure,Cuprate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,48,B:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal Structure,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,62,B:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal Structure,La2CuO4,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,37,B:family:214,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystal Structure,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,62,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Crystalline,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,38,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,30,A:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Crystal Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,48,A:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Doped,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-DSC,90,A:family:cuprate,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Doping,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-SMT,54,A:family:cuprate,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Perovskites,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,35,A:family:cuprate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Phase Diagram,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,38,A:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Single Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,34,A:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,38,A:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Superconductivity,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-PRO,60,A:family:cuprate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,Superconductor,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-PRO,92,A:family:cuprate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Cuprate,TC,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-PRO,42,A:family:cuprate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Dehydrogenation,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,34,B:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doped,BaFe2As2,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,DSC-CHM,92,B:core:BaFe2As2,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doped,Cuprate,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,DSC-CHM,90,B:family:cuprate,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doped,FeSe,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,DSC-CHM,62,B:core:FeSe,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doped,Iron Pnictide,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,DSC-CHM,86,B:family:Fe-based,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doped,La2CuO4,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,DSC-CHM,68,B:family:214,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doped,MgB2,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,DSC-CHM,248,B:core:MgB2,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doped,YBa2Cu3O7,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,DSC-CHM,48,B:core:YBa2Cu3O7,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doped,YBa2Cu3O7-Δ,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,DSC-CHM,74,B:core:YBa2Cu3O7,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doping,BaFe2As2,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,SMT-CHM,57,B:core:BaFe2As2,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doping,Cuprate,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,SMT-CHM,54,B:family:cuprate,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doping,FeSe,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,SMT-CHM,50,B:core:FeSe,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doping,Iron Pnictide,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,SMT-CHM,48,B:family:Fe-based,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doping,La2CuO4,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,SMT-CHM,40,B:family:214,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Doping,MgB2,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,SMT-CHM,88,B:core:MgB2,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Electronic Structure,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,59,B:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Electronic Structure,Iron Pnictide,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,41,B:family:Fe-based,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Electronic Structure,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,35,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Fe,122,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,37,B:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Band Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,45,A:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,50,A:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Crystal Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,62,A:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Doped,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-DSC,62,A:core:FeSe,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Doping,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-SMT,50,A:core:FeSe,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Electronic Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,59,A:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Hexagonal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,51,A:core:FeSe,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Orthorhombic,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,39,A:core:FeSe,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Phase Diagram,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,52,A:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Single Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,70,A:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Structural Transition,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,30,A:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,56,A:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+FeSe,Tetragonal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,103,A:core:FeSe,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Heat Treated,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,43,B:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Heat Treatment,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,64,B:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Heating,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,63,B:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Hexagonal,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,51,B:core:FeSe,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Hexagonal,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,64,B:core:MgB2,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Iron,122,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,31,B:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Iron Pnictide,Doped,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-DSC,86,A:family:Fe-based,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Iron Pnictide,Doping,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-SMT,48,A:family:Fe-based,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Iron Pnictide,Electronic Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,41,A:family:Fe-based,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Iron Pnictide,Orthorhombic,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,40,A:family:Fe-based,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Iron Pnictide,Phase Diagram,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,55,A:family:Fe-based,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Iron Pnictide,Single Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,47,A:family:Fe-based,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Iron Pnictide,Tetragonal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,57,A:family:Fe-based,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+La2CuO4,Crystal Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,37,A:family:214,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+La2CuO4,Doped,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-DSC,68,A:family:214,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+La2CuO4,Doping,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-SMT,40,A:family:214,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+La2CuO4,Orthorhombic,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,43,A:family:214,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+La2CuO4,Perovskites,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,68,A:family:214,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+La2CuO4,Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,40,A:family:214,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+La2CuO4,Tetragonal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,38,A:family:214,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Lattice Parameter,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,71,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Annealed,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,56,A:core:MgB2,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Annealing,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,74,A:core:MgB2,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,64,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Crystal Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,62,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Crystalline,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,38,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Dehydrogenation,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,34,A:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Doped,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-DSC,248,A:core:MgB2,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Doping,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-SMT,88,A:core:MgB2,keyword:doping;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Electronic Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,35,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Heat Treated,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,43,A:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Heat Treatment,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,64,A:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Heating,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,63,A:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Hexagonal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,64,A:core:MgB2,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Lattice Parameter,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,71,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Microstructure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,111,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Milled,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,42,A:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Milling,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,34,A:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Phase Diagram,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,30,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Pit,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,35,A:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Polycrystalline,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,81,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Powder in Tube,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,30,A:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Single Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,120,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Sintered,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,124,A:core:MgB2,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Sintering,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,102,A:core:MgB2,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Structural,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,41,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+MgB2,Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,81,A:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Microstructure,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,111,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Microstructure,YBa2Cu3O7,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,47,B:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Microstructure,YBa2Cu3O7-D,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,32,B:family:cuprate-formula,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Microstructure,YBa2Cu3O7-X,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,47,B:family:cuprate-formula,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Milled,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,42,B:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Milling,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,34,B:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Nickelate,Perovskites,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,70,A:family:nickelate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Orthorhombic,BaFe2As2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,57,B:core:BaFe2As2,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Orthorhombic,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,39,B:core:FeSe,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Orthorhombic,Iron Pnictide,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,40,B:family:Fe-based,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Orthorhombic,La2CuO4,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,43,B:family:214,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Orthorhombic,YBa2Cu3O7,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,44,B:core:YBa2Cu3O7,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Orthorhombic,YBa2Cu3O7-X,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,49,B:family:cuprate-formula,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Orthorhombic,YBa2Cu3O7-Δ,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,33,B:core:YBa2Cu3O7,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Perovskites,Cuprate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,35,B:family:cuprate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Perovskites,La2CuO4,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,68,B:family:214,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Perovskites,Nickelate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,70,B:family:nickelate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Perovskites,YBa2Cu3O7,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,55,B:core:YBa2Cu3O7,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Perovskites,YBa2Cu3O7-X,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,30,B:family:cuprate-formula,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Phase Diagram,BaFe2As2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,37,B:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Phase Diagram,Cuprate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,38,B:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Phase Diagram,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,52,B:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Phase Diagram,Iron Pnictide,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,55,B:family:Fe-based,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Phase Diagram,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,30,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Pit,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,35,B:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Polycrystalline,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,81,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Polycrystalline,YBa2Cu3O7,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,38,B:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Powder in Tube,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,30,B:core:MgB2,tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Pulsed Laser Deposition,YBa2Cu3O7,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,57,B:core:YBa2Cu3O7,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Pulsed Laser Deposition,YBa2Cu3O7-X,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,34,B:family:cuprate-formula,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Pulsed Laser Deposition,YBa2Cu3O7-Δ,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,39,B:core:YBa2Cu3O7,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Single Crystal,BaFe2As2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,72,B:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Single Crystal,Cuprate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,34,B:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Single Crystal,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,70,B:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Single Crystal,Iron Pnictide,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,47,B:family:Fe-based,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Single Crystal,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,120,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Single Crystal,YBa2Cu3O7,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,86,B:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Single Crystal,YBa2Cu3O7-X,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,43,B:family:cuprate-formula,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Single Crystal,YBa2Cu3O7-Δ,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,DSC-CHM,97,B:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Sintered,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,124,B:core:MgB2,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Sintering,MgB2,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,SMT-CHM,102,B:core:MgB2,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structural,BaFe2As2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,40,B:core:BaFe2As2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structural,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,41,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structural Transition,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,30,B:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structure,Cuprate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,38,B:family:cuprate,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structure,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,56,B:core:FeSe,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structure,La2CuO4,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,40,B:family:214,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structure,MgB2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,81,B:core:MgB2,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structure,YBa2Cu3O7,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,60,B:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structure,YBa2Cu3O7-X,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,33,B:family:cuprate-formula,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Structure,YBa2Cu3O7-Δ,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-CHM,33,B:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Superconductivity,122,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-SPL,35,B:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Superconductivity,Cuprate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-SPL,60,B:family:cuprate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Superconductor,122,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-SPL,56,B:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Superconductor,Cuprate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-SPL,92,B:family:cuprate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+TC,Cuprate,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,PRO-SPL,42,B:family:cuprate,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Tetragonal,BaFe2As2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,58,B:core:BaFe2As2,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Tetragonal,CaFe2As2,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,46,B:family:122,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Tetragonal,FeSe,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,103,B:core:FeSe,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Tetragonal,Iron Pnictide,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,57,B:family:Fe-based,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Tetragonal,La2CuO4,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,38,B:family:214,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+Tetragonal,YBa2Cu3O7,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,SPL-CHM,33,B:core:YBa2Cu3O7,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Annealing,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,37,A:core:YBa2Cu3O7,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,66,A:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Doped,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-DSC,48,A:core:YBa2Cu3O7,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Microstructure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,47,A:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Orthorhombic,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,44,A:core:YBa2Cu3O7,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Perovskites,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,55,A:core:YBa2Cu3O7,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Polycrystalline,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,38,A:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Pulsed Laser Deposition,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,57,A:core:YBa2Cu3O7,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Single Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,86,A:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,60,A:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7,Tetragonal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,33,A:core:YBa2Cu3O7,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-D,Microstructure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,32,A:family:cuprate-formula,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-X,Annealing,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,38,A:family:cuprate-formula,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-X,Microstructure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,47,A:family:cuprate-formula,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-X,Orthorhombic,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,49,A:family:cuprate-formula,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-X,Perovskites,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,30,A:family:cuprate-formula,tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-X,Pulsed Laser Deposition,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,34,A:family:cuprate-formula,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-X,Single Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,43,A:family:cuprate-formula,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-X,Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,33,A:family:cuprate-formula,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-Δ,Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,43,A:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-Δ,Doped,MKG-DOPING,MatKG 聚合共现中的掺杂相关弱关系；位点未知，不映射为 R1-R5,CHM-DSC,74,A:core:YBa2Cu3O7,keyword:doping,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-Δ,Orthorhombic,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-SPL,33,A:core:YBa2Cu3O7,keyword:structure;tag:SPL,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-Δ,Pulsed Laser Deposition,MKG-SYNTHESIS,MatKG 聚合共现中的合成/生长相关弱关系；不属于核心 R1-R9 强证据,CHM-SMT,39,A:core:YBa2Cu3O7,keyword:synthesis;tag:SMT,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-Δ,Single Crystal,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-DSC,97,A:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false
+YBa2Cu3O7-Δ,Structure,MKG-STRUCTURE,MatKG 聚合共现中的结构/相标签相关弱关系；不等同于已核验的 R9,CHM-PRO,33,A:core:YBa2Cu3O7,keyword:structure,MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024),,matkg_aggregate_weak,false

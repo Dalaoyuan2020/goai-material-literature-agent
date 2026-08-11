@@ -1,22 +1,27 @@
 {
   "L2_structure": {
-    "materials_count": 35,
-    "edges_count": 36,
+    "materials_count": 82,
+    "edges_count": 246,
     "core_materials_count": 35,
     "core_edges_count": 36,
-    "extended_nodes_count": 0,
-    "extended_edges_count": 0,
-    "composition_dims": 28,
+    "extended_nodes_count": 47,
+    "extended_edges_count": 210,
+    "composition_dims": 33,
     "structure_families": [
       "11",
       "1111",
       "122",
       "214",
       "diboride",
+      "entity:dsc",
+      "entity:pro",
+      "entity:smt",
+      "entity:spl",
       "other"
     ],
     "vector_space_sources": [
-      "core"
+      "core",
+      "matkg"
     ]
   },
   "L3_rules": {
