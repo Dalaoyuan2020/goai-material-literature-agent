@@ -58,6 +58,7 @@ def warmstart_candidates(
     source_evidence=None,
     source_rank=0,
     exposed_round=1,
+    exclude_source_pairs=None,
 ):
     """Generate deterministic warmstart candidates from core evidence.
 
@@ -82,6 +83,7 @@ def warmstart_candidates(
             vecs,
             comp_dims,
             relation_type,
+            exclude_pairs=exclude_source_pairs,
             ranked_pairs=True,
         )
         source = ranked_sources[source_rank] if source_rank < len(ranked_sources) else None
@@ -121,6 +123,7 @@ def warmstart_candidates(
                 "source_pair": list(source_pair),
                 "reference_pair": list(reference_pair),
                 "source_rank": source_rank,
+                "rank_within_relation_type": source_rank + 1,
                 "exposed_round": exposed_round,
                 "source_cosine_hint": round(source["cosine"], 4),
                 "target_base": target,
@@ -583,6 +586,7 @@ def run_family_search(
                 )
             )
             exposed_depths[relation_type] += 1
+            expansion["rank_within_relation_type"] = source_rank + 1
         existing_ids = {candidate["candidate_id"] for candidate in candidate_pool}
         new_candidates = [
             candidate
@@ -607,14 +611,14 @@ def run_family_search(
     report = {
         "run_name": run_name,
         "structure_family": family,
-        "method": "可解释余弦评分 + LLM引导扩张与剪枝",
+        "method": "llm_guided_iterative_candidate_expansion_and_pruning",
         "llm_integration_mode": (
             "real_llm_api_with_audited_fallback"
             if any(
                 call["real_llm_api_called"]
                 for call in llm_client.calls[first_llm_call_index:]
             )
-            else "heuristic_fallback_not_real_llm"
+            else "heuristic_fallback_llm_unreachable"
         ),
         "real_llm_api_called": any(
             call["real_llm_api_called"]
@@ -639,6 +643,27 @@ def run_family_search(
         "initial_candidate_ids": sorted(initial_candidate_ids),
         "candidate_pool_count": len(candidate_pool),
         "candidate_pool_growth": candidate_pool_growth,
+        "pool_growth_by_round": [
+            item["candidate_pool_count"] for item in candidate_pool_growth
+        ],
+        "expansion_source_by_round": [
+            {
+                "after_round": item["round"],
+                "relation_type": item.get("expansion_decision", {}).get(
+                    "relation_types", [None]
+                )[0]
+                if item.get("expansion_decision", {}).get("relation_types")
+                else None,
+                "rank_within_relation_type": item.get(
+                    "expansion_decision", {}
+                ).get("rank_within_relation_type"),
+                "new_candidate_count": item.get("expansion_decision", {}).get(
+                    "new_candidate_count", 0
+                ),
+                "applied": item.get("expansion_decision", {}).get("applied", False),
+            }
+            for item in history
+        ],
         "ranked_source_counts": {
             relation_type: len(sources)
             for relation_type, sources in ranked_sources.items()

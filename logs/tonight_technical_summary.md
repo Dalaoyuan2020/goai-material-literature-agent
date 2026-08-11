@@ -2,103 +2,74 @@
 
 ## 结果摘要
 
-今晚完成了全部 P0 与指定 P1：搜索空间从静态池改成逐轮扩张；加入 STEP→Gemini→启发式的审计决策链；补齐 agent 双端口；新增四家族自查；跑通全家族回归；新增候选池增长曲线和 1111 旗舰 walkthrough。
+P0、P1 和余量阶段均已完成：搜索从静态池改为逐轮扩张；加入 STEP→Gemini→诚实启发式降级的审计决策链；补齐 agent 四端口；新增全家族与单案例自查；生成候选池增长曲线和 1111 旗舰说明；用 Sciverse 再检索并仅收入 2 条 DOI 可核验核心边。
 
-最关键的验收数字是 1111 候选池 **49→85**，并且第 2–5 轮每轮都实际观察到了首轮完整 49 个候选中不可能存在的新 ID。四家族自查总结果为 PASS。
+远端 `610354a` 已有 79 条核心边，本地 2 条新边合并后为 81 条。完整基线上，1111 首轮候选从历史 49 增至 56，随后 **56→66→76→86→96**。后续轮观察到 16 个首轮外 ID，满足结构验收。
 
-## 为什么要改
+## 根因与结构修复
 
-旧版 `find_analogy_source()` 对每个 relation type 只返回全局最佳的一对变换；`run_family_search()` 又在进入循环前一次性生成候选。所谓多轮只是从同一个静态列表继续取值，不能探索新证据方向。
+旧版 `find_analogy_source()` 对每个 relation type 只返回全局最优的一对变换，`run_family_search()` 又在循环前一次性生成候选，多轮只能切同一个列表。
 
-旧版还把整个方法写成“贝叶斯优化风格”，但代码没有高斯过程、后验分布或 Expected Improvement。LLAMBO 三个位置也只是启发式近似，不是真实 API。这个命名会让实现显得比实际更强，必须纠正。
+- `find_analogy_source(..., exclude_pairs=None, ranked_pairs=True)` 现在可以返回过滤后的完整确定性排序，默认仍兼容旧的“返回最佳一项”。
+- `warmstart_candidates(..., exclude_source_pairs=None)` 支持跳过已用来源。
+- 搜索首轮开放每类第一来源；每轮排序后再审计一次“深挖/换方向”决策，并开放新的来源排名。
+- 候选 ID 包含源、参考与目标，保证不同证据方向不碰撞；报告新增 `rank_within_relation_type`、`pool_growth_by_round`、`expansion_source_by_round`。
 
-## 改了什么
+方法字段固定为 `llm_guided_iterative_candidate_expansion_and_pruning`。代码没有高斯过程、后验分布或 Expected Improvement，因此不再使用“贝叶斯优化”措辞。
 
-### 1. 多源类比与轮次扩张
+## LLM 接入与诚信边界
 
-- `application.find_analogy_source(..., ranked_pairs=True)` 现在返回全部非退化类比源的确定性排序；默认调用仍返回全局最佳来源，保持兼容。
-- 搜索首轮只开放每个关系类型的第一个来源；每轮结束后再决定深挖当前 relation type 或切换方向，并开放下一排名来源。
-- 候选 ID 加入源变换和参考变换，避免不同证据方向碰撞。
-- 新开放候选优先进入下一轮，同时仍由本地规则保证已观察 ID 不重复。
+`src/llm_client.py` 依次尝试 STEP（兼容 `STEP_BASE`/`STEP_BASE_URL`）和 Gemini；两者不可达时使用 `heuristic_fallback_llm_unreachable`。接入点是候选筛选排序与每轮扩张决策，每次调用都写 `outputs/llm_calls/<call_id>.json`，且不写密钥。
 
-### 2. 审计型 LLM 接口
+本机未发现可用的 STEP/Gemini 完整配置，所以本轮四家族共 40 次逻辑调用均为启发式降级，`real_llm_api_called=false`。mock 测试证明 STEP 成功响应路径可解析且凭证不会落审计；这不等于本轮发生过真实模型调用。
 
-- 新增 `src/llm_client.py`，只用 Python 标准库。
-- 调用顺序：STEP（`STEP_API_KEY` + `STEP_BASE`）→ Gemini（`GEMINI_KEY`）→ 明确启发式兜底。
-- 两个接入点：候选筛选排序；每轮后的“继续深挖还是换方向”决策。
-- 每个逻辑调用都写入 `outputs/llm_calls/<call_id>.json`，包含请求、provider 尝试、失败原因、模式和结果，但不含凭证。
-- provider 返回的陌生候选 ID、已观察 ID 和不可扩张 relation type 会被本地白名单拒绝。
-- `method` 改为“可解释余弦评分 + LLM引导扩张与剪枝”，不再称贝叶斯优化。
+## Agent 四端口与自查
 
-本机实际情况：环境和约定 `_digital_assets/api_keys.env` 都没有 STEP/Gemini 必要配置，所以本轮 40 个逻辑调用全部诚实使用 `heuristic_fallback_not_real_llm`，四份报告均为 `real_llm_api_called=false`。单测用 mock 验证了 STEP 成功解析路径和密钥不落审计，但这不等于今晚发生过真实网络调用。
+- `agent/CLAUDE.md`：人类可读铁律。
+- `agent/soul.json`：机器可读身份、语气、证据立场和降级原则。
+- `agent/workflow.json`：8 个意图到真实 Python 函数的固定映射，与前端规范第 04 节同层。
+- `src/verify_search_case.py --run <family>`：输出结构断言、LLM 参与率、证据层级、探索多样性、候选下一步与审计完整性。
 
-### 3. Agent 双端口
+`src/verify_search.py` 同时核验四家族：池逐轮增长、后续轮有首轮外 ID、观察 ID 唯一、证据层未混用、每轮恰有两份审计、真实调用标志一致。1111 接受标准为不得低于历史 49 基线并必须继续增长，避免把远端新增证据造成的 56 错判为失败。
 
-- `agent/CLAUDE.md`：提炼 raw 只读、schema 稳定、核心/MatKG 证据隔离、未验证假设、LLM 诚信、密钥保护和允许操作边界。
-- `agent/workflow.json`：把 9 个意图映射到真实 Python 函数，包括检索、构图、向量化、类比源、单/全家族搜索、自查、主管线和可视化。
-- 契约测试逐个 import 目标函数，避免文档指向不存在的接口。
+## 完整数据与验证结果
 
-### 4. 自动自查
+主管线结果：53 篇唯一 DOI 文献、81 条核心边、94 个核心材料、210 条 MatKG 弱边、140 个向量节点、326 组非退化核心证据、6 个 L4 未验证候选。
 
-新增 `src/verify_search.py`，检查：
-
-- 四份家族报告齐全且映射正确；
-- 方法名诚实；
-- 候选池逐轮严格增长；
-- 每个后续轮都有首轮完整池外 ID；
-- 已观察 ID 唯一；
-- 所有条目仍标为未验证假设；
-- 核心 DOI 与 MatKG 弱背景没有混用；
-- 每轮恰有候选排序和扩张决策两份审计；
-- 真实 LLM 标志与逐份审计一致；
-- 1111 首轮必须为 49 且最终大于 49。
-
-结果写入 `outputs/search_verification.json`。
-
-### 5. 可视化与案例说明
-
-- 新增 `outputs/visualizations/04_candidate_pool_growth.png`，完全从四份搜索 JSON 读取增长数据。
-- 流程图把 `BO-style search` 改成 `Iterative search`，并写出当前为审计型启发式降级。
-- 新增 `outputs/flagship_case_1111_walkthrough.md`，逐轮解释 1111 的池增长、候选保留/剪枝、审计状态和科学局限。
-
-## 四家族验证结果
-
-| 家族 | 初始池 | 最终池 | 实际观察 | 保留 | 后续轮首轮外 ID | LLM 审计 | 真实 API |
+| 家族 | 初始池 | 最终池 | 实际观察 | 保留 | 后续轮首轮外 ID | 审计 | 真实 API |
 |---|---:|---:|---:|---:|---:|---:|---|
-| 122 | 13 | 19 | 19 | 19 | 6 | 10 | 否 |
-| 1111 | 49 | 85 | 20 | 12 | 16 | 10 | 否 |
-| 11 | 38 | 59 | 20 | 20 | 15 | 10 | 否 |
-| MgB2 | 5 | 9 | 9 | 7 | 4 | 10 | 否 |
+| 122 | 33 | 52 | 20 | 20 | 16 | 10 | 否 |
+| 1111 | 56 | 96 | 20 | 20 | 16 | 10 | 否 |
+| 11 | 56 | 96 | 20 | 20 | 16 | 10 | 否 |
+| MgB2 | 44 | 76 | 20 | 20 | 16 | 10 | 否 |
 
-“最终池”是累计生成的未验证假设空间；“实际观察”是五轮中取出并打分的唯一 ID；“保留”是非退化且分数大于 0、等待外部验证的数量。这三列不能混为“发现的材料数”。
+“最终池”是累计未验证假设空间，不是发现材料数。四个单案例验收均通过；全家族总验收在修正历史 49 的硬编码后通过。
 
-## 测试与运行环境
+## Sciverse 余量检索
 
-- 搜索、LLM、agent 契约、MatKG 隔离、自查、可视化和 walkthrough 共 15 项测试全部通过。
-- `E:\Anaconda3` base 环境混有 NumPy 1.26/2.2 文件，Matplotlib 会出现两个不同的 `numpy.uint8` 类及 `ERR_IGNORE` 导入错误。未修改全局环境。
-- 使用现有 `E:\Anaconda3\envs\camel_agent`（NumPy 1.26.4 / Matplotlib 3.10.1）运行完整测试和出图，全部通过。
-- 新增长图和更新后的流程图已人工视觉检查，无文字溢出。
+调用审计为 `outputs/sciverse_calls/30f701db4f80.json` 与 `c1f9ff5c42d9.json`。仅收入：
 
-复现命令：
+- La4Ni3O10-delta 压力诱导超导，Nature 2024，DOI `10.1038/s41586-024-07553-3`；
+- BaFe1.9Pt0.1As2 的 Pt 取代超导，PRB 2010，DOI `10.1103/PhysRevB.81.104525`。
+
+仅有 arXiv、没有核对发表 DOI、或关系不清的结果均未入核心库；raw 层未改，CSV schema 未改。
+
+## 局限
+
+1. 没有真实 STEP/Gemini 成功响应，当前验证的是接口、降级、审计与约束，不是模型判断质量。
+2. 余弦分数评价证据方向而非目标材料，同一方向迁到多个目标时可能同分。
+3. 成分向量不是位点化学、价态、相稳定性或合成模型。
+4. 启发式本轮持续选择 R2 深挖；“换方向”能力已具备但未由真实模型检验。
+5. 所有搜索产物仍是 `候选假设(未验证)`，必须继续做数据库、原文或实验交叉验证。
+6. GitHub 443 导致 fetch 三次、push 两次失败；最终同步改用用户指定的已认证 GitHub API，以远端最新提交为父原子写树。
+
+## 复现
 
 ```powershell
+E:\Anaconda3\python.exe src\pipeline.py
 E:\Anaconda3\python.exe src\search.py
 E:\Anaconda3\python.exe src\verify_search.py
-E:\Anaconda3\envs\camel_agent\python.exe -m unittest discover -s tests -v
+E:\Anaconda3\python.exe src\verify_search_case.py --run 1111
 E:\Anaconda3\envs\camel_agent\python.exe src\visualize.py
+E:\Anaconda3\envs\camel_agent\python.exe -m unittest discover -s tests -v
 ```
-
-## 仍然存在的局限
-
-1. 本轮没有真实 STEP/Gemini 成功响应；现在验证的是调用链、降级、审计和输出约束，不是 LLM 判断质量。
-2. `score_candidate` 评价源变换与参考变换的平行性，不使用目标材料特征，因此同一证据方向迁到不同目标时会同分。
-3. 成分向量是全式归一化表示，不是位点占据、价态、相稳定性或合成可行性模型；预测增量不能直接当实验配方。
-4. 跨结构家族迁移可能几何上平行但化学上牵强。所有候选仍需 Materials Project/OQMD/NOMAD、原文或实验交叉验证。
-5. 当前“继续深挖”只开放排序中的下一组来源，没有引入高斯过程、MCTS 或新的复杂算法；这是按任务边界有意保持的简单状态机。
-6. GitHub 443 在开工前按规则 fetch 三次均失败。所有本地提交保持干净；远端同步仍需在最终阶段按两次 push 上限和 GitHub API 备用路径处理。
-
-## 下一步
-
-P0/P1 已完成。余量阶段也已执行：Sciverse 检索两个新方向并留下调用审计，只筛入两条满足铁律的核心边：La4Ni3O10-delta 压力超导（Nature 2024，DOI `10.1038/s41586-024-07553-3`）和 BaFe1.9Pt0.1As2 的 Pt 取代超导（PRB 2010，DOI `10.1103/PhysRevB.81.104525`）。数据集 DOI、仅 arXiv 且未核对发表 DOI、或关系不清的结果均未入库。
-
-入库后完整 pipeline 为 22 篇唯一 DOI 文献、38 条核心边、38 个核心材料、210 条 MatKG 弱边、85 个总向量节点和 50 组非退化核心证据；L4 仍为 4 个未验证候选。随后重跑四家族搜索、自查、可视化和全套 15 项测试，均通过。1111 仍为 49→85；最新其他家族为 122 13→19、11 38→59、MgB2 5→9。下一步只剩远端同步和将来补齐 STEP/Gemini 配置后验证真实模型质量。

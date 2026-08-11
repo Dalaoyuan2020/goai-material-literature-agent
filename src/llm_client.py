@@ -66,6 +66,7 @@ def load_runtime_config(secret_paths=None):
     for key in (
         "STEP_API_KEY",
         "STEP_BASE",
+        "STEP_BASE_URL",
         "STEP_MODEL",
         "GEMINI_KEY",
         "GEMINI_MODEL",
@@ -112,7 +113,8 @@ class AuditedLLMClient:
     def provider_availability(self):
         return {
             "step": bool(
-                self.config.get("STEP_API_KEY") and self.config.get("STEP_BASE")
+                self.config.get("STEP_API_KEY")
+                and (self.config.get("STEP_BASE") or self.config.get("STEP_BASE_URL"))
             ),
             "gemini": bool(self.config.get("GEMINI_KEY")),
         }
@@ -128,7 +130,7 @@ class AuditedLLMClient:
             return json.loads(response.read().decode("utf-8"))
 
     def _call_step(self, system_prompt, user_prompt):
-        base = self.config["STEP_BASE"].rstrip("/")
+        base = (self.config.get("STEP_BASE") or self.config["STEP_BASE_URL"]).rstrip("/")
         endpoint = base if base.endswith("/chat/completions") else f"{base}/chat/completions"
         model = self.config.get("STEP_MODEL", "step-2-16k")
         payload = {
@@ -240,7 +242,7 @@ class AuditedLLMClient:
                 "value": heuristic(),
                 "provider": "heuristic",
                 "model": None,
-                "mode": "heuristic_fallback_not_real_llm",
+                "mode": "heuristic_fallback_llm_unreachable",
                 "real_llm_api_called": False,
             }
             audit["attempts"].append(

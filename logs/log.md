@@ -46,6 +46,15 @@
 - 提交前再次执行 `git fetch origin master` 已成功，把远端指针从 `dd31af3` 更新到 `e3dbdf4`；稍后提交后会在该最新任务说明提交之上 rebase，不覆盖远端新增文档。
 - rebase 后普通 `git push origin master` 连续 2 次失败：第 1 次为 `Recv failure: Connection was reset`，第 2 次为 443 端口 21 秒连接超时。按总控规则停止继续重试 Git 传输，改用已认证的 GitHub API 以远端 `e3dbdf4` 为父提交写入同一份已验证文件树。
 
+## 2026-08-11 · 第二轮入库（Sciverse 检索扩库）
+
+- 原料：Sciverse API 10 个关键词检索（iron pnictide doping / cuprate substitution / FeSe Te doping / MgB2 doping / nickel oxide pressure / kagome doping / chemical pressure / transition metal doping / hydride high pressure / cuprate rare earth substitution），共 150 条记录，筛出 58 条候选文献，审计记录 10 条存 `outputs/sciverse_calls/`
+- 新增边：43 条（R1×11, R2×8, R3×1, R5×2, R7×12, R9×9），全部带真实 DOI（31 个唯一 DOI，经 CrossRef 验证存在）+ 摘要原文证据摘录（程序化逐字核验）
+- 证据强度：direct 42，negative 1（FeTe 加压不超导，负样本）
+- 查重：与现有 36 条边三元组无重复；候选内跳过 11 条重复边、20 条无明确证据边
+- 新关系类型发现：**氧位H-掺杂 O→H（1111系）**（LaFeAsO→LaFeAsO1-xHx，10.1038/ncomms1913，2012，第二超导穹顶 Tc 36K@x=0.3）——现有 R4 仅定义 O→F，O→H 不属于任何现有类型，按铁律不强行归类，仅记录候选，供后续 schema 扩展决策（R4 是否需要泛化为"氧位阴离子掺杂"）
+- 规模变化：材料点 35→91，边 36→79（注：合并远程 MatKG 提交后，知识层含核心 edges.csv 79 条 + 扩展 edges_matkg.csv 210 条）
+
 ## 2026-08-12 · 夜间 P0-1：轮次驱动的候选池扩张
 
 - 开工前 `git fetch origin` 按 30 秒间隔最多尝试 3 次，均未能连接 GitHub 443；按夜间规则停止等待，使用本地完整基线继续。
@@ -104,3 +113,13 @@
 - CSV 解析确认核心边 36→38，新增 DOI 无重复，schema 未变。完整 pipeline 为 22 篇唯一 DOI 文献、38 核心边/38 核心材料、210 MatKG 弱边、85 总向量节点、50 组非退化核心证据、4 个 L4 未验证候选。
 - 入库后重跑四家族搜索：122 13→19（保留 19）、1111 49→85（保留 12）、11 38→59（保留 20）、MgB2 5→9（保留 7）；四家族自查全部 PASS，当前四份报告各引用新生成的 10 份 LLM 降级审计。
 - 重生成全部 6 张 PNG + 1 份 Mermaid；增长图视觉检查通过。更新回归期望后，全套 15/15 测试通过。
+
+## 2026-08-12 · 远端 610354a 安全对齐与最终验收
+
+- 普通 push 连续 2 次因 GitHub 443 失败后，通过已认证 GitHub App 读取远端最新提交 `610354a7f037d732d1ef375329cfe0f311835866`。发现远端已新增第二轮 Sciverse 的 43 条核心边，故没有用本地 38 条版本覆盖远端。
+- 以远端 79 条完整 `knowledge/edges.csv` 为基线，再合并本地 2 条 DOI 边，最终 CSV 为 81 条且 schema 不变；同时保留远端最新 `CLAUDE.md`、`logs/log.md` 与前端接口规范。
+- 按主任务精确接口补齐 `exclude_pairs`、`exclude_source_pairs`、`rank_within_relation_type`、`pool_growth_by_round`、`expansion_source_by_round`、`agent/soul.json`、列表式 `agent/workflow.json` 和 `src/verify_search_case.py --run`。
+- 完整 pipeline：53 篇唯一 DOI、81 条核心边、94 个核心材料、210 条 MatKG 弱边、140 个向量节点、326 组非退化核心证据、6 个 L4 未验证候选。
+- 四家族重跑：122 33→52、1111 56→96、11 56→96、MgB2 44→76；每家族后续轮观察 16 个首轮外 ID，10 份审计齐全，真实 LLM 成功数为 0。
+- 历史 1111 首轮基线为 49；远端新增 `CeFeAsO_P` 等证据后当前首轮为 56。验收改为“不得低于 49 且必须增长”，避免把真实新增证据误判为结构回归。
+- `src/verify_search.py` 总结果 PASS，四个 `verify_search_case.py` 单案例结果均 PASS；全套 17/17 测试通过。重生成 6 张 PNG + 1 份 Mermaid，候选池增长图视觉检查无溢出。

@@ -61,3 +61,12 @@
 2. **原料层只读**：`raw/` 一旦写入不再修改，要更正就在 `knowledge/` 层标注
 3. **点边定义变更要走 CLAUDE.md**：改 schema 就更新本文件，不要让 schema 隐式漂移
 4. **私有仓库**：这是内部知识库，不进行公开开源宣传，比赛提交是附带产物不是目标
+
+## Agent 四端口
+
+- `agent/CLAUDE.md`：运行边界与铁律的人类可读版本。
+- `agent/soul.json`：身份、语气、证据立场和诚实降级原则的机器可读版本。
+- `agent/workflow.json`：与 `docs/frontend/frontend_dev_spec.md` 第 04 节一致的意图到真实 Python 函数映射。
+- `src/verify_search_case.py --run <122|1111|11|MgB2>`：单家族验收端口；输出结构扩张、LLM 参与率、证据层级、探索多样性、下一步动作和审计完整性。
+
+搜索方法字段固定为 `llm_guided_iterative_candidate_expansion_and_pruning`。STEP 与 Gemini 都不可达时固定标注 `heuristic_fallback_llm_unreachable`，不得伪装为真实 LLM 调用。

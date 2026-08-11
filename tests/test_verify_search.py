@@ -17,8 +17,11 @@ class VerifySearchTests(unittest.TestCase):
         flagship = next(
             item for item in result["family_results"] if item["run_name"] == "1111"
         )
-        self.assertEqual(flagship["summary"]["initial_candidate_pool_count"], 49)
-        self.assertGreater(flagship["summary"]["final_candidate_pool_count"], 49)
+        self.assertGreaterEqual(flagship["summary"]["initial_candidate_pool_count"], 49)
+        self.assertGreater(
+            flagship["summary"]["final_candidate_pool_count"],
+            flagship["summary"]["initial_candidate_pool_count"],
+        )
 
 
 if __name__ == "__main__":

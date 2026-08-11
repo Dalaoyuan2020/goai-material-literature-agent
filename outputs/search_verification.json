@@ -12,11 +12,11 @@
       "run_name": "122",
       "passed": true,
       "summary": {
-        "initial_candidate_pool_count": 13,
-        "final_candidate_pool_count": 19,
+        "initial_candidate_pool_count": 33,
+        "final_candidate_pool_count": 52,
         "rounds_run": 5,
-        "observed_candidate_count": 19,
-        "later_round_novel_count": 6,
+        "observed_candidate_count": 20,
+        "later_round_novel_count": 16,
         "llm_call_count": 10,
         "real_llm_api_called": false
       },
@@ -34,33 +34,33 @@
         {
           "name": "honest_method_name",
           "passed": true,
-          "details": "可解释余弦评分 + LLM引导扩张与剪枝"
+          "details": "llm_guided_iterative_candidate_expansion_and_pruning"
         },
         {
           "name": "initial_pool_count_matches_ids",
           "passed": true,
-          "details": "count=13, ids=13"
+          "details": "count=33, ids=33"
         },
         {
           "name": "candidate_pool_grew",
           "passed": true,
-          "details": "13->19"
+          "details": "33->52"
         },
         {
           "name": "pool_growth_is_strict_by_round",
           "passed": true,
           "details": [
-            13,
-            16,
-            17,
-            18,
-            19
+            33,
+            38,
+            43,
+            48,
+            52
           ]
         },
         {
           "name": "observed_ids_are_unique",
           "passed": true,
-          "details": "observed=19, unique=19"
+          "details": "observed=20, unique=20"
         },
         {
           "name": "every_later_round_contains_id_impossible_in_round_1",
@@ -68,31 +68,31 @@
           "details": [
             {
               "round": 2,
-              "novel_count": 3
+              "novel_count": 4
             },
             {
               "round": 3,
-              "novel_count": 1
+              "novel_count": 4
             },
             {
               "round": 4,
-              "novel_count": 1
+              "novel_count": 4
             },
             {
               "round": 5,
-              "novel_count": 1
+              "novel_count": 4
             }
           ]
         },
         {
           "name": "all_outputs_are_unverified_hypotheses",
           "passed": true,
-          "details": "candidate_count=19"
+          "details": "candidate_count=20"
         },
         {
           "name": "evidence_tiers_remain_separate",
           "passed": true,
-          "details": "candidate_count=19"
+          "details": "candidate_count=20"
         },
         {
           "name": "two_audited_llm_decisions_per_round",
@@ -131,8 +131,8 @@
       "run_name": "1111",
       "passed": true,
       "summary": {
-        "initial_candidate_pool_count": 49,
-        "final_candidate_pool_count": 85,
+        "initial_candidate_pool_count": 56,
+        "final_candidate_pool_count": 96,
         "rounds_run": 5,
         "observed_candidate_count": 20,
         "later_round_novel_count": 16,
@@ -153,27 +153,27 @@
         {
           "name": "honest_method_name",
           "passed": true,
-          "details": "可解释余弦评分 + LLM引导扩张与剪枝"
+          "details": "llm_guided_iterative_candidate_expansion_and_pruning"
         },
         {
           "name": "initial_pool_count_matches_ids",
           "passed": true,
-          "details": "count=49, ids=49"
+          "details": "count=56, ids=56"
         },
         {
           "name": "candidate_pool_grew",
           "passed": true,
-          "details": "49->85"
+          "details": "56->96"
         },
         {
           "name": "pool_growth_is_strict_by_round",
           "passed": true,
           "details": [
-            49,
-            58,
-            67,
+            56,
+            66,
             76,
-            85
+            86,
+            96
           ]
         },
         {
@@ -250,11 +250,11 @@
       "run_name": "11",
       "passed": true,
       "summary": {
-        "initial_candidate_pool_count": 38,
-        "final_candidate_pool_count": 59,
+        "initial_candidate_pool_count": 56,
+        "final_candidate_pool_count": 96,
         "rounds_run": 5,
         "observed_candidate_count": 20,
-        "later_round_novel_count": 15,
+        "later_round_novel_count": 16,
         "llm_call_count": 10,
         "real_llm_api_called": false
       },
@@ -272,27 +272,27 @@
         {
           "name": "honest_method_name",
           "passed": true,
-          "details": "可解释余弦评分 + LLM引导扩张与剪枝"
+          "details": "llm_guided_iterative_candidate_expansion_and_pruning"
         },
         {
           "name": "initial_pool_count_matches_ids",
           "passed": true,
-          "details": "count=38, ids=38"
+          "details": "count=56, ids=56"
         },
         {
           "name": "candidate_pool_grew",
           "passed": true,
-          "details": "38->59"
+          "details": "56->96"
         },
         {
           "name": "pool_growth_is_strict_by_round",
           "passed": true,
           "details": [
-            38,
-            42,
-            45,
-            52,
-            59
+            56,
+            66,
+            76,
+            86,
+            96
           ]
         },
         {
@@ -310,7 +310,7 @@
             },
             {
               "round": 3,
-              "novel_count": 3
+              "novel_count": 4
             },
             {
               "round": 4,
@@ -369,11 +369,11 @@
       "run_name": "MgB2",
       "passed": true,
       "summary": {
-        "initial_candidate_pool_count": 5,
-        "final_candidate_pool_count": 9,
+        "initial_candidate_pool_count": 44,
+        "final_candidate_pool_count": 76,
         "rounds_run": 5,
-        "observed_candidate_count": 9,
-        "later_round_novel_count": 4,
+        "observed_candidate_count": 20,
+        "later_round_novel_count": 16,
         "llm_call_count": 10,
         "real_llm_api_called": false
       },
@@ -391,33 +391,33 @@
         {
           "name": "honest_method_name",
           "passed": true,
-          "details": "可解释余弦评分 + LLM引导扩张与剪枝"
+          "details": "llm_guided_iterative_candidate_expansion_and_pruning"
         },
         {
           "name": "initial_pool_count_matches_ids",
           "passed": true,
-          "details": "count=5, ids=5"
+          "details": "count=44, ids=44"
         },
         {
           "name": "candidate_pool_grew",
           "passed": true,
-          "details": "5->9"
+          "details": "44->76"
         },
         {
           "name": "pool_growth_is_strict_by_round",
           "passed": true,
           "details": [
-            5,
-            6,
-            7,
-            8,
-            9
+            44,
+            52,
+            60,
+            68,
+            76
           ]
         },
         {
           "name": "observed_ids_are_unique",
           "passed": true,
-          "details": "observed=9, unique=9"
+          "details": "observed=20, unique=20"
         },
         {
           "name": "every_later_round_contains_id_impossible_in_round_1",
@@ -425,31 +425,31 @@
           "details": [
             {
               "round": 2,
-              "novel_count": 1
+              "novel_count": 4
             },
             {
               "round": 3,
-              "novel_count": 1
+              "novel_count": 4
             },
             {
               "round": 4,
-              "novel_count": 1
+              "novel_count": 4
             },
             {
               "round": 5,
-              "novel_count": 1
+              "novel_count": 4
             }
           ]
         },
         {
           "name": "all_outputs_are_unverified_hypotheses",
           "passed": true,
-          "details": "candidate_count=9"
+          "details": "candidate_count=20"
         },
         {
           "name": "evidence_tiers_remain_separate",
           "passed": true,
-          "details": "candidate_count=9"
+          "details": "candidate_count=20"
         },
         {
           "name": "two_audited_llm_decisions_per_round",
@@ -487,14 +487,14 @@
   ],
   "flagship_1111_checks": [
     {
-      "name": "flagship_1111_baseline_pool_is_49",
+      "name": "flagship_1111_meets_or_exceeds_historical_49_baseline",
       "passed": true,
-      "details": 49
+      "details": 56
     },
     {
       "name": "flagship_1111_expands_beyond_baseline",
       "passed": true,
-      "details": 85
+      "details": 96
     },
     {
       "name": "flagship_1111_has_later_round_novel_ids",

@@ -1,21 +1,21 @@
 {
   "run_name": "1111",
   "structure_family": "1111",
-  "method": "可解释余弦评分 + LLM引导扩张与剪枝",
-  "llm_integration_mode": "heuristic_fallback_not_real_llm",
+  "method": "llm_guided_iterative_candidate_expansion_and_pruning",
+  "llm_integration_mode": "heuristic_fallback_llm_unreachable",
   "real_llm_api_called": false,
   "llm_call_count": 10,
   "llm_call_ids": [
-    "20260811T175454440203Z-1f618560",
-    "20260811T175454443202Z-c70f145c",
-    "20260811T175454444202Z-9e78a35b",
-    "20260811T175454446202Z-e1f64d76",
-    "20260811T175454448202Z-4d68967d",
-    "20260811T175454450202Z-566376aa",
-    "20260811T175454452203Z-c71c84ad",
-    "20260811T175454454202Z-e7731c00",
-    "20260811T175454455203Z-cecf27ec",
-    "20260811T175454458201Z-be3e8716"
+    "20260811T180756902376Z-bbd1dfbf",
+    "20260811T180756906376Z-42cff21f",
+    "20260811T180756907376Z-16e0c54c",
+    "20260811T180756909376Z-07cc643d",
+    "20260811T180756911378Z-c4da787e",
+    "20260811T180756913376Z-a490278e",
+    "20260811T180756915377Z-43db78b8",
+    "20260811T180756917376Z-5052d900",
+    "20260811T180756919377Z-20fb9ebc",
+    "20260811T180756921377Z-e7bb43ec"
   ],
   "llm_provider_availability": {
     "step": false,
@@ -26,7 +26,7 @@
     "source_transformations": "core_doi_backed_only",
     "candidate_targets": "core_doi_backed_only",
     "matkg_extension": "weak_vector_space_context_only",
-    "core_edges_count": 38,
+    "core_edges_count": 81,
     "matkg_extended_edges_count": 210
   },
   "family_core_materials": [
@@ -38,29 +38,34 @@
     "GdFeAsO1-xFx",
     "CeFeAsO",
     "NdFeAsO",
-    "PrFeAsO"
+    "PrFeAsO",
+    "CeFeAsO_P"
   ],
-  "family_core_materials_count": 9,
-  "initial_candidate_pool_count": 49,
+  "family_core_materials_count": 10,
+  "initial_candidate_pool_count": 56,
   "initial_candidate_ids": [
-    "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|CeFeAsO",
-    "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|GdFeAsO1-xFx",
-    "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|LaFeAsO",
-    "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|LaFeAsO1-xFx",
-    "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|NdFeAsO",
-    "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|PrFeAsO",
-    "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|SmFeAsO",
-    "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|SmFeAsO1-xFx",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO1-xFx",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|LaFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|LaFeAsO1-xFx",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|NdFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|PrFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|SmFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|SmFeAsO1-xFx",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|CeFeAsO",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|CeFeAsO_P",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|GdFeAsO",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|GdFeAsO1-xFx",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|LaFeAsO",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|LaFeAsO1-xFx",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|NdFeAsO",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|PrFeAsO",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|SmFeAsO",
+    "R1|BaFe2As2->Ba0.6K0.4Fe2As2~CaFe2As2->CaKFe4As4|SmFeAsO1-xFx",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO_P",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO1-xFx",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|LaFeAsO",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|LaFeAsO1-xFx",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|NdFeAsO",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|PrFeAsO",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|SmFeAsO",
+    "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|SmFeAsO1-xFx",
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|CeFeAsO",
+    "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|CeFeAsO_P",
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|GdFeAsO",
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|GdFeAsO1-xFx",
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|LaFeAsO",
@@ -69,6 +74,7 @@
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|PrFeAsO",
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|SmFeAsO",
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|SmFeAsO1-xFx",
+    "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|CeFeAsO_P",
     "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|GdFeAsO",
     "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|GdFeAsO1-xFx",
     "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|LaFeAsO1-xFx",
@@ -76,6 +82,7 @@
     "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|SmFeAsO",
     "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|SmFeAsO1-xFx",
     "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|CeFeAsO",
+    "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|CeFeAsO_P",
     "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|GdFeAsO",
     "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|GdFeAsO1-xFx",
     "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|LaFeAsO",
@@ -83,51 +90,96 @@
     "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|NdFeAsO",
     "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|PrFeAsO",
     "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|SmFeAsO",
-    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|CeFeAsO",
-    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|GdFeAsO",
-    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|GdFeAsO1-xFx",
-    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|LaFeAsO",
-    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|LaFeAsO1-xFx",
-    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|NdFeAsO",
-    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|PrFeAsO",
-    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|SmFeAsO",
-    "R9|BaFe2As2->SrFe2As2~BaFe2As2->KFe2As2|SmFeAsO1-xFx"
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|CeFeAsO",
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|CeFeAsO_P",
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|GdFeAsO",
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|GdFeAsO1-xFx",
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|LaFeAsO",
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|LaFeAsO1-xFx",
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|NdFeAsO",
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|PrFeAsO",
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|SmFeAsO",
+    "R9|MgB2->MgB2+Y2O3/SiC~MgB2->MgB2+Eu2O3|SmFeAsO1-xFx"
   ],
-  "candidate_pool_count": 85,
+  "candidate_pool_count": 96,
   "candidate_pool_growth": [
     {
       "round_available": 1,
-      "candidate_pool_count": 49
+      "candidate_pool_count": 56
     },
     {
       "round_available": 2,
-      "candidate_pool_count": 58
+      "candidate_pool_count": 66
     },
     {
       "round_available": 3,
-      "candidate_pool_count": 67
-    },
-    {
-      "round_available": 4,
       "candidate_pool_count": 76
     },
     {
+      "round_available": 4,
+      "candidate_pool_count": 86
+    },
+    {
       "round_available": 5,
-      "candidate_pool_count": 85
+      "candidate_pool_count": 96
+    }
+  ],
+  "pool_growth_by_round": [
+    56,
+    66,
+    76,
+    86,
+    96
+  ],
+  "expansion_source_by_round": [
+    {
+      "after_round": 1,
+      "relation_type": "R2",
+      "rank_within_relation_type": 2,
+      "new_candidate_count": 10,
+      "applied": true
+    },
+    {
+      "after_round": 2,
+      "relation_type": "R2",
+      "rank_within_relation_type": 3,
+      "new_candidate_count": 10,
+      "applied": true
+    },
+    {
+      "after_round": 3,
+      "relation_type": "R2",
+      "rank_within_relation_type": 4,
+      "new_candidate_count": 10,
+      "applied": true
+    },
+    {
+      "after_round": 4,
+      "relation_type": "R2",
+      "rank_within_relation_type": 5,
+      "new_candidate_count": 10,
+      "applied": true
+    },
+    {
+      "after_round": 5,
+      "relation_type": "R2",
+      "rank_within_relation_type": null,
+      "new_candidate_count": 0,
+      "applied": false
     }
   ],
   "ranked_source_counts": {
-    "R1": 6,
-    "R2": 14,
-    "R3": 6,
-    "R5": 6,
+    "R1": 105,
+    "R2": 90,
+    "R3": 9,
+    "R5": 15,
     "R8": 3,
-    "R9": 15
+    "R9": 104
   },
   "exposed_source_depths": {
     "R1": 1,
-    "R2": 1,
-    "R3": 5,
+    "R2": 5,
+    "R3": 1,
     "R5": 1,
     "R8": 1,
     "R9": 1
@@ -141,9 +193,9 @@
     4,
     4
   ],
-  "retained_candidate_count": 12,
-  "stop_reason": "converged_two_rounds_without_new_non_degenerate_candidate",
-  "converged": true,
+  "retained_candidate_count": 20,
+  "stop_reason": "max_rounds_reached",
+  "converged": false,
   "status": "completed",
   "history": [
     {
@@ -154,35 +206,38 @@
       "ranking_decision": {
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454440203Z-1f618560",
+        "call_id": "20260811T180756902376Z-bbd1dfbf",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
       "candidates": [
         {
-          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|CeFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.92Co0.08)2As2"
           ],
           "reference_pair": [
-            "FeTe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.926Co0.074)2As2"
           ],
           "source_rank": 0,
+          "rank_within_relation_type": 1,
           "exposed_round": 1,
-          "source_cosine_hint": -1.0,
+          "source_cosine_hint": 1.0,
           "target_base": "CeFeAsO",
           "prediction": {
-            "source_transform": "FeSe → FeSe0.5Te0.5",
+            "source_transform": "BaFe2As2 → Ba(Fe0.92Co0.08)2As2",
             "target_base": "CeFeAsO",
             "predicted_composition_delta": {
-              "Se": -0.25,
-              "Te": 0.25
+              "As": 0.1,
+              "Ba": 0.05,
+              "Co": 0.02,
+              "Fe": -0.17
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -194,38 +249,87 @@
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
           "score": 1.0,
-          "signed_cosine": -1.0,
+          "signed_cosine": 1.0,
           "absolute_cosine": 1.0,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision_mode": "heuristic_fallback_llm_unreachable",
           "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|GdFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO_P",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.92Co0.08)2As2"
           ],
           "reference_pair": [
-            "FeTe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.926Co0.074)2As2"
           ],
           "source_rank": 0,
+          "rank_within_relation_type": 1,
           "exposed_round": 1,
-          "source_cosine_hint": -1.0,
+          "source_cosine_hint": 1.0,
+          "target_base": "CeFeAsO_P",
+          "prediction": {
+            "source_transform": "BaFe2As2 → Ba(Fe0.92Co0.08)2As2",
+            "target_base": "CeFeAsO_P",
+            "predicted_composition_delta": {
+              "As": 0.1,
+              "Ba": 0.05,
+              "Co": 0.02,
+              "Fe": -0.17
+            },
+            "predicted_structure_family": "1111",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 1.0,
+          "signed_cosine": 1.0,
+          "absolute_cosine": 1.0,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO",
+          "relation_type": "R2",
+          "family": "1111",
+          "source_pair": [
+            "BaFe2As2",
+            "Ba(Fe0.92Co0.08)2As2"
+          ],
+          "reference_pair": [
+            "BaFe2As2",
+            "Ba(Fe0.926Co0.074)2As2"
+          ],
+          "source_rank": 0,
+          "rank_within_relation_type": 1,
+          "exposed_round": 1,
+          "source_cosine_hint": 1.0,
           "target_base": "GdFeAsO",
           "prediction": {
-            "source_transform": "FeSe → FeSe0.5Te0.5",
+            "source_transform": "BaFe2As2 → Ba(Fe0.92Co0.08)2As2",
             "target_base": "GdFeAsO",
             "predicted_composition_delta": {
-              "Se": -0.25,
-              "Te": 0.25
+              "As": 0.1,
+              "Ba": 0.05,
+              "Co": 0.02,
+              "Fe": -0.17
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -237,38 +341,41 @@
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
           "score": 1.0,
-          "signed_cosine": -1.0,
+          "signed_cosine": 1.0,
           "absolute_cosine": 1.0,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision_mode": "heuristic_fallback_llm_unreachable",
           "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|GdFeAsO1-xFx",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO1-xFx",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.92Co0.08)2As2"
           ],
           "reference_pair": [
-            "FeTe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.926Co0.074)2As2"
           ],
           "source_rank": 0,
+          "rank_within_relation_type": 1,
           "exposed_round": 1,
-          "source_cosine_hint": -1.0,
+          "source_cosine_hint": 1.0,
           "target_base": "GdFeAsO1-xFx",
           "prediction": {
-            "source_transform": "FeSe → FeSe0.5Te0.5",
+            "source_transform": "BaFe2As2 → Ba(Fe0.92Co0.08)2As2",
             "target_base": "GdFeAsO1-xFx",
             "predicted_composition_delta": {
-              "Se": -0.25,
-              "Te": 0.25
+              "As": 0.1,
+              "Ba": 0.05,
+              "Co": 0.02,
+              "Fe": -0.17
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -280,84 +387,43 @@
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
           "score": 1.0,
-          "signed_cosine": -1.0,
+          "signed_cosine": 1.0,
           "absolute_cosine": 1.0,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "retain_for_external_validation"
-        },
-        {
-          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|LaFeAsO",
-          "relation_type": "R3",
-          "family": "1111",
-          "source_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
-          ],
-          "reference_pair": [
-            "FeTe",
-            "FeSe0.5Te0.5"
-          ],
-          "source_rank": 0,
-          "exposed_round": 1,
-          "source_cosine_hint": -1.0,
-          "target_base": "LaFeAsO",
-          "prediction": {
-            "source_transform": "FeSe → FeSe0.5Te0.5",
-            "target_base": "LaFeAsO",
-            "predicted_composition_delta": {
-              "Se": -0.25,
-              "Te": 0.25
-            },
-            "predicted_structure_family": "1111",
-            "status": "候选假设(未验证)",
-            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
-          },
-          "status": "候选假设(未验证)",
-          "generation_mode": "heuristic_approximation_not_real_llm",
-          "source_evidence_tier": "core_doi_backed",
-          "target_evidence_tier": "core_doi_backed",
-          "matkg_role": "vector_space_context_only",
-          "score": 1.0,
-          "signed_cosine": -1.0,
-          "absolute_cosine": 1.0,
-          "degenerate": false,
-          "penalty_factor": 1.0,
-          "penalty_reasons": [],
-          "surrogate": "rules.cosine_core_transform_alignment",
-          "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision_mode": "heuristic_fallback_llm_unreachable",
           "decision": "retain_for_external_validation"
         }
       ],
       "expansion_decision": {
         "action": "deepen",
         "relation_types": [
-          "R3"
+          "R2"
         ],
         "reason": "best scored relation from the completed round still has ranked sources",
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454443202Z-c70f145c",
+        "call_id": "20260811T180756906376Z-42cff21f",
+        "rank_within_relation_type": 2,
         "new_candidate_ids": [
-          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|CeFeAsO",
-          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO",
-          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO1-xFx",
-          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|LaFeAsO",
-          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|LaFeAsO1-xFx",
-          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|NdFeAsO",
-          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|PrFeAsO",
-          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|SmFeAsO",
-          "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|SmFeAsO1-xFx"
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO_P",
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO1-xFx",
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|LaFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|LaFeAsO1-xFx",
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|NdFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|PrFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|SmFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|SmFeAsO1-xFx"
         ],
-        "new_candidate_count": 9,
-        "candidate_pool_count_after_expansion": 58,
+        "new_candidate_count": 10,
+        "candidate_pool_count_after_expansion": 66,
         "applied": true
       }
     },
@@ -369,35 +435,38 @@
       "ranking_decision": {
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454444202Z-9e78a35b",
+        "call_id": "20260811T180756907376Z-16e0c54c",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
       "candidates": [
         {
-          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|CeFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.95Ni0.05)2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
+            "BaFe2As2",
+            "Ba(Fe0.926Co0.074)2As2"
           ],
           "source_rank": 1,
+          "rank_within_relation_type": 2,
           "exposed_round": 2,
-          "source_cosine_hint": 0.5,
+          "source_cosine_hint": 0.9999,
           "target_base": "CeFeAsO",
           "prediction": {
-            "source_transform": "FeSe → FeSe0.5Te0.5",
+            "source_transform": "BaFe2As2 → Ba(Fe0.95Ni0.05)2As2",
             "target_base": "CeFeAsO",
             "predicted_composition_delta": {
-              "Se": -0.25,
-              "Te": 0.25
+              "As": 0.1,
+              "Ba": 0.05,
+              "Fe": -0.1625,
+              "Ni": 0.0125
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -408,39 +477,88 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.5,
-          "signed_cosine": 0.5,
-          "absolute_cosine": 0.5,
+          "score": 0.9999,
+          "signed_cosine": 0.9999,
+          "absolute_cosine": 0.9999,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision_mode": "heuristic_fallback_llm_unreachable",
           "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|CeFeAsO_P",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.95Ni0.05)2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
+            "BaFe2As2",
+            "Ba(Fe0.926Co0.074)2As2"
           ],
           "source_rank": 1,
+          "rank_within_relation_type": 2,
           "exposed_round": 2,
-          "source_cosine_hint": 0.5,
+          "source_cosine_hint": 0.9999,
+          "target_base": "CeFeAsO_P",
+          "prediction": {
+            "source_transform": "BaFe2As2 → Ba(Fe0.95Ni0.05)2As2",
+            "target_base": "CeFeAsO_P",
+            "predicted_composition_delta": {
+              "As": 0.1,
+              "Ba": 0.05,
+              "Fe": -0.1625,
+              "Ni": 0.0125
+            },
+            "predicted_structure_family": "1111",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.9999,
+          "signed_cosine": 0.9999,
+          "absolute_cosine": 0.9999,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO",
+          "relation_type": "R2",
+          "family": "1111",
+          "source_pair": [
+            "BaFe2As2",
+            "Ba(Fe0.95Ni0.05)2As2"
+          ],
+          "reference_pair": [
+            "BaFe2As2",
+            "Ba(Fe0.926Co0.074)2As2"
+          ],
+          "source_rank": 1,
+          "rank_within_relation_type": 2,
+          "exposed_round": 2,
+          "source_cosine_hint": 0.9999,
           "target_base": "GdFeAsO",
           "prediction": {
-            "source_transform": "FeSe → FeSe0.5Te0.5",
+            "source_transform": "BaFe2As2 → Ba(Fe0.95Ni0.05)2As2",
             "target_base": "GdFeAsO",
             "predicted_composition_delta": {
-              "Se": -0.25,
-              "Te": 0.25
+              "As": 0.1,
+              "Ba": 0.05,
+              "Fe": -0.1625,
+              "Ni": 0.0125
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -451,39 +569,42 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.5,
-          "signed_cosine": 0.5,
-          "absolute_cosine": 0.5,
+          "score": 0.9999,
+          "signed_cosine": 0.9999,
+          "absolute_cosine": 0.9999,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision_mode": "heuristic_fallback_llm_unreachable",
           "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO1-xFx",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.95Ni0.05)2As2~BaFe2As2->Ba(Fe0.926Co0.074)2As2|GdFeAsO1-xFx",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.95Ni0.05)2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
+            "BaFe2As2",
+            "Ba(Fe0.926Co0.074)2As2"
           ],
           "source_rank": 1,
+          "rank_within_relation_type": 2,
           "exposed_round": 2,
-          "source_cosine_hint": 0.5,
+          "source_cosine_hint": 0.9999,
           "target_base": "GdFeAsO1-xFx",
           "prediction": {
-            "source_transform": "FeSe → FeSe0.5Te0.5",
+            "source_transform": "BaFe2As2 → Ba(Fe0.95Ni0.05)2As2",
             "target_base": "GdFeAsO1-xFx",
             "predicted_composition_delta": {
-              "Se": -0.25,
-              "Te": 0.25
+              "As": 0.1,
+              "Ba": 0.05,
+              "Fe": -0.1625,
+              "Ni": 0.0125
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -494,85 +615,44 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.5,
-          "signed_cosine": 0.5,
-          "absolute_cosine": 0.5,
+          "score": 0.9999,
+          "signed_cosine": 0.9999,
+          "absolute_cosine": 0.9999,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "retain_for_external_validation"
-        },
-        {
-          "candidate_id": "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|LaFeAsO",
-          "relation_type": "R3",
-          "family": "1111",
-          "source_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
-          ],
-          "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
-          ],
-          "source_rank": 1,
-          "exposed_round": 2,
-          "source_cosine_hint": 0.5,
-          "target_base": "LaFeAsO",
-          "prediction": {
-            "source_transform": "FeSe → FeSe0.5Te0.5",
-            "target_base": "LaFeAsO",
-            "predicted_composition_delta": {
-              "Se": -0.25,
-              "Te": 0.25
-            },
-            "predicted_structure_family": "1111",
-            "status": "候选假设(未验证)",
-            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
-          },
-          "status": "候选假设(未验证)",
-          "generation_mode": "heuristic_approximation_not_real_llm",
-          "source_evidence_tier": "core_doi_backed",
-          "target_evidence_tier": "core_doi_backed",
-          "matkg_role": "vector_space_context_only",
-          "score": 0.5,
-          "signed_cosine": 0.5,
-          "absolute_cosine": 0.5,
-          "degenerate": false,
-          "penalty_factor": 1.0,
-          "penalty_reasons": [],
-          "surrogate": "rules.cosine_core_transform_alignment",
-          "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision_mode": "heuristic_fallback_llm_unreachable",
           "decision": "retain_for_external_validation"
         }
       ],
       "expansion_decision": {
         "action": "deepen",
         "relation_types": [
-          "R3"
+          "R2"
         ],
         "reason": "best scored relation from the completed round still has ranked sources",
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454446202Z-e1f64d76",
+        "call_id": "20260811T180756909376Z-07cc643d",
+        "rank_within_relation_type": 3,
         "new_candidate_ids": [
-          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|CeFeAsO",
-          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO",
-          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO1-xFx",
-          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|LaFeAsO",
-          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|LaFeAsO1-xFx",
-          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|NdFeAsO",
-          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|PrFeAsO",
-          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|SmFeAsO",
-          "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|SmFeAsO1-xFx"
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|CeFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|CeFeAsO_P",
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|GdFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|GdFeAsO1-xFx",
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|LaFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|LaFeAsO1-xFx",
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|NdFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|PrFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|SmFeAsO",
+          "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|SmFeAsO1-xFx"
         ],
-        "new_candidate_count": 9,
-        "candidate_pool_count_after_expansion": 67,
+        "new_candidate_count": 10,
+        "candidate_pool_count_after_expansion": 76,
         "applied": true
       }
     },
@@ -584,35 +664,38 @@
       "ranking_decision": {
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454448202Z-4d68967d",
+        "call_id": "20260811T180756911378Z-c4da787e",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
       "candidates": [
         {
-          "candidate_id": "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|CeFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|CeFeAsO",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "FeTe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.92Co0.08)2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
+            "BaFe2As2",
+            "Ba(Fe0.95Ni0.05)2As2"
           ],
           "source_rank": 2,
+          "rank_within_relation_type": 3,
           "exposed_round": 3,
-          "source_cosine_hint": -0.5,
+          "source_cosine_hint": 0.9999,
           "target_base": "CeFeAsO",
           "prediction": {
-            "source_transform": "FeTe → FeSe0.5Te0.5",
+            "source_transform": "BaFe2As2 → Ba(Fe0.92Co0.08)2As2",
             "target_base": "CeFeAsO",
             "predicted_composition_delta": {
-              "Se": 0.25,
-              "Te": -0.25
+              "As": 0.1,
+              "Ba": 0.05,
+              "Co": 0.02,
+              "Fe": -0.17
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -623,39 +706,88 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.5,
-          "signed_cosine": -0.5,
-          "absolute_cosine": 0.5,
+          "score": 0.9999,
+          "signed_cosine": 0.9999,
+          "absolute_cosine": 0.9999,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision_mode": "heuristic_fallback_llm_unreachable",
           "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|CeFeAsO_P",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "FeTe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.92Co0.08)2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
+            "BaFe2As2",
+            "Ba(Fe0.95Ni0.05)2As2"
           ],
           "source_rank": 2,
+          "rank_within_relation_type": 3,
           "exposed_round": 3,
-          "source_cosine_hint": -0.5,
+          "source_cosine_hint": 0.9999,
+          "target_base": "CeFeAsO_P",
+          "prediction": {
+            "source_transform": "BaFe2As2 → Ba(Fe0.92Co0.08)2As2",
+            "target_base": "CeFeAsO_P",
+            "predicted_composition_delta": {
+              "As": 0.1,
+              "Ba": 0.05,
+              "Co": 0.02,
+              "Fe": -0.17
+            },
+            "predicted_structure_family": "1111",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.9999,
+          "signed_cosine": 0.9999,
+          "absolute_cosine": 0.9999,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|GdFeAsO",
+          "relation_type": "R2",
+          "family": "1111",
+          "source_pair": [
+            "BaFe2As2",
+            "Ba(Fe0.92Co0.08)2As2"
+          ],
+          "reference_pair": [
+            "BaFe2As2",
+            "Ba(Fe0.95Ni0.05)2As2"
+          ],
+          "source_rank": 2,
+          "rank_within_relation_type": 3,
+          "exposed_round": 3,
+          "source_cosine_hint": 0.9999,
           "target_base": "GdFeAsO",
           "prediction": {
-            "source_transform": "FeTe → FeSe0.5Te0.5",
+            "source_transform": "BaFe2As2 → Ba(Fe0.92Co0.08)2As2",
             "target_base": "GdFeAsO",
             "predicted_composition_delta": {
-              "Se": 0.25,
-              "Te": -0.25
+              "As": 0.1,
+              "Ba": 0.05,
+              "Co": 0.02,
+              "Fe": -0.17
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -666,39 +798,42 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.5,
-          "signed_cosine": -0.5,
-          "absolute_cosine": 0.5,
+          "score": 0.9999,
+          "signed_cosine": 0.9999,
+          "absolute_cosine": 0.9999,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision_mode": "heuristic_fallback_llm_unreachable",
           "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO1-xFx",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->Ba(Fe0.92Co0.08)2As2~BaFe2As2->Ba(Fe0.95Ni0.05)2As2|GdFeAsO1-xFx",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "FeTe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "Ba(Fe0.92Co0.08)2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
+            "BaFe2As2",
+            "Ba(Fe0.95Ni0.05)2As2"
           ],
           "source_rank": 2,
+          "rank_within_relation_type": 3,
           "exposed_round": 3,
-          "source_cosine_hint": -0.5,
+          "source_cosine_hint": 0.9999,
           "target_base": "GdFeAsO1-xFx",
           "prediction": {
-            "source_transform": "FeTe → FeSe0.5Te0.5",
+            "source_transform": "BaFe2As2 → Ba(Fe0.92Co0.08)2As2",
             "target_base": "GdFeAsO1-xFx",
             "predicted_composition_delta": {
-              "Se": 0.25,
-              "Te": -0.25
+              "As": 0.1,
+              "Ba": 0.05,
+              "Co": 0.02,
+              "Fe": -0.17
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -709,127 +844,85 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.5,
-          "signed_cosine": -0.5,
-          "absolute_cosine": 0.5,
+          "score": 0.9999,
+          "signed_cosine": 0.9999,
+          "absolute_cosine": 0.9999,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "retain_for_external_validation"
-        },
-        {
-          "candidate_id": "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|LaFeAsO",
-          "relation_type": "R3",
-          "family": "1111",
-          "source_pair": [
-            "FeTe",
-            "FeSe0.5Te0.5"
-          ],
-          "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
-          ],
-          "source_rank": 2,
-          "exposed_round": 3,
-          "source_cosine_hint": -0.5,
-          "target_base": "LaFeAsO",
-          "prediction": {
-            "source_transform": "FeTe → FeSe0.5Te0.5",
-            "target_base": "LaFeAsO",
-            "predicted_composition_delta": {
-              "Se": 0.25,
-              "Te": -0.25
-            },
-            "predicted_structure_family": "1111",
-            "status": "候选假设(未验证)",
-            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
-          },
-          "status": "候选假设(未验证)",
-          "generation_mode": "heuristic_approximation_not_real_llm",
-          "source_evidence_tier": "core_doi_backed",
-          "target_evidence_tier": "core_doi_backed",
-          "matkg_role": "vector_space_context_only",
-          "score": 0.5,
-          "signed_cosine": -0.5,
-          "absolute_cosine": 0.5,
-          "degenerate": false,
-          "penalty_factor": 1.0,
-          "penalty_reasons": [],
-          "surrogate": "rules.cosine_core_transform_alignment",
-          "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
+          "decision_mode": "heuristic_fallback_llm_unreachable",
           "decision": "retain_for_external_validation"
         }
       ],
       "expansion_decision": {
         "action": "deepen",
         "relation_types": [
-          "R3"
+          "R2"
         ],
         "reason": "best scored relation from the completed round still has ranked sources",
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454450202Z-566376aa",
+        "call_id": "20260811T180756913376Z-a490278e",
+        "rank_within_relation_type": 4,
         "new_candidate_ids": [
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|CeFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|GdFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|GdFeAsO1-xFx",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|LaFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|LaFeAsO1-xFx",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|NdFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|PrFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|SmFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|SmFeAsO1-xFx"
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO",
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO_P",
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO",
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO1-xFx",
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|LaFeAsO",
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|LaFeAsO1-xFx",
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|NdFeAsO",
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|PrFeAsO",
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|SmFeAsO",
+          "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|SmFeAsO1-xFx"
         ],
-        "new_candidate_count": 9,
-        "candidate_pool_count_after_expansion": 76,
+        "new_candidate_count": 10,
+        "candidate_pool_count_after_expansion": 86,
         "applied": true
       }
     },
     {
       "round": 4,
       "proposed_count": 4,
-      "new_non_degenerate_count": 0,
-      "consecutive_no_new": 1,
+      "new_non_degenerate_count": 4,
+      "consecutive_no_new": 0,
       "ranking_decision": {
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454452203Z-c71c84ad",
+        "call_id": "20260811T180756915377Z-43db78b8",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
       "candidates": [
         {
-          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|CeFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
             "BaFe2As2",
-            "BaFe2(As0.7P0.3)2"
+            "BaFe1.8Co0.2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "BaFe1.9Pt0.1As2"
           ],
           "source_rank": 3,
+          "rank_within_relation_type": 4,
           "exposed_round": 4,
-          "source_cosine_hint": 0.0,
+          "source_cosine_hint": 0.9994,
           "target_base": "CeFeAsO",
           "prediction": {
-            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
+            "source_transform": "BaFe2As2 → BaFe1.8Co0.2As2",
             "target_base": "CeFeAsO",
             "predicted_composition_delta": {
-              "As": -0.225,
-              "Ba": 0.05,
-              "Fe": 0.1,
-              "P": 0.075
+              "Co": 0.04,
+              "Fe": -0.04
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -840,41 +933,84 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.0,
-          "signed_cosine": 0.0,
-          "absolute_cosine": 0.0,
+          "score": 0.9994,
+          "signed_cosine": 0.9994,
+          "absolute_cosine": 0.9994,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "prune"
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|GdFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO_P",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
             "BaFe2As2",
-            "BaFe2(As0.7P0.3)2"
+            "BaFe1.8Co0.2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "BaFe1.9Pt0.1As2"
           ],
           "source_rank": 3,
+          "rank_within_relation_type": 4,
           "exposed_round": 4,
-          "source_cosine_hint": 0.0,
+          "source_cosine_hint": 0.9994,
+          "target_base": "CeFeAsO_P",
+          "prediction": {
+            "source_transform": "BaFe2As2 → BaFe1.8Co0.2As2",
+            "target_base": "CeFeAsO_P",
+            "predicted_composition_delta": {
+              "Co": 0.04,
+              "Fe": -0.04
+            },
+            "predicted_structure_family": "1111",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.9994,
+          "signed_cosine": 0.9994,
+          "absolute_cosine": 0.9994,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
+        },
+        {
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO",
+          "relation_type": "R2",
+          "family": "1111",
+          "source_pair": [
+            "BaFe2As2",
+            "BaFe1.8Co0.2As2"
+          ],
+          "reference_pair": [
+            "BaFe2As2",
+            "BaFe1.9Pt0.1As2"
+          ],
+          "source_rank": 3,
+          "rank_within_relation_type": 4,
+          "exposed_round": 4,
+          "source_cosine_hint": 0.9994,
           "target_base": "GdFeAsO",
           "prediction": {
-            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
+            "source_transform": "BaFe2As2 → BaFe1.8Co0.2As2",
             "target_base": "GdFeAsO",
             "predicted_composition_delta": {
-              "As": -0.225,
-              "Ba": 0.05,
-              "Fe": 0.1,
-              "P": 0.075
+              "Co": 0.04,
+              "Fe": -0.04
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -885,41 +1021,40 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.0,
-          "signed_cosine": 0.0,
-          "absolute_cosine": 0.0,
+          "score": 0.9994,
+          "signed_cosine": 0.9994,
+          "absolute_cosine": 0.9994,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "prune"
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|GdFeAsO1-xFx",
-          "relation_type": "R3",
+          "candidate_id": "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO1-xFx",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
             "BaFe2As2",
-            "BaFe2(As0.7P0.3)2"
+            "BaFe1.8Co0.2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
+            "BaFe2As2",
+            "BaFe1.9Pt0.1As2"
           ],
           "source_rank": 3,
+          "rank_within_relation_type": 4,
           "exposed_round": 4,
-          "source_cosine_hint": 0.0,
+          "source_cosine_hint": 0.9994,
           "target_base": "GdFeAsO1-xFx",
           "prediction": {
-            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
+            "source_transform": "BaFe2As2 → BaFe1.8Co0.2As2",
             "target_base": "GdFeAsO1-xFx",
             "predicted_composition_delta": {
-              "As": -0.225,
-              "Ba": 0.05,
-              "Fe": 0.1,
-              "P": 0.075
+              "Co": 0.04,
+              "Fe": -0.04
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -930,129 +1065,85 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.0,
-          "signed_cosine": 0.0,
-          "absolute_cosine": 0.0,
+          "score": 0.9994,
+          "signed_cosine": 0.9994,
+          "absolute_cosine": 0.9994,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "prune"
-        },
-        {
-          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|LaFeAsO",
-          "relation_type": "R3",
-          "family": "1111",
-          "source_pair": [
-            "BaFe2As2",
-            "BaFe2(As0.7P0.3)2"
-          ],
-          "reference_pair": [
-            "FeSe",
-            "FeSe0.5Te0.5"
-          ],
-          "source_rank": 3,
-          "exposed_round": 4,
-          "source_cosine_hint": 0.0,
-          "target_base": "LaFeAsO",
-          "prediction": {
-            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
-            "target_base": "LaFeAsO",
-            "predicted_composition_delta": {
-              "As": -0.225,
-              "Ba": 0.05,
-              "Fe": 0.1,
-              "P": 0.075
-            },
-            "predicted_structure_family": "1111",
-            "status": "候选假设(未验证)",
-            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
-          },
-          "status": "候选假设(未验证)",
-          "generation_mode": "heuristic_approximation_not_real_llm",
-          "source_evidence_tier": "core_doi_backed",
-          "target_evidence_tier": "core_doi_backed",
-          "matkg_role": "vector_space_context_only",
-          "score": 0.0,
-          "signed_cosine": 0.0,
-          "absolute_cosine": 0.0,
-          "degenerate": false,
-          "penalty_factor": 1.0,
-          "penalty_reasons": [],
-          "surrogate": "rules.cosine_core_transform_alignment",
-          "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "prune"
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
         }
       ],
       "expansion_decision": {
         "action": "deepen",
         "relation_types": [
-          "R3"
+          "R2"
         ],
         "reason": "best scored relation from the completed round still has ranked sources",
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454454202Z-e7731c00",
+        "call_id": "20260811T180756917376Z-5052d900",
+        "rank_within_relation_type": 5,
         "new_candidate_ids": [
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|CeFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|GdFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|GdFeAsO1-xFx",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|LaFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|LaFeAsO1-xFx",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|NdFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|PrFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|SmFeAsO",
-          "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|SmFeAsO1-xFx"
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO",
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO_P",
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO",
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO1-xFx",
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|LaFeAsO",
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|LaFeAsO1-xFx",
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|NdFeAsO",
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|PrFeAsO",
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|SmFeAsO",
+          "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|SmFeAsO1-xFx"
         ],
-        "new_candidate_count": 9,
-        "candidate_pool_count_after_expansion": 85,
+        "new_candidate_count": 10,
+        "candidate_pool_count_after_expansion": 96,
         "applied": true
       }
     },
     {
       "round": 5,
       "proposed_count": 4,
-      "new_non_degenerate_count": 0,
-      "consecutive_no_new": 2,
+      "new_non_degenerate_count": 4,
+      "consecutive_no_new": 0,
       "ranking_decision": {
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454455203Z-cecf27ec",
+        "call_id": "20260811T180756919377Z-20fb9ebc",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
       "candidates": [
         {
-          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|CeFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "BaFe2As2",
-            "BaFe2(As0.7P0.3)2"
+            "SrFe2As2",
+            "SrFe1.8Co0.2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
+            "BaFe2As2",
+            "BaFe1.9Pt0.1As2"
           ],
           "source_rank": 4,
+          "rank_within_relation_type": 5,
           "exposed_round": 5,
-          "source_cosine_hint": 0.0,
+          "source_cosine_hint": 0.9994,
           "target_base": "CeFeAsO",
           "prediction": {
-            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
+            "source_transform": "SrFe2As2 → SrFe1.8Co0.2As2",
             "target_base": "CeFeAsO",
             "predicted_composition_delta": {
-              "As": -0.225,
-              "Ba": 0.05,
-              "Fe": 0.1,
-              "P": 0.075
+              "Co": 0.04,
+              "Fe": -0.04
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -1063,41 +1154,84 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.0,
-          "signed_cosine": 0.0,
-          "absolute_cosine": 0.0,
+          "score": 0.9994,
+          "signed_cosine": 0.9994,
+          "absolute_cosine": 0.9994,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "prune"
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|GdFeAsO",
-          "relation_type": "R3",
+          "candidate_id": "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO_P",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "BaFe2As2",
-            "BaFe2(As0.7P0.3)2"
+            "SrFe2As2",
+            "SrFe1.8Co0.2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
+            "BaFe2As2",
+            "BaFe1.9Pt0.1As2"
           ],
           "source_rank": 4,
+          "rank_within_relation_type": 5,
           "exposed_round": 5,
-          "source_cosine_hint": 0.0,
+          "source_cosine_hint": 0.9994,
+          "target_base": "CeFeAsO_P",
+          "prediction": {
+            "source_transform": "SrFe2As2 → SrFe1.8Co0.2As2",
+            "target_base": "CeFeAsO_P",
+            "predicted_composition_delta": {
+              "Co": 0.04,
+              "Fe": -0.04
+            },
+            "predicted_structure_family": "1111",
+            "status": "候选假设(未验证)",
+            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
+          },
+          "status": "候选假设(未验证)",
+          "generation_mode": "heuristic_approximation_not_real_llm",
+          "source_evidence_tier": "core_doi_backed",
+          "target_evidence_tier": "core_doi_backed",
+          "matkg_role": "vector_space_context_only",
+          "score": 0.9994,
+          "signed_cosine": 0.9994,
+          "absolute_cosine": 0.9994,
+          "degenerate": false,
+          "penalty_factor": 1.0,
+          "penalty_reasons": [],
+          "surrogate": "rules.cosine_core_transform_alignment",
+          "black_box_model_used": false,
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
+        },
+        {
+          "candidate_id": "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO",
+          "relation_type": "R2",
+          "family": "1111",
+          "source_pair": [
+            "SrFe2As2",
+            "SrFe1.8Co0.2As2"
+          ],
+          "reference_pair": [
+            "BaFe2As2",
+            "BaFe1.9Pt0.1As2"
+          ],
+          "source_rank": 4,
+          "rank_within_relation_type": 5,
+          "exposed_round": 5,
+          "source_cosine_hint": 0.9994,
           "target_base": "GdFeAsO",
           "prediction": {
-            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
+            "source_transform": "SrFe2As2 → SrFe1.8Co0.2As2",
             "target_base": "GdFeAsO",
             "predicted_composition_delta": {
-              "As": -0.225,
-              "Ba": 0.05,
-              "Fe": 0.1,
-              "P": 0.075
+              "Co": 0.04,
+              "Fe": -0.04
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -1108,41 +1242,40 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.0,
-          "signed_cosine": 0.0,
-          "absolute_cosine": 0.0,
+          "score": 0.9994,
+          "signed_cosine": 0.9994,
+          "absolute_cosine": 0.9994,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "prune"
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
         },
         {
-          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|GdFeAsO1-xFx",
-          "relation_type": "R3",
+          "candidate_id": "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO1-xFx",
+          "relation_type": "R2",
           "family": "1111",
           "source_pair": [
-            "BaFe2As2",
-            "BaFe2(As0.7P0.3)2"
+            "SrFe2As2",
+            "SrFe1.8Co0.2As2"
           ],
           "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
+            "BaFe2As2",
+            "BaFe1.9Pt0.1As2"
           ],
           "source_rank": 4,
+          "rank_within_relation_type": 5,
           "exposed_round": 5,
-          "source_cosine_hint": 0.0,
+          "source_cosine_hint": 0.9994,
           "target_base": "GdFeAsO1-xFx",
           "prediction": {
-            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
+            "source_transform": "SrFe2As2 → SrFe1.8Co0.2As2",
             "target_base": "GdFeAsO1-xFx",
             "predicted_composition_delta": {
-              "As": -0.225,
-              "Ba": 0.05,
-              "Fe": 0.1,
-              "P": 0.075
+              "Co": 0.04,
+              "Fe": -0.04
             },
             "predicted_structure_family": "1111",
             "status": "候选假设(未验证)",
@@ -1153,76 +1286,31 @@
           "source_evidence_tier": "core_doi_backed",
           "target_evidence_tier": "core_doi_backed",
           "matkg_role": "vector_space_context_only",
-          "score": 0.0,
-          "signed_cosine": 0.0,
-          "absolute_cosine": 0.0,
+          "score": 0.9994,
+          "signed_cosine": 0.9994,
+          "absolute_cosine": 0.9994,
           "degenerate": false,
           "penalty_factor": 1.0,
           "penalty_reasons": [],
           "surrogate": "rules.cosine_core_transform_alignment",
           "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "prune"
-        },
-        {
-          "candidate_id": "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|LaFeAsO",
-          "relation_type": "R3",
-          "family": "1111",
-          "source_pair": [
-            "BaFe2As2",
-            "BaFe2(As0.7P0.3)2"
-          ],
-          "reference_pair": [
-            "FeSe",
-            "FeSe1-xSx"
-          ],
-          "source_rank": 4,
-          "exposed_round": 5,
-          "source_cosine_hint": 0.0,
-          "target_base": "LaFeAsO",
-          "prediction": {
-            "source_transform": "BaFe2As2 → BaFe2(As0.7P0.3)2",
-            "target_base": "LaFeAsO",
-            "predicted_composition_delta": {
-              "As": -0.225,
-              "Ba": 0.05,
-              "Fe": 0.1,
-              "P": 0.075
-            },
-            "predicted_structure_family": "1111",
-            "status": "候选假设(未验证)",
-            "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap"
-          },
-          "status": "候选假设(未验证)",
-          "generation_mode": "heuristic_approximation_not_real_llm",
-          "source_evidence_tier": "core_doi_backed",
-          "target_evidence_tier": "core_doi_backed",
-          "matkg_role": "vector_space_context_only",
-          "score": 0.0,
-          "signed_cosine": 0.0,
-          "absolute_cosine": 0.0,
-          "degenerate": false,
-          "penalty_factor": 1.0,
-          "penalty_reasons": [],
-          "surrogate": "rules.cosine_core_transform_alignment",
-          "black_box_model_used": false,
-          "decision_mode": "heuristic_fallback_not_real_llm",
-          "decision": "prune"
+          "decision_mode": "heuristic_fallback_llm_unreachable",
+          "decision": "retain_for_external_validation"
         }
       ],
       "expansion_decision": {
         "action": "deepen",
         "relation_types": [
-          "R3"
+          "R2"
         ],
         "reason": "best scored relation from the completed round still has ranked sources",
         "provider": "heuristic",
         "model": null,
-        "mode": "heuristic_fallback_not_real_llm",
+        "mode": "heuristic_fallback_llm_unreachable",
         "real_llm_api_called": false,
-        "call_id": "20260811T175454458201Z-be3e8716",
+        "call_id": "20260811T180756921377Z-e7bb43ec",
         "applied": false,
-        "not_applied_reason": "converged_two_rounds_without_new_non_degenerate_candidate"
+        "not_applied_reason": "max_rounds_reached"
       }
     }
   ]

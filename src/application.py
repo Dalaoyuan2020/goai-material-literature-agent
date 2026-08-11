@@ -23,6 +23,7 @@ def find_analogy_source(
     comp_dims,
     relation_type: str,
     *,
+    exclude_pairs=None,
     ranked_pairs: bool = False,
 ):
     """返回同类关系里的非退化类比源。
@@ -37,11 +38,17 @@ def find_analogy_source(
             pairs.append((e["材料A"], e["材料B"]))
     pairs = list(dict.fromkeys(pairs))
 
+    excluded = set()
+    for item in exclude_pairs or set():
+        excluded.add(frozenset(item))
     ranked = []
     for i in range(len(pairs)):
         for j in range(i + 1, len(pairs)):
             a1, b1 = pairs[i]
             a2, b2 = pairs[j]
+            source_key = frozenset({(a1, b1), (a2, b2)})
+            if source_key in excluded:
+                continue
             if a1 not in vecs or b1 not in vecs or a2 not in vecs or b2 not in vecs:
                 continue
             v1 = edge_vector(vecs, a1, b1)
@@ -56,6 +63,7 @@ def find_analogy_source(
                     "cosine": cos,
                     "v1": v1,
                     "v2": v2,
+                    "source_key": source_key,
                 }
             )
     ranked.sort(

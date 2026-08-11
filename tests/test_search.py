@@ -71,6 +71,17 @@ class SearchTests(unittest.TestCase):
         self.assertEqual(best, ranked[0])
         self.assertGreaterEqual(abs(ranked[0]["cosine"]), abs(ranked[1]["cosine"]))
 
+        excluded = find_analogy_source(
+            edges,
+            {},
+            vecs,
+            2,
+            "R",
+            exclude_pairs={frozenset((ranked[0]["pair1"], ranked[0]["pair2"]))},
+            ranked_pairs=True,
+        )
+        self.assertNotIn(best["source_key"], {item["source_key"] for item in excluded})
+
     def test_round_expansion_exposes_id_impossible_in_first_round(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             llm_client = AuditedLLMClient(
