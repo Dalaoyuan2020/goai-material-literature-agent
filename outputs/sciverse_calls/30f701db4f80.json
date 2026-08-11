@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-08-12 01:52:33",
+  "request": {
+    "query": "La4Ni3O10 pressure induced superconductivity",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 10,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2023
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 17.0,
+        "publication_published_year": 2023.0,
+        "doi": "10.48550/arxiv.2311.07423",
+        "title": "Superconductivity in trilayer nickelate La4Ni3O10 under pressure",
+        "abstract": "Nickelate superconductors have attracted a great deal of attention over the past few decades due to their similar crystal and electronic structures with high-temperature cuprate superconductors. Here, we report the superconductivity in a pressurized Ruddlesden-Popper phase single crystal, La4Ni3O10 (n = 3), and its interplay with the density wave order in the phase diagram. With increasing pressure, the density wave order as indicated by the anomaly in the resistivity is progressively suppressed, followed by the emergence of the superconductivity around 25 K under I4/mmm space group. The susceptibility measurements confirm bulk superconductivity with a volume fraction exceeding 80%. Moreover, theoretical analysis unveils that antiferromagnetic (AFM) super-exchange interactions can serve as the effective pairing interaction for the emergence of superconductivity (SC) in pressurized La4Ni3O10. Our research provides a new platform for the investigation of the unconventional superconductivity mechanism in Ruddlesden-Popper trilayer perovskite nickelates.",
+        "relevance_score": 56.276146,
+        "is_content_accessible": false,
+        "doc_id": "ed610ead615a9feaae78d5da8a2faad8096df555f4f86a743dc2a081fab503b4",
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 19.0,
+        "publication_published_year": 2025.0,
+        "doi": "10.1038/s41467-025-57264-0",
+        "title": "Absence of superconductivity and density-wave transition in ambient-pressure tetragonal La4Ni3O10",
+        "abstract": "The recent discovery of superconductivity in La3Ni2O7 and La4Ni3O10 under pressure stimulates intensive research interests. These nickelates crystallize in an orthogonal/monoclinic structure and have a density-wave transition at ambient pressure. The application of pressure triggers a transition to tetragonal structure (I4/mmm), which is believed to be a key prerequisite for the emergence of superconductivity. Here, we report the first tetragonal nickelates La4Ni3O10 microcrystals at ambient pressure. In tetragonal La4Ni3O10, transport measurements find that both density-wave and superconducting transitions are absent up to 160 GPa, indicating a robust tetragonal metallic ground state. Meanwhile, density functional theory calculations reveal a considerable contribution of dz2 orbital to the Fermi surface. The concurrent absence of density-wave state and high-pressure superconductivity in tetragonal La4Ni3O10 suggests that the density-wave state instead of tetragonal structure is crucial for the superconductivity in nickelates under pressure. Our findings impose important constraints on the mechanism of pressure-induced superconductivity in nickelates. Superconductivity was recently discovered in La4Ni3O10 under pressure in proximity to a density-wave phase. Here, by stabilizing a tetragonal form of La4Ni3O10 at ambient pressure, the authors show that the density-wave state is crucial for the superconductivity, but the tetragonal structure is not.",
+        "relevance_score": 49.08364,
+        "is_content_accessible": false,
+        "doc_id": "d0855709b29ab7f9fc6f36c01cf56cab2b86cf54d0bbb0878a26178b3fa75b39",
+        "publication_venue_name_unified": "Nature Communications"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "doi": "10.6084/m9.figshare.28397993",
+        "title": "Absence of superconductivity and density-wave transition in ambient-pressure tetragonal La4Ni3O10",
+        "abstract": "The dataset for \"Absence of superconductivity and density-wave transition in ambient-pressure tetragonal La4Ni3O10.\"",
+        "relevance_score": 48.407482,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Figshare"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "doi": "10.6084/m9.figshare.28397993.v1",
+        "title": "Absence of superconductivity and density-wave transition in ambient-pressure tetragonal La4Ni3O10",
+        "abstract": "The dataset for \"Absence of superconductivity and density-wave transition in ambient-pressure tetragonal La4Ni3O10.\"",
+        "relevance_score": 48.284615,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Figshare"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "doi": "10.48550/arxiv.2501.13511",
+        "title": "Signature of superconductivity in pressurized La4Ni3O10-x single crystals grown at ambient pressure",
+        "abstract": "Nickelates have attracted enormous attention since the discovery of high-temperature superconductivity in La3Ni2O7 under high pressure. However, whether superconducting nickelate single crystals can be prepared at ambient pressure remains elusive. Here we report signature of superconductivity in pressurized La4Ni3O10-x single crystals grown from potassium carbonate flux at ambient pressure. Single crystal X-ray diffraction and scanning transmission electron microscopy investigations re-vealed high-quality single crystals with perfect stacking of trilayers. Resistivity measurements indicate that the metal-to-metal transition observed at ambient pressure was suppressed under high pressure, and a sharp drop occurred at ~30 K at 77.9 GPa, consistent with superconductivity in pressurized La4Ni3O10 single crystals grown by the floating zone method at an oxygen pressure of &gt;18 bar. Our results not only provide an important path to prepare high-quality nickelate single crystals but also support superconductivity in nickelates under high pressure, promoting more systematic and in-depth research in this compelling field.",
+        "relevance_score": 46.25955,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2025.0,
+        "doi": "10.48550/arxiv.2502.14410",
+        "title": "Isotropic superconductivity in pressurized trilayer nickelate La4Ni3O10",
+        "abstract": "Evidence of superconductivity (SC) has recently been reported in pressurized La3Ni2O7 and La4Ni3O10, providing a new platform to explore high-temperature superconductivity. However, while zero resistance state has been observed, experimental characterization of the superconducting properties of pressurized nickelates is still limited and experimentally challenging. Here, we present the first full temperature dependence of the upper critical field Hc2 measurement in La4Ni3O10 single crystal, achieved by combining high magnetic field and high-pressure techniques. Remarkably, the Hc2 of La4Ni3O10 is nearly isotropic, with the anisotropic parameter monotonically increasing from 1.4 near Tc to 1 at lower temperatures. By analyzing the Hc2 using the two-band model, we uncover that the anisotropic diffusivity of the bands, primarily originating from d(z2 ) and d(x2-y2 ) orbitals, is well compensated, resulting in an unusually isotropic superconducting state. These findings provide critical experimental evidence that underscores the significant role of the d(z2 ) orbital in enabling superconductivity in pressurized Ruddlesden-Popper nickelates.",
+        "relevance_score": 45.946827,
+        "is_content_accessible": false,
+        "doc_id": "1bbf998b99f7af95e782beb18c049f50c0bac7a746e31bfeb37d846a5ef48700",
+        "publication_venue_name_unified": "ArXiv.org"
+      },
+      {
+        "citation_count": 221.0,
+        "publication_published_year": 2024.0,
+        "doi": "10.1038/s41586-024-07553-3",
+        "title": "Superconductivity in pressurized trilayer La4Ni3O10−δ single crystals",
+        "abstract": "The pursuit of discovering new high-temperature superconductors that diverge from the copper-based model1-3 has profound implications for explaining mechanisms behind superconductivity and may also enable new applications4-8. Here our investigation shows that the application of pressure effectively suppresses the spin-charge order in trilayer nickelate La4Ni3O10-δ single crystals, leading to the emergence of superconductivity with a maximum critical temperature (Tc) of around 30 K at 69.0 GPa. The d.c. susceptibility measurements confirm a substantial diamagnetic response below Tc, indicating the presence of bulk superconductivity with a volume fraction exceeding 80%. In the normal state, we observe a strange metal behaviour, characterized by a linear temperature-dependent resistance extending up to 300 K. Furthermore, the layer-dependent superconductivity observed hints at a unique interlayer coupling mechanism specific to nickelates, setting them apart from cuprates in this regard. Our findings provide crucial insights into the fundamental mechanisms underpinning superconductivity, while also introducing a new material platform to explore the intricate interplay between the spin-charge order, flat band structures, interlayer coupling, strange metal behaviour and high-temperature superconductivity.",
+        "relevance_score": 44.061348,
+        "is_content_accessible": false,
+        "doc_id": "6cd6a7b249497a767e3ee48e830c12f6610e99a160b0d23cd58874766c0c1dd7",
+        "publication_venue_name_unified": "Nature"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "doi": "10.6084/m9.figshare.28387259.v1",
+        "title": "The source data for \"Absence of superconductivity and density-wave transition in ambient-pressure tetragonal La4Ni3O10\".",
+        "abstract": "The source data for \"Absence of superconductivity and density-wave transition in ambient-pressure tetragonal La4Ni3O10\".",
+        "relevance_score": 43.196606,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Figshare"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2025.0,
+        "doi": "10.6084/m9.figshare.28387259",
+        "title": "The source data for \"Absence of superconductivity and density-wave transition in ambient-pressure tetragonal La4Ni3O10\".",
+        "abstract": "The source data for \"Absence of superconductivity and density-wave transition in ambient-pressure tetragonal La4Ni3O10\".",
+        "relevance_score": 42.603745,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Figshare"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2026.0,
+        "doi": "10.48550/arxiv.2603.17846",
+        "title": "Pressure-induced Superconductivity in AgSbTe2",
+        "abstract": "AgSbTe2 is a well-known thermoelectric material with a high Seebeck coefficient and intrinsically low thermal conductivity, but its behavior under pressure remains largely unexplored. Here we report a systematic investigation of the structural, electronic, and transport properties of non-stoichiometric AgSbTe2 under high pressure. At ambient pressure, the material can be described as having a cubic crystal structure that remains stable up to 21.7 GPa beyond which it loses long-range structural order, while its crystal system fully recovers upon decompression. Remarkably, superconductivity emerges at a very low pressure of 0.38 GPa with an onset superconducting critical temperature (Tc) of 3.2 K. Tc increases with increasing pressure, reaching 6.9 K at 31.9 GPa, and peaks at 7.4 K during decompression. Magnetic-field-dependent transport measurements and electronic structure calculations reveal an evolution of the superconducting state driven by an enhanced electronic density of states at the Fermi level under compression. Our findings uncover pressure-induced superconductivity in AgSbTe2 and demonstrate that pressure can effectively tune the electronic ground state of thermoelectric materials, extending their functionality beyond thermoelectric energy conversion.",
+        "relevance_score": 41.275032,
+        "is_content_accessible": false,
+        "doc_id": "58ac123f480396583fd89a5fcb61bfb3be24003a338b0110e4fbb214bb49bc1e",
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 10,
+    "total_pages": 1000,
+    "search_time_ms": 112.34438,
+    "next_cursor": "eyJzIjpbNDEuMjc1MDMyLCJwYXBlcjoxMC40ODU1MC9hcnhpdi4yNjAzLjE3ODQ2Il19",
+    "request_tokens": 4,
+    "response_tokens": 1546,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

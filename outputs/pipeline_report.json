@@ -1,14 +1,14 @@
 {
   "L1_sources": {
-    "unique_doi_backed_literature_count": 20,
+    "unique_doi_backed_literature_count": 22,
     "core_source": "manual_verification",
     "extended_source": "MatKG_aggregate_without_row_level_doi"
   },
   "L2_structure": {
-    "materials_count": 82,
-    "edges_count": 246,
-    "core_materials_count": 35,
-    "core_edges_count": 36,
+    "materials_count": 85,
+    "edges_count": 248,
+    "core_materials_count": 38,
+    "core_edges_count": 38,
     "extended_nodes_count": 47,
     "extended_edges_count": 210,
     "composition_dims": 33,
@@ -30,12 +30,12 @@
     ],
     "core_relation_counts": {
       "R1": 4,
-      "R2": 5,
+      "R2": 6,
       "R3": 4,
       "R4": 5,
       "R5": 4,
       "R6": 2,
-      "R7": 3,
+      "R7": 4,
       "R8": 3,
       "R9": 6
     },
@@ -62,7 +62,7 @@
         "11": 7,
         "214": 2,
         "diboride": 1,
-        "other": 13
+        "other": 16
       },
       "matkg_extended_nodes": {
         "122": 1,
@@ -73,12 +73,12 @@
         "other": 45
       },
       "core_edges": {
-        "122": 9,
+        "122": 10,
         "1111": 14,
         "11": 7,
         "214": 2,
         "diboride": 2,
-        "other": 2
+        "other": 3
       },
       "matkg_extended_edges": {
         "122": 11,
@@ -92,8 +92,8 @@
   },
   "L3_rules": {
     "evidence_source": "core_only",
-    "total_pairwise_comparisons": 51,
-    "non_degenerate_evidence": 45,
+    "total_pairwise_comparisons": 58,
+    "non_degenerate_evidence": 50,
     "top_parallel_evidence": [
       {
         "relation_type": "R3",
@@ -105,29 +105,29 @@
       {
         "relation_type": "R2",
         "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
-        "pair2": "SrFe2As2→SrFe1.8Mn0.2As2",
-        "cosine": 0.9992,
+        "pair2": "BaFe2As2→BaFe1.9Pt0.1As2",
+        "cosine": 0.9994,
         "degenerate": false
       },
       {
         "relation_type": "R2",
         "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→BaFe1.9Pt0.1As2",
+        "cosine": 0.9994,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "BaFe2As2→BaFe1.9Pt0.1As2",
+        "cosine": 0.9994,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
         "pair2": "SrFe2As2→SrFe1.8Mn0.2As2",
         "cosine": 0.9992,
-        "degenerate": false
-      },
-      {
-        "relation_type": "R2",
-        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
-        "pair2": "SrFe2As2→SrFe2-xRuxAs2",
-        "cosine": 0.9912,
-        "degenerate": false
-      },
-      {
-        "relation_type": "R2",
-        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
-        "pair2": "SrFe2As2→SrFe2-xPtxAs2",
-        "cosine": 0.9912,
         "degenerate": false
       }
     ],
@@ -142,6 +142,27 @@
       {
         "relation_type": "R2",
         "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→BaFe1.9Pt0.1As2",
+        "cosine": 0.9994,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
+        "pair2": "BaFe2As2→BaFe1.9Pt0.1As2",
+        "cosine": 0.9994,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
+        "pair2": "BaFe2As2→BaFe1.9Pt0.1As2",
+        "cosine": 0.9994,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "BaFe2As2→BaFe1.8Co0.2As2",
         "pair2": "SrFe2As2→SrFe1.8Mn0.2As2",
         "cosine": 0.9992,
         "degenerate": false
@@ -151,6 +172,13 @@
         "pair1": "SrFe2As2→SrFe1.8Co0.2As2",
         "pair2": "SrFe2As2→SrFe1.8Mn0.2As2",
         "cosine": 0.9992,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xPtxAs2",
+        "pair2": "BaFe2As2→BaFe1.9Pt0.1As2",
+        "cosine": 0.9928,
         "degenerate": false
       },
       {
@@ -193,6 +221,13 @@
         "pair1": "SrFe2As2→SrFe1.8Mn0.2As2",
         "pair2": "SrFe2As2→SrFe2-xPtxAs2",
         "cosine": 0.9912,
+        "degenerate": false
+      },
+      {
+        "relation_type": "R2",
+        "pair1": "SrFe2As2→SrFe2-xRuxAs2",
+        "pair2": "BaFe2As2→BaFe1.9Pt0.1As2",
+        "cosine": 0.9911,
         "degenerate": false
       },
       {
@@ -451,57 +486,62 @@
     "random_baseline": {
       "method": "uniform sample of non-degenerate pairings across unique DOI-backed core edge vectors",
       "seed": 20260811,
-      "eligible_pairings": 486,
-      "sample_size": 45,
+      "eligible_pairings": 547,
+      "sample_size": 50,
       "cosines": [
         0.0,
-        0.0,
-        0.5,
-        0.0,
+        0.476463,
         0.0,
         0.0,
         0.0,
-        -0.5,
+        0.980493,
+        -0.507964,
         0.0,
         0.0,
         0.0,
+        0.980493,
         0.0,
         0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        -0.424433,
+        0.488583,
         0.0,
         0.991216,
-        0.039873,
         0.0,
         0.0,
         0.0,
-        0.987532,
-        0.999201,
-        -0.112509,
-        0.0,
-        0.013649,
-        0.0,
-        1.0,
         0.0,
         0.0,
         0.0,
-        0.440236,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.225018,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.991216,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.483301,
+        0.0,
         0.5,
         0.0,
         0.0,
         0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.5
+        0.0
       ],
-      "mean": 0.109661,
-      "population_std": 0.326713,
+      "mean": 0.112176,
+      "population_std": 0.300551,
       "evidence_source": "core_only",
       "matkg_excluded": true
     }
@@ -529,7 +569,7 @@
       },
       {
         "source_transform": "BaFe2As2 → BaFe1.8Co0.2As2",
-        "target_base": "KFe2As2",
+        "target_base": "SrFe2As2",
         "predicted_composition_delta": {
           "Co": 0.04,
           "Fe": -0.04
@@ -538,7 +578,7 @@
         "status": "候选假设(未验证)",
         "next_step_required": "与 Materials Project / OQMD / NOMAD 交叉验证是否已被报道；若未报道，标记为待实验验证的 Research Gap",
         "relation_type": "R2",
-        "source_cosine": 0.9992
+        "source_cosine": 0.9994
       },
       {
         "source_transform": "FeSe → FeSe0.5Te0.5",
@@ -554,11 +594,11 @@
         "source_cosine": -1.0
       },
       {
-        "source_transform": "LaFeAsO → SmFeAsO",
+        "source_transform": "LaFeAsO → CeFeAsO",
         "target_base": "LaFeAsO1-xFx",
         "predicted_composition_delta": {
-          "La": -0.25,
-          "Sm": 0.25
+          "Ce": 0.25,
+          "La": -0.25
         },
         "predicted_structure_family": "1111",
         "status": "候选假设(未验证)",

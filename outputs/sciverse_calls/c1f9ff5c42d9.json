@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-08-12 01:52:40",
+  "request": {
+    "query": "BaFe2As2 ruthenium substitution superconductivity",
+    "fields": [
+      "title",
+      "doi",
+      "abstract",
+      "publication_published_year",
+      "publication_venue_name_unified",
+      "citation_count"
+    ],
+    "page": 1,
+    "page_size": 10,
+    "filters": [
+      {
+        "field": "publication_published_year",
+        "operator": "FILTER_OP_GTE",
+        "value": 2009
+      }
+    ]
+  },
+  "status": 200,
+  "response": {
+    "results": [
+      {
+        "citation_count": 1.0,
+        "publication_published_year": 2015.0,
+        "doi": "10.1016/j.physc.2014.12.001",
+        "title": "Superconductivity in Yb-doped BaFe2As2",
+        "abstract": "We report the discovery of superconductivity in Yb-doped \\\\mathrm{BaFe_3A_5} single-crystal specimens of \\\\mathrm{BaFe_3A_5} (Fig. 1a). The results are consistent with previous reports on superconducting transition temperature for the crystals was determined by dc magnetic susceptibility measurements with a commercial SQDIG magnetometer. A clear phase transition from paramagnetic to paramagnetic phases is observed around \\\\18 - 20\\\\mathrm{K}\\\\ for the samples with nominal composition \\\\((\\\\mathrm{Ba}_{x}\\\\mathrm{Yb})_{y}\\\\mathrm{Ba}_{x}\\\\mathrm{As}_{y}\\\\ \\\\((0.05\\\\times 0.2\\\\times 0.15)\\\\).",
+        "relevance_score": 45.480846,
+        "is_content_accessible": false,
+        "doc_id": "42b97ef7c01562e6506a614eac3f863e40e2a8788a9c4b94ae73a24d9e0f5cd6",
+        "publication_venue_name_unified": "Physica C: Superconductivity"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2014.0,
+        "doi": "10.48550/arxiv.1402.3387",
+        "title": "Unification of the Pressure and Composition Dependence of Superconductivity in Ru substituted BaFe2As2",
+        "abstract": "Temperature dependent high pressure electrical resistivity studies has been carried out on Ba(Fe_{1-x}Ru_{x})_{2}As_{2} single crystals with x = 0.12, 0.26 and 0.35, which correspond to under doped, optimally doped and over doped composition regimes respectively. The evolution of structural/magnetic (T_{S-M}) and superconducting transition (T_(c)) temperatures, with pressure for various compositions have been obtained. The normal state resistivity has been analyzed in terms of a model that incorporates both spin fluctuations and the opening of the gap in the spin density wave (SDW)phase. It is shown that Tc scales with the strength of the spin fluctuation, B, and T_{S-M} scales with the SDW gap parameter, Δ. This provides a prescription for the unification of the composition and pressure induced superconductivity in BaFe2As2.",
+        "relevance_score": 44.463257,
+        "is_content_accessible": false,
+        "doc_id": "7ff01c8616325ef566f7a30d86b7005a560359dc7938674e0d0873a0739e561a",
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 3.0,
+        "publication_published_year": 2024.0,
+        "doi": "10.3390/ma17040929",
+        "title": "The Superconductivity in Bi-Doped BaFe2As2 Single Crystals",
+        "abstract": "We have successfully synthesized a series of Bi-doped BaFe2As2 high-quality single crystals for the first time. X-ray diffraction (XRD) patterns show an expansion of lattice parameter c with Bi doping, indicating a negative pressure effect. By investigating the resistivity, a Fermi liquid (FL) to non-Fermi liquid (NFL) crossover is observed from normal state to antiferromagnetic order state, accompanied by three superconducting transitions labeled as SC I, SC II and SC III, which are supposed to be induced by three superconducting realms with various Bi concentrations. Thus, we propose that the NFL behavior is closely related to the presence of superconductivity. The magnetic susceptibility measurements further speculate that the SC I and SC III phases should exhibit filamentary superconductivity while the SC II exhibits a possible bulk superconductivity of TC~7 K.",
+        "relevance_score": 44.25151,
+        "is_content_accessible": false,
+        "doc_id": "3769d3d498b3ed6ecbc54082652169a5e53280a12409a6271536975a51b1d540",
+        "publication_venue_name_unified": "Materials (Basel)"
+      },
+      {
+        "citation_count": 4.0,
+        "publication_published_year": 2014.0,
+        "doi": "10.1016/j.ssc.2014.02.002",
+        "title": "Unification of the pressure and composition dependence of superconductivity in Ru substituted BaFe2As2",
+        "abstract": "Temperature dependent high pressure resistivity studies have been carried out on \\\\mathrm{BaFe_{3 + x} - }\\\\mathrm{Ru_2Al_2O_4}\\\\ single crystals with \\\\x = 0.12\\\\ 0.26 and 0.35, which correspond to undoped-doped, optimally doped \\\\mathrm{BaFe_{3 + x} - }\\\\mathrm{Ru_2Al_2O_4}\\\\ single crystals. The results show that the temperature dependence of the superconducting transition \\\\((T_{\\\\mathrm{s}})\\\\) temperatures, with pressure for various compositions has been obtained. The main features are: (i) the onset of the superconducting transition occurs at a lower temperature and (ii) the fluctuations and the opening of the gap in the spin density wave (SDW) phase. It is shown that \\\\T_{\\\\mathrm{s}}\\\\ scales with the strength of the spin fluctuation, \\\\B\\\\ and \\\\T_{\\\\mathrm{s}}\\\\ scales with the SDW gap parameter, \\\\Delta\\\\ This is a prescription for the ordination of the composition and pressure induced superconductivity. \\\\mathrm{BaFe_{3 + x} - }\\\\",
+        "relevance_score": 44.11788,
+        "is_content_accessible": false,
+        "doc_id": "b13b29bf0930e4a131619b88d9d76e45f58c630774dfb7f569362b844ec78b05",
+        "publication_venue_name_unified": "Solid State Communications"
+      },
+      {
+        "citation_count": 16.0,
+        "publication_published_year": 2014.0,
+        "doi": "10.1038/srep06252",
+        "title": "Possible unconventional superconductivity in substituted BaFe2As2 revealed by magnetic pair-breaking studies",
+        "abstract": "The possible existence of a sign-changing gap symmetry in BaFe2As2-derived superconductors (SC) has been an exciting topic of research in the last few years. To further investigate this subject we combine Electron Spin Resonance (ESR) and pressure-dependent transport measurements to investigate magnetic pair-breaking effects on BaFe1.9M0.1As2 (M = Mn, Co, Cu, and Ni) single crystals. An ESR signal, indicative of the presence of localized magnetic moments, is observed only for M = Cu and Mn compounds, which display very low SC transition temperature (Tc) and no SC, respectively. From the ESR analysis assuming the absence of bottleneck effects, the microscopic parameters are extracted to show that this reduction of Tc cannot be accounted by the Abrikosov-Gorkov pair-breaking expression for a sign-preserving gap function. Our results reveal an unconventional spin- and pressure-dependent pair-breaking effect and impose strong constraints on the pairing symmetry of these materials.",
+        "relevance_score": 44.04345,
+        "is_content_accessible": false,
+        "doc_id": "6b00b8b36812fee51ec2550b5acd867168526cd74bd4fd5ee16ed37a961cc0c7",
+        "publication_venue_name_unified": "Scientific Reports"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2010.0,
+        "doi": "10.48550/arxiv.1001.4913",
+        "title": "Superconductivity induced by doping Platinum in BaFe2As2",
+        "abstract": "By substituting Fe with the 5d-transition metal Pt in BaFe2As2, we have successfully synthesized the superconductors BaFe2-xPtxAs2. The systematic evolution of the lattice constants indicates that the Fe ions were successfully replaced by Pt ions. By increasing the doping content of Pt, the antiferromagnetic order and structural transition of the parent phase is suppressed and superconductivity emerges at a doping level of about x = 0.02. At a doping level of x = 0.1, we get a maximum transition temperature Tc of about 25 K. The synchrotron powder x-ray diffraction shows that the resistivity anomaly is in good agreement with the structural transition. The superconducting transitions at different magnetic fields were also measured at the doping level of about x = 0.1, yielding a slope of -dHc2/dT = 5.4 T/K near Tc. A phase diagram was established for the Pt doped 122 system. Our results suggest that superconductivity can also be easily induced in the FeAs family by substituting the Fe with Pt, with almost the similar maximum transition temperatures as doping Ni, Co, Rh and Ir.",
+        "relevance_score": 43.099716,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 0.0,
+        "publication_published_year": 2009.0,
+        "doi": "10.48550/arxiv.0903.4236",
+        "title": "Pressure induced superconductivity in BaFe2As2 single crystal",
+        "abstract": "The evolution of pressure induced superconductivity in single crystal as well as polycrystalline samples of BaFe2As2 has been investigated through temperature dependent electrical resistivity studies in 0-7 GPa pressure range. While the superconducting transition remains incomplete in polycrystalline sample, a clear pressure induced superconductivity with zero resistivity at the expense of magnetic transition, associated with spin density wave (SDW), is observed in the single crystal sample. The superconducting transition temperature (TC) is seen to increase upto a moderate pressure of about ~1.5 GPa and decreases monotonically beyond this pressure. The SDW transition temperature TSDW decreases rapidly with increasing pressure and vanishes above ~1.5 GPa.",
+        "relevance_score": 42.512936,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "arXiv (Cornell University)"
+      },
+      {
+        "citation_count": 69.0,
+        "publication_published_year": 2013.0,
+        "doi": "10.1038/ncomms3877",
+        "title": "Strain induced superconductivity in the parent compound BaFe2As2",
+        "abstract": "The discovery of superconductivity with a transition temperature, Tc, up to 65 K in single-layer FeSe (bulk Tc=8 K) films grown on SrTiO3 substrates has attracted special attention to Fe-based thin films. The high Tc is a consequence of the combined effect of electron transfer from the oxygen-vacant substrate to the FeSe thin film and lattice tensile strain. Here we demonstrate the realization of superconductivity in the parent compound BaFe2As2 (no bulk Tc) just by tensile lattice strain without charge doping. We investigate the interplay between strain and superconductivity in epitaxial BaFe2As2 thin films on Fe-buffered MgAl2O4 single crystalline substrates. The strong interfacial bonding between Fe and the FeAs sublattice increases the Fe-Fe distance due to the lattice misfit, which leads to a suppression of the antiferromagnetic spin density wave and induces superconductivity with bulk Tc≈10 K. These results highlight the role of structural changes in controlling the phase diagram of Fe-based superconductors.",
+        "relevance_score": 42.202847,
+        "is_content_accessible": false,
+        "doc_id": "e115e4ac12c9c31c43154aeb174885f1ddd5073fd6aadaa59b763f75bd83beb7",
+        "publication_venue_name_unified": "Nature Communications"
+      },
+      {
+        "citation_count": 6.0,
+        "publication_published_year": 2011.0,
+        "doi": "10.5282/edoc.12634",
+        "title": "High-Temperature Superconductivity in Doped BaFe2As2",
+        "abstract": "",
+        "relevance_score": 42.05172,
+        "is_content_accessible": false,
+        "publication_venue_name_unified": "Electronic Theses of LMU Munich (Ludwig-Maximilians-Universität München)"
+      },
+      {
+        "citation_count": 6.0,
+        "publication_published_year": 2014.0,
+        "doi": "10.1063/1.4867159",
+        "title": "Structural feature controlling superconductivity in compressed BaFe2As2",
+        "abstract": "Superconductivity can be induced with the application of pressure but it disappears eventually upon heavy compression in the iron-based parent compound BaFe2As2. Structural evolution with pressure is used to understand this behavior. By performing synchrotron X-ray powder diffraction measurements with diamond anvil cells up to 26.1 GPa, we find an anomalous behavior of the lattice parameter with a S shape along the a axis but a monotonic decrease in the c-axis lattice parameter with increasing pressure. The close relationship between the axial ratio c/a and the superconducting transition temperature Tc is established for this parent compound. The c/a ratio is suggested to be a measure of the spin fluctuation strength. The reduction of Tc with the further increase of pressure is a result of the pressure-driven weakness of the spin-fluctuation strength in this material.",
+        "relevance_score": 41.354073,
+        "is_content_accessible": false,
+        "doc_id": "b825e032218da573af903fd1817b51fbeb4db3cbf8eab9b5756e3de5d3cbc79f",
+        "publication_venue_name_unified": "Journal of Applied Physics"
+      }
+    ],
+    "total_count": 10000,
+    "page": 1,
+    "page_size": 10,
+    "total_pages": 1000,
+    "search_time_ms": 60.195778,
+    "next_cursor": "eyJzIjpbNDEuMzU0MDczLCJwYXBlcjoxMC4xMDYzLzEuNDg2NzE1OSJdfQ==",
+    "request_tokens": 4,
+    "response_tokens": 1840,
+    "facets": [],
+    "biz_code": 0,
+    "code": "SUCCESS",
+    "message": "成功"
+  }
+}

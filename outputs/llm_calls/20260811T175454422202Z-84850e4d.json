@@ -1,0 +1,133 @@
+{
+  "call_id": "20260811T175454422202Z-84850e4d",
+  "timestamp_utc": "2026-08-11T17:54:54.422202+00:00",
+  "task": "candidate_ranking",
+  "request": {
+    "system_prompt": "你是材料类比搜索的候选筛选器。只能返回 JSON。候选都是未验证假设；不得把 MatKG 弱证据当强证据。兼顾高余弦证据与新开放方向，只能从给定 ID 中排序。",
+    "payload": {
+      "instruction": "选出并排序最多 4 个候选",
+      "history_summary": {
+        "run_name": "122",
+        "structure_family": "122",
+        "round": 3,
+        "observed_candidate_count": 8,
+        "candidate_pool_count": 17
+      },
+      "candidates": [
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|KFe2As2",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "KFe2As2",
+          "source_cosine_hint": 0.4898,
+          "score": null
+        },
+        {
+          "candidate_id": "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|SrFe2As2",
+          "relation_type": "R1",
+          "source_rank": 0,
+          "target_base": "SrFe2As2",
+          "source_cosine_hint": 0.4898,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|BaFe2As2",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "BaFe2As2",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|KFe2As2",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "KFe2As2",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|SrFe2As2",
+          "relation_type": "R5",
+          "source_rank": 0,
+          "target_base": "SrFe2As2",
+          "source_cosine_hint": 0.5,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|BaFe2As2",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "BaFe2As2",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|KFe2As2",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "KFe2As2",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R8|MgB2->SmFeAsO1-xFx~SmFeAsO1-xFx->FeSe-STO_mono|SrFe2As2",
+          "relation_type": "R8",
+          "source_rank": 0,
+          "target_base": "SrFe2As2",
+          "source_cosine_hint": -0.4179,
+          "score": null
+        },
+        {
+          "candidate_id": "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|KFe2As2",
+          "relation_type": "R2",
+          "source_rank": 1,
+          "target_base": "KFe2As2",
+          "source_cosine_hint": 0.9994,
+          "score": null
+        }
+      ],
+      "required_schema": {
+        "ranked_candidate_ids": [
+          "candidate_id"
+        ],
+        "reason": "string"
+      }
+    }
+  },
+  "secret_paths_loaded": [
+    "C:\\Users\\WinnerSheep\\Documents\\Claude_Mini_agent\\_digital_assets\\api_keys.env",
+    "C:\\Users\\WinnerSheep\\.goai_agent_secrets\\api_keys.env"
+  ],
+  "credentials_written_to_audit": false,
+  "attempts": [
+    {
+      "provider": "step",
+      "status": "skipped_missing_configuration"
+    },
+    {
+      "provider": "gemini",
+      "status": "skipped_missing_configuration"
+    },
+    {
+      "provider": "heuristic",
+      "status": "fallback_used",
+      "reason": "no configured provider returned valid JSON"
+    }
+  ],
+  "result": {
+    "value": {
+      "ranked_candidate_ids": [
+        "R2|SrFe2As2->SrFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|KFe2As2",
+        "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|BaFe2As2",
+        "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|KFe2As2",
+        "R5|LaFeAsO->CeFeAsO~LaFeAsO->NdFeAsO|SrFe2As2"
+      ],
+      "reason": "deterministic evidence score ordering"
+    },
+    "provider": "heuristic",
+    "model": null,
+    "mode": "heuristic_fallback_not_real_llm",
+    "real_llm_api_called": false
+  }
+}

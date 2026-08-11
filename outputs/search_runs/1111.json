@@ -6,16 +6,16 @@
   "real_llm_api_called": false,
   "llm_call_count": 10,
   "llm_call_ids": [
-    "20260811T173310498840Z-ef4be757",
-    "20260811T173310501838Z-db28cf52",
-    "20260811T173310502839Z-092d79dd",
-    "20260811T173310504839Z-99bb5e62",
-    "20260811T173310506841Z-f5eec8ae",
-    "20260811T173310508841Z-4cdf5483",
-    "20260811T173310509839Z-93306ad0",
-    "20260811T173310511839Z-ae9eb338",
-    "20260811T173310513839Z-16f3a7dd",
-    "20260811T173310515838Z-7ef1ab7b"
+    "20260811T175454440203Z-1f618560",
+    "20260811T175454443202Z-c70f145c",
+    "20260811T175454444202Z-9e78a35b",
+    "20260811T175454446202Z-e1f64d76",
+    "20260811T175454448202Z-4d68967d",
+    "20260811T175454450202Z-566376aa",
+    "20260811T175454452203Z-c71c84ad",
+    "20260811T175454454202Z-e7731c00",
+    "20260811T175454455203Z-cecf27ec",
+    "20260811T175454458201Z-be3e8716"
   ],
   "llm_provider_availability": {
     "step": false,
@@ -26,7 +26,7 @@
     "source_transformations": "core_doi_backed_only",
     "candidate_targets": "core_doi_backed_only",
     "matkg_extension": "weak_vector_space_context_only",
-    "core_edges_count": 36,
+    "core_edges_count": 38,
     "matkg_extended_edges_count": 210
   },
   "family_core_materials": [
@@ -51,15 +51,15 @@
     "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|PrFeAsO",
     "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|SmFeAsO",
     "R1|GdFeAsO->Gd1-xThxFeAsO~BaFe2As2->Ba0.6K0.4Fe2As2|SmFeAsO1-xFx",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|CeFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|GdFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|GdFeAsO1-xFx",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|LaFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|LaFeAsO1-xFx",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|NdFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|PrFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|SmFeAsO",
-    "R2|BaFe2As2->BaFe1.8Co0.2As2~SrFe2As2->SrFe1.8Mn0.2As2|SmFeAsO1-xFx",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|CeFeAsO",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|GdFeAsO1-xFx",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|LaFeAsO",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|LaFeAsO1-xFx",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|NdFeAsO",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|PrFeAsO",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|SmFeAsO",
+    "R2|BaFe2As2->BaFe1.8Co0.2As2~BaFe2As2->BaFe1.9Pt0.1As2|SmFeAsO1-xFx",
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|CeFeAsO",
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|GdFeAsO",
     "R3|FeSe->FeSe0.5Te0.5~FeTe->FeSe0.5Te0.5|GdFeAsO1-xFx",
@@ -118,7 +118,7 @@
   ],
   "ranked_source_counts": {
     "R1": 6,
-    "R2": 9,
+    "R2": 14,
     "R3": 6,
     "R5": 6,
     "R8": 3,
@@ -156,7 +156,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310498840Z-ef4be757",
+        "call_id": "20260811T175454440203Z-1f618560",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
@@ -344,7 +344,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310501838Z-db28cf52",
+        "call_id": "20260811T175454443202Z-c70f145c",
         "new_candidate_ids": [
           "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|CeFeAsO",
           "R3|FeSe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO",
@@ -371,7 +371,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310502839Z-092d79dd",
+        "call_id": "20260811T175454444202Z-9e78a35b",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
@@ -559,7 +559,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310504839Z-99bb5e62",
+        "call_id": "20260811T175454446202Z-e1f64d76",
         "new_candidate_ids": [
           "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|CeFeAsO",
           "R3|FeTe->FeSe0.5Te0.5~FeSe->FeSe1-xSx|GdFeAsO",
@@ -586,7 +586,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310506841Z-f5eec8ae",
+        "call_id": "20260811T175454448202Z-4d68967d",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
@@ -774,7 +774,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310508841Z-4cdf5483",
+        "call_id": "20260811T175454450202Z-566376aa",
         "new_candidate_ids": [
           "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|CeFeAsO",
           "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe0.5Te0.5|GdFeAsO",
@@ -801,7 +801,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310509839Z-93306ad0",
+        "call_id": "20260811T175454452203Z-c71c84ad",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
@@ -997,7 +997,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310511839Z-ae9eb338",
+        "call_id": "20260811T175454454202Z-e7731c00",
         "new_candidate_ids": [
           "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|CeFeAsO",
           "R3|BaFe2As2->BaFe2(As0.7P0.3)2~FeSe->FeSe1-xSx|GdFeAsO",
@@ -1024,7 +1024,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310513839Z-16f3a7dd",
+        "call_id": "20260811T175454455203Z-cecf27ec",
         "reason": "deterministic evidence score ordering",
         "invalid_or_missing_ids_filled_heuristically": false
       },
@@ -1220,7 +1220,7 @@
         "model": null,
         "mode": "heuristic_fallback_not_real_llm",
         "real_llm_api_called": false,
-        "call_id": "20260811T173310515838Z-7ef1ab7b",
+        "call_id": "20260811T175454458201Z-be3e8716",
         "applied": false,
         "not_applied_reason": "converged_two_rounds_without_new_non_degenerate_candidate"
       }

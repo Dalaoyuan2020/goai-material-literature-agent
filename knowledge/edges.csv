@@ -52,6 +52,8 @@ LaFeAsO,SmFeAsO,R9,同结构家族 same structural family (无向等价值),10.1
 LaFeAsO,GdFeAsO,R9,同结构家族 same structural family (无向等价值),10.1209/0295-5075/83/67006,2008,secondary,"Thorium-doping–induced superconductivity up to 56 K in Gd
                     <sub>1−x</sub>
                  ",同上 1111 家族
+La4Ni3O10-delta,La4Ni3O10-delta_P,R7,压力诱导超导 pressure-induced superconductivity,10.1038/s41586-024-07553-3,2024,direct,Superconductivity in pressurized trilayer La4Ni3O10-delta single crystals,"Nature abstract: 'application of pressure effectively suppresses the spin-charge order ... leading to the emergence of superconductivity ... around 30 K at 69.0 GPa'"
+BaFe2As2,BaFe1.9Pt0.1As2,R2,过渡金属Fe位取代掺杂 transition-metal-site doping (Fe→Co/Mn/Ni/Ru/Pt),10.1103/PhysRevB.81.104525,2010,direct,Superconductivity induced by doping Platinum in BaFe2As2,"abstract: 'At a doping level of x = 0.1, we get a maximum transition temperature Tc of about 25 K.'"
 FeSe,FeTe,R9,同结构家族 same structural family (无向等价值),10.1209/0295-5075/84/37002,2008,direct,Tellurium substitution effect on superconductivity of the α-phase iron selenide,yeh abs: 'PbO-type compound FeSe1-xTex (x=0~1)' — 11 家族
 SmFeAsO,GdFeAsO,R9,同结构家族 same structural family (无向等价值),10.1209/0295-5075/83/67006,2008,secondary,"Thorium-doping–induced superconductivity up to 56 K in Gd
                     <sub>1−x</sub>

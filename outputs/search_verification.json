@@ -12,11 +12,11 @@
       "run_name": "122",
       "passed": true,
       "summary": {
-        "initial_candidate_pool_count": 12,
-        "final_candidate_pool_count": 24,
+        "initial_candidate_pool_count": 13,
+        "final_candidate_pool_count": 19,
         "rounds_run": 5,
-        "observed_candidate_count": 20,
-        "later_round_novel_count": 12,
+        "observed_candidate_count": 19,
+        "later_round_novel_count": 6,
         "llm_call_count": 10,
         "real_llm_api_called": false
       },
@@ -39,28 +39,28 @@
         {
           "name": "initial_pool_count_matches_ids",
           "passed": true,
-          "details": "count=12, ids=12"
+          "details": "count=13, ids=13"
         },
         {
           "name": "candidate_pool_grew",
           "passed": true,
-          "details": "12->24"
+          "details": "13->19"
         },
         {
           "name": "pool_growth_is_strict_by_round",
           "passed": true,
           "details": [
-            12,
-            15,
+            13,
+            16,
+            17,
             18,
-            21,
-            24
+            19
           ]
         },
         {
           "name": "observed_ids_are_unique",
           "passed": true,
-          "details": "observed=20, unique=20"
+          "details": "observed=19, unique=19"
         },
         {
           "name": "every_later_round_contains_id_impossible_in_round_1",
@@ -72,27 +72,27 @@
             },
             {
               "round": 3,
-              "novel_count": 3
+              "novel_count": 1
             },
             {
               "round": 4,
-              "novel_count": 3
+              "novel_count": 1
             },
             {
               "round": 5,
-              "novel_count": 3
+              "novel_count": 1
             }
           ]
         },
         {
           "name": "all_outputs_are_unverified_hypotheses",
           "passed": true,
-          "details": "candidate_count=20"
+          "details": "candidate_count=19"
         },
         {
           "name": "evidence_tiers_remain_separate",
           "passed": true,
-          "details": "candidate_count=20"
+          "details": "candidate_count=19"
         },
         {
           "name": "two_audited_llm_decisions_per_round",
@@ -251,7 +251,7 @@
       "passed": true,
       "summary": {
         "initial_candidate_pool_count": 38,
-        "final_candidate_pool_count": 55,
+        "final_candidate_pool_count": 59,
         "rounds_run": 5,
         "observed_candidate_count": 20,
         "later_round_novel_count": 15,
@@ -282,7 +282,7 @@
         {
           "name": "candidate_pool_grew",
           "passed": true,
-          "details": "38->55"
+          "details": "38->59"
         },
         {
           "name": "pool_growth_is_strict_by_round",
@@ -291,8 +291,8 @@
             38,
             42,
             45,
-            50,
-            55
+            52,
+            59
           ]
         },
         {

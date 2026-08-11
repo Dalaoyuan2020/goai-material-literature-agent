@@ -2,13 +2,13 @@
 
 ```mermaid
 flowchart TD
-    A["Sciverse + manual verification<br/>20 DOI-backed papers"]:::core
-    B["Core knowledge graph<br/>36 DOI-backed edges · 35 core materials"]:::core
+    A["Sciverse + manual verification<br/>22 DOI-backed papers"]:::core
+    B["Core knowledge graph<br/>38 DOI-backed edges · 38 core materials"]:::core
     C["MatKG weak extension<br/>210 aggregate edges · 47 extension nodes<br/>0 row-level DOI"]:::weak
-    D["Vectorization<br/>82 nodes · 33 composition dimensions"]:::method
-    E["Parallelism detection<br/>45 non-degenerate core evidence pairs"]:::core
+    D["Vectorization<br/>85 nodes · 33 composition dimensions"]:::method
+    E["Parallelism detection<br/>50 non-degenerate core evidence pairs"]:::core
     F["Analogy transfer<br/>4 unverified hypotheses"]:::hypothesis
-    G["Iterative search<br/>4 material families · 51 retained hypotheses<br/>audited heuristic fallback"]:::hypothesis
+    G["Iterative search<br/>4 material families · 58 retained hypotheses<br/>audited heuristic fallback"]:::hypothesis
     H["Research report"]:::method
 
     A --> B

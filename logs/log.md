@@ -96,3 +96,11 @@
 - 新增 `logs/tonight_technical_summary.md`，汇总静态池根因、多源轮次扩张、审计型 LLM 链路、agent 双端口、自查、可视化、1111 案例与 GitHub 网络状态。
 - 总结明确列出四家族的初始/最终池、实际观察、保留、后续轮新 ID、审计数和真实 API 状态，并单列 6 项仍存在的科学/工程局限。
 - 使用相容可视化环境重新运行全套测试，搜索、LLM、agent 契约、MatKG、自查、可视化与 walkthrough 共 15/15 通过。
+
+## 2026-08-12 · 夜间 P2：Sciverse 增量入库与全链回归
+
+- Sciverse 检索 `La4Ni3O10 pressure induced superconductivity` 与 `BaFe2As2 ruthenium substitution superconductivity`，两次 HTTP 200、各返回 10 条并分别审计为 `30f701db4f80`、`c1f9ff5c42d9`。
+- 严格筛选后只追加 2 条核心边：`La4Ni3O10-delta→La4Ni3O10-delta_P`（R7，Nature 2024，DOI `10.1038/s41586-024-07553-3`）和 `BaFe2As2→BaFe1.9Pt0.1As2`（R2，PRB 2010，DOI `10.1103/PhysRevB.81.104525`）。两条均保留短摘要原文证据；数据集 DOI、仅 arXiv 或关系不明确结果未入库。
+- CSV 解析确认核心边 36→38，新增 DOI 无重复，schema 未变。完整 pipeline 为 22 篇唯一 DOI 文献、38 核心边/38 核心材料、210 MatKG 弱边、85 总向量节点、50 组非退化核心证据、4 个 L4 未验证候选。
+- 入库后重跑四家族搜索：122 13→19（保留 19）、1111 49→85（保留 12）、11 38→59（保留 20）、MgB2 5→9（保留 7）；四家族自查全部 PASS，当前四份报告各引用新生成的 10 份 LLM 降级审计。
+- 重生成全部 6 张 PNG + 1 份 Mermaid；增长图视觉检查通过。更新回归期望后，全套 15/15 测试通过。
