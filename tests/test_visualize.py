@@ -24,12 +24,14 @@ class VisualizationTests(unittest.TestCase):
     def test_generate_all_expected_files(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             paths = generate_all(output_dir=Path(temp_dir))
-            self.assertEqual(len(paths), 6)
+            self.assertEqual(len(paths), 7)
             self.assertTrue(all(path.exists() and path.stat().st_size > 1000 for path in paths))
             mermaid = paths[0].read_text(encoding="utf-8")
             self.assertIn("20 DOI-backed papers", mermaid)
             self.assertIn("210 aggregate edges", mermaid)
-            self.assertIn("57 unique observed hypotheses", mermaid)
+            self.assertIn("51 retained hypotheses", mermaid)
+            self.assertIn("audited heuristic fallback", mermaid)
+            self.assertEqual(paths[-1].name, "04_candidate_pool_growth.png")
 
 
 if __name__ == "__main__":

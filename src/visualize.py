@@ -71,6 +71,8 @@ def write_pipeline_mermaid(pipeline, search_runs, output_dir):
     l3 = pipeline["L3_rules"]
     l4 = pipeline["L4_application"]
     observed = sum(run["retained_candidate_count"] for run in search_runs)
+    real_llm = any(run.get("real_llm_api_called", False) for run in search_runs)
+    llm_label = "real API used (see audits)" if real_llm else "audited heuristic fallback"
     text = f"""# Knowledge-base construction pipeline
 
 ```mermaid
@@ -81,7 +83,7 @@ flowchart TD
     D["Vectorization<br/>{l2['materials_count']} nodes · {l2['composition_dims']} composition dimensions"]:::method
     E["Parallelism detection<br/>{l3['non_degenerate_evidence']} non-degenerate core evidence pairs"]:::core
     F["Analogy transfer<br/>{l4['candidates_generated']} unverified hypotheses"]:::hypothesis
-    G["BO-style search<br/>{len(search_runs)} material families · {observed} unique observed hypotheses<br/>heuristic approximation, not a real LLM call"]:::hypothesis
+    G["Iterative search<br/>{len(search_runs)} material families · {observed} retained hypotheses<br/>{llm_label}"]:::hypothesis
     H["Research report"]:::method
 
     A --> B
@@ -108,6 +110,8 @@ def draw_pipeline_flow(pipeline, search_runs, output_dir):
     l3 = pipeline["L3_rules"]
     l4 = pipeline["L4_application"]
     observed = sum(run["retained_candidate_count"] for run in search_runs)
+    real_llm = any(run.get("real_llm_api_called", False) for run in search_runs)
+    llm_label = "real LLM API used" if real_llm else "audited heuristic fallback"
     fig, axis = plt.subplots(figsize=(10, 12))
     axis.set_xlim(0, 10)
     axis.set_ylim(0, 12)
@@ -120,7 +124,7 @@ def draw_pipeline_flow(pipeline, search_runs, output_dir):
         (5, 7.65, "Vectorization", f"{l2['materials_count']} nodes · {l2['composition_dims']}D composition", "method"),
         (5, 5.95, "Parallelism detection", f"{l3['non_degenerate_evidence']} non-degenerate core pairs", "core"),
         (5, 4.25, "Analogy transfer", f"{l4['candidates_generated']} unverified hypotheses", "hypothesis"),
-        (5, 2.55, "BO-style search", f"{len(search_runs)} families · {observed} observed hypotheses", "hypothesis"),
+        (5, 2.55, "Iterative search", f"{len(search_runs)} families · {observed} retained\n{llm_label}", "hypothesis"),
         (5, 0.9, "Research report", "evidence tiers remain explicit", "method"),
     ]
     style = {
@@ -384,6 +388,53 @@ def draw_analogy_case(pipeline, output_dir):
     return path
 
 
+def draw_candidate_pool_growth(search_runs, output_dir):
+    fig, axis = plt.subplots(figsize=(11, 7))
+    colors = {
+        "122": "#173F5F",
+        "1111": "#D17A22",
+        "11": "#3C7D5B",
+        "MgB2": "#7A5AA6",
+    }
+    for run in sorted(search_runs, key=lambda item: item["run_name"]):
+        growth = run["candidate_pool_growth"]
+        rounds = [item["round_available"] for item in growth]
+        counts = [item["candidate_pool_count"] for item in growth]
+        label = run["run_name"]
+        axis.plot(
+            rounds,
+            counts,
+            marker="o",
+            linewidth=2.2,
+            markersize=6,
+            color=colors[label],
+            label=f"{label}: {counts[0]}→{counts[-1]}",
+        )
+        axis.annotate(
+            str(counts[-1]),
+            (rounds[-1], counts[-1]),
+            xytext=(6, 0),
+            textcoords="offset points",
+            va="center",
+            fontsize=9,
+            color=colors[label],
+        )
+    axis.set_xticks(sorted({
+        item["round_available"]
+        for run in search_runs
+        for item in run["candidate_pool_growth"]
+    }))
+    axis.set_xlabel("Round when candidates become available")
+    axis.set_ylabel("Cumulative candidate-pool size")
+    axis.set_title("Candidate pools expand as new evidence directions are opened")
+    axis.legend(frameon=False, title="Material family")
+    _style_axis(axis)
+    caption = "Counts come from each search report's candidate_pool_growth. All pool members are unverified hypotheses; growth shows search-space expansion, not experimental confirmation."
+    path = output_dir / "04_candidate_pool_growth.png"
+    _finish_figure(fig, path, caption)
+    return path
+
+
 def generate_all(output_dir=OUTPUT_DIR, pipeline_path=PIPELINE_REPORT, search_dir=SEARCH_RUNS_DIR):
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -395,6 +446,7 @@ def generate_all(output_dir=OUTPUT_DIR, pipeline_path=PIPELINE_REPORT, search_di
         draw_family_coverage(pipeline, output_dir),
         draw_parallelism_distribution(pipeline, output_dir),
         draw_analogy_case(pipeline, output_dir),
+        draw_candidate_pool_growth(search_runs, output_dir),
     ]
 
 

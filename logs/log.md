@@ -76,3 +76,10 @@
 - 旗舰 1111 另设硬检查：首轮基线池必须为 49、最终池必须大于 49、后续轮新增 ID 必须大于 0。当前结果为 49→85、后续轮观察到 16 个首轮外 ID，全部通过。
 - 四家族自查结果：122 12→24（后续新 ID 12）、1111 49→85（16）、11 38→55（15）、MgB2 5→9（4）；每家族 10 份审计，真实 LLM 均为 false 且与审计一致。
 - `agent/workflow.json` 同步新增 `search.verify -> verify_search.verify_all` 意图。验证报告写入 `outputs/search_verification.json`；自查、契约和编译测试合计 3 项全部通过。
+
+## 2026-08-12 · 夜间 P1-1：全量回归与候选池增长图
+
+- 全量测试首次为 13/14：唯一失败发生在 `E:\Anaconda3` base 的 Matplotlib Path 内部。诊断确认该环境目录同时存在 `numpy-1.26.4.dist-info`、`numpy-2.2.6.dist-info`，Python 实际载入 2.2.6，而 Matplotlib/C 扩展产生另一套 `numpy.uint8` 类型；随后又暴露 `ERR_IGNORE` 导入缺失，属于混装 ABI，不是搜索代码回归。
+- 未改动或重装全局环境；改用机器上已有且相容的 `E:\Anaconda3\envs\camel_agent`（NumPy 1.26.4 / Matplotlib 3.10.1），全套 14 项测试全部通过。`CLAUDE.md` 已把可视化命令切到该环境。
+- `src/visualize.py` 新增 `04_candidate_pool_growth.png`，从四份报告的 `candidate_pool_growth` 动态读取数据：122 12→24、1111 49→85、11 38→55、MgB2 5→9。图注明确增长代表搜索空间扩张，不代表实验确认。
+- 流程图同步把旧的 `BO-style search` 改为 `Iterative search`，当前结果明确标注 4 家族、51 个保留的非退化候选与 `audited heuristic fallback`。增长图与流程图均完成逐图视觉检查，标签、图例和图注无溢出。

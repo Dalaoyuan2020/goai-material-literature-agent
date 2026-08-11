@@ -8,7 +8,7 @@ flowchart TD
     D["Vectorization<br/>82 nodes · 33 composition dimensions"]:::method
     E["Parallelism detection<br/>45 non-degenerate core evidence pairs"]:::core
     F["Analogy transfer<br/>4 unverified hypotheses"]:::hypothesis
-    G["BO-style search<br/>4 material families · 57 unique observed hypotheses<br/>heuristic approximation, not a real LLM call"]:::hypothesis
+    G["Iterative search<br/>4 material families · 51 retained hypotheses<br/>audited heuristic fallback"]:::hypothesis
     H["Research report"]:::method
 
     A --> B
