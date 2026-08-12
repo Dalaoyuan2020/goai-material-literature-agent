@@ -1,6 +1,7 @@
 export type Tier = 'core' | 'extended';
 export type TierFilter = 'all' | Tier;
-export type ViewName = 'conversation' | 'skills' | 'library' | 'citespace';
+export type ExperienceMode = 'track' | 'science';
+export type ViewName = 'conversation' | 'skills' | 'library' | 'graph' | 'citespace';
 
 export interface ChatMessage {
   id: string;

@@ -1,4 +1,5 @@
-import { ChevronDown, PanelRight, Play, Plus } from 'lucide-react';
+import { BookOpen, ChevronDown, FlaskConical, HelpCircle, PanelRight, Play, Plus } from 'lucide-react';
+import type { ExperienceMode } from '../types';
 
 interface TopBarProps {
   title: string;
@@ -6,6 +7,9 @@ interface TopBarProps {
   onTogglePanel: () => void;
   onRun: () => void;
   onNewTask: () => void;
+  mode: ExperienceMode;
+  onModeChange: (mode: ExperienceMode) => void;
+  onOpenDemo: () => void;
 }
 
 const MODELS = [
@@ -14,14 +18,32 @@ const MODELS = [
   'gpt-5.1-codex-mini'
 ];
 
-export function TopBar({ title, meta, onTogglePanel, onRun, onNewTask }: TopBarProps) {
+export function TopBar({ title, meta, onTogglePanel, onRun, onNewTask, mode, onModeChange, onOpenDemo }: TopBarProps) {
   return (
     <header className="topbar">
       <div className="topbar-title">
         <strong>{title}</strong>
         <span className="topbar-meta">{meta}</span>
       </div>
+      <div className="mode-switch" role="group" aria-label="工作模式">
+        <button type="button" aria-pressed={mode === 'track'} className={mode === 'track' ? 'active' : ''} onClick={() => onModeChange('track')}>
+          <BookOpen size={14} />
+          <span>Track</span>
+          <small>轻松阅读</small>
+        </button>
+        <button type="button" aria-pressed={mode === 'science'} className={mode === 'science' ? 'active' : ''} onClick={() => onModeChange('science')}>
+          <FlaskConical size={14} />
+          <span>Science</span>
+          <small>专业研究</small>
+        </button>
+      </div>
       <div className="topbar-actions">
+        <button type="button" className="text-btn demo-trigger" onClick={onOpenDemo}>
+          <HelpCircle size={14} />
+          使用演示
+        </button>
+        {mode === 'science' && (
+          <>
         <label className="model-picker" title="模型">
           <span>模型</span>
           <select defaultValue={MODELS[0]} aria-label="模型">
@@ -43,6 +65,8 @@ export function TopBar({ title, meta, onTogglePanel, onRun, onNewTask }: TopBarP
           <Play size={14} />
           执行
         </button>
+          </>
+        )}
       </div>
     </header>
   );

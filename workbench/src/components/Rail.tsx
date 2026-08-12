@@ -1,4 +1,4 @@
-import { Atom, Boxes, LibraryBig, Network, PanelRight, Plus, Settings, Workflow, type LucideIcon } from 'lucide-react';
+import { Atom, Boxes, GitFork, LibraryBig, Network, PanelRight, Plus, Settings, Workflow, type LucideIcon } from 'lucide-react';
 import type { ViewName } from '../types';
 
 interface RailProps {
@@ -12,6 +12,7 @@ const NAV_ITEMS: Array<{ id: ViewName; label: string; icon: LucideIcon }> = [
   { id: 'conversation', label: '编排', icon: Workflow },
   { id: 'skills', label: '技能', icon: Boxes },
   { id: 'library', label: '知识库', icon: LibraryBig },
+  { id: 'graph', label: '知识图谱', icon: GitFork },
   { id: 'citespace', label: '图谱', icon: Network }
 ];
 

@@ -2,21 +2,25 @@ import { useCallback, useEffect, useRef, useState, type CSSProperties } from 're
 import { api, type ApiMessage, type ApiModule, type ApiTask } from './api';
 import { CitespaceView } from './components/CitespaceView';
 import { ConversationView } from './components/ConversationView';
+import { DemoTour } from './components/DemoTour';
+import { KnowledgeGraphView } from './components/KnowledgeGraphView';
 import { KnowledgePanel } from './components/KnowledgePanel';
 import { LibraryView } from './components/LibraryView';
 import { NewTaskDialog, type NewTaskPayload } from './components/NewTaskDialog';
 import { Rail } from './components/Rail';
+import { ReaderView } from './components/ReaderView';
 import { SkillsView } from './components/SkillsView';
 import type { TaskItem } from './components/TaskList';
 import { TopBar } from './components/TopBar';
 import { DEMO_KNOWLEDGE_DATA } from './demo';
 import { usePanelResize } from './hooks/usePanelResize';
-import type { ChatMessage, KnowledgeData, TierFilter, ViewName } from './types';
+import type { ChatMessage, ExperienceMode, KnowledgeData, TierFilter, ViewName } from './types';
 
 const VIEW_TITLES: Record<ViewName, string> = {
   conversation: '编排',
   skills: '技能',
   library: '知识库',
+  graph: '知识图谱',
   citespace: '图谱'
 };
 
@@ -87,7 +91,9 @@ function toTaskItem(task: ApiTask): TaskItem {
 
 export default function App() {
   const [knowledgeData, setKnowledgeData] = useState<KnowledgeData>(DEMO_KNOWLEDGE_DATA);
+  const [experienceMode, setExperienceMode] = useState<ExperienceMode>('track');
   const [activeView, setActiveView] = useState<ViewName>('conversation');
+  const [demoOpen, setDemoOpen] = useState(false);
   const [filter, setFilter] = useState<TierFilter>('all');
   const [selectedId, setSelectedId] = useState(DEMO_KNOWLEDGE_DATA.edges[0]?.id ?? '');
   const [panelOpen, setPanelOpen] = useState(false);
@@ -115,6 +121,14 @@ export default function App() {
   const switchView = useCallback((view: ViewName) => {
     setActiveView(view);
     setPanelOpen(false);
+  }, []);
+
+  const switchExperienceMode = useCallback((mode: ExperienceMode) => {
+    setExperienceMode(mode);
+    setPanelOpen(false);
+    if (mode === 'science') {
+      setActiveView('graph');
+    }
   }, []);
 
   const togglePanel = useCallback(() => {
@@ -397,13 +411,15 @@ export default function App() {
   const selectedEdge = knowledgeData.edges.find((edge) => edge.id === selectedId) ?? knowledgeData.edges[0];
   const metaText = apiReady ? '桌面端 · 后端已连接' : '桌面端 · 本地模式';
   const appStyle = { '--knowledge-width': `${knowledgeResize.width}px` } as CSSProperties;
+  const title = experienceMode === 'track' ? '文献阅读' : VIEW_TITLES[activeView];
 
   return (
-    <div className={`app${panelOpen ? ' panel-open' : ''}`} style={appStyle}>
-      <Rail activeView={activeView} onViewChange={switchView} onTogglePanel={togglePanel} onNewTask={openNewTask} />
+    <div className={`app ${experienceMode}-mode${panelOpen ? ' panel-open' : ''}`} style={appStyle}>
+      {experienceMode === 'science' && <Rail activeView={activeView} onViewChange={switchView} onTogglePanel={togglePanel} onNewTask={openNewTask} />}
       <main className="main">
-        <TopBar title={VIEW_TITLES[activeView]} meta={metaText} onTogglePanel={togglePanel} onRun={handleTopRun} onNewTask={openNewTask} />
-        {activeView === 'conversation' && (
+        <TopBar title={title} meta={metaText} onTogglePanel={togglePanel} onRun={handleTopRun} onNewTask={openNewTask} mode={experienceMode} onModeChange={switchExperienceMode} onOpenDemo={() => setDemoOpen(true)} />
+        {experienceMode === 'track' && <ReaderView edges={knowledgeData.edges} stats={knowledgeData.stats} onEnterScience={() => switchExperienceMode('science')} onOpenDemo={() => setDemoOpen(true)} />}
+        {experienceMode === 'science' && activeView === 'conversation' && (
           <ConversationView
             tasks={tasks}
             activeTaskId={activeTaskId}
@@ -415,8 +431,8 @@ export default function App() {
             onSendMessage={handleSendMessage}
           />
         )}
-        {activeView === 'skills' && <SkillsView onRunSkill={handleRunSkill} />}
-        {activeView === 'library' && (
+        {experienceMode === 'science' && activeView === 'skills' && <SkillsView onRunSkill={handleRunSkill} />}
+        {experienceMode === 'science' && activeView === 'library' && (
           <LibraryView
             edges={knowledgeData.edges}
             filter={filter}
@@ -425,7 +441,8 @@ export default function App() {
             onSelect={setSelectedId}
           />
         )}
-        {activeView === 'citespace' && (
+        {experienceMode === 'science' && activeView === 'graph' && <KnowledgeGraphView edges={knowledgeData.edges} selectedId={selectedId} onSelect={setSelectedId} />}
+        {experienceMode === 'science' && activeView === 'citespace' && (
           <CitespaceView
             activeTaskId={activeTaskId}
             onEnsureTask={() => ensureTask('开源图谱分析', 'opensource', true)}
@@ -433,11 +450,12 @@ export default function App() {
           />
         )}
       </main>
-      <div className="resize-handle right-resize" onMouseDown={knowledgeResize.startResize} title="拖动调整知识库宽度" />
-      <KnowledgePanel data={knowledgeData} selectedEdge={selectedEdge} onSelect={setSelectedId} />
+      {experienceMode === 'science' && <div className="resize-handle right-resize" onMouseDown={knowledgeResize.startResize} title="拖动调整知识库宽度" />}
+      {experienceMode === 'science' && <KnowledgePanel data={knowledgeData} selectedEdge={selectedEdge} onSelect={setSelectedId} />}
       <NewTaskDialog open={taskDialogOpen} onClose={() => setTaskDialogOpen(false)} onCreate={handleCreateTask} />
       {panelOpen && <div className="panel-backdrop" onClick={() => setPanelOpen(false)} />}
       <div className={`toast${toastVisible ? ' show' : ''}`}>{toastText}</div>
+      <DemoTour open={demoOpen} onClose={() => setDemoOpen(false)} onGoTrack={() => setExperienceMode('track')} onGoGraph={() => { setExperienceMode('science'); setActiveView('graph'); }} onGoSkills={() => { setExperienceMode('science'); setActiveView('skills'); }} />
     </div>
   );
 }
