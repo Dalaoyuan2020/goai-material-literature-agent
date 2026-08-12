@@ -13,4 +13,6 @@ workbench/server/.env
 workbench/smoke.png
 outputs/workbench/
 .playwright-cli/
-output/playwright/
+output/playwright/*
+!output/playwright/demo/
+!output/playwright/demo/**
