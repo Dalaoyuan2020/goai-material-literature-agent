@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-electron
+*.log
+smoke.png
+release/
+server/node_modules/
+server/dist/
+server/.env
+data/outputs/
+citespace/
+*.zip
