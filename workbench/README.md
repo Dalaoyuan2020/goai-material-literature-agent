@@ -27,19 +27,30 @@ npm --prefix server install
 
 ## 启动整体应用
 
-开发模式（API、Vite、Electron 一起启动）：
+开发模式（API 与 Vite 一起启动，浏览器打开 `http://127.0.0.1:5173`）：
 
 ```powershell
 cd workbench
 npm run dev
 ```
 
-构建并启动：
+构建并启动本地生产预览：
 
 ```powershell
 cd workbench
 npm start
 ```
+
+Electron 桌面壳入口保留为：
+
+```powershell
+npm run dev:desktop
+# 或
+npm run start:desktop
+```
+
+当前验收机上的 Electron 35 二进制在 Chromium 初始化阶段触发 Windows 原生
+`EXCEPTION_ACCESS_VIOLATION`；同一 React/HTTP/Python 功能已通过 Chromium 浏览器端验收。
 
 需要指定 Python 解释器时：
 
