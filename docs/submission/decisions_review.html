@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOAI 提交决策页 · 2026-08-12</title>
+<style>
+  :root {
+    --bg: #f6f5f1;
+    --panel: #ffffff;
+    --ink: #1f2320;
+    --ink-soft: #55584f;
+    --line: #ddd8ca;
+    --accent: #2f6f4f;
+    --accent-soft: #e8f1ea;
+    --warn: #b5502e;
+    --warn-soft: #fbeee6;
+    --tag: #8a7a4a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181a;
+      --panel: #202325;
+      --ink: #ececea;
+      --ink-soft: #a9ada4;
+      --line: #35383a;
+      --accent: #6fbb92;
+      --accent-soft: #1e2c24;
+      --warn: #e2865f;
+      --warn-soft: #2c211c;
+      --tag: #c9b675;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
+    line-height: 1.65;
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header.page-head {
+    margin-bottom: 32px;
+  }
+  header.page-head h1 {
+    font-size: 22px;
+    margin: 0 0 8px;
+  }
+  header.page-head p {
+    color: var(--ink-soft);
+    margin: 0;
+    font-size: 14px;
+  }
+  .roadmap {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
+  .roadmap span {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .roadmap span.now {
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  section.card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 26px;
+    margin-bottom: 22px;
+  }
+  section.card h2 {
+    font-size: 17px;
+    margin: 0 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  section.card h2 .idx {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .sub {
+    color: var(--ink-soft);
+    font-size: 13.5px;
+    margin: 0 0 18px;
+  }
+  table.cmp {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 14px 0;
+  }
+  table.cmp th, table.cmp td {
+    border: 1px solid var(--line);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  table.cmp th {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .fact-box {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    margin: 12px 0;
+  }
+  .warn-box {
+    background: var(--warn-soft);
+    border-left: 3px solid var(--warn);
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    margin: 12px 0;
+  }
+  .opt {
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+  }
+  .opt:hover { border-color: var(--accent); }
+  .opt input { margin-right: 8px; }
+  .opt.checked {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .opt .opt-title { font-weight: 600; font-size: 14px; }
+  .opt .opt-desc { color: var(--ink-soft); font-size: 13px; margin-top: 4px; }
+  textarea.answer {
+    width: 100%;
+    min-height: 64px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 13.5px;
+    background: var(--bg);
+    color: var(--ink);
+    resize: vertical;
+  }
+  .q-block { margin-bottom: 18px; }
+  .q-block label.q-label {
+    display: block;
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-bottom: 6px;
+  }
+  .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+  }
+  .checkbox-row input { margin-top: 3px; }
+  .tagline {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--tag);
+    background: rgba(138,122,74,0.12);
+    border-radius: 4px;
+    padding: 1px 8px;
+    margin-left: 6px;
+  }
+  .sticky-bar {
+    position: sticky;
+    bottom: 0;
+    background: var(--bg);
+    padding-top: 16px;
+    margin-top: 8px;
+  }
+  button#gen {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+  }
+  button#gen:hover { opacity: 0.92; }
+  #output-wrap { margin-top: 16px; display: none; }
+  #output {
+    width: 100%;
+    min-height: 260px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12.5px;
+    background: var(--panel);
+    color: var(--ink);
+  }
+  #copy-btn {
+    margin-top: 10px;
+    background: var(--panel);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13.5px;
+    cursor: pointer;
+  }
+  #copy-status {
+    font-size: 12.5px;
+    color: var(--accent);
+    margin-left: 10px;
+  }
+  code { font-size: 12.5px; background: rgba(0,0,0,0.06); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-head">
+    <h1>GOAI 提交材料 · 今天要定的几件事</h1>
+    <p>三件套顺序做：研报 → 系统说明 → 路线Proposal。下面四块看完、选完、答完，底部一键生成回复文本，复制回去发我就行。</p>
+    <div class="roadmap">
+      <span class="now">① 系统说明框架</span>
+      <span class="now">② Gap识别时间预算</span>
+      <span class="now">③ 科学意义 / 团队</span>
+      <span>④ 安全待办确认</span>
+    </div>
+  </header>
+
+  <!-- Section A -->
+  <section class="card">
+    <h2><span class="idx">1</span>系统说明怎么写：全自研 vs 诚实拆分</h2>
+    <p class="sub">你说"前后端和核心算法都是自己开发的"——查完代码，这句话不完全站得住，说明一下再让你选。</p>
+
+    <div class="warn-box">
+      实际用到的外部组件：前端框架 React/Electron/Vite；图谱分析靠检测启动 PyBibX/Bibliometrix/Sci2/Gephi/ScientoPy 五个开源工具；扩展知识库 210 条边来自 MatKG（Olivetti组，CC0协议）；检索用官方推荐的 Sciverse API；LLM 调用的是 Gemini。这些都不是我们写的。
+    </div>
+
+    <table class="cmp">
+      <tr><th style="width:18%">部分</th><th>真实来源</th></tr>
+      <tr><td>算法核心（L1-L4）</td><td><strong>自研</strong> — 成分向量化、编码退化检测、类比迁移、轮次驱动候选扩张、LLM两处决策接入，全 Python 标准库</td></tr>
+      <tr><td>知识库核心集</td><td><strong>自研</strong> — 81条DOI可溯源边，人工核验证据摘录</td></tr>
+      <tr><td>知识库扩展集</td><td>外部 — MatKG 210条弱证据边（CC0公开数据）</td></tr>
+      <tr><td>检索</td><td>外部 — Sciverse API（官方推荐源）</td></tr>
+      <tr><td>LLM推理</td><td>外部 — Gemini API</td></tr>
+      <tr><td>前端框架</td><td>外部 — React/Electron/Vite</td></tr>
+      <tr><td>图谱分析引擎</td><td>外部 — PyBibX/Bibliometrix/Sci2/Gephi/ScientoPy（检测+启动，不是自己写的分析算法）</td></tr>
+    </table>
+
+    <label class="opt" data-group="A" data-val="honest">
+      <input type="radio" name="A" value="honest" checked>
+      <span class="opt-title">同意诚实拆分写法<span class="tagline">推荐</span></span>
+      <div class="opt-desc">系统说明按"自研核心 + 明确点名的外部组件"来写，符合官方"基于开源项目+说明增量"的原文要求，也符合红线②。</div>
+    </label>
+    <label class="opt" data-group="A" data-val="full-self">
+      <input type="radio" name="A" value="full-self">
+      <span class="opt-title">坚持写全自研</span>
+      <div class="opt-desc">我会照做，但要提醒：这个说法跟实际代码对不上，一旦被查是红线②风险，不是分数高低的问题。</div>
+    </label>
+    <label class="opt" data-group="A" data-val="other">
+      <input type="radio" name="A" value="other">
+      <span class="opt-title">我有别的想法，见下面文字说明</span>
+    </label>
+    <div class="q-block">
+      <textarea class="answer" id="A-note" placeholder="（可选）关于这一条，你想补充/纠正的内容"></textarea>
+    </div>
+  </section>
+
+  <!-- Section B -->
+  <section class="card">
+    <h2><span class="idx">2</span>Gap 识别：要不要真去查数据库</h2>
+    <p class="sub">6个候选假设目前只标了"下一步需要交叉验证"，交叉验证本身从来没跑过——现在手里的是候选假设，还不是官方定义的"已识别Gap"。</p>
+
+    <div class="fact-box">
+      查过仓库全部文件：<code>MP/OQMD/NOMAD</code> 相关字符串只出现在"下一步要做"这句提示文字里，没有一次真实调用记录。<code>flagship_case_1111_walkthrough.md</code> 里也已经如实写了"所有候选都尚未完成数据库或实验交叉验证"。
+    </div>
+
+    <label class="opt" data-group="B" data-val="run-mp">
+      <input type="radio" name="B" value="run-mp" checked>
+      <span class="opt-title">今天真去查 Materials Project API<span class="tagline">推荐，若时间够</span></span>
+      <div class="opt-desc">MP有公开API，6个候选查询量不大，查完是真正的"已识别Gap"，含金量更高，核心任务第3步（Gap识别）能扎实过关。</div>
+    </label>
+    <label class="opt" data-group="B" data-val="write-plan">
+      <input type="radio" name="B" value="write-plan">
+      <span class="opt-title">写成"初步可行性验证方案"</span>
+      <div class="opt-desc">按官方自己给的坑位提醒原话处理，如实说明还没跑，不装作查过。省时间，但Gap识别这步分量会弱一些。</div>
+    </label>
+  </section>
+
+  <!-- Section C -->
+  <section class="card">
+    <h2><span class="idx">3</span>科学意义 / 团队背景 —— 这4条我这边真答不了，需要你写</h2>
+    <p class="sub">科学意义这一项占官方评分 30 分（占比最大），也是全文唯一没法从代码/日志里抠出来的部分。写多写少不重要，写真实的就行，哪怕两三句话。</p>
+
+    <div class="q-block">
+      <label class="q-label">Q1 · 你（或团队）在超导/材料科学方向有什么背景？</label>
+      <textarea class="answer" id="Q1" placeholder="研究方向、发表过的东西、跟这个课题的关联，没有也可以直说"></textarea>
+    </div>
+    <div class="q-block">
+      <label class="q-label">Q2 · 为什么"用文献已验证的材料变换规律做类比迁移"这个思路对超导材料发现有意义？你是怎么想到这个角度的？</label>
+      <textarea class="answer" id="Q2" placeholder="哪怕是直觉性的想法也可以，我会帮你组织成书面表达"></textarea>
+    </div>
+    <div class="q-block">
+      <label class="q-label">Q3 · 团队目前构成？</label>
+      <textarea class="answer" id="Q3" placeholder="你 + 谭做前端，还是有更多人参与"></textarea>
+    </div>
+  </section>
+
+  <!-- Section D -->
+  <section class="card">
+    <h2><span class="idx">4</span>安全待办确认</h2>
+    <p class="sub">上次给309配置真实LLM调用时，PowerShell转义出过问题，StepFun和Gemini两个key短暂原样出现在操作记录里。提交材料前建议正式处理，不再当顺口一提。</p>
+    <label class="checkbox-row">
+      <input type="checkbox" id="D-ack" checked>
+      <span>确认：提交前会去对应平台把这两个 key 轮换掉（我会把这条列进提交前检查清单，到时候提醒你）</span>
+    </label>
+  </section>
+
+  <div class="sticky-bar">
+    <button id="gen">生成回复文本</button>
+    <div id="output-wrap">
+      <textarea id="output" readonly></textarea>
+      <button id="copy-btn">复制到剪贴板</button>
+      <span id="copy-status"></span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.opt').forEach(function(opt) {
+    opt.addEventListener('click', function() {
+      var group = opt.dataset.group;
+      document.querySelectorAll('.opt[data-group="' + group + '"]').forEach(function(o) {
+        o.classList.remove('checked');
+      });
+      opt.classList.add('checked');
+      opt.querySelector('input[type=radio]').checked = true;
+    });
+  });
+  // init checked state
+  document.querySelectorAll('.opt input[type=radio]:checked').forEach(function(inp) {
+    inp.closest('.opt').classList.add('checked');
+  });
+
+  function getRadioVal(name) {
+    var el = document.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '(未选)';
+  }
+
+  var LABELS_A = {
+    'honest': '同意诚实拆分写法（自研核心 + 点名外部组件）',
+    'full-self': '坚持写全自研',
+    'other': '有别的想法（见备注）'
+  };
+  var LABELS_B = {
+    'run-mp': '今天真去查 Materials Project API',
+    'write-plan': '写成"初步可行性验证方案"'
+  };
+
+  document.getElementById('gen').addEventListener('click', function() {
+    var a = getRadioVal('A');
+    var b = getRadioVal('B');
+    var aNote = document.getElementById('A-note').value.trim();
+    var q1 = document.getElementById('Q1').value.trim();
+    var q2 = document.getElementById('Q2').value.trim();
+    var q3 = document.getElementById('Q3').value.trim();
+    var dAck = document.getElementById('D-ack').checked;
+
+    var lines = [];
+    lines.push('【GOAI提交决策回复 · ' + new Date().toLocaleString('zh-CN') + '】');
+    lines.push('');
+    lines.push('1. 系统说明框架：' + (LABELS_A[a] || a));
+    if (aNote) lines.push('   备注：' + aNote);
+    lines.push('');
+    lines.push('2. Gap识别时间预算：' + (LABELS_B[b] || b));
+    lines.push('');
+    lines.push('3. 科学意义 / 团队背景：');
+    lines.push('   Q1（背景）：' + (q1 || '（未填）'));
+    lines.push('   Q2（思路来源）：' + (q2 || '（未填）'));
+    lines.push('   Q3（团队构成）：' + (q3 || '（未填）'));
+    lines.push('');
+    lines.push('4. 安全待办确认：' + (dAck ? '已确认，提交前会轮换key' : '未勾选确认'));
+
+    var text = lines.join('\n');
+    document.getElementById('output').value = text;
+    document.getElementById('output-wrap').style.display = 'block';
+    document.getElementById('output-wrap').scrollIntoView({behavior: 'smooth', block: 'nearest'});
+  });
+
+  document.getElementById('copy-btn').addEventListener('click', function() {
+    var out = document.getElementById('output');
+    out.select();
+    var status = document.getElementById('copy-status');
+    try {
+      navigator.clipboard.writeText(out.value).then(function() {
+        status.textContent = '已复制，粘贴回对话框发给我';
+      }, function() {
+        document.execCommand('copy');
+        status.textContent = '已复制（备用方式），粘贴回对话框发给我';
+      });
+    } catch (e) {
+      document.execCommand('copy');
+      status.textContent = '已复制（备用方式），粘贴回对话框发给我';
+    }
+    setTimeout(function() { status.textContent = ''; }, 4000);
+  });
+</script>
+
+</body>
+</html>
