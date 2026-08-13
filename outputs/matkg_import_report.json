@@ -1,7 +1,7 @@
 {
   "input_path": "..\\.tmp\\matkg\\SUBRELOBJ.csv",
   "input_size_bytes": 184088025,
-  "output_path": "H:\\Codex_Agent\\knowage\\goai-material-literature-agent\\knowledge\\edges_matkg.csv",
+  "output_path": "knowledge/edges_matkg.csv",
   "source": "MatKG SUBRELOBJ.csv (Venugopal & Olivetti 2024)",
   "raw_rows_processed": 5411478,
   "material_layer_matches": 878,

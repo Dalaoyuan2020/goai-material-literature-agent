@@ -195,7 +195,7 @@ class AuditedLLMClient:
                 "system_prompt": system_prompt,
                 "payload": payload,
             },
-            "secret_paths_loaded": self.loaded_secret_paths,
+            "secret_sources_loaded": [Path(path).name for path in self.loaded_secret_paths],
             "credentials_written_to_audit": False,
             "attempts": [],
         }

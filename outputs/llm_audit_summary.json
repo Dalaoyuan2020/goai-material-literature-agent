@@ -1,0 +1,15 @@
+{
+  "scope": "submission evidence ledger snapshot",
+  "logical_decisions": 160,
+  "real_llm_api_calls": 39,
+  "fallback_decisions": 121,
+  "modes": {
+    "real_llm_api": 39,
+    "heuristic_fallback_llm_unreachable": 41,
+    "heuristic_fallback_not_real_llm": 80
+  },
+  "real_model": "gemini-3.6-flash",
+  "evidence_directory": "outputs/llm_calls",
+  "interpretation": "A successful API call proves that the model was in the decision loop; it does not validate a scientific hypothesis.",
+  "privacy_note": "Secret values are never stored. Local secret-file paths are reduced to file names."
+}

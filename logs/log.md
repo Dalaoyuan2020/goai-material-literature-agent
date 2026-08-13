@@ -129,3 +129,12 @@
 - 164 个变更文件逐一创建 Git blob；API SHA 与 Windows 工作树原始字节 SHA 164/164 一致。文本与本地 Git 对象的 SHA 差异仅来自 Windows CRLF / Git LF 规范化，25 个二进制对象与本地 Git blob 直接一致。
 - 以远端最新 `610354a7f037d732d1ef375329cfe0f311835866` 为基础树，原子创建远端提交 `de8e8bcec6e8a717194a62e8896689f1b55e3d76`，随后以 `force=false` 快进 `master` 成功，没有覆盖并发改动。
 - API 回读确认：新提交相对 `610354a` 为 ahead 1 / behind 0；`knowledge/edges.csv` 为 81 条数据记录；`outputs/search_verification_1111.json` 为 PASS、池 56→96；`CODEX_OVERNIGHT_MASTER.md` 与 `docs/frontend/frontend_dev_spec.md` 仍存在。
+
+## 2026-08-13 · Track A 三件套初稿
+
+- 依据 `CODEX_SUBMISSION_PACKAGE.md` 仅处理超导材料 Track A，未复用 SolidEvidence 的电池科学内容；团队介绍沿获准文字复用，林夏槿条目不写学校等可识别信息。
+- 新增 `submissions/track_a/系统说明.md`、`调研报告.md`、`评分自查.md`、`隐私与打包检查.md`；系统说明明确自研 L1—L4 与 MatKG/Sciverse/Gemini/桌面端外部边界。
+- 克隆 `Dalaoyuan2020/ai4r-baseline-kit`，完整读取官方逐节提示、rubric、隐私清单和 score-proposal Skill；使用 `official_template_with_team.docx` 及官方 `fill_template.py` 生成 `材料证据链_算法赛初赛方案.docx`，段落正文 4648 字符，模板标题不变，并压缩为 ZIP。
+- 本机指定密钥文件没有 `MP_API_KEY`，因此未生成 `outputs/mp_crosscheck.json`；文档均诚实写为“候选假设/初步可行性验证方案”，没有把6条候选写成已确认 Research Gap。
+- 将 `outputs/matkg_import_report.json` 的输出路径改为仓库相对路径；后续新生成的 LLM 审计只记录密钥文件名，不再写本机绝对路径；新增脱敏汇总 `outputs/llm_audit_summary.json`，据本机完整底账核验任务书数字：160 次逻辑决策、39 次真实 Gemini 成功。原始联网审计留在本机实验工作区，未混入本次初稿提交。
+- score-proposal 模拟评分 89.6/100，证据链、新知/已知分层、可解释步骤、零虚假引用和字数/标题红线均通过；全套 17/17 测试通过，ZIP 解压后的 Word 与源文件 SHA-256 一致。Windows 主机缺少 LibreOffice，Word COM 类型库也异常，无法逐页渲染；已完成节结构、样式、标题、占位符、字数和全文抽取检查，逐页视觉检查留待定稿环境补做。
