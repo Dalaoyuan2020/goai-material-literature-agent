@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>两条线冲突 · 今天必须选一个</title>
+<style>
+  :root {
+    --bg: #f6f5f1; --panel: #ffffff; --ink: #1f2320; --ink-soft: #55584f;
+    --line: #ddd8ca; --accent: #2f6f4f; --accent-soft: #e8f1ea;
+    --warn: #b5502e; --warn-soft: #fbeee6; --tag: #8a7a4a;
+    --track-a: #2f6f4f; --track-a-soft: #e8f1ea;
+    --track-b: #3a5a8c; --track-b-soft: #e8edf6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181a; --panel: #202325; --ink: #ececea; --ink-soft: #a9ada4;
+      --line: #35383a; --accent: #6fbb92; --accent-soft: #1e2c24;
+      --warn: #e2865f; --warn-soft: #2c211c; --tag: #c9b675;
+      --track-a: #6fbb92; --track-a-soft: #1e2c24;
+      --track-b: #7fa3d6; --track-b-soft: #1c2735;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
+    line-height: 1.65; padding: 32px 20px 90px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  header.page-head { margin-bottom: 28px; }
+  header.page-head h1 { font-size: 22px; margin: 0 0 8px; }
+  header.page-head p { color: var(--ink-soft); margin: 0; font-size: 14px; }
+  .warn-banner {
+    background: var(--warn-soft); border: 1px solid var(--warn);
+    border-radius: 12px; padding: 16px 18px; margin: 20px 0 28px; font-size: 14px;
+  }
+  .warn-banner b { color: var(--warn); }
+  section.card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 24px 26px; margin-bottom: 22px;
+  }
+  section.card h2 { font-size: 17px; margin: 0 0 14px; }
+  .tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .tracks { grid-template-columns: 1fr; } }
+  .track {
+    border-radius: 12px; padding: 18px; border: 1.5px solid var(--line);
+  }
+  .track.a { border-color: var(--track-a); background: var(--track-a-soft); }
+  .track.b { border-color: var(--track-b); background: var(--track-b-soft); }
+  .track h3 { margin: 0 0 4px; font-size: 15.5px; }
+  .track.a h3 { color: var(--track-a); }
+  .track.b h3 { color: var(--track-b); }
+  .track .subtitle { font-size: 12.5px; color: var(--ink-soft); margin-bottom: 12px; }
+  .track dl { margin: 0; font-size: 13px; }
+  .track dt { font-weight: 600; margin-top: 10px; }
+  .track dd { margin: 2px 0 0; color: var(--ink-soft); }
+  .badge {
+    display: inline-block; font-size: 11.5px; padding: 1px 8px; border-radius: 10px;
+    margin-left: 6px; font-weight: 600;
+  }
+  .badge.ok { background: var(--track-a-soft); color: var(--track-a); border: 1px solid var(--track-a); }
+  .badge.todo { background: var(--warn-soft); color: var(--warn); border: 1px solid var(--warn); }
+  ul.todo-list { margin: 8px 0 0; padding-left: 20px; font-size: 13px; }
+  ul.todo-list li { margin-bottom: 4px; }
+  .fact-box {
+    background: var(--accent-soft); border-left: 3px solid var(--accent);
+    border-radius: 6px; padding: 12px 14px; font-size: 13.5px; margin: 12px 0;
+  }
+  .opt {
+    display: block; border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px 16px; margin-bottom: 10px; cursor: pointer;
+  }
+  .opt:hover { border-color: var(--accent); }
+  .opt.checked { border-color: var(--accent); background: var(--accent-soft); }
+  .opt input { margin-right: 8px; }
+  .opt .opt-title { font-weight: 600; font-size: 14px; }
+  .opt .opt-desc { color: var(--ink-soft); font-size: 13px; margin-top: 4px; }
+  textarea.answer {
+    width: 100%; min-height: 60px; border: 1px solid var(--line); border-radius: 8px;
+    padding: 10px 12px; font-family: inherit; font-size: 13.5px;
+    background: var(--bg); color: var(--ink); resize: vertical; margin-top: 8px;
+  }
+  .sticky-bar { position: sticky; bottom: 0; background: var(--bg); padding-top: 16px; }
+  button#gen {
+    background: var(--accent); color: #fff; border: none; border-radius: 10px;
+    padding: 13px 22px; font-size: 15px; font-weight: 600; cursor: pointer; width: 100%;
+  }
+  #output-wrap { margin-top: 16px; display: none; }
+  #output {
+    width: 100%; min-height: 220px; border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12.5px; background: var(--panel); color: var(--ink);
+  }
+  #copy-btn {
+    margin-top: 10px; background: var(--panel); border: 1px solid var(--accent);
+    color: var(--accent); border-radius: 8px; padding: 8px 16px; font-size: 13.5px; cursor: pointer;
+  }
+  #copy-status { font-size: 12.5px; color: var(--accent); margin-left: 10px; }
+  code { font-size: 12px; background: rgba(0,0,0,0.06); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-head">
+    <h1>发现两条不一样的提交线，今天得选一条</h1>
+    <p>你让我去 GitHub 上拉那份"科学文献调研"报告——找到了，在 <code>feature/baseline-submission</code> 分支上，commit 是你自己从 MacBook 推的。但打开一看，它讲的是完全不同的科学问题，跟我们这一整场做的东西对不上。</p>
+  </header>
+
+  <div class="warn-banner">
+    <b>核心冲突：</b>这份文档的 README 自己也写了这句话——"当前工程案例使用超导材料家族验证搜索循环与证据审计能力，<b>与 Baseline 方案中的硫化物全固态电池科学问题属于不同验证案例</b>"。也就是说，写文档的人（你，或者配合本地Codex）当时是知道这两条对不上的，只是没有跟我同步。
+  </div>
+
+  <section class="card">
+    <h2>两条线，摆开看</h2>
+    <div class="tracks">
+      <div class="track a">
+        <h3>track A · 超导材料工程 <span class="badge ok">这一整场在做的</span></h3>
+        <div class="subtitle">仓库：goai-material-literature-agent · 分支 master</div>
+        <dl>
+          <dt>科学问题</dt>
+          <dd>从文献里的材料变换规律做类比迁移，找超导材料新组合</dd>
+          <dt>进阶路线</dt>
+          <dd>路线A（构效关系发现）—— 已经明确选定并做了</dd>
+          <dt>核心数据</dt>
+          <dd>81条DOI核心边、53篇唯一文献、94个核心材料、210条MatKG弱证据边</dd>
+          <dt>搜索层</dt>
+          <dd>结构性修复过（候选池随轮次真实增长56→96）、独立验证过</dd>
+          <dt>LLM接入</dt>
+          <dd>真实Gemini API调用39次，逐条审计留痕，`real_llm_api_called`如实标注</dd>
+          <dt>测试</dt>
+          <dd>17/17 自动化测试通过</dd>
+          <dt>Gap识别</dt>
+          <dd>6个候选假设，MP/OQMD/NOMAD交叉验证<b>尚未做</b>（今天讨论过要不要补）</dd>
+        </dl>
+      </div>
+      <div class="track b">
+        <h3>track B · SolidEvidence（电池界面） <span class="badge todo">新发现，另一条线</span></h3>
+        <div class="subtitle">同仓库 · 分支 feature/baseline-submission</div>
+        <dl>
+          <dt>科学问题</dt>
+          <dd>高镍层状氧化物正极—硫化物固态电解质界面稳定性</dd>
+          <dt>进阶路线</dt>
+          <dd>文档里写的是"<b>【待确认】</b>"，还没选</dd>
+          <dt>核心数据</dt>
+          <dd>1次Sciverse连通性验证，2026年8月4日做的，比这周的工作还早</dd>
+          <dt>搜索层</dt>
+          <dd>文档里是方案设计，没有代码实现记录</dd>
+          <dt>LLM接入</dt>
+          <dd>文档里写"具体开源或商业模型<b>【待确认】</b>"——还没定用哪个模型</dd>
+          <dt>验证结果</dt>
+          <dd>10条候选片段，5条读取成功，人工筛出E1-E4，1条待验证假设H1</dd>
+          <dt>文档自己列的待办</dt>
+          <dd>6条未完成项（见下）</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>track B 文档结尾自己列的"提交前待办"（原文摘录，不是我加的）</h2>
+    <ul class="todo-list">
+      <li>确认进阶路线：A构效关系发现 / B模拟方法创新 / C合成路线</li>
+      <li>确认首批纳入的材料化学体系、文献时间范围和排除标准</li>
+      <li>确定 Embedding、Reranker、大语言模型及工作流实现，记录模型卡/许可证</li>
+      <li>补充领域签审人和团队成果的公开作品链接</li>
+      <li>实施小规模标注与对比实验，用真实结果替换第四章的验证计划</li>
+      <li>提交前逐段审核科学判断、工具许可、数据来源及赛事AI辅助规定</li>
+    </ul>
+    <div class="fact-box">
+      commit信息里写的是"已验证的初赛方案"（verified initial-round proposal），但文档正文和这份待办清单说的是另一回事——按我们这一整场"不轻信自报状态，独立核实"的规矩，这份目前还不能直接算"可提交"。
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>顺带回答你问的"是不是还有个材料/API没拉"</h2>
+    <p style="font-size:13.5px; color:var(--ink-soft); margin-top:0;">
+      文档里两处明确写了"尚未下载 Sci-Base"——Sci-Base 是官方推荐四个工具之一（HuggingFace上的开放文献数据集，不是拉代码那种"pull"，是下载数据集），track B 文档承认这块还没做。track A（超导那条线）目前没有依赖 Sci-Base，用的是 Sciverse + 我们自己核验的核心边。
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>今天怎么选</h2>
+    <p style="font-size:13.5px; color:var(--ink-soft); margin-top:0;">
+      两条线今天都做扎实不现实。我的倾向是A——数据更完整、经过独立核实、redline合规性更高；但B的文字质量其实写得不错（F/I/H分类、诚实标注做得挺规范），只是材料准备程度差一截。这个决定该你来定。
+    </p>
+    <label class="opt" data-group="T" data-val="A">
+      <input type="radio" name="T" value="A" checked>
+      <span class="opt-title">今天主推 track A（超导），track B 先搁置<span class="badge ok" style="margin-left:8px;">我的倾向</span></span>
+      <div class="opt-desc">系统说明/研报/Proposal 都基于这一整场做的超导工作写，数据链条更完整可核实。</div>
+    </label>
+    <label class="opt" data-group="T" data-val="B">
+      <input type="radio" name="T" value="B">
+      <span class="opt-title">改推 track B（SolidEvidence），把它做完</span>
+      <div class="opt-desc">今天需要先补上6条待办里能补的部分（至少定路线、定LLM模型），工作量不小。</div>
+    </label>
+    <label class="opt" data-group="T" data-val="merge">
+      <input type="radio" name="T" value="merge">
+      <span class="opt-title">两条都保留，主线用A，B作为"其他探索"附录提一句</span>
+      <div class="opt-desc">跟当前README的处理方式一致——A是主案例，B作为工程原型/探索记录简单带过，不展开。</div>
+    </label>
+    <textarea class="answer" id="T-note" placeholder="（可选）你的补充说明，比如为什么倾向某条线、或者林夏槿/谭力奎那边有没有更新信息"></textarea>
+  </section>
+
+  <div class="sticky-bar">
+    <button id="gen">生成回复文本</button>
+    <div id="output-wrap">
+      <textarea id="output" readonly></textarea>
+      <button id="copy-btn">复制到剪贴板</button>
+      <span id="copy-status"></span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.opt').forEach(function(opt) {
+    opt.addEventListener('click', function() {
+      var group = opt.dataset.group;
+      document.querySelectorAll('.opt[data-group="' + group + '"]').forEach(function(o) { o.classList.remove('checked'); });
+      opt.classList.add('checked');
+      opt.querySelector('input[type=radio]').checked = true;
+    });
+  });
+  document.querySelectorAll('.opt input[type=radio]:checked').forEach(function(inp) {
+    inp.closest('.opt').classList.add('checked');
+  });
+
+  var LABELS_T = {
+    'A': '今天主推 track A（超导），track B 先搁置',
+    'B': '改推 track B（SolidEvidence），把它做完',
+    'merge': '两条都保留，主线A，B作为附录简单提一句'
+  };
+
+  document.getElementById('gen').addEventListener('click', function() {
+    var t = document.querySelector('input[name="T"]:checked').value;
+    var note = document.getElementById('T-note').value.trim();
+    var lines = [];
+    lines.push('【两条线冲突·决策回复 · ' + new Date().toLocaleString('zh-CN') + '】');
+    lines.push('');
+    lines.push('选择：' + (LABELS_T[t] || t));
+    if (note) { lines.push('补充说明：' + note); }
+    var text = lines.join('\n');
+    document.getElementById('output').value = text;
+    document.getElementById('output-wrap').style.display = 'block';
+    document.getElementById('output-wrap').scrollIntoView({behavior: 'smooth', block: 'nearest'});
+  });
+
+  document.getElementById('copy-btn').addEventListener('click', function() {
+    var out = document.getElementById('output');
+    out.select();
+    var status = document.getElementById('copy-status');
+    try {
+      navigator.clipboard.writeText(out.value).then(function() {
+        status.textContent = '已复制，粘贴回对话框发给我';
+      }, function() {
+        document.execCommand('copy');
+        status.textContent = '已复制（备用方式），粘贴回对话框发给我';
+      });
+    } catch (e) {
+      document.execCommand('copy');
+      status.textContent = '已复制（备用方式），粘贴回对话框发给我';
+    }
+    setTimeout(function() { status.textContent = ''; }, 4000);
+  });
+</script>
+
+</body>
+</html>
