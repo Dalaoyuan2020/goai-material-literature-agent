@@ -138,3 +138,13 @@
 - 本机指定密钥文件没有 `MP_API_KEY`，因此未生成 `outputs/mp_crosscheck.json`；文档均诚实写为“候选假设/初步可行性验证方案”，没有把6条候选写成已确认 Research Gap。
 - 将 `outputs/matkg_import_report.json` 的输出路径改为仓库相对路径；后续新生成的 LLM 审计只记录密钥文件名，不再写本机绝对路径；新增脱敏汇总 `outputs/llm_audit_summary.json`，据本机完整底账核验任务书数字：160 次逻辑决策、39 次真实 Gemini 成功。原始联网审计留在本机实验工作区，未混入本次初稿提交。
 - score-proposal 模拟评分 89.6/100，证据链、新知/已知分层、可解释步骤、零虚假引用和字数/标题红线均通过；全套 17/17 测试通过，ZIP 解压后的 Word 与源文件 SHA-256 一致。Windows 主机缺少 LibreOffice，Word COM 类型库也异常，无法逐页渲染；已完成节结构、样式、标题、占位符、字数和全文抽取检查，逐页视觉检查留待定稿环境补做。
+
+## 2026-08-14 · Materials Project 真实交叉验证补跑
+
+- 新增 `src/mp_crosscheck.py`，从工作区外的私密配置读取 `MP_API_KEY`，按 Materials Project 官方客户端当前约定使用 `x-api-key` 请求头；密钥不打印、不写入结果、不进入 Git。
+- 对 `L4_application.candidates` 逐条重建归一化组成：6 条中 4 条可查询，2 条因向量差分产生负计量数而被拒绝查询。该负面结果暴露了 L4 当前缺少位点感知迁移和非负组成约束，未被包装成 API 未命中。
+- 4 条有效组成完成 `materials/summary` 真实查询，精确匹配为 0。Fe-S-Te 体系返回 2 条 `Fe4Te3S`，As-Ce-F-Fe-O 体系返回 1 条 `Ce8Fe8As8O7F`，均与候选组成不符；另两个化学体系无记录。脱敏请求口径、匹配阈值、材料 ID、响应摘要和限制写入 `outputs/mp_crosscheck.json`。
+- 更新系统说明、调研报告、Proposal `content.json` 和评分自查：只称“Materials Project 单库初步排重”，明确 4 条未精确匹配、2 条无法判定，仍需 OQMD/NOMAD、文献、领域签审和计算/实验验证。
+- 使用官方 `official_template_with_team.docx` 与 `fill_template.py` 重生成 Proposal；模板标题不变、16 个填写标题全部命中、无“应说明”占位符、段落正文 4738 字符。模拟评分更新为 90.7/100，四条红线继续通过。
+- 新增 3 项交叉验证单元测试；在临时依赖目录补齐 matplotlib 后，全套 20/20 测试通过。精确密钥、敏感文件名、提交材料绝对路径及 DOCX 内部 XML 扫描均无命中。
+- 文档渲染流程再次确认本机缺少 LibreOffice/soffice，因此无法生成逐页 PNG；已完成全文抽取、节结构、样式、标题、占位符、字数和包内容检查，未把结构检查表述为视觉验收通过。
