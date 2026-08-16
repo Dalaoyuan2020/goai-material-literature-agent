@@ -61,17 +61,17 @@
       ["p", "吕志远（winnie）：博士在读，AI Agent方向；核心技能为智能体工程（Skill、MCP与工作流编排）、全链路工具开发和科研方案撰写。谭力奎：桂林理工大学，AI Agent方向；核心技能为harness架构设计、多智能体协作与自动化工作流。林夏槿：负责Skill工程实现（sciverse-search/evidence-ledger）与Docker一键复现打包。"]
     ],
     "6.2 团队分工": [
-      ["p", "吕志远：总体架构、证据链、Track A算法实现与提交审查；林夏槿：负责Skill工程实现（sciverse-search/evidence-ledger）与Docker一键复现打包；谭力奎：多Agent协作架构、React/Electron/Vite桌面端、harness测试与新颖性复核。领域签审人【待补充】。"]
+      ["p", "吕志远：总体架构、证据链、Track A算法实现与提交审查；林夏槿：负责Skill工程实现（sciverse-search/evidence-ledger）与Docker一键复现打包；谭力奎：多Agent协作架构、React/Electron/Vite桌面端、harness测试与新颖性复核。领域签审：本轮暂无外部材料学专家签审，留待后续实验阶段引入。"]
     ],
     "6.3团队成果": [
-      ["p", "吕志远：AutoScience研究方向、Claude Science绿皮书/CSA开源生态、hhu-social全链路智能体项目；谭力奎：AI天文望远镜自动化工作流与多望远镜智能体协作架构设计。团队作品公开链接【待补充】。为保护未成年人隐私，本稿不写林夏槿的学校等可识别身份信息。"]
+      ["p", "吕志远：AutoScience研究方向、Claude Science绿皮书/CSA开源生态、hhu-social全链路智能体项目；谭力奎：AI天文望远镜自动化工作流与多望远镜智能体协作架构设计。团队作品公开链接暂不在本次提交中列出。为保护未成年人隐私，本稿不写林夏槿的学校等可识别身份信息。"]
     ]
   },
   "tail": [
     "附：待补充清单",
     "1. 修正2条负计量数组成，并对变量/多相候选做材料专家规范化。",
     "2. OQMD、NOMAD与文献排重后的人工签审结论。",
-    "3. 领域签审人、团队作品公开链接及队友最终公开授权。",
+    "3. 引入外部材料学专家领域签审，并取得队友最终公开授权后补充团队作品公开链接。",
     "4. API成本、运行环境锁定与Docker镜像版本。"
   ]
 }
