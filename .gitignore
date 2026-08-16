@@ -4,3 +4,15 @@ __pycache__/
 .DS_Store
 *.env
 api_keys.env
+workbench/node_modules/
+workbench/dist/
+workbench/dist-electron/
+workbench/server/node_modules/
+workbench/server/dist/
+workbench/server/.env
+workbench/smoke.png
+outputs/workbench/
+.playwright-cli/
+output/playwright/*
+!output/playwright/demo/
+!output/playwright/demo/**

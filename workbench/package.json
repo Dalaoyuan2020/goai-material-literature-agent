@@ -1,0 +1,69 @@
+{
+  "name": "material-literature-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "description": "材料科学文献知识库桌面工作台",
+  "author": "Material Literature Agent",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"npm --prefix server run dev\" \"vite --port 5173 --strictPort\"",
+    "dev:desktop": "concurrently -k \"npm --prefix server run dev\" \"vite --port 5173 --strictPort\" \"wait-on http://localhost:8787/api/v1/health http://localhost:5173 && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "build": "tsc -p tsconfig.electron.json && vite build && npm --prefix server run build",
+    "start": "npm run build && concurrently -k \"npm --prefix server start\" \"vite preview --host 127.0.0.1 --port 5173 --strictPort\"",
+    "start:desktop": "npm run build && concurrently -k \"npm --prefix server start\" \"wait-on http://localhost:8787/api/v1/health && electron .\"",
+    "smoke": "npm run build && concurrently -k \"npm --prefix server start\" \"wait-on http://localhost:8787/api/v1/health && cross-env ELECTRON_SMOKE=1 SMOKE_OUTPUT=smoke.png electron .\"",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.electron.json --noEmit && npm --prefix server run typecheck",
+    "dist": "npm run build && electron-builder --win portable --x64",
+    "dist:dir": "npm run build && electron-builder --win dir --x64"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "@types/papaparse": "^5.3.15",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^35.1.5",
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
+    "wait-on": "^8.0.2"
+  },
+  "build": {
+    "appId": "com.knowledge.workbench",
+    "productName": "材料文献智能工作台",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "node_modules/papaparse/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "npmRebuild": false,
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "signAndEditExecutable": false,
+      "artifactName": "${productName}-${version}-portable.${ext}"
+    },
+    "electronDownload": {
+      "mirror": "https://npmmirror.com/mirrors/electron/"
+    }
+  }
+}

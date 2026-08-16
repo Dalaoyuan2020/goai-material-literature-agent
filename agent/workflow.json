@@ -4,6 +4,13 @@
   "python_path": "src",
   "intents": [
     {
+      "intent": "read_knowledge_summary",
+      "description": "读取核心知识边、MatKG 弱证据边和当前管线报告的真实摘要",
+      "action": "ui_bridge.read_knowledge_summary",
+      "params": {},
+      "artifacts": ["knowledge/edges.csv", "knowledge/edges_matkg.csv", "outputs/pipeline_report.json"]
+    },
+    {
       "intent": "search_122_family",
       "description": "运行 122 家族逐轮候选扩张",
       "action": "search.run_family_search",

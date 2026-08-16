@@ -1,0 +1,801 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "科研编排工作台后端 API",
+    "version": "0.1.1",
+    "description": "供前后端对接使用的 HTTP API。初始化服务：cd server && npm install && npm run dev"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8787/api/v1",
+      "description": "本地开发"
+    },
+    {
+      "url": "http://{host}:8787/api/v1",
+      "variables": {
+        "host": {
+          "default": "127.0.0.1",
+          "description": "部署后替换为后端域名或 IP"
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "apiKey": []
+    }
+  ],
+  "paths": {
+    "/openapi.json": {
+      "get": {
+        "summary": "OpenAPI 规范",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "OpenAPI JSON",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "健康检查",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "服务正常",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tasks": {
+      "post": {
+        "summary": "创建任务",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTaskRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "创建成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Task"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      },
+      "get": {
+        "summary": "任务列表",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 50
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "任务列表",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tasks/{id}": {
+      "get": {
+        "summary": "任务详情",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "任务详情",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Task"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/tasks/{id}/messages": {
+      "post": {
+        "summary": "发送对话消息",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "消息创建成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tasks/{id}/events": {
+      "get": {
+        "summary": "任务 SSE 事件流",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "SSE 流",
+            "content": {
+              "text/event-stream": {
+                "schema": {
+                  "$ref": "#/components/schemas/Event"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/knowledge/search": {
+      "post": {
+        "summary": "检索知识库",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "检索结果",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/knowledge/stats": {
+      "get": {
+        "summary": "知识库统计",
+        "responses": {
+          "200": {
+            "description": "统计",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Stats"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/engines": {
+      "get": {
+        "summary": "开源引擎矩阵",
+        "responses": {
+          "200": {
+            "description": "引擎列表",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EngineList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/workflow/run": {
+      "post": {
+        "summary": "执行工作流",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkflowRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "已入队",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkflowAccepted"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/jobs/{id}": {
+      "get": {
+        "summary": "分析任务结果",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "任务结果",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/exports": {
+      "post": {
+        "summary": "导出图谱文件",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "导出文件已生成",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/files/{name}": {
+      "get": {
+        "summary": "下载导出文件",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "文件流",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/reports/generate": {
+      "post": {
+        "summary": "生成报告",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "报告生成中",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Report"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/reports/{id}": {
+      "get": {
+        "summary": "报告详情",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "报告详情",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Report"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/reports/{id}/download": {
+      "get": {
+        "summary": "下载报告",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "报告文件",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "409": {
+            "description": "报告尚未生成完成",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Api-Key"
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "参数错误",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "Unauthorized": {
+        "description": "密钥错误",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "资源不存在",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "Health": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string" },
+          "service": { "type": "string" },
+          "version": { "type": "string" },
+          "timestamp": { "type": "string" }
+        }
+      },
+      "CreateTaskRequest": {
+        "type": "object",
+        "required": ["title"],
+        "properties": {
+          "title": { "type": "string", "maxLength": 200 },
+          "description": { "type": "string", "maxLength": 2000 },
+          "module": { "type": "string", "enum": ["research", "knowledge", "opensource", "report"] },
+          "openCitespace": { "type": "boolean" }
+        }
+      },
+      "Task": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "module": { "type": "string", "enum": ["research", "knowledge", "opensource", "report"] },
+          "status": { "type": "string", "enum": ["created", "running", "completed", "failed"] },
+          "messages": { "type": "array", "items": { "$ref": "#/components/schemas/Message" } },
+          "workflow": {
+            "type": "object",
+            "properties": {
+              "currentStep": { "type": "string" },
+              "progress": { "type": "integer" },
+              "jobId": { "type": "string" }
+            }
+          },
+          "createdAt": { "type": "string" },
+          "updatedAt": { "type": "string" }
+        }
+      },
+      "TaskList": {
+        "type": "object",
+        "properties": {
+          "items": { "type": "array", "items": { "$ref": "#/components/schemas/Task" } },
+          "total": { "type": "integer" }
+        }
+      },
+      "SendMessageRequest": {
+        "type": "object",
+        "required": ["content"],
+        "properties": {
+          "content": { "type": "string", "maxLength": 4000 },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "path": { "type": "string" },
+                "type": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "Message": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "role": { "type": "string", "enum": ["user", "assistant"] },
+          "content": { "type": "string" },
+          "steps": { "type": "array", "items": { "type": "string" } },
+          "suggestion": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "meta": { "type": "string" }
+            }
+          },
+          "createdAt": { "type": "string" }
+        }
+      },
+      "Event": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["connected", "heartbeat", "task.created", "message.created", "workflow.started", "workflow.step", "workflow.completed", "report.started", "report.completed", "error"]
+          },
+          "payload": { "type": "object" },
+          "timestamp": { "type": "string" }
+        }
+      },
+      "SearchRequest": {
+        "type": "object",
+        "properties": {
+          "keyword": { "type": "string" },
+          "tier": { "type": "string", "enum": ["all", "core", "extended"] },
+          "limit": { "type": "integer", "minimum": 1, "maximum": 1000 },
+          "offset": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "SearchResponse": {
+        "type": "object",
+        "properties": {
+          "items": { "type": "array", "items": { "$ref": "#/components/schemas/Edge" } },
+          "total": { "type": "integer" },
+          "stats": { "$ref": "#/components/schemas/Stats" }
+        }
+      },
+      "Edge": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "source": { "type": "string" },
+          "target": { "type": "string" },
+          "relation": { "type": "string" },
+          "doi": { "type": "string" },
+          "year": { "type": "string" },
+          "evidence": { "type": "string" },
+          "quote": { "type": "string" },
+          "tier": { "type": "string", "enum": ["core", "extended"] }
+        }
+      },
+      "Stats": {
+        "type": "object",
+        "properties": {
+          "coreMaterials": { "type": "integer" },
+          "coreEdges": { "type": "integer" },
+          "extendedMaterials": { "type": "integer" },
+          "extendedEdges": { "type": "integer" },
+          "candidates": { "type": "integer" }
+        }
+      },
+      "EngineList": {
+        "type": "object",
+        "properties": {
+          "items": { "type": "array", "items": { "$ref": "#/components/schemas/Engine" } },
+          "total": { "type": "integer" }
+        }
+      },
+      "Engine": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "repo": { "type": "string" },
+          "strengths": { "type": "array", "items": { "type": "string" } },
+          "adaptation": { "type": "string" }
+        }
+      },
+      "WorkflowRequest": {
+        "type": "object",
+        "required": ["taskId", "skillId"],
+        "properties": {
+          "taskId": { "type": "string" },
+          "skillId": { "type": "string" },
+          "input": { "type": "object" }
+        }
+      },
+      "WorkflowAccepted": {
+        "type": "object",
+        "properties": {
+          "jobId": { "type": "string" },
+          "status": { "type": "string" },
+          "events": { "type": "string" }
+        }
+      },
+      "Job": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "taskId": { "type": "string" },
+          "status": { "type": "string", "enum": ["queued", "running", "completed", "failed"] },
+          "progress": { "type": "integer" },
+          "currentStep": { "type": "string" },
+          "metrics": { "$ref": "#/components/schemas/JobMetrics" },
+          "createdAt": { "type": "string" },
+          "updatedAt": { "type": "string" }
+        }
+      },
+      "JobMetrics": {
+        "type": "object",
+        "properties": {
+          "nodes": { "type": "integer" },
+          "edges": { "type": "integer" },
+          "modularity": { "type": "number" },
+          "silhouette": { "type": "number" },
+          "bursts": { "type": "integer" },
+          "clusters": { "type": "integer" },
+          "centralNodes": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "ExportRequest": {
+        "type": "object",
+        "required": ["jobId", "format"],
+        "properties": {
+          "jobId": { "type": "string" },
+          "format": { "type": "string", "enum": ["graphml", "pajek", "csv", "ris", "svg", "png", "markdown"] }
+        }
+      },
+      "ExportResponse": {
+        "type": "object",
+        "properties": {
+          "fileName": { "type": "string" },
+          "downloadUrl": { "type": "string" },
+          "size": { "type": "integer" },
+          "format": { "type": "string" }
+        }
+      },
+      "ReportRequest": {
+        "type": "object",
+        "required": ["taskId"],
+        "properties": {
+          "taskId": { "type": "string" },
+          "jobIds": { "type": "array", "items": { "type": "string" } },
+          "include": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "Report": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "taskId": { "type": "string" },
+          "status": { "type": "string", "enum": ["generating", "completed", "failed"] },
+          "fileName": { "type": "string" },
+          "downloadUrl": { "type": "string" },
+          "createdAt": { "type": "string" },
+          "updatedAt": { "type": "string" }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "details": { "type": "object" }
+        }
+      }
+    }
+  }
+}
