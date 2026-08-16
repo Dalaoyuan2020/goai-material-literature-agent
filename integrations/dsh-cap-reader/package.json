@@ -1,0 +1,31 @@
+{
+  "name": "dsh-cap-reader",
+  "version": "0.1.0-p0",
+  "private": true,
+  "description": "CAP material literature reader Client plugin for DeepSeek Harness",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "verify:dsh-web": "node scripts/verify-dsh-web.mjs"
+  }
+}

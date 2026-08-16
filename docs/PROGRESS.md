@@ -8,6 +8,16 @@
 
 ## 已完成
 
+### 前端分叉决策与 DSH 插件骨架
+
+- 已确认 `workbench/` 是 2026-08-12 从 cl-agent UI-3 分出的独立代码线，后续不追赶 cl-agent UI-5；
+- `codex/wire-real-data` 已关闭且未合并，不作为当前产品依赖；
+- 新增比赛仓库自有的 `integrations/dsh-cap-reader/` Client 插件骨架；
+- 插件通过公开 `shell.overlay`、`ctx.connection` 和 Host `webServer` 工作；当前已能从比赛仓库真实 `pipeline_report.json` 读取知识概览，不启动旧 Express 服务；
+- 隔离 DSH Web Profile 已验证加载、禁用和重新启用，真实 Host 路由返回 94/81/46/210/6/326；证据见 `docs/evidence/DSH-CAP-P0-01/`；
+- 当前尚未验证 Desktop/Electron 可视渲染，不把 Web Profile 通过扩大表述为桌面端已完成；
+- 完整决策见 `docs/architecture/FRONTEND_LINEAGE.md`。
+
 ### 比赛仓库主线整合
 
 - 以 Track A 最新提交稿分支为基线，合入 CAP Track/Science 前后端工作台；

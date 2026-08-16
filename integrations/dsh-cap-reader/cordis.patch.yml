@@ -1,0 +1,5 @@
+# Client-only CAP reader row. The Host face is intentionally empty at P0 so
+# DSH remains the sole owner of sessions, models, tools and permissions.
+- insert:
+    - id: dsh-cap-reader
+      name: dsh-cap-reader

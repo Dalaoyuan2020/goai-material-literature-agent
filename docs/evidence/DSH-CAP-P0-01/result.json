@@ -1,0 +1,16 @@
+{
+  "plugin": "dsh-cap-reader",
+  "build": "cap-reader-p0-01",
+  "profile": "web",
+  "loaded": true,
+  "disabled": true,
+  "reenabled": true,
+  "summary": {
+    "coreMaterials": 94,
+    "coreEdges": 81,
+    "extendedMaterials": 46,
+    "extendedEdges": 210,
+    "candidates": 6,
+    "evidencePairs": 326
+  }
+}

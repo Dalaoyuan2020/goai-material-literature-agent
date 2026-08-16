@@ -1,0 +1,6 @@
+dsh-cap-reader Host/Client unit tests: 4/4 PASS
+DSH Web Profile install/load/disable/reenable: PASS
+DSH Host real knowledge summary: PASS (94 core materials, 81 core edges, 46 extended materials, 210 extended edges, 6 candidates, 326 evidence pairs)
+Competition Python tests: 22/22 PASS
+Workbench TypeScript typecheck: PASS
+Desktop/Electron visible renderer: NOT VERIFIED IN THIS TASK

@@ -62,6 +62,8 @@ npm.cmd run build
 
 当前集成分支的验收结果：Python 22/22 通过、TypeScript 类型检查通过、生产构建通过。完整状态和边界见 [当前进度](docs/PROGRESS.md)。
 
+前端分叉关系和 DSH 插件化决策见 [前端血缘与 DSH 迁移决策](docs/architecture/FRONTEND_LINEAGE.md)。
+
 ## 关于“数据库”
 
 当前系统拥有可查询、可追溯的本地材料知识数据，但存储介质是 CSV/JSON，并不是 SQLite、PostgreSQL 或图数据库。明日需要围绕科研人员真实工作流决定是否升级及升级范围，见 [数据库决策清单](docs/DATABASE_DECISION.md)。

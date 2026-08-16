@@ -1,0 +1,5 @@
+npm.cmd test
+node scripts/verify-dsh-web.mjs --dsh-root <desktop-repository> --cap-root <competition-repository>
+<compatible-python> -m unittest discover -s tests
+npm.cmd run typecheck
+npm.cmd run build
